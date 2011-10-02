@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="739" maximized="true" width="1018" x="321" y="61">
 <fastViewData fastViewLocation="1024"/>
@@ -32,6 +32,7 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -52,9 +53,13 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/ListChoserLegumeCloneable.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="495" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ramasseur.java" partName="Ramasseur.java" path="/home/franziz/Workspace-L-3/eclipseW/COO_tp2/src/generics/Ramasseur.java" title="Ramasseur.java" tooltip="COO_tp2/src/generics/Ramasseur.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ramasseur.java" partName="Ramasseur.java" path="/home/franziz/Workspace-L-3/COO/COO_tp2/src/generics/Ramasseur.java" title="Ramasseur.java" tooltip="COO_tp2/src/generics/Ramasseur.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/Ramasseur.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2225" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="235" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestScanner.java" partName="TestScanner.java" path="/home/franziz/Workspace-L-3/COO/COO_tp2/src/scanner/TestScanner.java" title="TestScanner.java" tooltip="COO_tp2/src/scanner/TestScanner.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/scanner/TestScanner.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="360" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -62,10 +67,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (2 items)"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (1 item)"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="73" org.eclipse.ui.ide.markerType="977" org.eclipse.ui.ide.pathField="143" org.eclipse.ui.ide.resourceField="108" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -111,7 +115,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -232,6 +236,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/generics/Carotte.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/generics/ListChoserLegume.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/generics/Ramasseur.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/scanner/TestScanner.java"/>
 </editors>
 <item historyLabel="ArcEnCielTest.java" index="0">
 <position info="not_deleted" x="513" y="0"/>
@@ -269,8 +274,14 @@
 <item historyLabel="ListChoserLegumeCloneable.java" index="1">
 <position info="not_deleted" x="495" y="0"/>
 </item>
-<item active="true" historyLabel="Ramasseur.java" index="5">
+<item historyLabel="Ramasseur.java" index="5">
 <position info="not_deleted" x="0" y="3022"/>
+</item>
+<item historyLabel="TestScanner.java" index="6">
+<position info="not_deleted" x="360" y="0"/>
+</item>
+<item active="true" historyLabel="Ramasseur.java" index="5">
+<position info="not_deleted" x="643" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -289,6 +300,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestScanner.java" tooltip="COO_tp2/src/scanner/TestScanner.java">
+<persistable path="/COO_tp2/src/scanner/TestScanner.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ramasseur.java" tooltip="COO_tp2/src/generics/Ramasseur.java">
 <persistable path="/COO_tp2/src/generics/Ramasseur.java"/>
 </file>

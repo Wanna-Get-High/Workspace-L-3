@@ -1,0 +1,75 @@
+
+Exo 1 TD1:	Q1 	: 	select fnom from fournisseurs;
+			Q1a	:	select fnom as suppliername from fournisseurs;
+	
+			Q2 	: 	select * from fournisseurs where fad = 'Paris';
+			Q2a	:	select * from fournisseurs where fad like '%Paris';
+	
+			Q3 	:	select fnom from fournisseurs where fad like '%Paris';
+	
+			Q4 	:	select anom from articles where acoul ='vert';
+	
+			Q5 	:	select aid from catalogue where prix < 20;
+					distinct n'affiche pas les aid qui sont present plusieurs fois;
+	
+			Q6 	:	select fid from catalogue where prix < 20;
+	
+			Q7 	: 	select fid from catalogue where prix <20 and prix >10;
+			Q7a	:	select fid from catalogue where prix between 10 and 20;
+					on n'affiche pas les donnees duplique
+			
+			Q8 	:	select fid from catalogue where prix <20 intersect select fid from catalogue where prix >10;
+	
+			Q9 	:	select anom from articles where acoul = 'rouge' or acoul = 'vert';
+					select anom from articles where acoul = 'rouge' union select anom from articles where acoul = 'vert';
+					la premiere requete affiche tous les articles qui sont rouge ou vert et si un article est present dans les deux couleurs alors il l'affiche deux fois.
+					la deuxiemes requete n'affiche pas les duplicata et donc si un article est pres	ent dans les deux couleurs alors il ne l'affichera qu'une fois.
+			
+			Q10 :	select anom from articles where acoul = 'rouge' and acoul = 'vert';
+					select anom from articles where acoul = 'rouge' intersect select anom from articles where acoul = 'vert';
+					la premiere requete affiche tous les articles qui sont a la fois rouge et a la fois vert.
+					la deuxiemes requete n'affiche que les articles sont present dans les deux couleurs.
+			
+			Q11 :
+			
+			
+Exo 1 TD2 : Q1	:	create table articles 													create table catalogue
+					(aid INTEGER,															(fid INTEGER,
+					anom VARCHAR(30),														aid INTEGER, 
+					acoul VARXHAR(15),														prix REAL,
+					PRIMARY KEY(aid) on delete cascade on update cascade);					FOREIGN KEY (fid) references fournisseurs(fid) on delete cascade on update cascade,
+										  													FOREIGN KEY (aid) references articles(aid) on delete cascade on update cascade);
+					create table fournisseurs 			
+					(fid INTEGER,															create table categorie
+					fnom VARCHAR(30),														(cid INTEGER,
+					fad VARXHAR(60),														aid INTEGER,
+					PRIMARY KEY(fid) on delete cascade on update cascade);					description VARCHAR(70),
+																							PRIMARY KEY(cid) on delete cascade on update cascade),
+																							FOREIGN KEY (aid) references articles(aid) on delete cascade on update cascade);
+														
+			Q2	: 1- insert into articles values (11,'DB Toaster','rouge');
+			
+				  2- insert into articles values(13,'Aspirateur','noire');
+				  
+				  3- insert into fournisseur values (1,'Ytrad','Paris');
+				  	 insert into catalogue values (1,11,null);
+				  	 insert into catalogue values (1,13,null);
+				 	 
+				 	 insert into fournisseur values (2,'Xip','Lille');
+				 	 insert into catalogue values (2,11,null);
+				 	 
+				  4- update table catalogue set prix = 15.5 where aid = 11;
+				  	 update table catalogue set prix = 39.99 where aid = 2;
+				  	 
+				  5- update table fournisseurs set fid = 3 where fid = 1;
+				  
+				  6- update table articles set aid = 4 where aid = 2;
+				  
+				  7- delete from fournisseurs where fnom = 'Ytrad';
+				  
+				  8- insert into categorie values (1,11,'Electromenager');
+				  	 insert into categorie values (1,13,'Electromenager');
+				  	 
+				  9- 
+			
+
