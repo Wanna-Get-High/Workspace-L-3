@@ -18,7 +18,8 @@ public class GraphicalCounter
 	public GraphicalCounter(Counter counter)
 	{
 		this.isInit = false;
-		this.frame = new JFrame(counter.toString());
+		this.counter = counter;
+		this.frame = new JFrame(this.counter.toString());
 		this.frame.addWindowListener(new CloseWindowEvent());
 		this.frame.setLocation(100, 300);
 		this.frame.setSize(100, 100);
@@ -43,8 +44,8 @@ public class GraphicalCounter
 	public static void main (String[] args)
 	{
 		new GraphicalCounter(new SimpleCounter());
-		/*new GraphicalCounter(new ModularCounter(7));
-		new GraphicalCounter(new CompteurGeometrique(3));*/
+		new GraphicalCounter(new ModularCounter(7));
+		new GraphicalCounter(new CompteurGeometrique(3));
 	}
 	
 	// ----------------------------------------------------------------------
@@ -61,11 +62,10 @@ public class GraphicalCounter
 	
 	class InitActionListener implements ActionListener 
 	{
-		public void actionPerformed(ActionEvent e) 
+		public void actionPerformed(ActionEvent e)
 		{
 			try {
-				System.out.println(Integer.parseInt(GraphicalCounter.this.input.getText()));
-			    GraphicalCounter.this.counter.init(1);
+			    GraphicalCounter.this.counter.init(Integer.parseInt(GraphicalCounter.this.input.getText()));
 			    GraphicalCounter.this.isInit = true;
 			}
 			catch (NumberFormatException nfe)
@@ -77,7 +77,7 @@ public class GraphicalCounter
 	
 	class IncrementActionListener implements ActionListener 
 	{
-		public void actionPerformed(ActionEvent e) 
+		public void actionPerformed(ActionEvent e)
 		{
 			if (GraphicalCounter.this.isInit)
 			{

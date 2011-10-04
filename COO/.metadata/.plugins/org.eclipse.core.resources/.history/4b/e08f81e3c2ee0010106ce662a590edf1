@@ -1,0 +1,9 @@
+package afficheurLumineux;
+
+public abstract class FileFIFO 
+{
+	public int getLargeur()
+	{
+		return 0;
+	}
+}

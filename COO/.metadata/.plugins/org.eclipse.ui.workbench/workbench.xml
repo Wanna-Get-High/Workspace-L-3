@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
-<window height="739" maximized="true" width="1018" x="321" y="61">
+<window height="740" maximized="true" width="1014" x="321" y="61">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -29,37 +29,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ListChoser.java" partName="ListChoser.java" path="/home/franziz/Workspace-L-3/eclipseW/COO_tp2/src/generics/ListChoser.java" title="ListChoser.java" tooltip="COO_tp2/src/generics/ListChoser.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/ListChoser.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="347" selectionOffset="554" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChainList.java" partName="ChainList.java" path="/home/franziz/Workspace-L-3/COO/tests/src/chainList/ChainList.java" title="ChainList.java" tooltip="tests/src/chainList/ChainList.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tests/src/chainList/ChainList.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="89" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Carotte.java" partName="Carotte.java" path="/home/franziz/Workspace-L-3/eclipseW/COO_tp2/src/generics/Carotte.java" title="Carotte.java" tooltip="COO_tp2/src/generics/Carotte.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/Carotte.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="275" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ListChoserLegume.java" partName="ListChoserLegume.java" path="/home/franziz/Workspace-L-3/eclipseW/COO_tp2/src/generics/ListChoserLegume.java" title="ListChoserLegume.java" tooltip="COO_tp2/src/generics/ListChoserLegume.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/ListChoserLegume.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="710" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ListChoserLegumeCloneable.java" partName="ListChoserLegumeCloneable.java" path="/home/franziz/Workspace-L-3/eclipseW/COO_tp2/src/generics/ListChoserLegumeCloneable.java" title="ListChoserLegumeCloneable.java" tooltip="COO_tp2/src/generics/ListChoserLegumeCloneable.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/ListChoserLegumeCloneable.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="495" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ramasseur.java" partName="Ramasseur.java" path="/home/franziz/Workspace-L-3/COO/COO_tp2/src/generics/Ramasseur.java" title="Ramasseur.java" tooltip="COO_tp2/src/generics/Ramasseur.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/generics/Ramasseur.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="235" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestScanner.java" partName="TestScanner.java" path="/home/franziz/Workspace-L-3/COO/COO_tp2/src/scanner/TestScanner.java" title="TestScanner.java" tooltip="COO_tp2/src/scanner/TestScanner.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/COO_tp2/src/scanner/TestScanner.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="360" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileFIFO.java" partName="FileFIFO.java" path="/home/franziz/Workspace-L-3/COO/tp4-afflumin/src/afficheurLumineux/FileFIFO.java" title="FileFIFO.java" tooltip="tp4-afflumin/src/afficheurLumineux/FileFIFO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp4-afflumin/src/afficheurLumineux/FileFIFO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="172" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -67,7 +47,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -237,13 +217,18 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/generics/ListChoserLegume.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/generics/Ramasseur.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/scanner/TestScanner.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/introihm/Test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/introihm/TestInterneEvenement.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/COO_tp2/src/generics/ListChoserLegume.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/counter/GraphicalCounter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/counter/Counter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/counter/CompteurGeometrique.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/counter/Counter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp3-introihm/src/counter/CompteurGeometrique.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tests/src/chainList/ChainList.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp4-afflumin/src/FileFIFO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp4-afflumin/src/afficheurLumineux/FileFIFO.java"/>
 </editors>
-<item historyLabel="ArcEnCielTest.java" index="0">
-<position info="not_deleted" x="513" y="0"/>
-</item>
-<item historyLabel="ListChoserLegumeCloneable.java" index="1">
-<position info="not_deleted" x="1432" y="0"/>
-</item>
 <item historyLabel="ArcEnCielTest.java" index="0">
 <position info="not_deleted" x="21" y="0"/>
 </item>
@@ -280,8 +265,117 @@
 <item historyLabel="TestScanner.java" index="6">
 <position info="not_deleted" x="360" y="0"/>
 </item>
-<item active="true" historyLabel="Ramasseur.java" index="5">
-<position info="not_deleted" x="643" y="0"/>
+<item historyLabel="Ramasseur.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Test.java" index="7">
+<position info="not_deleted" x="40" y="0"/>
+</item>
+<item historyLabel="TestInterneEvenement.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ListChoserLegume.java" index="9"/>
+<item historyLabel="TestInterneEvenement.java" index="8">
+<position info="not_deleted" x="236" y="0"/>
+</item>
+<item historyLabel="GraphicalCounter.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestInterneEvenement.java" index="8">
+<position info="not_deleted" x="236" y="0"/>
+</item>
+<item historyLabel="GraphicalCounter.java" index="10">
+<position info="not_deleted" x="2312" y="0"/>
+</item>
+<item historyLabel="Counter.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CompteurGeometrique.java" index="12">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="Counter.java" index="11">
+<position info="not_deleted" x="282" y="0"/>
+</item>
+<item historyLabel="GraphicalCounter.java" index="10">
+<position info="not_deleted" x="2312" y="0"/>
+</item>
+<item historyLabel="GraphicalCounter.java" index="10">
+<position info="not_deleted" x="1714" y="0"/>
+</item>
+<item historyLabel="Counter.java" index="11">
+<position info="not_deleted" x="282" y="0"/>
+</item>
+<item historyLabel="CompteurGeometrique.java" index="12">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="GraphicalCounter.java" index="10">
+<position info="not_deleted" x="196" y="0"/>
+</item>
+<item historyLabel="Counter.java" index="13">
+<position info="not_deleted" x="282" y="0"/>
+</item>
+<item historyLabel="CompteurGeometrique.java" index="14">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="Counter.java" index="13">
+<position info="not_deleted" x="282" y="0"/>
+</item>
+<item historyLabel="GraphicalCounter.java" index="10">
+<position info="not_deleted" x="500" y="0"/>
+</item>
+<item historyLabel="ChainList.java" index="15">
+<position info="not_deleted" x="89" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="16">
+<position/>
+</item>
+<item historyLabel="FileFIFO.java" index="16">
+<position/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="8" y="17"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="206" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="102" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="182" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="95" y="4"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="283" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="384" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="380" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="380" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="182" y="0"/>
+</item>
+<item active="true" historyLabel="FileFIFO.java" index="17">
+<position info="not_deleted" x="172" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -300,6 +394,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileFIFO.java" tooltip="tp4-afflumin/src/FileFIFO.java">
+<persistable path="/tp4-afflumin/src/FileFIFO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChainList.java" tooltip="tests/src/chainList/ChainList.java">
+<persistable path="/tests/src/chainList/ChainList.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CompteurGeometrique.java" tooltip="tp3-introihm/src/counter/CompteurGeometrique.java">
+<persistable path="/tp3-introihm/src/counter/CompteurGeometrique.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Counter.java" tooltip="tp3-introihm/src/counter/Counter.java">
+<persistable path="/tp3-introihm/src/counter/Counter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GraphicalCounter.java" tooltip="tp3-introihm/src/counter/GraphicalCounter.java">
+<persistable path="/tp3-introihm/src/counter/GraphicalCounter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestInterneEvenement.java" tooltip="tp3-introihm/src/introihm/TestInterneEvenement.java">
+<persistable path="/tp3-introihm/src/introihm/TestInterneEvenement.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="tp3-introihm/src/introihm/Test.java">
+<persistable path="/tp3-introihm/src/introihm/Test.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestScanner.java" tooltip="COO_tp2/src/scanner/TestScanner.java">
 <persistable path="/COO_tp2/src/scanner/TestScanner.java"/>
 </file>

@@ -14,6 +14,7 @@ public abstract class Counter
 
 	public Counter() 
 	{
+		this.value = 0;
 	}
 
 	public int getCurrentValue() 

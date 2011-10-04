@@ -13,7 +13,6 @@ import java.awt.event.*;
 public class TestInterneEvenement {
 
 	private JButton unBouton;
-	private JLabel unLabel;
 
 	public void test() {
 		JFrame f = new JFrame("event frame");

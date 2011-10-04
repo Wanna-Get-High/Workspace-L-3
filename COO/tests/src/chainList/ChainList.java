@@ -1,0 +1,7 @@
+package chainList;
+
+public class ChainList <E> 
+{
+	private List <E> l;
+	private E elem;
+}
