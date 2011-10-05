@@ -1,0 +1,15 @@
+package afficheurLumineux;
+
+import java.util.*;
+
+public abstract class FileFIFO <E>
+{
+	private List <E> elem;
+	private int length;
+	private int head;
+	
+	public int getLargeur()
+	{
+		return 0;
+	}
+}

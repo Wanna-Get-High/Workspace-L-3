@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="728,255" id="afficheurLumineux" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030207470342D6166666C756D696E2F6C6570616E">
+  <children xsi:type="editmodel:ClassEditModel" name="FileFIFO" location="50,50" size="144,185" id="afficheurLumineux/FileFIFO" runTimeClassModel="main([Ljava.lang.String;),element,add(LE;),length,FileFIFO(I),raz(LE;),head,toString(),getLargeur()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,45">
+      <children xsi:type="editmodel:AttributeEditModel" name="element" id="afficheurLumineux/FileFIFO#element"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="head" id="afficheurLumineux/FileFIFO#head"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="length" id="afficheurLumineux/FileFIFO#length"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,90">
+      <children xsi:type="editmodel:MethodEditModel" name="FileFIFO" id="afficheurLumineux/FileFIFO#FileFIFO(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add" id="afficheurLumineux/FileFIFO#add(LE;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLargeur" id="afficheurLumineux/FileFIFO#getLargeur()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="afficheurLumineux/FileFIFO#main([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="raz" id="afficheurLumineux/FileFIFO#raz(LE;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="afficheurLumineux/FileFIFO#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Afficheur" location="273,112" size="174,140" id="afficheurLumineux/Afficheur" runTimeClassModel="message,f,decale(),head,toString(),setMessage(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,45">
+      <children xsi:type="editmodel:AttributeEditModel" name="f" id="afficheurLumineux/Afficheur#f"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="head" id="afficheurLumineux/Afficheur#head"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="message" id="afficheurLumineux/Afficheur#message"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="151,45">
+      <children xsi:type="editmodel:MethodEditModel" name="decale" id="afficheurLumineux/Afficheur#decale()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMessage" id="afficheurLumineux/Afficheur#setMessage(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="afficheurLumineux/Afficheur#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Horloge" location="526,79" size="151,110" id="afficheurLumineux/Horloge" runTimeClassModel="main([Ljava.lang.String;),afficheur,tester(I),Horloge(LafficheurLumineux.Afficheur;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="afficheur" id="afficheurLumineux/Horloge#afficheur"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="128,45">
+      <children xsi:type="editmodel:MethodEditModel" name="Horloge" id="afficheurLumineux/Horloge#Horloge(LafficheurLumineux.Afficheur;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="afficheurLumineux/Horloge#main([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="tester" id="afficheurLumineux/Horloge#tester(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

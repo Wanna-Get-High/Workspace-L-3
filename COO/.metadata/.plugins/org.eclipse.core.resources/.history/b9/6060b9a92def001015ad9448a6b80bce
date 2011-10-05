@@ -1,0 +1,25 @@
+package chainList;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import counter.GraphicalCounter;
+
+
+public class ChainList <E> 
+{
+	class InitActionListener implements ActionListener 
+	{
+		public void actionPerformed(ActionEvent e)
+		{
+			try {
+			    GraphicalCounter.this.counter.init(Integer.parseInt(GraphicalCounter.this.input.getText()));
+			    GraphicalCounter.this.isInit = true;
+			}
+			catch (NumberFormatException nfe)
+			{
+				GraphicalCounter.this.label.setText("Value isn't an Integer, try again");
+			}
+		}
+	}
+}

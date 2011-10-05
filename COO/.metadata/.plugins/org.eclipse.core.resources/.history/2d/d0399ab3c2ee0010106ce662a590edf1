@@ -1,0 +1,6 @@
+package afficheurLumineux;
+
+public abstract class FileFIFO 
+{
+
+}

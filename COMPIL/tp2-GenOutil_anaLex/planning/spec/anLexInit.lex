@@ -12,8 +12,7 @@
  * (package) et les importations de classes (import).
  ***********************************************************************/
 
-// déclaration du paquetage auquel appartient la classe générée
-package init.analyseurs;
+package init.analyseurs;	// déclaration du paquetage auquel appartient la classe générée
 
 %%
 
@@ -25,32 +24,30 @@ package init.analyseurs;
 
 // ATTENTION : le % doit toujours être en 1ère colonne
 
-// la classe générée implantant l'analyseur s'appelle ScannerInit.java
-%class ScannerInit
-// et est publique
-%public
-// la cl. générée implante l'itf java_cup.runtime.Scanner fournie par Cup
-%implements java_cup.runtime.Scanner
-// pour utiliser les caractères unicode
-%unicode
-// pour garder trace du numéro de ligne du caractère traité
-%line
-// pour garder trace du numéro de colonne du caractère traité
-%column
-// l'an. lex. retourne des symboles de type java_cup.runtime.Symbol
-%type java_cup.runtime.Symbol
+
+%class ScannerInit						// la classe générée implantant l'analyseur s'appelle ScannerInit.java
+%public									// et est publique
+%implements java_cup.runtime.Scanner	// la cl. générée implante l'itf java_cup.runtime.Scanner fournie par Cup
+%unicode								// pour utiliser les caractères unicode
+%line									// pour garder trace du numéro de ligne du caractère traité
+%column									// pour garder trace du numéro de colonne du caractère traité
+%type java_cup.runtime.Symbol			// l'an. lex. retourne des symboles de type java_cup.runtime.Symbol
+
 // la fonction de l'analyseur fournissant le prochain Symbol s'appelle
 // next_token...
 %function next_token
+
 // ... et lève une exception ScannerException en cas d'erreur lexicale
 %yylexthrow{
 	ScannerException
 %yylexthrow}
+
 // action effectuée qd la fin du fichier à analyser est rencontrée
 // le type EOF est généré automatiquement par Cup
 %eofval{
   return new Symbole(TypeSymboles.EOF);
 %eofval}
+
 // code recopié dans la classe générée
 %{
   private Symbole creerSymbole(String representation, int type) {
@@ -71,28 +68,31 @@ package init.analyseurs;
 // manière non récursive !) : il faut alors entourer son
 // identificateur d'accolades.
 
-finLigne = \r|\n|\r\n // convention Java
-// | est le choix des expr reg de JFlex
-// \n = retour-chariot sous Unix, \r = rc sous Windows
+master = "master"
+date = "date"
+room = "sale"
 
-blancs = {finLigne} | [ \t\f] 
-// \t = tabulation, \f = form-feed
-// [ \t\f] est une classe de caractères qui dénote soit " ", soit \t,
-// soit \f  
+hour = [:digit:]+"h"[:digit:]+
+
+finLigne = \r|\n|\r\n 	// convention Java
+					  	// | est le choix des expr reg de JFlex
+						// \n = retour-chariot sous Unix, \r = rc sous Windows
+
+blancs = {finLigne} | [\t\f]	// \t = tabulation, \f = form-feed
+								// [ \t\f] est une classe de caractères qui dénote soit " ", soit \t,
+								// soit \f  
 
 prog = "program" // une simple chaîne
 
-identificateur = [:jletter:] [:jletterdigit:]* 
-// * est l'étoile des expressions régulières standard
-// [:jletter:] représente n'importe quel caractère qui peut débuter un
-// identificateur Java 
-// [:jletterdigit:] représente n'importe quel caractère qui peut
-// suivre le 1er caractère d'un identificateur Java (donc une lettre
-// ou un chiffre)    
+identificateur = [:jletter:] [:jletterdigit:]* 	// * est l'étoile des expressions régulières standard
+												// [:jletter:] représente n'importe quel caractère qui peut débuter un
+												// identificateur Java 
+												// [:jletterdigit:] représente n'importe quel caractère qui peut
+												// suivre le 1er caractère d'un identificateur Java (donc une lettre
+												// ou un chiffre)    
 
-entier = [:digit:]+
-// x+ signifie classiquement xx*
-// [:digit:]  représente n'importe quel chiffre
+entier = [:digit:]+	// x+ signifie classiquement xx*
+					// [:digit:]  représente n'importe quel chiffre
  
 affect = := // ou ":="
 %%
@@ -107,6 +107,7 @@ affect = := // ou ":="
 // S'il n'y a pas de return, on passe au symbole suivant.
 
 {blancs} { /* on ignore les blancs */ }
+
 {prog} { // on a reconnu le mot-clé program
   return creerSymbole("PROG",TypeSymboles.PROG);
 }
@@ -128,7 +129,7 @@ affect = := // ou ":="
 }
 {entier} {// on a reconnu un entier, par la suite il faudra lui
 	  // associer par ex sa valeur de type Integer
-  return creerSymbole("ENTIER", TypeSymboles.ENTIER);
+  return creerSymbole("ENTIER", TypeSymboles.ENTIER,yytext());
 }
 {affect} {// on a reconnu un opérateur d'affectation
   return creerSymbole("AFF",TypeSymboles.AFF);

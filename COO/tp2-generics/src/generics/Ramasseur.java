@@ -1,11 +1,14 @@
 package generics;
 
-/** definit des objets specialises dans le ramassage d'objets d'un type T donne
- * un objet T "tenu" a la fois
+/**
+ * definit des objets specialises dans le ramassage d'objets d'un type T donne un objet T "tenu" a la fois
  */
 public class Ramasseur<E>{
     // ATTRIBUTS a DEFINIR
 	protected String name = "";
+	/**
+	 * @uml.property  name="object"
+	 */
 	E object;
 	
     // METHODES a DEFINIR
@@ -19,6 +22,10 @@ public class Ramasseur<E>{
 		return this.name + " carries " + this.object;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="object"
+	 */
 	protected E getObject(){
 		return this.object;
 	}

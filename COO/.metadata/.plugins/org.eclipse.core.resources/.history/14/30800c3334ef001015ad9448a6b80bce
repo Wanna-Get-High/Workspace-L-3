@@ -1,0 +1,30 @@
+package afficheurLumineux;
+
+public class Afficheur
+{
+	private String message; 
+	private FileFIFO<Character> f;
+	private int head;
+	
+	/**
+	 */
+	public void setMessage(String msg)
+	{
+		this.head = 0;
+		this.message = msg;
+	}
+			
+	/**
+	 */
+	public void decale()
+	{
+		f.add(this.message.charAt(head));
+	}
+
+	/**
+	 */
+	public String toString()
+	{
+		return "";	
+	}	
+}

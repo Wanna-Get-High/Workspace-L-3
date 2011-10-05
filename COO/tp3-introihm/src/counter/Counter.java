@@ -14,6 +14,7 @@ public abstract class Counter
 
 	public Counter() 
 	{
+		this.value = 0;
 	}
 
 	public int getCurrentValue() 
@@ -31,4 +32,11 @@ public abstract class Counter
 	{
 		return this.name;
 	}
+
+		
+		/**
+		 */
+		public int truc(int s){
+			return 0;
+		}
 }// Counter

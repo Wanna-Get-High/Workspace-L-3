@@ -1,0 +1,14 @@
+#Wed Oct 05 10:45:43 CEST 2011
+UMLClassDiagramPreference.generalProperties.editor.split.user=value
+UMLClassDiagramPreference.classDiagram.attribute.private=true
+UMLClassDiagramPreference.classDiagram.innerclass.protected=true
+UMLClassDiagramPreference.classDiagram.method.return=true
+UMLClassDiagramPreference.classDiagram.innerclass.private=true
+UMLClassDiagramPreference.classDiagram.method.protected=true
+UMLClassDiagramPreference.classDiagram.attribute.protected=true
+UMLPreference.options.font=1317804343336
+UMLClassDiagramPreference.classDiagram.method.private=true
+eclipse.preferences.version=1
+UMLClassDiagramPreference.classDiagram.method.arguments.name=true
+UMLClassDiagramPreference.classDiagram.method.arguments=true
+UMLPreference.style=UML Standard

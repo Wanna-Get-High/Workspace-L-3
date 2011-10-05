@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="counter1" size="728,846" id="counter" metadata="uml2-1.0" initialized="true" scrolledY="36" tag="1000" key="32303037303533312D31303030207470332D696E74726F69686D2F6C6570616E">
+  <children xsi:type="editmodel:ClassEditModel" name="GraphicalCounter" location="50,430" size="240,396" id="counter/GraphicalCounter">
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,105">
+      <children xsi:type="editmodel:AttributeEditModel" name="counter" id="counter/GraphicalCounter#counter"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frame" id="counter/GraphicalCounter#frame"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="increment" id="counter/GraphicalCounter#increment"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="init" id="counter/GraphicalCounter#init"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="input" id="counter/GraphicalCounter#input"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="isInit" id="counter/GraphicalCounter#isInit"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="label" id="counter/GraphicalCounter#label"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="210,30">
+      <children xsi:type="editmodel:MethodEditModel" name="GraphicalCounter" id="counter/GraphicalCounter#GraphicalCounter(Lcounter.Counter;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="counter/GraphicalCounter#main([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="217,201">
+      <children xsi:type="editmodel:ClassEditModel" name="CloseWindowEvent" size="217,65" id="counter/GraphicalCounter$CloseWindowEvent">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="194,15">
+          <children xsi:type="editmodel:MethodEditModel" name="windowClosing" id="counter/GraphicalCounter$CloseWindowEvent#windowClosing(Ljava.awt.event.WindowEvent;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+      <children xsi:type="editmodel:ClassEditModel" name="IncrementActionListener" size="215,65" id="counter/GraphicalCounter$IncrementActionListener">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="192,15">
+          <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="counter/GraphicalCounter$IncrementActionListener#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+      <children xsi:type="editmodel:ClassEditModel" name="InitActionListener" size="215,65" id="counter/GraphicalCounter$InitActionListener">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="192,15">
+          <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="counter/GraphicalCounter$InitActionListener#actionPerformed(Ljava.awt.event.ActionEvent;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SimpleCounter" location="312,276" size="135,80" id="counter/SimpleCounter">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="103,30">
+      <children xsi:type="editmodel:MethodEditModel" name="SimpleCounter" id="counter/SimpleCounter#SimpleCounter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="increment" id="counter/SimpleCounter#increment()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="counter/Counter&lt;-counter/SimpleCounter" source="//@children.1" target="//@children.4/@sourceConnections.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="67,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="Counter" location="303,50" size="155,170" id="counter/Counter" runTimeClassModel="Counter(),truc(I),init(I),name,value,increment(),getCurrentValue(),toString()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="82,30">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="counter/Counter#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="value" id="counter/Counter#value"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,90">
+      <children xsi:type="editmodel:MethodEditModel" name="Counter" id="counter/Counter#Counter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCurrentValue" id="counter/Counter#getCurrentValue()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="increment" id="counter/Counter#increment()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="counter/Counter#init(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="counter/Counter#toString()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="truc" id="counter/Counter#truc(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ModularCounter" location="496,276" size="195,95" id="counter/ModularCounter">
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="modulo" id="counter/ModularCounter#modulo"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="172,30">
+      <children xsi:type="editmodel:MethodEditModel" name="ModularCounter" id="counter/ModularCounter#ModularCounter(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="increment" id="counter/ModularCounter#increment()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="counter/Counter&lt;-counter/ModularCounter" source="//@children.3" target="//@children.4/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="97,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CompteurGeometrique" location="50,276" size="225,95" id="counter/CompteurGeometrique">
+    <children xsi:type="editmodel:CompartmentEditModel" size="67,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="raison" id="counter/CompteurGeometrique#raison"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="202,30">
+      <children xsi:type="editmodel:MethodEditModel" name="CompteurGeometrique" id="counter/CompteurGeometrique#CompteurGeometrique(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="increment" id="counter/CompteurGeometrique#increment()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.3/@sourceConnections.0" autoLocated="true" id="counter/Counter&lt;-counter/CompteurGeometrique" source="//@children.4" target="//@children.2" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="112,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,168" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

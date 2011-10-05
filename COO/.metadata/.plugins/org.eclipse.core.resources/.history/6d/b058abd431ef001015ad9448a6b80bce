@@ -1,0 +1,18 @@
+package afficheurLumineux;
+
+
+public class Afficheur {
+
+		
+		/**
+		 */
+		public void setMessage(String msg){
+		}
+
+			
+			/**
+			 */
+			public void decale(){
+			}
+
+}
