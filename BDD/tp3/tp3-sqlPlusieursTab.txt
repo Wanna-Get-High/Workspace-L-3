@@ -1,0 +1,99 @@
+1 :	select * from catalogue, articles;
+
+2 :	select * from articles inner join catalogue on articles.aid=catalogue.aid;
+
+3 : select distinct anom from articles inner join catalogue on articles.aid=catalogue.aid;
+
+4 : select anom, prix, fnom from (catalogue inner join articles on articles.aid = catalogue.aid) as articatalog
+	inner join 
+	fournisseurs on articatalog.fid = fournisseurs.fid;
+
+5 : select distinct anom from catalogue 
+	inner join 
+	articles on articles.aid = catalogue.aid where prix < 20 ;
+
+6 : select distinct fnom from catalogue as c
+	inner join 
+	fournisseurs as f on f.fid = c.fid where prix < 20 ;
+
+7 : select fnom from fournisseurs as f where fid not in ( 
+			select f.fid
+			left outer join
+			catalogue as c on f.fid = c.fid 
+				where prix < 20);
+
+8 : select fnom from fournisseurs as f
+	inner join 
+	(catalogue as c inner join articles as a on c.aid = a.aid ) as articatal on f.fid = articatal.fid 
+		where acoul='vert';
+
+
+9 : select distinct a.aid from (
+		articles as a 
+		inner join 
+		(catalogue as c inner join fournisseurs as f on f.fid = c.fid) AS fc on a.aid = fc.aid)
+			where ((acoul = 'rouge' or acoul='magenta') and prix < 25 );
+
+
+10	:	select distinct a.aid from (
+		articles  as a
+		inner join 
+		(catalogue as c inner join fournisseurs as f on f.fid = c.fid) AS fc on a.aid = a.aid)
+			where (acoul = 'rouge' OR acoul='magenta' AND prix < 25 );
+
+	and est prioritaire sur or donc on aura les articles rouges ou les articles magenta a moin de 25 euro
+	(pas de verification sur le prix des articles rouges)
+
+
+11	:	select fid from fournisseurs
+			where fid not in (	select f.fid from fournisseurs as f
+								inner join catalogue as c on f.fid = c.fid
+									where prix <= 10000 );
+
+
+12	:	select artvert.aid AS aidvert, artroug.aid AS aidrouge from
+		(select aid from articles where acoul = 'vert') AS artvert,
+		(select aid from articles where acoul = 'rouge') AS artroug;
+
+13	:	a) select aid from articles except ( select aid from articles intersect select aid from catalogue);
+
+		b) select a.aid from (articles as a left outer join catalogue as c on a.aid = c.aid)
+				where c.aid is null;
+				
+		c) select aid from articles where aid not in (select aid from catalogue);
+
+14	:	select anom	from articles where aid not in (select aid from catalogue);
+
+
+15	:	select fid from 
+		fournisseurs
+		where fid in (		select fid from 
+								articles as a1
+								inner join 
+								catalogue as c1 
+							on a1.aid = c1.aid where acoul = 'vert'
+						intersect
+							select fid from 
+								articles as a2
+								inner join 
+								catalogue as c2 
+							on a2.aid = c2.aid where acoul ='rouge');	
+
+16	 :	select fnom from 
+		fournisseurs
+		where fid in (	select fid from 	
+							articles as a
+							inner join 
+							catalogue as c
+						on a.aid = c.aid where acoul = 'noir');		
+
+17	:	select distinct c1.aid from catalogue as c1, catalogue as c2
+			where c1.aid = c2.aid AND c1.fid <> c2.fid;
+
+18	:	select fnom from 
+		fournisseurs
+		where fid not in (	select fid from 	
+								articles as a
+								inner join 
+								catalogue as c
+							on a.aid = c.aid where acoul = 'noir' or acoul = 'argente');
