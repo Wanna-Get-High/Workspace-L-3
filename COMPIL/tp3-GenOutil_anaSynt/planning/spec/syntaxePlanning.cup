@@ -1,13 +1,13 @@
 /*****************************************************
- * Description pour Cup d'une grammaire pour Init
- * 
+ * Description pour Cup d'une grammaire vide
+ * Sert uniquement √† d√©finir les symboles de Planning
  *
- * 16/12/04 - revu 09/09 
- * M. Nebut
+ * M. Lepan & M. Van Ryseghem 
+ * 2011/10/05
  *
  *****************************************************/
 
-package init.analyseurs;
+package planningMaster.analyseurs;
 import java_cup.runtime.*;
 
 parser code {: 
@@ -15,7 +15,7 @@ parser code {:
 	private boolean erreurSyntaxique;
 	private String messageErreur;
 
-	/** RedÈfinition de la mÈthode parse() pour levÈe de 
+	/** Red√©finition de la m√©thode parse() pour lev√©e de 
 	  * ParserException() en cas d'erreur syntaxique.
 	  * @throws ParserException en cas d'erreur syntaxique.
 	  */ 
@@ -35,7 +35,7 @@ parser code {:
 		return s;
 	} 
 
-	/** RedÈfinition de syntax_error() pour qu'elle affiche
+	/** Red√©finition de syntax_error() pour qu'elle affiche
 	  * le symbole courant.
 	  */
 	public void syntax_error(Symbol symboleCourant) 
@@ -49,49 +49,54 @@ parser code {:
 	
 :} // parser code
 
-/* terminaux (symboles retournÈs par l'analyseur lexical) */
+/* terminaux (symboles retourn√©s par l'analyseur lexical) */
 
-terminal PROG,DECLINT,READ,IDENT,ENTIER,AFF,FININSTR;
-terminal SEPVAR;
+terminal DATECST,MASTERCST,ROOMCST,PETITEPAUSE,GRANDEPAUSE;
+terminal SLOT,DATE, NAME,ENTREPRISE;
+terminal ROOM,MASTER,OPTIONS,SEPARATOR;
+
+/********* Non utilis√© pour le TP1 *************/
 
 /* non-terminaux de la grammaire */
 
-non terminal programme,entete,listeDecl,decl,listeIdent,listeInstr;
-non terminal instr,affect,lect, testImprod;
+non terminal salle, date, entry, master, petitePause, grandePause, data, prog;
 
-start with programme; /* axiome */
+/* axiome */
+start with prog;
 
 /* la grammaire */
 
-programme ::= entete listeDecl listeInstr
+prog ::= 
+		| master date salle data prog
 ;
 
-entete ::= PROG IDENT FININSTR 
+data ::= 
+		| entry data
+		| petitePause data
+		| grandePause data
 ;
 
-listeDecl ::= 
-            | decl listeDecl 
+salle ::= ROOMCST ROOM
+;
+
+master ::= MASTERCST MASTER
+;
+
+date ::= DATECST DATE
+;
+
+entry ::= SLOT SEPARATOR NAME SEPARATOR ENTREPRISE SEPARATOR OPTIONS
+;
+
+petitePause ::= PETITEPAUSE
+;
+
+grandePause ::= GRANDEPAUSE
 ;
 
 
 
-decl ::= DECLINT listeIdent FININSTR
-;
 
-listeIdent ::= IDENT 
-             | IDENT SEPVAR listeIdent
-;
 
-listeInstr ::= 
-             | instr listeInstr
-; 
 
-instr ::= affect
-        | lect
-;
 
-affect ::= IDENT AFF ENTIER FININSTR
-;
-
-lect ::= READ IDENT FININSTR
-;

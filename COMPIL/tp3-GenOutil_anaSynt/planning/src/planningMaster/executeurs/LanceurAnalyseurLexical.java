@@ -11,18 +11,21 @@ import java_cup.runtime.*;
  * @version 16/12/04 revu 09/09
  * @author M. Nebut
  */
-public class LanceurAnalyseurLexical {
+public class LanceurAnalyseurLexical 
+{
 
-    public static void main(String[] args) throws Exception {
-	if (args.length > 1)
-            System.out.println("Attention: un seul fichier pris en compte");
-	new LanceurAnalyseurLexical().run(args);
+    public static void main(String[] args) throws Exception 
+    {
+		if (args.length > 1)
+   			System.out.println("Attention: un seul fichier pris en compte");
+		new LanceurAnalyseurLexical().run(args);
     }
 
-    public void run(String[] args) throws Exception {
-	Reader flotLecture = obtenirFlotDepuisFichierOuEntreeStandard(args);
-	ScannerPlanning scanner = construireAnalyseurLexical(flotLecture);
-	avalerSymbolesFournisParScanner(scanner);
+    public void run(String[] args) throws Exception 
+    {
+		Reader flotLecture = obtenirFlotDepuisFichierOuEntreeStandard(args);
+		ScannerPlanning scanner = construireAnalyseurLexical(flotLecture);
+		avalerSymbolesFournisParScanner(scanner);
     }
 
     private Reader obtenirFlotDepuisFichierOuEntreeStandard (String[] argsLigneCommande) 
