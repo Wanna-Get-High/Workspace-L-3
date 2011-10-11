@@ -9,7 +9,6 @@ public abstract class Cell
 	protected int index;
 	protected Player player;
 
-	
 	public Cell(int ind)
 	{
 		this.index = ind;

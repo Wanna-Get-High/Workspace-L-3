@@ -15,15 +15,13 @@ public class GooseCell extends Cell
 
 	public int consequence(int diceThrow)
 	{
-		if ( this.index + diceThrow < 63)
+		if ( this.index + diceThrow*2 < 63)
 		{
-			this.index += diceThrow;
-			return this.index;
+			return this.index +diceThrow*2;
 		}
 		else
 		{
-			this.index = 63 - (this.index + diceThrow);
-			return this.index;
+			return 63 - (this.index + diceThrow*2);
 		}
 	}
 }

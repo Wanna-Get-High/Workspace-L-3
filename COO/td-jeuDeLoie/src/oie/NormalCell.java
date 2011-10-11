@@ -7,7 +7,7 @@ public class NormalCell extends Cell
 		super(ind);
 	}
 	
-	public boolean canBeLeft() 
+	public boolean canBeLeft()
 	{
 		return true;
 	}
@@ -16,13 +16,11 @@ public class NormalCell extends Cell
 	{
 		if ( this.index + diceThrow < 63)
 		{
-			this.index += diceThrow;
-			return this.index;
+			return this.index + diceThrow;
 		}
 		else
 		{
-			this.index = 63 - (this.index + diceThrow - 63);
-			return this.index;
+			return 63 - (this.index + diceThrow - 63);
 		}
 	}
 }

@@ -1,7 +1,0 @@
-package oie;
-
-public abstract class Board 
-{
-	private final int nbOfCells;
-	private Cell theCells;
-}
