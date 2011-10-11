@@ -1,0 +1,6 @@
+package oie;
+
+public abstract class Board 
+{
+	
+}

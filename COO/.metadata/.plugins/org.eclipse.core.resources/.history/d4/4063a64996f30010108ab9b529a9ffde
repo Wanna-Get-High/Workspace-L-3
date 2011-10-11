@@ -1,0 +1,36 @@
+package oie;
+
+public class Board 
+{
+	protected final int nbOfCells;
+	protected Cell theCells[];
+	
+	public Board(int noc)
+	{
+		this.nbOfCells = noc;
+	}
+	
+	protected void initBoard()
+	{
+		for (int i =0 ; i<  nbOfCells +1;i++)
+		{
+			if ( i%9 == 0)
+				theCells[i] = new GooseCell();
+			
+			if (i == 31 || i == 52 )
+			theCells[i] = new TrapCell();
+			theCells[19] = new WaitCell();
+			theCells[6] = theCells[42] = theCells[58] = new TeleportCell();
+		}
+	}
+	
+	public Cell getCell(int num)
+	{
+		return this.theCells[num];
+	}
+	
+	public int getNbOfCells()
+	{
+		return this.nbOfCells;
+	}
+}

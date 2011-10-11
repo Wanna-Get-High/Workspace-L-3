@@ -1,0 +1,15 @@
+package oie;
+
+public class TrapCell extends Cell
+{
+	
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow) 
+	{
+		return diceThrow;
+	}
+}

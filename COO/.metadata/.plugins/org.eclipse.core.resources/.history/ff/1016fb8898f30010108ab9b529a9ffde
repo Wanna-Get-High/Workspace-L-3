@@ -1,0 +1,14 @@
+package oie;
+
+public class NormalCell extends Cell 
+{
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow) 
+	{
+		return diceThrow;
+	}
+}

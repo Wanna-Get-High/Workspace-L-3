@@ -1,0 +1,13 @@
+package oie;
+
+public abstract class Board 
+{
+	private final int nbOfCells;
+	private Cell theCells[];
+	
+	public Board(int noc)
+	{
+		this.nbOfCells = noc;
+	}
+	public abstract initBoard();
+}

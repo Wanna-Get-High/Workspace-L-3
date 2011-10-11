@@ -4,4 +4,11 @@
 <fullyQualifiedTypeName name="afficheurLumineux.FileFIFO"/>
 <fullyQualifiedTypeName name="afficheurLumineux.Horloge"/>
 <fullyQualifiedTypeName name="afficheurLumineux.Afficheur"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="oie.GooseCell"/>
+<fullyQualifiedTypeName name="oie.TrapCell"/>
+<fullyQualifiedTypeName name="oie.WaitCell"/>
+<fullyQualifiedTypeName name="oie.TeleportCell"/>
+<fullyQualifiedTypeName name="oie.NormalCell"/>
+<fullyQualifiedTypeName name="oie.Player"/>
 </qualifiedTypeNameHistroy>

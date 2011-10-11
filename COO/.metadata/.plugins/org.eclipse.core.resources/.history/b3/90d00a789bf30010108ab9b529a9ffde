@@ -1,0 +1,61 @@
+package oie;
+
+import java.util.*;
+
+/**
+ * 
+ * @author franziz
+ * the game that contains the players and the field
+ */
+public class Game 
+{
+	protected List<Player> thePlayers;
+	protected Board board;
+	
+	public Game(Board board)
+	{
+		this.board = board;
+	}
+	
+	public void addPlayer(Player p)
+	{
+		thePlayers.add(p);
+	}
+	
+	public void play()
+	{
+		int diceResult = 0;
+		for (int i=0; i<thePlayers.size();i++)
+		{
+			thePlayers.get(i).setCell(board.getCell(0));
+		}
+
+		while (noPlayerWon())
+		{
+			for (int i=0; i<thePlayers.size();i++)
+			{
+				diceResult = thePlayers.get(i).twoDicesThrow();
+				System.out.print("player "+ thePlayers.get(i) + "_ is on cell " +thePlayers.get(i).getCell().getIndex()
+						+ " _ throw : " + diceResult + " and go to : " + thePlayers.get(i).getCell().consequence(diceResult));
+			}
+		}
+		System.out.println("end");
+	}
+	
+	public boolean noPlayerWon()
+	{
+		for (int i=0; i<thePlayers.size();i++)
+		{
+			if (thePlayers.get(i).getCell().getIndex() == 64)
+				return false;
+		}
+		
+		return true;
+	}
+	
+	public static void main (String []args)
+	{
+		Game game = new Game(new Board(63));
+		game.play();
+	}
+}

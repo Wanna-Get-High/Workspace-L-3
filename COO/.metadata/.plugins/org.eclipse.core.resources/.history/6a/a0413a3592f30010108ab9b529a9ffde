@@ -1,0 +1,18 @@
+package oie;
+
+public class gooseCell extends Cell
+{
+
+	
+	@Override
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	@Override
+	public int consequence(int diceThrow) 
+	{
+		return 0;
+	}
+}

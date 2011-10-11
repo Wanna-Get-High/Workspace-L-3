@@ -1,0 +1,14 @@
+package oie;
+
+public class WaitCell extends Cell
+{
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow) 
+	{
+		return diceThrow;
+	}
+}
