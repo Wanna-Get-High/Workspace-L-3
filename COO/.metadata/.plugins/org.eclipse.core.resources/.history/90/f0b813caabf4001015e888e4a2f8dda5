@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="oie1" size="1280,954" id="oie" metadata="uml2-1.0" initialized="true" scrolledX="14" tag="1000" key="32303037303533312D313030302074642D6A657544654C6F69652F6C6570616E">
+  <children xsi:type="editmodel:ClassEditModel" name="Board" location="520,370" size="156,125" id="oie/Board">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="nbOfCells" id="oie/Board#nbOfCells"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="133,60">
+      <children xsi:type="editmodel:MethodEditModel" name="Board" id="oie/Board#Board(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCell" id="oie/Board#getCell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initBoard" id="oie/Board#initBoard()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="oie/Board#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Game" location="301,370" size="169,140" id="oie/Game">
+    <children xsi:type="editmodel:CompartmentEditModel" size="146,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="thePlayers" id="oie/Game#thePlayers"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="146,75">
+      <children xsi:type="editmodel:MethodEditModel" name="Game" id="oie/Game#Game(Loie.Board;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addPlayer" id="oie/Game#addPlayer(Loie.Player;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="oie/Game#main([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="noPlayerWon" id="oie/Game#noPlayerWon()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="oie/Game#play()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Player" location="50,370" size="201,125" id="oie/Player">
+    <children xsi:type="editmodel:CompartmentEditModel" size="82,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="oie/Player#name"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,60">
+      <children xsi:type="editmodel:MethodEditModel" name="Player" id="oie/Player#Player(Ljava.lang.String;Loie.Cell;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="oneDiceThrow" id="oie/Player#oneDiceThrow()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="oie/Player#toString()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="twoDicesThrow" id="oie/Player#twoDicesThrow()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="NormalCell" location="546,225" size="218,95" id="oie/NormalCell">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,45">
+      <children xsi:type="editmodel:MethodEditModel" name="NormalCell" id="oie/NormalCell#NormalCell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="canBeLeft" id="oie/NormalCell#canBeLeft()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="consequence" id="oie/NormalCell#consequence(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="oie/Cell&lt;-oie/NormalCell" source="//@children.3" target="//@children.4/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="WaitCell" location="50,225" size="218,95" id="oie/WaitCell">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,45">
+      <children xsi:type="editmodel:MethodEditModel" name="WaitCell" id="oie/WaitCell#WaitCell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="canBeLeft" id="oie/WaitCell#canBeLeft()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="consequence" id="oie/WaitCell#consequence(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.8/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.6/@sourceConnections.0" autoLocated="true" id="oie/Cell&lt;-oie/WaitCell" source="//@children.4" target="//@children.7" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,125" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TeleportCell" location="794,225" size="218,95" id="oie/TeleportCell">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,45">
+      <children xsi:type="editmodel:MethodEditModel" name="TeleportCell" id="oie/TeleportCell#TeleportCell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="canBeLeft" id="oie/TeleportCell#canBeLeft()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="consequence" id="oie/TeleportCell#consequence(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="oie/Cell&lt;-oie/TeleportCell" source="//@children.5" target="//@children.4/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TrapCell" location="1042,225" size="218,95" id="oie/TrapCell">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,45">
+      <children xsi:type="editmodel:MethodEditModel" name="TrapCell" id="oie/TrapCell#TrapCell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="canBeLeft" id="oie/TrapCell#canBeLeft()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="consequence" id="oie/TrapCell#consequence(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="oie/Cell&lt;-oie/TrapCell" source="//@children.6" target="//@children.4/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="Cell" location="545,50" size="219,125" id="oie/Cell">
+    <children xsi:type="editmodel:CompartmentEditModel" size="63,15">
+      <children xsi:type="editmodel:AttributeEditModel" name="index" id="oie/Cell#index"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="196,60">
+      <children xsi:type="editmodel:MethodEditModel" name="Cell" id="oie/Cell#Cell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="canBeLeft" id="oie/Cell#canBeLeft()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="consequence" id="oie/Cell#consequence(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isBusy" id="oie/Cell#isBusy()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="GooseCell" location="298,225" size="218,95" id="oie/GooseCell">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="195,45">
+      <children xsi:type="editmodel:MethodEditModel" name="GooseCell" id="oie/GooseCell#GooseCell(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="canBeLeft" id="oie/GooseCell#canBeLeft()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="consequence" id="oie/GooseCell#consequence(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="oie/Cell&lt;-oie/GooseCell" source="//@children.8" target="//@children.4/@sourceConnections.0" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

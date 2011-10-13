@@ -1,0 +1,22 @@
+package oie;
+
+public class TrapCell extends Cell
+{
+	protected int TimeToWait;
+	public TrapCell(int ind,int ttw)
+	{
+		super(ind);
+		
+	}
+	
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow)
+	{
+		
+		return diceThrow;
+	}
+}

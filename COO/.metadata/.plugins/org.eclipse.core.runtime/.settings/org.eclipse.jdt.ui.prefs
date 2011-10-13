@@ -1,4 +1,4 @@
-#Tue Oct 11 02:31:47 CEST 2011
+#Thu Oct 13 12:58:28 CEST 2011
 content_assist_proposals_foreground=60,60,60
 spelling_locale_initialized=true
 org.eclipse.jdt.ui.text.templates_migrated=true
@@ -15,9 +15,9 @@ proposalOrderMigrated=true
 <<<<<<<=HEAD
 content_assist_proposals_background=255,255,255
 org.eclipse.jdt.ui.formatterprofiles.version=12
-content_assist_number_of_computers=13
+content_assist_number_of_computers=17
 useQuickDiffPrefPage=true
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="afficheurLumineux.Horloge"><rhs name\="afficheurLumineux.Horloge"/></lhs><lhs name\="afficheurLumineux.Afficheur"><rhs name\="afficheurLumineux.Afficheur"/></lhs><lhs name\="oie.Cell"><rhs name\="oie.GooseCell"/><rhs name\="oie.TrapCell"/><rhs name\="oie.WaitCell"/><rhs name\="oie.TeleportCell"/><rhs name\="oie.NormalCell"/></lhs><lhs name\="oie.Player"><rhs name\="oie.Player"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="afficheurLumineux.Horloge"><rhs name\="afficheurLumineux.Horloge"/></lhs><lhs name\="afficheurLumineux.Afficheur"><rhs name\="afficheurLumineux.Afficheur"/></lhs><lhs name\="oie.Cell"><rhs name\="oie.GooseCell"/><rhs name\="oie.TrapCell"/><rhs name\="oie.WaitCell"/><rhs name\="oie.TeleportCell"/><rhs name\="oie.NormalCell"/><rhs name\="oie.StartCell"/></lhs><lhs name\="oie.Player"><rhs name\="oie.Player"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs></history>
 =\=\=\=\=\=\=
 org.eclipse.jdt.ui.text.code_templates_migrated=true

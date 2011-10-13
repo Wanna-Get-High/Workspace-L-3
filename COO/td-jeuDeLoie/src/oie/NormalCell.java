@@ -7,6 +7,11 @@ public class NormalCell extends Cell
 		super(ind);
 	}
 	
+	public void setPlayer(Player player)
+	{
+		this.player = player;
+	}
+	
 	public boolean canBeLeft()
 	{
 		return true;
@@ -14,13 +19,6 @@ public class NormalCell extends Cell
 
 	public int consequence(int diceThrow) 
 	{
-		if ( this.index + diceThrow < 63)
-		{
-			return this.index + diceThrow;
-		}
-		else
-		{
-			return 63 - (this.index + diceThrow - 63);
-		}
+		return this.index;
 	}
 }

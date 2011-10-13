@@ -1,83 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="34" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="49" y="45">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
-<coolbarLayout locked="0">
+<coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="104" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="156" y="34"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.soyatec.uml.UMLElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="34"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="116" y="34"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="34"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="124" y="34"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="140" y="34"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="172" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.soyatec.uml.ClassDiagramEditor" itemType="typeToolBarContribution" x="419" y="34"/>
+<coolItem id="com.soyatec.uml.ClassDiagramEditor" itemType="typePlaceholder" x="419" y="34"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1317803250994" focus="true" label="Workspace - Java">
 <editors>
-<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<info part="org.eclipse.ui.internal.EditorStack@34d1ea">
+<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<info part="org.eclipse.ui.internal.EditorStack@13bc7ec">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="8"/>
-<part id="0"/>
 <part id="5"/>
 <part id="6"/>
-<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cell.java" partName="Cell.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/Cell.java" title="Cell.java" tooltip="td-jeuDeLoie/src/oie/Cell.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/Cell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="403" selectionTopPixel="273"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player.java" partName="Player.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/Player.java" title="Player.java" tooltip="td-jeuDeLoie/src/oie/Player.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/Player.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="323" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" partName="Game.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/Game.java" title="Game.java" tooltip="td-jeuDeLoie/src/oie/Game.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/Game.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2182" selectionTopPixel="692"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" partName="Board.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/Board.java" title="Board.java" tooltip="td-jeuDeLoie/src/oie/Board.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/Board.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="410" selectionTopPixel="185"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GooseCell.java" partName="GooseCell.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/GooseCell.java" title="GooseCell.java" tooltip="td-jeuDeLoie/src/oie/GooseCell.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/GooseCell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="283" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TrapCell.java" partName="TrapCell.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/TrapCell.java" title="TrapCell.java" tooltip="td-jeuDeLoie/src/oie/TrapCell.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/TrapCell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="50" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WaitCell.java" partName="WaitCell.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/WaitCell.java" title="WaitCell.java" tooltip="td-jeuDeLoie/src/oie/WaitCell.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/WaitCell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="98" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TeleportCell.java" partName="TeleportCell.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/TeleportCell.java" title="TeleportCell.java" tooltip="td-jeuDeLoie/src/oie/TeleportCell.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/TeleportCell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="90" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NormalCell.java" partName="NormalCell.java" path="/home/franziz/Workspace-L-3/COO/td-jeuDeLoie/src/oie/NormalCell.java" title="NormalCell.java" tooltip="td-jeuDeLoie/src/oie/NormalCell.java" workbook="org.eclipse.ui.internal.EditorStack@34d1ea">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NormalCell.java" partName="NormalCell.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/NormalCell.java" title="NormalCell.java" tooltip="td-jeuDeLoie/src/oie/NormalCell.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/NormalCell.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="269" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClassicBoard.java" partName="ClassicBoard.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/ClassicBoard.java" title="ClassicBoard.java" tooltip="td-jeuDeLoie/src/oie/ClassicBoard.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/ClassicBoard.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="321" selectionTopPixel="85"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" partName="Game.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/Game.java" title="Game.java" tooltip="td-jeuDeLoie/src/oie/Game.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/Game.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1198" selectionTopPixel="865"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cell.java" partName="Cell.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/Cell.java" title="Cell.java" tooltip="td-jeuDeLoie/src/oie/Cell.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/Cell.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="778" selectionTopPixel="374"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TrapCell.java" partName="TrapCell.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/TrapCell.java" title="TrapCell.java" tooltip="td-jeuDeLoie/src/oie/TrapCell.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/TrapCell.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="48" selectionTopPixel="34"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GooseCell.java" partName="GooseCell.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/GooseCell.java" title="GooseCell.java" tooltip="td-jeuDeLoie/src/oie/GooseCell.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/GooseCell.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="100" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TeleportCell.java" partName="TeleportCell.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/src/oie/TeleportCell.java" title="TeleportCell.java" tooltip="td-jeuDeLoie/src/oie/TeleportCell.java" workbook="org.eclipse.ui.internal.EditorStack@13bc7ec">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/td-jeuDeLoie/src/oie/TeleportCell.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="98" selectionTopPixel="0"/>
 </editor>
 </editors>
@@ -88,7 +78,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors (1 item)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="73" org.eclipse.ui.ide.markerType="108" org.eclipse.ui.ide.pathField="143" org.eclipse.ui.ide.resourceField="108" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
@@ -98,9 +88,6 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1317403770054">
@@ -127,9 +114,14 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
@@ -156,6 +148,13 @@
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="register"/>
+<alwaysOnActionSet id="com.soyatec.uml.UMLElementCreationActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -192,14 +191,19 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
-<fastViewBars/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
@@ -216,7 +220,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1ec5735a" ratio="0.7156348" ratioLeft="682" ratioRight="271" relationship="4" relative="left">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1ec5735a" ratio="0.6899767" ratioLeft="592" ratioRight="266" relationship="4" relative="left">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -257,13 +261,11 @@
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.5" ratioLeft="233" ratioRight="233" relationship="4" relative="org.eclipse.ui.internal.ViewStack@121f956">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.59967846" ratioLeft="373" ratioRight="249" relationship="4" relative="left"/>
@@ -274,163 +276,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/NormalCell.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/StartCell.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/Game.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/Board.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/Cell.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/Player.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/ClassicBoard.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/GooseCell.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/Cell.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/TrapCell.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/NormalCell.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/td-jeuDeLoie/src/oie/TeleportCell.java"/>
 </editors>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="103" y="0"/>
+<item historyLabel="Cell.java" index="4">
+<position info="not_deleted" x="919" y="0"/>
 </item>
-<item historyLabel="Board.java" index="2">
-<position info="not_deleted" x="671" y="0"/>
-</item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="285" y="0"/>
-</item>
-<item historyLabel="Board.java" index="2">
-<position info="not_deleted" x="674" y="0"/>
-</item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="229" y="2"/>
-</item>
-<item historyLabel="Cell.java" index="3">
-<position info="not_deleted" x="259" y="0"/>
-</item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="229" y="2"/>
-</item>
-<item historyLabel="Cell.java" index="3">
-<position info="not_deleted" x="403" y="0"/>
-</item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="270" y="0"/>
-</item>
-<item historyLabel="Board.java" index="2">
-<position info="not_deleted" x="990" y="0"/>
-</item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="415" y="0"/>
-</item>
-<item historyLabel="Player.java" index="4">
-<position info="not_deleted" x="382" y="0"/>
-</item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="415" y="0"/>
-</item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="768" y="0"/>
-</item>
-<item historyLabel="Board.java" index="2">
-<position info="not_deleted" x="954" y="0"/>
-</item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="2773" y="0"/>
-</item>
-<item historyLabel="Player.java" index="4">
+<item historyLabel="StartCell.java" index="0">
 <position info="not_deleted" x="182" y="0"/>
 </item>
 <item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="417" y="0"/>
+<position info="not_deleted" x="2237" y="0"/>
 </item>
-<item historyLabel="Player.java" index="4">
-<position info="not_deleted" x="323" y="0"/>
+<item historyLabel="StartCell.java" index="0">
+<position info="not_deleted" x="182" y="0"/>
 </item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="2409" y="0"/>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="321" y="0"/>
 </item>
-<item historyLabel="Board.java" index="2">
-<position info="not_deleted" x="559" y="0"/>
+<item historyLabel="StartCell.java" index="0">
+<position info="not_deleted" x="182" y="0"/>
 </item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="98" y="0"/>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="321" y="0"/>
 </item>
-<item historyLabel="Cell.java" index="3">
-<position info="not_deleted" x="403" y="0"/>
+<item historyLabel="GooseCell.java" index="3">
+<position info="not_deleted" x="228" y="0"/>
 </item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="98" y="0"/>
-</item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="2203" y="0"/>
-</item>
-<item historyLabel="Board.java" index="2">
-<position/>
-</item>
-<item historyLabel="GooseCell.java" index="5">
-<position info="not_deleted" x="283" y="0"/>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="321" y="0"/>
 </item>
 <item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="2203" y="0"/>
+<position info="not_deleted" x="2237" y="0"/>
 </item>
-<item historyLabel="TeleportCell.java" index="6">
-<position info="not_deleted" x="90" y="11"/>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="321" y="0"/>
 </item>
-<item historyLabel="GooseCell.java" index="5">
-<position info="not_deleted" x="283" y="0"/>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Board.java" index="2">
-<position/>
+<item historyLabel="Cell.java" index="4">
+<position info="not_deleted" x="919" y="0"/>
 </item>
-<item historyLabel="GooseCell.java" index="5">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="1805" y="0"/>
-</item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="98" y="0"/>
-</item>
-<item historyLabel="Cell.java" index="3">
-<position info="not_deleted" x="403" y="0"/>
-</item>
-<item historyLabel="Board.java" index="2">
+<item historyLabel="ClassicBoard.java" index="2">
 <position/>
 </item>
 <item historyLabel="Game.java" index="1">
+<position info="not_deleted" x="2237" y="0"/>
+</item>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="Cell.java" index="4">
 <position/>
 </item>
-<item historyLabel="Board.java" index="2">
-<position/>
+<item historyLabel="NormalCell.java" index="6">
+<position info="not_deleted" x="173" y="0"/>
 </item>
-<item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="1834" y="5"/>
-</item>
-<item historyLabel="NormalCell.java" index="0">
-<position info="not_deleted" x="98" y="0"/>
-</item>
-<item historyLabel="GooseCell.java" index="5">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="Board.java" index="2">
+<item historyLabel="ClassicBoard.java" index="2">
 <position/>
 </item>
 <item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="1834" y="5"/>
+<position info="not_deleted" x="2237" y="0"/>
 </item>
-<item historyLabel="Board.java" index="2">
+<item historyLabel="Cell.java" index="4">
+<position info="not_deleted" x="768" y="0"/>
+</item>
+<item historyLabel="GooseCell.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Cell.java" index="4">
+<position info="not_deleted" x="778" y="9"/>
+</item>
+<item historyLabel="NormalCell.java" index="6">
+<position info="not_deleted" x="173" y="0"/>
+</item>
+<item historyLabel="GooseCell.java" index="3">
+<position info="not_deleted" x="12" y="0"/>
+</item>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="156" y="0"/>
+</item>
+<item historyLabel="ClassicBoard.java" index="2">
 <position/>
 </item>
-<item historyLabel="GooseCell.java" index="5">
-<position info="not_deleted" x="283" y="0"/>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="156" y="0"/>
 </item>
-<item historyLabel="Board.java" index="2">
-<position/>
-</item>
-<item historyLabel="Board.java" index="2">
-<position info="not_deleted" x="410" y="0"/>
+<item historyLabel="NormalCell.java" index="6">
+<position info="not_deleted" x="173" y="0"/>
 </item>
 <item historyLabel="Game.java" index="1">
-<position info="not_deleted" x="1834" y="5"/>
+<position info="not_deleted" x="2428" y="0"/>
 </item>
-<item historyLabel="Player.java" index="4">
-<position info="not_deleted" x="323" y="0"/>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="156" y="0"/>
 </item>
-<item active="true" historyLabel="Game.java" index="1">
-<position info="not_deleted" x="1834" y="5"/>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="217" y="0"/>
+</item>
+<item historyLabel="Game.java" index="1">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="ClassicBoard.java" index="2">
+<position/>
+</item>
+<item historyLabel="Game.java" index="1">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="Cell.java" index="4">
+<position info="not_deleted" x="778" y="9"/>
+</item>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="217" y="0"/>
+</item>
+<item historyLabel="Cell.java" index="4">
+<position info="not_deleted" x="778" y="9"/>
+</item>
+<item historyLabel="NormalCell.java" index="6">
+<position info="not_deleted" x="269" y="18"/>
+</item>
+<item historyLabel="TrapCell.java" index="5">
+<position info="not_deleted" x="48" y="0"/>
+</item>
+<item historyLabel="GooseCell.java" index="3">
+<position info="not_deleted" x="100" y="0"/>
+</item>
+<item historyLabel="Game.java" index="1">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="443" y="0"/>
+</item>
+<item historyLabel="TeleportCell.java" index="7">
+<position info="not_deleted" x="75" y="0"/>
+</item>
+<item historyLabel="Game.java" index="1">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="443" y="0"/>
+</item>
+<item historyLabel="ClassicBoard.java" index="2">
+<position info="not_deleted" x="321" y="0"/>
+</item>
+<item historyLabel="TeleportCell.java" index="7">
+<position info="not_deleted" x="75" y="0"/>
+</item>
+<item historyLabel="TeleportCell.java" index="7">
+<position info="not_deleted" x="115" y="0"/>
+</item>
+<item active="true" historyLabel="TeleportCell.java" index="7">
+<position info="not_deleted" x="27" y="12"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -438,7 +441,11 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
@@ -449,47 +456,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NormalCell.java" tooltip="td-jeuDeLoie/src/oie/NormalCell.java">
-<persistable path="/td-jeuDeLoie/src/oie/NormalCell.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TeleportCell.java" tooltip="td-jeuDeLoie/src/oie/TeleportCell.java">
 <persistable path="/td-jeuDeLoie/src/oie/TeleportCell.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WaitCell.java" tooltip="td-jeuDeLoie/src/oie/WaitCell.java">
-<persistable path="/td-jeuDeLoie/src/oie/WaitCell.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GooseCell.java" tooltip="td-jeuDeLoie/src/oie/GooseCell.java">
+<persistable path="/td-jeuDeLoie/src/oie/GooseCell.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TrapCell.java" tooltip="td-jeuDeLoie/src/oie/TrapCell.java">
 <persistable path="/td-jeuDeLoie/src/oie/TrapCell.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cell.java" tooltip="td-jeuDeLoie/src/oie/Cell.java">
+<persistable path="/td-jeuDeLoie/src/oie/Cell.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" tooltip="td-jeuDeLoie/src/oie/Board.java">
 <persistable path="/td-jeuDeLoie/src/oie/Board.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" tooltip="td-jeuDeLoie/src/oie/Game.java">
-<persistable path="/td-jeuDeLoie/src/oie/Game.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player.java" tooltip="td-jeuDeLoie/src/oie/Player.java">
 <persistable path="/td-jeuDeLoie/src/oie/Player.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cell.java" tooltip="td-jeuDeLoie/src/oie/Cell.java">
-<persistable path="/td-jeuDeLoie/src/oie/Cell.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StartCell.java" tooltip="td-jeuDeLoie/src/oie/StartCell.java">
+<persistable path="/td-jeuDeLoie/src/oie/StartCell.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" tooltip="td-jeuDeLoie/src/oie/Game.java">
+<persistable path="/td-jeuDeLoie/src/oie/Game.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClassicBoard.java" tooltip="td-jeuDeLoie/src/oie/ClassicBoard.java">
+<persistable path="/td-jeuDeLoie/src/oie/ClassicBoard.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.soyatec.uml.ClassDiagramEditor" name="oie1.ucd" tooltip="td-jeuDeLoie/src/oie/oie1.ucd">
+<persistable path="/td-jeuDeLoie/src/oie/oie1.ucd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.soyatec.uml.ClassDiagramEditor" name="oie.ucd" tooltip="td-jeuDeLoie/src/oie/oie.ucd">
+<persistable path="/td-jeuDeLoie/src/oie/oie.ucd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NormalCell.java" tooltip="td-jeuDeLoie/src/oie/NormalCell.java">
+<persistable path="/td-jeuDeLoie/src/oie/NormalCell.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WaitCell.java" tooltip="td-jeuDeLoie/src/oie/WaitCell.java">
+<persistable path="/td-jeuDeLoie/src/oie/WaitCell.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Horloge.java" tooltip="tp4-afflumin/src/afficheurLumineux/Horloge.java">
 <persistable path="/tp4-afflumin/src/afficheurLumineux/Horloge.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Afficheur.java" tooltip="tp4-afflumin/src/afficheurLumineux/Afficheur.java">
 <persistable path="/tp4-afflumin/src/afficheurLumineux/Afficheur.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.soyatec.uml.ClassDiagramEditor" name="afficheurLumineux.ucd" tooltip="tp4-afflumin/src/afficheurLumineux/afficheurLumineux.ucd">
-<persistable path="/tp4-afflumin/src/afficheurLumineux/afficheurLumineux.ucd"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileFIFO.java" tooltip="tp4-afflumin/src/afficheurLumineux/FileFIFO.java">
-<persistable path="/tp4-afflumin/src/afficheurLumineux/FileFIFO.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Counter.java" tooltip="tp3-introihm/src/counter/Counter.java">
-<persistable path="/tp3-introihm/src/counter/Counter.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.soyatec.uml.ClassDiagramEditor" name="counter1.ucd" tooltip="tp3-introihm/src/counter/counter1.ucd">
-<persistable path="/tp3-introihm/src/counter/counter1.ucd"/>
 </file>
 </mruList>
 </workbench>

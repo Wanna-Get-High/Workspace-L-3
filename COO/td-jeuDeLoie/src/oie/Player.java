@@ -1,8 +1,14 @@
 package oie;
-/** A player in the "jeu de l'oie" game */
+/**
+ * A player in the "jeu de l'oie" game
+ */
 public class Player 
 {
-    /** current cell of the player */
+    /**
+	 * current cell of the player
+	 * @uml.property  name="cell"
+	 * @uml.associationEnd  
+	 */
     protected Cell cell;
     
     /** name of the player*/
@@ -19,19 +25,24 @@ public class Player
     }
     /** */
     public String toString() { return name; }
-    /** returns the current cell of the player 
-      *  @return the current cell of the player 
-      */
+    /**
+	 * returns the current cell of the player 
+	 * @return  the current cell of the player
+	 * @uml.property  name="cell"
+	 */
     public Cell getCell() 
     { 
        return this.cell ; 
     }
-    /** changes the cell of the player 
-     * @param newCell the new cell
-    */
+    /**
+	 * changes the cell of the player 
+	 * @param newCell  the new cell
+	 * @uml.property  name="cell"
+	 */
     public void setCell(Cell newCell) 
     { 
-       this.cell = newCell; 
+       this.cell = newCell;
+       cell.setPlayer(this);
     }    
     /** result of a 1d6 throw
      * @return random result of a 1d6 throw 

@@ -11,4 +11,6 @@
 <fullyQualifiedTypeName name="oie.NormalCell"/>
 <fullyQualifiedTypeName name="oie.Player"/>
 <fullyQualifiedTypeName name="oie.GooseCell"/>
+<fullyQualifiedTypeName name="oie.StartCell"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

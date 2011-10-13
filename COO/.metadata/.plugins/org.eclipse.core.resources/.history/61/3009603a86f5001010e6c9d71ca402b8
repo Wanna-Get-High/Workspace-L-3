@@ -1,0 +1,120 @@
+package oie;
+
+import java.util.*;
+
+/**
+ * @author  franziz  the game that contains the players and the field
+ */
+public class Game 
+{
+	protected List<Player> thePlayers;
+	
+	/**
+	 * @uml.property  name="board"
+	 * @uml.associationEnd  
+	 */
+	protected ClassicBoard board;
+	
+	public Game(ClassicBoard board)
+	{
+		this.thePlayers = new ArrayList<Player>();
+		this.board = board;
+	}
+	
+	public void addPlayer(Player p)
+	{
+		thePlayers.add(p);
+		board.getCell(p.getCell().getIndex()).setPlayer(p);
+	}
+	
+	private int boundedIndex(int index) 
+	{
+		int lastInd = board.getNbOfCells() -1;
+		
+		if (index > lastInd )
+		{
+			return lastInd - (index - lastInd);
+		}
+		else
+		{
+			return index;
+		}
+	}
+	
+	public void play()
+	{
+		int diceResult = 0;
+		int  consequence = 0;
+		int currentInd  = 0;
+		int newIndex = 0;
+		Cell reachedCell;
+		Player playerToSwap;
+		
+		System.out.println(board.toString()); // printing the board
+		System.out.println("");
+		while (noPlayerWon()) // while no player is on the last Cell
+		{
+			for(Player currentPlayer : thePlayers)  
+			{
+				currentInd = currentPlayer.getCell().getIndex(); // index of the current player
+				
+				
+				if (board.getCell(currentInd).canBeLeft())
+				{
+					diceResult = currentPlayer.twoDicesThrow();	// the result of the dice
+					
+					newIndex = boundedIndex(currentInd+diceResult); // the index of the reached cell after dice were thrown
+					reachedCell = this.board.getCell(newIndex); // the new cell on which we'll apply the consequence
+					consequence = boundedIndex(reachedCell.consequence(diceResult)); // the index of the new cell
+					
+					if (board.getCell(consequence).isBusy())	// case of swap players
+					{
+						playerToSwap = board.getCell(consequence).getPlayer();// retrieving the player to swap
+						
+						currentPlayer.setCell(board.getCell(consequence));	// setting the two players new cell
+						playerToSwap.setCell(board.getCell(currentInd));
+						
+						System.out.println("_ is on cell " + currentInd + " reaches cell : " +consequence);
+						System.out.println(playerToSwap.toString() + " go to :" + playerToSwap.getCell().getIndex());
+					}
+					else 
+					{
+						currentPlayer.setCell(board.getCell(consequence)); 	// changing the current players cell
+						board.getCell(currentInd).setPlayer(null);			// setting the previous board cell to null
+						
+						System.out.println("_ is on cell " + currentInd +" reaches cell : " +consequence);
+					}
+				}
+				else
+				{
+					System.out.println(currentPlayer.toString() +" can't move");
+				}
+			}
+			System.out.println(board.toString());  // printing the board
+			System.out.println("");
+		}
+		System.out.println("end");
+	}
+	
+	public boolean noPlayerWon()
+	{
+		for (int i=0; i<thePlayers.size();i++)
+		{
+			if (thePlayers.get(i).getCell().getIndex() == this.board.getNbOfCells()-1)
+				return false;
+		}
+		
+		return true;
+	}
+	
+	public static void main (String []args)
+	{
+		ClassicBoard board = new ClassicBoard(64);
+		Game game = new Game(board);
+		
+		game.addPlayer(new Player("B",board.getCell(0)));
+		game.addPlayer(new Player("T",board.getCell(0)));
+		
+		game.play();
+	}
+}

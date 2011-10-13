@@ -2,7 +2,7 @@ package oie;
 
 public class TeleportCell extends Cell
 {
-	public TeleportCell(int ind)
+	public TeleportCell(int ind,int jmpInd)
 	{
 		super(ind);
 	}
@@ -15,5 +15,11 @@ public class TeleportCell extends Cell
 	public int consequence(int diceThrow) 
 	{
 		return diceThrow;
+	}
+
+	@Override
+	public void setPlayer(Player player) {
+		// TODO Auto-generated method stub
+		
 	}
 }

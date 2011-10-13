@@ -1,8 +1,18 @@
 package oie;
 
-public class Board 
+/**
+ * @author  lepan
+ */
+public abstract class Board 
 {
+	/**
+	 * @uml.property  name="nbOfCells"
+	 */
 	protected final int nbOfCells;
+	/**
+	 * @uml.property  name="theCells"
+	 * @uml.associationEnd  multiplicity="(0 -1)"
+	 */
 	protected Cell theCells[];
 	
 	public Board(int noc)
@@ -12,50 +22,19 @@ public class Board
 		initBoard();
 	}
 	
-	protected void initBoard()
-	{
-		for (int i = 0 ; i<  nbOfCells;i++)
-		{
-			if ( i%9 == 0 && i != 0)
-				theCells[i] = new GooseCell(i);
-			/*
-			else if (i == 31 || i == 52 )
-				theCells[i] = new TrapCell(i);
-			
-			else if (i == 19)
-				theCells[i] = new WaitCell(i);
-			
-			else if (i == 6  || i == 42 || i == 58 )
-				theCells[i] = new TeleportCell(i);
-			*/
-			else theCells[i] = new NormalCell(i);
-		}
-	}
+	protected abstract void initBoard();
 	
 	public Cell getCell(int num)
 	{
 		return this.theCells[num];
 	}
 	
+	/**
+	 * @return
+	 * @uml.property  name="nbOfCells"
+	 */
 	public int getNbOfCells()
 	{
 		return this.nbOfCells;
-	}
-	
-	public String toString()
-	{
-		String CellsPrint = "";
-		for (int i=0 ; i<nbOfCells;i++)
-		{
-			if (theCells[i].getPlayer() != null)
-			{
-				CellsPrint += "[" + theCells[i].getPlayer().toString() + "] ";
-			}
-			else
-			{
-				CellsPrint += "[] ";
-			}	
-		}
-		return CellsPrint;
 	}
 }

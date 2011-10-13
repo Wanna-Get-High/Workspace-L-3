@@ -1,0 +1,25 @@
+package oie;
+
+
+public class StartCell extends Cell
+{
+	public StartCell(int ind)
+	{
+		super(ind);
+	}
+
+	List<Player> players;
+	@Override
+	public boolean canBeLeft()
+	{
+		return true;
+	}
+
+	@Override
+	public int consequence(int diceThrow) 
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -3,16 +3,19 @@ package oie;
 import java.util.*;
 
 /**
- * 
- * @author franziz
- * the game that contains the players and the field
+ * @author  franziz  the game that contains the players and the field
  */
 public class Game 
 {
 	protected List<Player> thePlayers;
-	protected Board board;
 	
-	public Game(Board board)
+	/**
+	 * @uml.property  name="board"
+	 * @uml.associationEnd  
+	 */
+	protected ClassicBoard board;
+	
+	public Game(ClassicBoard board)
 	{
 		this.thePlayers = new ArrayList<Player>();
 		this.board = board;
@@ -24,47 +27,69 @@ public class Game
 		board.getCell(p.getCell().getIndex()).setPlayer(p);
 	}
 	
+	private int boundedIndex(int index) 
+	{
+		int lastInd = board.getNbOfCells() -1;
+		
+		if (index > lastInd )
+		{
+			return lastInd - (index - lastInd);
+		}
+		else
+		{
+			return index;
+		}
+	}
+	
 	public void play()
 	{
 		int diceResult = 0;
 		int  consequence = 0;
 		int currentInd  = 0;
-		Player swapPlayer, currentPlayer;
+		int newIndex = 0;
+		Cell reachedCell;
+		Player playerToSwap;
 		
 		System.out.println(board.toString()); // printing the board
 		System.out.println("");
-		
 		while (noPlayerWon()) // while no player is on the last Cell
 		{
-			for (int i=0; i<thePlayers.size();i++) // each player play
+			for(Player currentPlayer : thePlayers)  
 			{
-				currentPlayer = thePlayers.get(i);
 				currentInd = currentPlayer.getCell().getIndex(); // index of the current player
-
+				
+				
 				if (board.getCell(currentInd).canBeLeft())
 				{
-					diceResult = currentPlayer.twoDicesThrow();	
-					consequence = currentPlayer.getCell().consequence(diceResult);	// the index of the new cell
+					diceResult = currentPlayer.twoDicesThrow();	// the result of the dice
+					
+					newIndex = boundedIndex(currentInd+diceResult); // the index of the reached cell after dice were thrown
+					reachedCell = this.board.getCell(newIndex); // the new cell on which we'll apply the consequence
+					consequence = boundedIndex(reachedCell.consequence(diceResult)); // the index of the new cell
 					
 					if (board.getCell(consequence).isBusy())	// case of swap players
 					{
-						swapPlayer = board.getCell(consequence).getPlayer();// retrieving the player to swap
+						playerToSwap = board.getCell(consequence).getPlayer();// retrieving the player to swap
 						
-						currentPlayer.setCell(board.getCell(consequence));	// swapping places for the players cell
-						swapPlayer.setCell(board.getCell(currentInd));
-						
-						board.getCell(consequence).setPlayer(currentPlayer); // swapping places for the board cell
-						board.getCell(currentInd).setPlayer(swapPlayer);
+						currentPlayer.setCell(board.getCell(consequence));	// setting the two players new cell
+						playerToSwap.setCell(board.getCell(currentInd));
 						
 						System.out.println("_ is on cell " + currentInd + " reaches cell : " +consequence);
-						System.out.println(swapPlayer.toString() + " go to :" + swapPlayer.getCell().getIndex());
+						System.out.println(playerToSwap.toString() + " go to :" + playerToSwap.getCell().getIndex());
 					}
 					else 
 					{
 						currentPlayer.setCell(board.getCell(consequence)); 	// changing the current players cell
-						board.getCell(consequence).setPlayer(currentPlayer);// changing the board cell
-						board.getCell(currentInd).setPlayer(null);			// setting the previous board cell to null
 						
+						if (currentInd == 0) // setting the previous board cell to null
+						{
+							StartCell cell = (StartCell)board.getCell(currentInd);
+							cell.setPlayer(null, currentPlayer);
+						}
+						else
+						{
+							board.getCell(currentInd).setPlayer(null);
+						}
 						System.out.println("_ is on cell " + currentInd +" reaches cell : " +consequence);
 					}
 				}
@@ -83,7 +108,7 @@ public class Game
 	{
 		for (int i=0; i<thePlayers.size();i++)
 		{
-			if (thePlayers.get(i).getCell().getIndex() == this.board.getNbOfCells() - 1)
+			if (thePlayers.get(i).getCell().getIndex() == this.board.getNbOfCells()-1)
 				return false;
 		}
 		
@@ -92,7 +117,7 @@ public class Game
 	
 	public static void main (String []args)
 	{
-		Board board = new Board(64);
+		ClassicBoard board = new ClassicBoard(64);
 		Game game = new Game(board);
 		
 		game.addPlayer(new Player("B",board.getCell(0)));

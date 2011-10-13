@@ -1,0 +1,29 @@
+package oie;
+
+public class TrapCell extends Cell
+{
+	protected int TimeToWait;
+	
+	public TrapCell(int ind)
+	{
+		super(ind);
+		this.TimeToWait
+	}
+	
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public void setPlayer(Player player)
+	{
+		this.player = player;
+		this.TimeToWait--;
+	}
+	
+	public int consequence(int diceThrow)
+	{
+		if (TimeToWait)
+		return diceThrow;
+	}
+}

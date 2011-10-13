@@ -1,0 +1,12 @@
+François Lepan Benjamin Van Ryseghem
+
+1 - on ne fait rien si on recontre des blancs ou retour-chariot donc moin de travaille.
+
+2 - expression régulières : 
+		avantages : 	JAVA donc plus facile à implementer et à corriger ou mettre à niveau
+		inconvénients : programme lourd
+		
+	JFlex & Cup	:
+		avantages : 	moin de code
+		inconvénients :	nouveau language
+	
