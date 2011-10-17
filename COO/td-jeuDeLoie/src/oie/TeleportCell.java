@@ -2,9 +2,12 @@ package oie;
 
 public class TeleportCell extends Cell
 {
+	private int jumpIndex;
+	
 	public TeleportCell(int ind,int jmpInd)
 	{
 		super(ind);
+		this.jumpIndex = jmpInd;
 	}
 	
 	public boolean canBeLeft() 
@@ -14,12 +17,6 @@ public class TeleportCell extends Cell
 
 	public int consequence(int diceThrow) 
 	{
-		return diceThrow;
-	}
-
-	@Override
-	public void setPlayer(Player player) {
-		// TODO Auto-generated method stub
-		
+		return this.jumpIndex;
 	}
 }

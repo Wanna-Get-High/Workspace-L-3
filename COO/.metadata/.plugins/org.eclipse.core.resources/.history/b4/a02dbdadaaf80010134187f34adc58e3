@@ -1,0 +1,26 @@
+package oie;
+
+public class TeleportCell extends Cell
+{
+	private int JumpIndex;
+	public TeleportCell(int ind,int jmpInd)
+	{
+		super(ind);
+		this.JumpIndex = jmpInd;
+	}
+	
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow) 
+	{
+		return diceThrow;
+	}
+
+	public void setPlayer(Player player) 
+	{		
+		this.player = player;
+	}
+}

@@ -38,7 +38,10 @@ public abstract class Cell
 	 * sets a player in this cell
 	 * @uml.property  name="player"
 	 */
-	public abstract void setPlayer(Player player);
+	public void setPlayer(Player player)
+	{
+		this.player = player;
+	}
 	/**
 	 * gets the player in this cell <tt>null</tt> if none
 	 * @uml.property  name="player"

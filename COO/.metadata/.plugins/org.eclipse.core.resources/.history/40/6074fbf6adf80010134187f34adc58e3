@@ -1,0 +1,21 @@
+package oie;
+
+public class GooseCell extends Cell
+{
+	
+	public GooseCell(int ind)
+	{
+		super(ind);
+	}
+	
+	public boolean canBeLeft() 
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow)
+	{
+		//System.out.println(" and jump to "+this.index + diceThrow);
+		return this.index + diceThrow;
+	}
+}

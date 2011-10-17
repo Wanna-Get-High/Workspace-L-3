@@ -1,0 +1,52 @@
+package oie;
+
+
+public class ClassicBoard extends Board
+{
+	public ClassicBoard(int noc)
+	{
+		super(noc);
+		initBoard();
+	}
+	
+	protected void initBoard()
+	{
+		for (int i = 1 ; i<  nbOfCells;i++)
+		{	
+			if ( i%9 == 0 && i != 63) 
+				theCells[i] = new GooseCell(i);
+			
+			else if (i != 6 && i != 19 && i != 31 && i != 42 && i != 52 && i != 58)
+				theCells[i] = new NormalCell(i);
+		}
+		
+		theCells[0] = new StartCell(0);
+		
+		theCells[19] = new WaitCell(19,2);
+		
+		theCells[31] = new TrapCell(31);
+		theCells[52] = new TrapCell(52);
+		
+		theCells[6] = new TeleportCell(6,12);
+		theCells[42] = new TeleportCell(42,30);
+		theCells[58] = new TeleportCell(58,1);
+	}
+	
+	public String toString()
+	{
+		String CellsPrint = "[" + theCells[0].toString() + "] ";
+		
+		for (int i=1 ; i<nbOfCells;i++)
+		{
+			if (theCells[i].getPlayer() != null)
+			{
+				CellsPrint += "[" + theCells[i].getPlayer().toString() + "] ";
+			}
+			else
+			{
+				CellsPrint += "[] ";
+			}	
+		}
+		return CellsPrint;
+	}
+}

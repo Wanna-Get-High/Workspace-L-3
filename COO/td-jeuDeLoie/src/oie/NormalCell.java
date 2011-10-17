@@ -7,11 +7,6 @@ public class NormalCell extends Cell
 		super(ind);
 	}
 	
-	public void setPlayer(Player player)
-	{
-		this.player = player;
-	}
-	
 	public boolean canBeLeft()
 	{
 		return true;

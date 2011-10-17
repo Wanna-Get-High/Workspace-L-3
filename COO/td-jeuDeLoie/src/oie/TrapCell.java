@@ -2,32 +2,18 @@ package oie;
 
 public class TrapCell extends Cell
 {
-	protected int TimeToWait;
-	
-	public TrapCell(int ind, int ttw)
+	public TrapCell(int ind)
 	{
 		super(ind);
-		this.TimeToWait = ttw;
 	}
 	
 	public boolean canBeLeft() 
 	{
-		this.TimeToWait--;
-		
-		if (this.TimeToWait == 0)
-			return true;
-		else
-			return false;
-	}
-
-	public void setPlayer(Player player)
-	{
-		this.player = player;
+		return false;
 	}
 	
 	public int consequence(int diceThrow)
 	{
-		this.TimeToWait = 2;
 		return this.index;
 	}
 }

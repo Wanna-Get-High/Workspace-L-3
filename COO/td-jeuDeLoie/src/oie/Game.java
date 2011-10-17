@@ -29,7 +29,7 @@ public class Game
 	
 	private int boundedIndex(int index) 
 	{
-		int lastInd = board.getNbOfCells() -1;
+		int lastInd = board.getNbOfCells() - 1;
 		
 		if (index > lastInd )
 		{
@@ -67,21 +67,27 @@ public class Game
 					reachedCell = this.board.getCell(newIndex); // the new cell on which we'll apply the consequence
 					consequence = boundedIndex(reachedCell.consequence(diceResult)); // the index of the new cell
 					
-					if (board.getCell(consequence).isBusy())	// case of swap players
+					if (board.getCell(consequence).isBusy() && board.getCell(consequence).getPlayer() != currentPlayer)	// case of swap players
 					{
 						playerToSwap = board.getCell(consequence).getPlayer();// retrieving the player to swap
 						
 						currentPlayer.setCell(board.getCell(consequence));	// setting the two players new cell
 						playerToSwap.setCell(board.getCell(currentInd));
 						
-						System.out.println("_ is on cell " + currentInd + " reaches cell : " +consequence);
-						System.out.println(playerToSwap.toString() + " go to :" + playerToSwap.getCell().getIndex());
+						if (currentInd == 0) // set the new player for the first cell and swap with the other player
+						{
+							StartCell cell = (StartCell)board.getCell(currentInd);
+							cell.setPlayer(null, currentPlayer);
+						}
+						
+						System.out.println(" is on cell " + currentInd + " reaches cell : " +consequence +" -> " 
+										+ playerToSwap.toString() + " go to :" + playerToSwap.getCell().getIndex());
 					}
 					else 
 					{
 						currentPlayer.setCell(board.getCell(consequence)); 	// changing the current players cell
 						
-						if (currentInd == 0) // setting the previous board cell to null
+						if (currentInd == 0) // set the player for the first cell
 						{
 							StartCell cell = (StartCell)board.getCell(currentInd);
 							cell.setPlayer(null, currentPlayer);
@@ -90,7 +96,7 @@ public class Game
 						{
 							board.getCell(currentInd).setPlayer(null);
 						}
-						System.out.println("_ is on cell " + currentInd +" reaches cell : " +consequence);
+						System.out.println(" is on cell " + currentInd +" reaches cell : " +consequence);
 					}
 				}
 				else
@@ -122,7 +128,7 @@ public class Game
 		
 		game.addPlayer(new Player("B",board.getCell(0)));
 		game.addPlayer(new Player("T",board.getCell(0)));
-		
+		game.addPlayer(new Player("S",board.getCell(0)));
 		game.play();
 	}
 }

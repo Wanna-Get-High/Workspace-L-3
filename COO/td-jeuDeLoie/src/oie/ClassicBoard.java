@@ -18,15 +18,15 @@ public class ClassicBoard extends Board
 			
 			else if ( i%9 == 0 && i != 63) theCells[i] = new GooseCell(i);
 			
-			else if (i == 31 || i == 52 ) theCells[i] = new TrapCell(i,2);
+			else if (i == 31 || i == 52 ) theCells[i] = new TrapCell(i);
 			
-			else if (i == 19) theCells[i] = new WaitCell(i);
+			else if (i == 19) theCells[i] = new WaitCell(i,2);
 			
-			else if (i == 6) theCells[i] = new TeleportCell(i,0);
+			else if (i == 6) theCells[i] = new TeleportCell(i,12);
 			
-			else if (i == 42) theCells[i] = new TeleportCell(i,0);
+			else if (i == 42) theCells[i] = new TeleportCell(i,30);
 				
-			else if (i == 58) theCells[i] = new TeleportCell(i,0);
+			else if (i == 58) theCells[i] = new TeleportCell(i,1);
 			
 			else theCells[i] = new NormalCell(i);
 		}

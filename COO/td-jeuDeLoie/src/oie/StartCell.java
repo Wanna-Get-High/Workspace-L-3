@@ -25,9 +25,10 @@ public class StartCell extends Cell
 	}
 	
 	public void setPlayer(Player p)
-	{ 
+	{
 		players.add(p);
 	}
+	
 	public void setPlayer(Player playerToAdd,Player playerToRemove)
 	{ 
 		players.add(playerToAdd);

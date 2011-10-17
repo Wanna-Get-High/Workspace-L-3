@@ -1,0 +1,28 @@
+package oie;
+
+public class WaitCell extends Cell
+{
+	protected int TimeToWait;
+	
+	public WaitCell(int ind, int ttw)
+	{
+		super(ind);
+		this.TimeToWait = ttw;
+	}
+	
+	public boolean canBeLeft() 
+	{
+		System.out.println("have to wait " this.TimeToWait +" turn(s)");
+		this.TimeToWait--;
+		if (this.TimeToWait == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public int consequence(int diceThrow)
+	{
+		this.TimeToWait = 2;
+		return this.index;
+	}
+}
