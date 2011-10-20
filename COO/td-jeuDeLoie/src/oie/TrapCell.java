@@ -1,6 +1,6 @@
 package oie;
 
-public class TrapCell extends Cell
+public class TrapCell extends BasicCell
 {
 	public TrapCell(int ind)
 	{

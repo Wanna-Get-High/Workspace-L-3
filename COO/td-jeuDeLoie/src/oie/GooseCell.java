@@ -1,16 +1,10 @@
 package oie;
 
-public class GooseCell extends Cell
+public class GooseCell extends BasicCell
 {
-	
 	public GooseCell(int ind)
 	{
 		super(ind);
-	}
-	
-	public boolean canBeLeft() 
-	{
-		return true;
 	}
 
 	public int consequence(int diceThrow)

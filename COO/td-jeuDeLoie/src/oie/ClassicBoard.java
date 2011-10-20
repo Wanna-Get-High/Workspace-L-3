@@ -6,7 +6,6 @@ public class ClassicBoard extends Board
 	public ClassicBoard(int noc)
 	{
 		super(noc);
-		initBoard();
 	}
 	
 	protected void initBoard()
@@ -28,7 +27,7 @@ public class ClassicBoard extends Board
 				
 			else if (i == 58) theCells[i] = new TeleportCell(i,1);
 			
-			else theCells[i] = new NormalCell(i);
+			else theCells[i] = new BasicCell(i);
 		}
 		
 	}

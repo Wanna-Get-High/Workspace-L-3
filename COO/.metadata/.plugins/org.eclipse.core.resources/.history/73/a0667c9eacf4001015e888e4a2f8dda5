@@ -1,7 +1,0 @@
-package oie;
-
-
-public class ClassicBoard extends Board
-{
-
-}

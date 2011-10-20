@@ -1,6 +1,6 @@
 package oie;
 
-public class TeleportCell extends Cell
+public class TeleportCell extends BasicCell
 {
 	private int jumpIndex;
 	
@@ -8,11 +8,6 @@ public class TeleportCell extends Cell
 	{
 		super(ind);
 		this.jumpIndex = jmpInd;
-	}
-	
-	public boolean canBeLeft() 
-	{
-		return true;
 	}
 
 	public int consequence(int diceThrow) 

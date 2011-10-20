@@ -1,0 +1,46 @@
+package oie;
+
+/**
+ * Interface for the cells of the "jeu de l'oie" game. <br/> Note that there can be only  one player by cell, the starting cell (index 0) excepted.
+ */
+public abstract class BasicCell implements Cell
+{
+	protected int index;
+	protected Player player;
+
+	public Cell(int ind)
+	{
+		this.index = ind;
+	}
+
+	public int getIndex()
+	{
+		return this.index;
+	}
+
+	public boolean isBusy()
+	{
+		return this.player != null;
+	}
+
+
+	public void setPlayer(Player player)
+	{
+		this.player = player;
+	}
+	/**
+
+	public Player getPlayer()
+	{
+		return this.player;
+	}
+	
+
+	public abstract boolean canBeLeft();
+
+	public int consequence(int diceThrow) 
+	{
+		return this.index;
+	}
+	
+}// Cell

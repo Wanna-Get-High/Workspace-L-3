@@ -1,6 +1,6 @@
 package oie;
 
-public class WaitCell extends Cell
+public class WaitCell extends BasicCell
 {
 	protected int TimeToWait;
 	
@@ -17,9 +17,15 @@ public class WaitCell extends Cell
 			this.TimeToWait = 2;
 			return true;
 		}
-		System.out.print("have to wait " +this.TimeToWait +" turn(s) --- ");
+		System.out.print(" have to wait " +this.TimeToWait +" turn(s) ---");
 		this.TimeToWait--;
 		return false;
+	}
+	
+	public void setPlayer(Player p)
+	{
+		this.TimeToWait = 2;
+		this.player = p;
 	}
 	
 	public int consequence(int diceThrow)
