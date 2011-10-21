@@ -1,27 +1,29 @@
 package oie;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class StartCell extends Cell
+
+public class StartCell implements Cell
 {
-	List<Player> players;
+	
+	protected List<Player> players;
+	protected int index;
 	
 	public StartCell(int ind)
 	{
-		super(ind);
 		players = new ArrayList<Player>();
+		this.index = ind;
 	}
 
-	@Override
 	public boolean canBeLeft()
 	{
 		return true;
 	}
 
-	@Override
 	public int consequence(int diceThrow) 
 	{
-		return diceThrow;
+		return this.index;
 	}
 	
 	public void setPlayer(Player p)
@@ -29,10 +31,19 @@ public class StartCell extends Cell
 		players.add(p);
 	}
 	
-	public void setPlayer(Player playerToAdd,Player playerToRemove)
-	{ 
-		players.add(playerToAdd);
-		players.remove(playerToRemove);
+	public Player removePlayer(Player playerToRemove)
+	{
+		if (players.contains(playerToRemove))
+			players.remove(playerToRemove);
+		else 
+			throw new RuntimeException();
+		
+		return playerToRemove;
+	}
+
+	public int getIndex() 
+	{
+		return this.index;
 	}
 	
 	public String toString()
@@ -45,4 +56,16 @@ public class StartCell extends Cell
 		}
 		return play;
 	}
+	
+	// never reached methods
+	public Player getPlayer() 
+	{
+		return null;
+	}
+	
+	public boolean isBusy() 
+	{
+		return false;
+	}
+
 }

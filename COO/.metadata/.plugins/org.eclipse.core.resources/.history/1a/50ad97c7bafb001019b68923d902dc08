@@ -1,0 +1,14 @@
+package oie;
+
+public class GooseCell extends BasicCell
+{
+	public GooseCell(int ind,Board b)
+	{
+		super(ind,b);
+	}
+
+	public int consequence(int diceThrow)
+	{
+		return board.getCell(this.index + diceThrow).consequence(diceThrow);
+	}
+}

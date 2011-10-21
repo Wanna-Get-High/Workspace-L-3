@@ -1,0 +1,16 @@
+package oie;
+
+public class BasicCell extends Cell
+{
+
+	public boolean canBeLeft() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int consequence(int diceThrow) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

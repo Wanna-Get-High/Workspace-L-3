@@ -1,20 +1,14 @@
 package oie;
 
-public class GooseCell extends Cell
+public class GooseCell extends BasicCell
 {
-	
-	public GooseCell(int ind)
+	public GooseCell(int ind,Board b)
 	{
-		super(ind);
+		super(ind,b);
 	}
-	
-	public boolean canBeLeft() 
-	{
-		return true;
-	}
-
+	@Override
 	public int consequence(int diceThrow)
 	{
-		return this.index + diceThrow;
+		return board.getCell(super.consequence(diceThrow)+ diceThrow).consequence(diceThrow);
 	}
 }

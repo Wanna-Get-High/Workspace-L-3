@@ -1,0 +1,21 @@
+package oie;
+
+public class BasicCell extends Cell
+{
+
+	public BasicCell(int ind) {
+		super(ind);
+		// TODO Auto-generated constructor stub
+	}
+
+	public boolean canBeLeft() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int consequence(int diceThrow) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

@@ -1,0 +1,146 @@
+package oie;
+
+import java.util.*;
+
+/**
+ * @author  Francois Lepan  the game that contains the players and the field
+ */
+public class Game 
+{
+	protected List<Player> thePlayers;
+	
+	/**
+	 * @uml.property  name="board"
+	 * @uml.associationEnd  
+	 */
+	protected ClassicBoard board;
+	
+	public Game(ClassicBoard board)
+	{
+		this.thePlayers = new ArrayList<Player>();
+		this.board = board;
+	}
+	
+	public void addPlayer(Player p)
+	{
+		thePlayers.add(p);
+		board.getCell(p.getCell().getIndex()).setPlayer(p);
+	}
+	
+	private int boundedIndex(int index) 
+	{
+		int lastInd = board.getNbOfCells() - 1;
+		
+		if (index > lastInd )
+		{
+			return lastInd - (index - lastInd);
+		}
+		else
+		{
+			return index;
+		}
+	}
+	
+	/**
+	 * 
+	 * @return true if a player is on the last cell
+	 */
+	public boolean aPlayerWon()
+	{
+		return board.getCell(board.getNbOfCells()-1).isBusy();
+	}
+	
+	public void play()
+	{
+		int diceResult = 0;
+		int  consequence = 0;
+		int currentInd  = 0;
+		int newIndex = 0;
+		Cell reachedCell;
+		Player playerToSwap;
+		
+		System.out.println(board.toString()); // printing the board
+		System.out.println("");
+		
+		while (!aPlayerWon()) // while no player is on the last Cell
+		{
+			for(Player currentPlayer : thePlayers)
+			{				
+				currentInd = currentPlayer.getCell().getIndex(); // index of the current player
+								
+				if (board.getCell(currentInd).canBeLeft())
+				{
+					diceResult = currentPlayer.twoDicesThrow();						// the result of the dice
+					newIndex = boundedIndex(currentInd+diceResult); 				// the index of the reached cell after dice were thrown
+					reachedCell = this.board.getCell(newIndex); 					// the new cell on which we'll apply the consequence
+					consequence = boundedIndex(reachedCell.consequence(diceResult));// the index of the new cell
+					
+					
+					// accumulate the consequences for the goose cell while you are on Cell 0 (if u throw 9 while you are on cell 0 you win :) )
+					//  delete comment that surround while to test it
+					
+					/*while (consequence != newIndex && consequence != board.getNbOfCells()-1 
+							&& board.getCell(newIndex).getClass() == GooseCell.class
+							&& board.getCell(newIndex).getIndex() == 0)
+					{
+						consequence = boundedIndex(reachedCell.consequence(consequence));
+					}*/
+					
+					if (board.getCell(consequence).isBusy() && board.getCell(consequence).getPlayer() != currentPlayer)	// case of swap players
+					{
+						playerToSwap = board.getCell(consequence).getPlayer();// retrieving the player to swap
+						
+						currentPlayer.setCell(board.getCell(consequence));	// setting the two players new cell
+						playerToSwap.setCell(board.getCell(currentInd));
+						
+						if (currentInd == 0) // remove the current player from the first cell
+							((StartCell)board.getCell(currentInd)).removePlayer(currentPlayer);
+
+						System.out.println(" is on cell " + currentInd + " reaches cell : " +consequence +" -> " 
+										+ playerToSwap.toString() + " go to :" + playerToSwap.getCell().getIndex());
+					}
+					else 
+					{
+						currentPlayer.setCell(board.getCell(consequence)); 	// changing the current players cell
+						
+						// remove the current player from his last position
+						if (currentInd == 0)
+							((StartCell)board.getCell(currentInd)).removePlayer(currentPlayer);
+						else
+							board.getCell(currentInd).setPlayer(null);
+
+						
+						System.out.println(" is on cell " + currentInd +" reaches cell : " +consequence);
+					}
+				}
+				else
+				{
+					System.out.println(currentPlayer.toString() +" can't move from the cell "+ consequence);
+				}
+				
+				if (aPlayerWon()) //Stop the game if a player win and print his name
+				{
+					System.out.println(currentPlayer.toString() + " win !!!!");
+					break;
+				}
+			}
+			System.out.println(board.toString());  // printing the board
+			System.out.println("");
+		}
+	}
+	
+	public static void main (String []args)
+	{
+		ClassicBoard board = new ClassicBoard(64);
+		Game game = new Game(board);
+		
+		game.addPlayer(new Player("B",board.getCell(0)));
+		game.addPlayer(new Player("T",board.getCell(0)));
+		game.addPlayer(new Player("S",board.getCell(0)));
+		game.addPlayer(new Player("G",board.getCell(0)));
+		game.addPlayer(new Player("H",board.getCell(0)));
+		game.addPlayer(new Player("K",board.getCell(0)));
+		
+		game.play();
+	}
+}

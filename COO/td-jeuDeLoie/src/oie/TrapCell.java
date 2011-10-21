@@ -1,19 +1,14 @@
 package oie;
 
-public class TrapCell extends Cell
+public class TrapCell extends BasicCell
 {
-	public TrapCell(int ind)
+	public TrapCell(int ind,Board b)
 	{
-		super(ind);
+		super(ind,b);
 	}
-	
+	@Override
 	public boolean canBeLeft() 
 	{
 		return false;
-	}
-	
-	public int consequence(int diceThrow)
-	{
-		return this.index;
 	}
 }

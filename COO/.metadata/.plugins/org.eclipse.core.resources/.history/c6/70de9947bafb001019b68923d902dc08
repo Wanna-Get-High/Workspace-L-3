@@ -1,0 +1,46 @@
+package oie;
+
+public class BasicCell implements Cell
+{
+	Board board;
+	/** the index of the cell*/
+	protected int index;
+	
+	/** the player on that cell*/
+	protected Player player;
+
+	public BasicCell(int ind)
+	{
+		this.index = ind;
+	}
+
+	public int getIndex()
+	{
+		return this.index;
+	}
+
+	public boolean isBusy()
+	{
+		return this.player != null;
+	}
+
+	public void setPlayer(Player player)
+	{
+		this.player = player;
+	}
+
+	public Player getPlayer()
+	{
+		return this.player;
+	}
+
+	public boolean canBeLeft()
+	{
+		return true;
+	}
+
+	public int consequence(int diceThrow) 
+	{
+		return this.index;
+	}	
+}

@@ -4,11 +4,7 @@ package oie;
  */
 public class Player 
 {
-    /**
-	 * current cell of the player
-	 * @uml.property  name="cell"
-	 * @uml.associationEnd  
-	 */
+    /** current cell of the player */
     protected Cell cell;
     
     /** name of the player*/
@@ -25,35 +21,37 @@ public class Player
     }
     /** */
     public String toString() { return name; }
+    
     /**
 	 * returns the current cell of the player 
 	 * @return  the current cell of the player
-	 * @uml.property  name="cell"
 	 */
     public Cell getCell() 
     { 
        return this.cell ; 
     }
+    
     /**
 	 * changes the cell of the player 
 	 * @param newCell  the new cell
-	 * @uml.property  name="cell"
 	 */
     public void setCell(Cell newCell) 
     { 
        this.cell = newCell;
        cell.setPlayer(this);
-    }    
+    } 
+    
     /** result of a 1d6 throw
      * @return random result of a 1d6 throw 
-    */
+     */
     private int oneDiceThrow() 
     {	
        return ((int) (Math.random()*10000) % 6)+ 1; 
     }
+    
     /** result of a 2d6 throw 
-      * @return random result of a 2d6 thow
-    */ 	
+     * @return random result of a 2d6 thow
+     */ 	
     public int twoDicesThrow()
     {
         int result = oneDiceThrow() + oneDiceThrow();

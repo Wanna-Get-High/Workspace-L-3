@@ -2,17 +2,14 @@ package oie;
 
 /**
  * @author  lepan
+ * the Board on witch we will play
  */
 public abstract class Board 
 {
-	/**
-	 * @uml.property  name="nbOfCells"
-	 */
+	/** the number of cells of the board */
 	protected final int nbOfCells;
-	/**
-	 * @uml.property  name="theCells"
-	 * @uml.associationEnd  multiplicity="(0 -1)"
-	 */
+	
+	/** the cells that compose the board */
 	protected Cell theCells[];
 	
 	public Board(int noc)
@@ -22,16 +19,22 @@ public abstract class Board
 		initBoard();
 	}
 	
+	/**
+	 * the initialization of the board 
+	 */
 	protected abstract void initBoard();
 	
-	public Cell getCell(int num)
+	/**
+	 * @param index the index of the cell you want to get
+	 * @return the cell at this index
+	 */
+	public Cell getCell(int index)
 	{
-		return this.theCells[num];
+		return this.theCells[index];
 	}
 	
 	/**
-	 * @return
-	 * @uml.property  name="nbOfCells"
+	 * @return the number of cells
 	 */
 	public int getNbOfCells()
 	{
