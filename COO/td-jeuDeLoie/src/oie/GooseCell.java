@@ -2,13 +2,13 @@ package oie;
 
 public class GooseCell extends BasicCell
 {
-	public GooseCell(int ind)
+	public GooseCell(int ind,Board b)
 	{
-		super(ind);
+		super(ind,b);
 	}
-
+	@Override
 	public int consequence(int diceThrow)
 	{
-		return this.index + diceThrow;
+		return board.getCell(super.consequence(diceThrow)+ diceThrow).consequence(diceThrow);
 	}
 }

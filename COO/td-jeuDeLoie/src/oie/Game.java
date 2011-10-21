@@ -30,7 +30,7 @@ public class Game
 	}
 	
 	/**
-	 * bound the index to the maximum length of the board. 
+	 * bound the index to the maximum length of the board.
 	 * If index is higher, it will return (the last index - (index - the last index))
 	 * @param index the index to be tested
 	 * @return the index after being bounded
@@ -85,29 +85,17 @@ public class Game
 					reachedCell = this.board.getCell(newIndex); 					// the new cell on which we'll apply the consequence
 					consequence = boundedIndex(reachedCell.consequence(diceResult));// the index of the new cell
 					
-					
-					// accumulate the consequences for the goose cell while you are on Cell 0 (if u throw 9 while you are on cell 0 you win :) )
-					//  delete comment that surround while to test it
-					
-					/*while (consequence != newIndex && consequence != board.getNbOfCells()-1 
-							&& board.getCell(newIndex).getClass() == GooseCell.class
-							&& board.getCell(newIndex).getIndex() == 0)
-					{
-						consequence = boundedIndex(reachedCell.consequence(consequence));
-					}*/
-					
 					if (board.getCell(consequence).isBusy() && board.getCell(consequence).getPlayer() != currentPlayer)	// case of swap players
 					{
 						// retrieving the player to swap
 						playerToSwap = board.getCell(consequence).getPlayer();
 						
+						// removes the current player of the current cell
+						board.getCell(currentInd).removePlayer(currentPlayer);
+						
 						// setting the two players new cell
 						currentPlayer.setCell(board.getCell(consequence));
 						playerToSwap.setCell(board.getCell(currentInd));
-						
-						// remove the current player from the first cell
-						if (currentInd == 0) 
-							((StartCell)board.getCell(currentInd)).removePlayer(currentPlayer);
 
 						System.out.println(" is on cell " + currentInd + " reaches cell : " +consequence +" -> " 
 										+ playerToSwap.toString() + " go to :" + playerToSwap.getCell().getIndex());
@@ -117,11 +105,8 @@ public class Game
 						// changing the current players cell
 						currentPlayer.setCell(board.getCell(consequence));
 						
-						// remove the current player from his last position
-						if (currentInd == 0)
-							((StartCell)board.getCell(currentInd)).removePlayer(currentPlayer);
-						else
-							board.getCell(currentInd).setPlayer(null);
+						// removes the current player of the current cell
+						board.getCell(currentInd).removePlayer(currentPlayer);
 
 						
 						System.out.println(" is on cell " + currentInd +" reaches cell : " +consequence);

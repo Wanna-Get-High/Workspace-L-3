@@ -17,6 +17,8 @@ public interface Cell
 	/**  gets the player in this cell <tt>null</tt> if none */
 	public Player getPlayer();
 	
+	/** remove the player from this cell and return it */
+	public Player removePlayer(Player player);
 	/**
 	 * @return <tt>true</tt> if and only if the player in this cell can freely leaves the cell, else
 	 * he must wait for another player to reach this cell or wait a given number of turns

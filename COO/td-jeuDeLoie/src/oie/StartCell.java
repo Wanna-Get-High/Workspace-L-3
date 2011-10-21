@@ -31,9 +31,14 @@ public class StartCell implements Cell
 		players.add(p);
 	}
 	
-	public void removePlayer(Player playerToRemove)
+	public Player removePlayer(Player playerToRemove)
 	{
-		players.remove(playerToRemove);
+		if (players.contains(playerToRemove))
+			players.remove(playerToRemove);
+		else 
+			throw new RuntimeException();
+		
+		return playerToRemove;
 	}
 
 	public int getIndex() 
