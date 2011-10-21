@@ -52,6 +52,7 @@ public class Game
 		
 		System.out.println(board.toString()); // printing the board
 		System.out.println("");
+		
 		while (noPlayerWon()) // while no player is on the last Cell
 		{
 			for(Player currentPlayer : thePlayers)  
@@ -63,13 +64,13 @@ public class Game
 				{
 					diceResult = currentPlayer.twoDicesThrow();	// the result of the dice
 					
-					newIndex = boundedIndex(currentInd+diceResult); // the index of the reached cell after dice were thrown
+					newIndex = boundedIndex(currentInd+diceResult); 	// the index of the reached cell after dice were thrown
 					reachedCell = this.board.getCell(newIndex); // the new cell on which we'll apply the consequence
 					consequence = boundedIndex(reachedCell.consequence(diceResult)); // the index of the new cell
 					
 					if (board.getCell(consequence).isBusy() && board.getCell(consequence).getPlayer() != currentPlayer)	// case of swap players
 					{
-						playerToSwap = board.getCell(consequence).getPlayer();// retrieving the player to swap
+						playerToSwap = board.getCell(consequence).getPlayer(); // retrieving the player to swap
 						
 						currentPlayer.setCell(board.getCell(consequence));	// setting the two players new cell
 						playerToSwap.setCell(board.getCell(currentInd));
@@ -129,6 +130,8 @@ public class Game
 		game.addPlayer(new Player("B",board.getCell(0)));
 		game.addPlayer(new Player("T",board.getCell(0)));
 		game.addPlayer(new Player("S",board.getCell(0)));
+		game.addPlayer(new Player("G",board.getCell(0)));
+		
 		game.play();
 	}
 }

@@ -24,6 +24,7 @@ public class WaitCell extends Cell
 	
 	public int consequence(int diceThrow)
 	{
+		this.TimeToWait = 2;
 		return this.index;
 	}
 }

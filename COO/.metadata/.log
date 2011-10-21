@@ -339,3 +339,521 @@ Java Model Exception: Java Model Status [Timed out while retrieving the attached
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1012 2011-10-17 12:42:41.313
 !MESSAGE Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in /usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar]]] 
+!SESSION 2011-10-17 19:35:58.662 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2011-10-17 19:40:12.675
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: Communication with repository at http://download.eclipse.org/releases/galileo/200909241140 failed.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CacheManager.createCache(CacheManager.java:136)
+	at org.eclipse.equinox.internal.provisional.spi.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:60)
+	at org.eclipse.equinox.internal.provisional.spi.p2.metadata.repository.SimpleMetadataRepositoryFactory.validateAndLoad(SimpleMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.provisional.spi.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:87)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:54)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:669)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:617)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:146)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:101)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.validateAndLoad(CompositeMetadataRepositoryFactory.java:127)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:87)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:54)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:669)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:617)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:146)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at org.apache.commons.httpclient.HttpParser.readRawLine(HttpParser.java:78)
+	at org.apache.commons.httpclient.HttpParser.readLine(HttpParser.java:106)
+	at org.apache.commons.httpclient.HttpConnection.readLine(HttpConnection.java:1116)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.readLine(MultiThreadedHttpConnectionManager.java:1413)
+	at org.apache.commons.httpclient.HttpMethodBase.readStatusLine(HttpMethodBase.java:1973)
+	at org.apache.commons.httpclient.HttpMethodBase.readResponse(HttpMethodBase.java:1735)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1098)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:204)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2011-10-17 19:40:12.678
+!MESSAGE Communication with repository at http://download.eclipse.org/releases/galileo/200909241140 failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:146)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at org.apache.commons.httpclient.HttpParser.readRawLine(HttpParser.java:78)
+	at org.apache.commons.httpclient.HttpParser.readLine(HttpParser.java:106)
+	at org.apache.commons.httpclient.HttpConnection.readLine(HttpConnection.java:1116)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.readLine(MultiThreadedHttpConnectionManager.java:1413)
+	at org.apache.commons.httpclient.HttpMethodBase.readStatusLine(HttpMethodBase.java:1973)
+	at org.apache.commons.httpclient.HttpMethodBase.readResponse(HttpMethodBase.java:1735)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1098)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:204)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2011-10-17 19:42:15.971
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: Communication with repository at http://download.eclipse.org/releases/galileo/201002260900 failed.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CacheManager.createCache(CacheManager.java:136)
+	at org.eclipse.equinox.internal.provisional.spi.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:60)
+	at org.eclipse.equinox.internal.provisional.spi.p2.metadata.repository.SimpleMetadataRepositoryFactory.validateAndLoad(SimpleMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.provisional.spi.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:87)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:54)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:669)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:617)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:146)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:101)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.validateAndLoad(CompositeMetadataRepositoryFactory.java:127)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:87)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:54)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:669)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:617)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:146)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at org.apache.commons.httpclient.HttpParser.readRawLine(HttpParser.java:78)
+	at org.apache.commons.httpclient.HttpParser.readLine(HttpParser.java:106)
+	at org.apache.commons.httpclient.HttpConnection.readLine(HttpConnection.java:1116)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.readLine(MultiThreadedHttpConnectionManager.java:1413)
+	at org.apache.commons.httpclient.HttpMethodBase.readStatusLine(HttpMethodBase.java:1973)
+	at org.apache.commons.httpclient.HttpMethodBase.readResponse(HttpMethodBase.java:1735)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1098)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:204)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2011-10-17 19:42:15.971
+!MESSAGE Communication with repository at http://download.eclipse.org/releases/galileo/201002260900 failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:146)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at org.apache.commons.httpclient.HttpParser.readRawLine(HttpParser.java:78)
+	at org.apache.commons.httpclient.HttpParser.readLine(HttpParser.java:106)
+	at org.apache.commons.httpclient.HttpConnection.readLine(HttpConnection.java:1116)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.readLine(MultiThreadedHttpConnectionManager.java:1413)
+	at org.apache.commons.httpclient.HttpMethodBase.readStatusLine(HttpMethodBase.java:1973)
+	at org.apache.commons.httpclient.HttpMethodBase.readResponse(HttpMethodBase.java:1735)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1098)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:204)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:42:21.022
+!MESSAGE Unable to load the repository http://www.soyatec.fr/eum12
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: No repository found at http://www.soyatec.fr/eum12.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:380)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:641)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2011-10-17 19:42:21.023
+!MESSAGE No repository found at http://www.soyatec.fr/eum12.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:42:27.553
+!MESSAGE Unable to load the repository http://www.soyatec.com/euml2/
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: No repository found at http://www.soyatec.com/euml2/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:380)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:641)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2011-10-17 19:42:27.553
+!MESSAGE No repository found at http://www.soyatec.com/euml2/.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:44:15.392
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:44:15.392
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.392
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.392
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:44:15.393
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:44:15.393
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.393
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.393
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:44:15.400
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:44:15.400
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.400
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.400
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:44:15.429
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:44:15.429
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.429
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:15.429
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:44:38.031
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:44:38.032
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:38.032
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:38.032
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:44:38.033
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:44:38.033
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:38.033
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:44:38.033
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:45:07.378
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:45:07.378
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:45:07.378
+!MESSAGE Software being installed: EclipseDatabase Modeler 3.7.1.20110624 (com.soyatec.database.feature.group 3.7.1.20110624)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:45:07.378
+!MESSAGE Missing requirement: EclipseDatabase Modeler 3.7.1.20110624 (com.soyatec.database.feature.group 3.7.1.20110624) requires 'org.eclipse.emf.feature.group [2.2.0.v200606271057,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:45:07.381
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:45:07.381
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:45:07.381
+!MESSAGE Software being installed: EclipseDatabase Modeler 3.7.1.20110624 (com.soyatec.database.feature.group 3.7.1.20110624)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:45:07.381
+!MESSAGE Missing requirement: EclipseDatabase Modeler 3.7.1.20110624 (com.soyatec.database.feature.group 3.7.1.20110624) requires 'org.eclipse.emf.feature.group [2.2.0.v200606271057,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:13.427
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.427
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.427
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.427
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.427
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.427
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.427
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:13.427
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.428
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.428
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.428
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.428
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.428
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.428
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:13.432
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.432
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.432
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.432
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.432
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.432
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.432
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:13.445
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.445
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.445
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.445
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:13.445
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.445
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:13.445
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:17.000
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:17.000
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:17.000
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:17.000
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:17.004
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:17.004
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:17.004
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:17.005
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:29.807
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:29.807
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:29.807
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:29.807
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:47:37.047
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:47:37.047
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:37.047
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:47:37.047
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:56:02.841
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:02.841
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:02.841
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:02.841
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091122 (com.soyatec.euml2.free.feature.group 3.4.0.20091122) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:56:26.562
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:26.563
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:26.563
+!MESSAGE Software being installed: eDepend 3.7.1.20110624 (com.soyatec.edepend.feature.group 3.7.1.20110624)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:26.563
+!MESSAGE Missing requirement: eDepend 3.7.1.20110624 (com.soyatec.edepend.feature.group 3.7.1.20110624) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:56:26.570
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:26.570
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:26.570
+!MESSAGE Software being installed: eDepend 3.7.1.20110624 (com.soyatec.edepend.feature.group 3.7.1.20110624)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:26.570
+!MESSAGE Missing requirement: eDepend 3.7.1.20110624 (com.soyatec.edepend.feature.group 3.7.1.20110624) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:56:45.469
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:45.469
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.469
+!MESSAGE Software being installed: eUML2 Studio Edition 3.7.1.20110624 (com.soyatec.euml2.studio.feature.group 3.7.1.20110624)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.469
+!MESSAGE Missing requirement: eDepend 3.7.1.20110624 (com.soyatec.edepend.feature.group 3.7.1.20110624) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:45.469
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.469
+!MESSAGE From: eUML2 Studio Edition 3.7.1.20110624 (com.soyatec.euml2.studio.feature.group 3.7.1.20110624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.470
+!MESSAGE To: com.soyatec.edepend.feature.group [3.7.1.20110624]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:56:45.471
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:45.471
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.471
+!MESSAGE Software being installed: eUML2 Studio Edition 3.7.1.20110624 (com.soyatec.euml2.studio.feature.group 3.7.1.20110624)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.471
+!MESSAGE Missing requirement: eDepend 3.7.1.20110624 (com.soyatec.edepend.feature.group 3.7.1.20110624) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 19:56:45.471
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.471
+!MESSAGE From: eUML2 Studio Edition 3.7.1.20110624 (com.soyatec.euml2.studio.feature.group 3.7.1.20110624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 19:56:45.471
+!MESSAGE To: com.soyatec.edepend.feature.group [3.7.1.20110624]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 19:58:38.962
+!MESSAGE Unable to load the repository http://www.eclipse.org/modeling/emf/
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: No repository found at http://www.eclipse.org/modeling/emf/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:380)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:606)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2011-10-17 19:58:38.962
+!MESSAGE No repository found at http://www.eclipse.org/modeling/emf/.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:03:55.231
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.231
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.231
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.231
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.231
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.231
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.231
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:03:55.231
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.231
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.231
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.231
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.232
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.232
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.232
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:03:55.232
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.232
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.232
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.233
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.233
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.233
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.233
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:03:55.248
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.248
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.248
+!MESSAGE Software being installed: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.248
+!MESSAGE Missing requirement: EclipseDatabase Modeler 2.2.0.20091121 (com.soyatec.database.feature.group 2.2.0.20091121) requires 'org.eclipse.uml2.feature.group [3.0.0.v200906011111,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:03:55.248
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.248
+!MESSAGE From: eUML2 Studio Edition 3.4.0.20091121 (com.soyatec.euml2.studio.feature.group 3.4.0.20091121)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:03:55.248
+!MESSAGE To: com.soyatec.database.feature.group [2.2.0.20091121,3.0.0)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:10:16.678
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:10:16.678
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.678
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.678
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:10:16.678
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:10:16.678
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.678
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.678
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:10:16.679
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:10:16.679
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.679
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.679
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2011-10-17 20:10:16.696
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2011-10-17 20:10:16.696
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.696
+!MESSAGE Software being installed: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2011-10-17 20:10:16.696
+!MESSAGE Missing requirement: eUML2 Free Edition 3.4.0.20091121 (com.soyatec.euml2.free.feature.group 3.4.0.20091121) requires 'org.eclipse.emf.feature.group [2.3.0.v200706262000,3.0.0)' but it could not be found

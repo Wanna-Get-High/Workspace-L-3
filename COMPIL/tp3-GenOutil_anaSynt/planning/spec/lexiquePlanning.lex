@@ -99,10 +99,10 @@ minutes = [0-5][:digit:]|60
 hourAndMinutes = {hour}"h"{minutes}
 slot = {hourAndMinutes}"-"{hourAndMinutes}
 
+
+
 name = ({capitalizedWord} ({blancs}*{capitalizedWord})+)?
 entreprise = ({word} ({blancs}*{word})*)?
-
-
 options = ({word}({word}| [ \t\f] | "," | "-" | ";" )*)?
 
 master = ("IAGL"|"TIIR"|"eServices"|"IVI")
