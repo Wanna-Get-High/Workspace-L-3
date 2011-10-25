@@ -1,0 +1,26 @@
+package oie;
+
+public abstract class Board 
+{
+	protected Cell theCells[];
+	protected int nbOfCells;
+	
+	public Board(int noc)
+	{
+		this.nbOfCells = noc;
+		this.theCells = new Cell[noc];
+		this.initBoard();
+	}
+	
+	public abstract void initBoard();
+	
+	public Cell getCell(int index)
+	{
+		return this.theCells[index];
+	}
+	
+	public int getNbOfCells()
+	{
+		return this.nbOfCells;
+	}
+}

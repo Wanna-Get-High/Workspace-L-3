@@ -1,0 +1,16 @@
+package ressource;
+
+public class RessourceUser<R> 
+{
+	protected R ressource;
+	
+	public R getRessource()
+	{
+		return this.ressource;
+	}
+	
+	public void resetRessource()
+	{
+		this.ressource = null;
+	}
+}

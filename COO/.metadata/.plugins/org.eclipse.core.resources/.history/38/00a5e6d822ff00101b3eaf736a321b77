@@ -1,0 +1,15 @@
+package ressource;
+
+public class Scenario extends Scheduling
+{
+	public Scenario()
+	{
+		
+	}
+	
+	@Override
+	protected void inToDo()
+	{
+		
+	}
+}

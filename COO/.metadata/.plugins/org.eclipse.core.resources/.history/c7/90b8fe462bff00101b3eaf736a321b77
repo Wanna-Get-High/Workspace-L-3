@@ -1,0 +1,9 @@
+package ressource;
+
+public class InvalidRessourceExecption 
+{
+	public InvalidRessourceExecption(String msg)
+	{
+		System.out.println(msg);
+	}
+}

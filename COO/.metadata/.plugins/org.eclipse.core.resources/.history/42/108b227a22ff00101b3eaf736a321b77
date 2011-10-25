@@ -1,0 +1,24 @@
+package ressource;
+
+public class Wait extends Action 
+{
+	
+	protected int timeToWait;
+	
+	public Wait(String msg, int ttw)
+	{
+		super(msg);
+		this.timeToWait = ttw;
+	}
+
+	public Wait() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void toDo() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

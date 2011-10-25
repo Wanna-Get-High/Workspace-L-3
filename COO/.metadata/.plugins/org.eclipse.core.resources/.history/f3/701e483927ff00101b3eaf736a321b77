@@ -1,0 +1,6 @@
+package ressource;
+
+public class RessourceManager<R> 
+{
+
+}

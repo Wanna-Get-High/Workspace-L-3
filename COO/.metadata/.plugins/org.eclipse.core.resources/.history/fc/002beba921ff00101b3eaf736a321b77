@@ -1,0 +1,37 @@
+package ressource;
+
+public abstract class Action 
+{
+	/** the message of the action */
+	protected String msg;
+	/** the state of the action */
+	protected ActionState state;
+	
+	public Action(String msg)
+	{
+		this.msg = msg;
+		this.state = ActionState.notStarted;
+	}
+	
+	public Action()
+	{
+		this("");
+	}
+	
+	protected  void inToDo()
+	{
+		
+	}
+	
+	public boolean isFinished()
+	{
+		return state == ActionState.finished;
+	}
+	
+	public abstract void toDo();
+	
+	public ActionState getState()
+	{
+		return this.state;
+	}
+}

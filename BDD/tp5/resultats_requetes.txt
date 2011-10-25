@@ -1,0 +1,205 @@
+--- Q 1
+  max   
+--------
+ 234556
+(1 row)
+
+
+--- Q 2
+            article             | nombrecouleurs 
+--------------------------------+----------------
+ 7 Segment Display              |              1
+ Acme Widget Washer             |              2
+ Anti-Gravity Turbine Generator |              2
+ Brake for Crop Circles Sticker |              1
+ Ferrari F430                   |              1
+ Fire Hydrant Cap               |              1
+ Left Handed Toaster Cover      |              1
+ Microsd Card USB Reader        |              2
+ Smoke Shifter End              |              1
+(9 rows)
+
+
+--- Q 3
+ couleur | nombrearticles 
+---------+----------------
+ argente |              1
+ cyan    |              1
+ magenta |              1
+ noir    |              1
+ opaque  |              1
+ rouge   |              5
+ vert    |              2
+(7 rows)
+
+--- Q 4
+ couleur |    prixmoyen     
+---------+------------------
+ rouge   | 29338.0402339697
+ cyan    | 124.230003356934
+ magenta | 62.3900016844273
+ noir    | 42.2999992370605
+ argente | 38.8999996185303
+ vert    | 38.0999984741211
+ opaque  | 21.3500003814697
+(7 rows)
+
+
+--- Q 5
+-- faute dans version precediente de tp5-results.txt: toutes les
+-- couleurs avec un seul article apparaissaient
+
+ couleur |    prixmoyen    
+---------+-----------------
+ rouge   | 21.235713822501
+(1 row)
+
+
+--- Q 6
+-- faute dans version precediente de tp5-results.txt: l'article avec 0
+-- fournisseurs  n'apparaissait pas
+--
+            Article             | Nombre de fournisseurs 
+--------------------------------+------------------------
+ Fire Hydrant Cap               |                      4
+ Left Handed Toaster Cover      |                      2
+ 7 Segment Display              |                      2
+ Anti-Gravity Turbine Generator |                      2
+ Brake for Crop Circles Sticker |                      2
+ Acme Widget Washer             |                      2
+ Smoke Shifter End              |                      1
+ Ferrari F430                   |                      1
+ Microsd Card USB Reader        |                      0
+(9 rows)
+
+
+--- Q 7
+              anom              |  acoul  | nombre de fournisseurs 
+--------------------------------+---------+------------------------
+ 7 Segment Display              | vert    |                      2
+ Acme Widget Washer             | argente |                      2
+ Acme Widget Washer             | rouge   |                      1
+ Anti-Gravity Turbine Generator | cyan    |                      1
+ Anti-Gravity Turbine Generator | magenta |                      2
+ Brake for Crop Circles Sticker | opaque  |                      2
+ Ferrari F430                   | rouge   |                      1
+ Fire Hydrant Cap               | rouge   |                      4
+ Left Handed Toaster Cover      | rouge   |                      2
+ Smoke Shifter End              | noir    |                      1
+(10 rows)
+
+
+
+
+--- Q 8
+     anom     |  prix  
+--------------+--------
+ Ferrari F430 | 234556
+(1 row)
+
+
+--- Q 9
+  fnom   
+---------
+ Autolux
+(1 row)
+
+
+
+--- Q 10
+     fournisseur      | nbarticles 
+----------------------+------------
+ Big Red Tool and Die |          3
+ Perfunctory Parts    |          2
+ kiventout            |          9
+ Alien Aircaft Inc.   |          3
+(4 rows)
+
+
+--- Q 11
+ couleursrares 
+---------------
+ argente
+ cyan
+ magenta
+ noir
+ opaque
+(5 rows)
+
+
+--- Q 12
+ aid 
+-----
+   1
+   4
+   5
+   7
+   8
+   9
+(6 rows)
+
+
+
+--- Q 13
+ fid 
+-----
+   1
+(1 row)
+
+
+--- Q 14
+   fnom    |              anom              
+-----------+--------------------------------
+ kiventout | Acme Widget Washer
+ kiventout | Anti-Gravity Turbine Generator
+(2 rows)
+
+
+
+--- Q 15
+              anom              | min  |  max   
+--------------------------------+------+--------
+ Left Handed Toaster Cover      | 16.5 |   36.1
+ Acme Widget Washer             | 15.3 |   57.3
+ Brake for Crop Circles Sticker | 20.5 |   22.2
+ Fire Hydrant Cap               | 7.95 |   48.6
+ 7 Segment Display              |    1 |   75.2
+ Anti-Gravity Turbine Generator | 0.55 | 124.23
+(6 rows)
+
+
+--- Q 16
+ max 
+-----
+   9
+(1 row)
+
+
+--- Q 17
+   fnom    
+-----------
+ kiventout
+(1 row)
+
+
+
+--- Q 18
+       anom        
+-------------------
+ Ferrari F430
+ Smoke Shifter End
+(2 rows)
+
+
+--- Q 19
+         anom           | count 
+-------------------------+-------
+ Microsd Card USB Reader |     2
+(1 row)
+
+
+--- Q 20
+         anom           | count 
+-------------------------+-------
+ Microsd Card USB Reader |     2
+(1 row)

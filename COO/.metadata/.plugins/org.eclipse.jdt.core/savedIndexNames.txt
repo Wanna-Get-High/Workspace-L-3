@@ -1,27 +1,6 @@
 INDEX VERSION 1.126+/home/franziz/Workspace-L-3/COO/.metadata/.plugins/org.eclipse.jdt.core
-1020058470.index
-1654635368.index
-1189062746.index
-2686503099.index
-516116778.index
-<<<<<<< HEAD
-1393721363.index
-2474253571.index
-=======
-1445151894.index
->>>>>>> 65814ec35cf029b591471c155a5a7ce241570809
-3611020188.index
-925624498.index
+1128826826.index
 260503317.index
+3329329598.index
 606161937.index
-1193566714.index
-<<<<<<< HEAD
-1796948596.index
-3223902160.index
-2889915287.index
-=======
-737766193.index
-3223902160.index
-85815195.index
->>>>>>> 65814ec35cf029b591471c155a5a7ce241570809
-2040264796.index
+1020058470.index

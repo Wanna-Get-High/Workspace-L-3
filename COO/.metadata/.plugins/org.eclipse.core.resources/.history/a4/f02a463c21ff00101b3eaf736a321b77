@@ -1,0 +1,18 @@
+package ressource;
+
+public class Scheduling extends Action 
+{
+	protected int CurrentActionIndex;
+	protected List<Action> theAction;
+	public Scheduling()
+	{
+		super();
+	}
+	
+	@Override
+	protected void inToDo() 
+	{
+		
+	}
+
+}

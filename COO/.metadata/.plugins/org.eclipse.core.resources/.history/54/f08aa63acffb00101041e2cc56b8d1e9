@@ -1,0 +1,14 @@
+package oie;
+
+public class Board 
+{
+	protected Cell theCells[];
+	protected int nbOfCell;
+	
+	public Board(noc)
+	{
+		this.nbOfCell = noc;
+		protected Cell theCells[] = new Cell[noc];
+		
+	}
+}

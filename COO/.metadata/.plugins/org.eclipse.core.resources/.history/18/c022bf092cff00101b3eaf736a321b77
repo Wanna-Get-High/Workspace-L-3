@@ -1,0 +1,17 @@
+package ressource;
+
+public class PanierManager extends RessourceManager<Panier> 
+{
+	public PanierManager(int ndr)
+	{
+		super(ndr);
+	}
+
+	@Override
+	protected Panier createRessource() 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

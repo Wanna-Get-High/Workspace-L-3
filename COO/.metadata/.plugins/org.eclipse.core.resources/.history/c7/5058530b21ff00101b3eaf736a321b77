@@ -1,0 +1,12 @@
+package ressource;
+
+public class Scheduling extends Action 
+{
+
+	@Override
+	protected void inToDo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

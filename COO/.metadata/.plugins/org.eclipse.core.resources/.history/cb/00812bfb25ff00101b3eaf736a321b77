@@ -1,0 +1,22 @@
+package ressource;
+
+public abstract class RessourceAction<R> extends Action 
+{
+
+	protected RessourceManager<R> manager;
+	protected RessourceUser<R> user;
+	
+	public RessourceAction(String msg,RessourceManager<R> manager, protected RessourceUser<R> user)
+	{
+		super(msg);
+		this.manager = manager;
+		this.user = user;
+	}
+	
+	@Override
+	public void toDo() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

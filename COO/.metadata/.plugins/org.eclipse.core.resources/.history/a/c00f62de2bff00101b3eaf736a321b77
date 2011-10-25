@@ -1,0 +1,16 @@
+package ressource;
+
+public class CabineManager<Cabine> extends RessourceManager<Cabine> 
+{
+	public CabineManager(int ndr)
+	{
+		super(ndr);
+	}
+
+	@Override
+	protected Cabine createRessource() 
+	{
+		return new Cabine();
+	}
+
+}

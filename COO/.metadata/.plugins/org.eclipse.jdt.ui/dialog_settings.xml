@@ -4,6 +4,17 @@
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="28" key="DIALOG_Y_ORIGIN"/>
+			<item value="86" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="true" key="group_libraries"/>
 		<item value="false" key="linkWithEditor"/>
@@ -15,36 +26,67 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+	<section name="DialogBounds_SuperInterfaceSelectionDialog">
+		<item value="420" key="DIALOG_WIDTH"/>
+		<item value="-57" key="DIALOG_Y_ORIGIN"/>
+		<item value="628" key="DIALOG_HEIGHT"/>
+		<item value="134" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
 	</section>
 	<section name="javadoc">
 		<item value="false" key="nodeprecatedlist"/>
 		<item value="false" key="notree"/>
 		<item value="true" key="splitindex"/>
-		<item value="" key="javadoc_command_history"/>
+		<item value="/usr/lib/jvm/java-6-openjdk/bin/javadoc" key="javadoc_command_history"/>
 		<item value="true" key="use"/>
 		<item value="false" key="nonavbar"/>
 		<item value="protected" key="access"/>
 		<item value="true" key="version"/>
 		<item value="false" key="nodeprecated"/>
-		<item value="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/doc" key="destdir"/>
+		<item value="/home/franziz/Workspace-L-3/COO/tp5-jeuDeLoie/doc" key="destdir"/>
 		<item value="true" key="author"/>
 		<item value="" key="docletname"/>
 		<item value="1.6" key="source"/>
 		<item value="false" key="openinbrowser"/>
 		<item value="false" key="noindex"/>
 		<item value="" key="docletpath"/>
-		<item value="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/td-jeuDeLoie/javadoc.xml" key="antpath"/>
+		<item value="/home/franziz/Workspace-L-3/COO/tp5-jeuDeLoie/javadoc.xml" key="antpath"/>
 		<item value="true" key="fromStandard"/>
 		<section name="projects">
+			<section name="tp4-afflumin">
+				<item value="/home/franziz/Workspace-L-3/COO/tp4-afflumin/doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="/home/franziz/Workspace-L-3/COO/tp4-afflumin/javadoc.xml" key="antpath"/>
+			</section>
+			<section name="tp2-generics">
+				<item value="/home/franziz/Workspace-L-3/COO/tp2-generics/doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="/home/franziz/Workspace-L-3/COO/tp2-generics/javadoc.xml" key="antpath"/>
+			</section>
+			<section name="tp5-jeuDeLoie">
+				<item value="/home/franziz/Workspace-L-3/COO/tp5-jeuDeLoie/doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="/home/franziz/Workspace-L-3/COO/tp5-jeuDeLoie/javadoc.xml" key="antpath"/>
+			</section>
+			<section name="tp3-introihm">
+				<item value="/home/franziz/Workspace-L-3/COO/tp3-introihm/doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="/home/franziz/Workspace-L-3/COO/tp3-introihm/javadoc.xml" key="antpath"/>
+			</section>
 		</section>
 	</section>
 	<section name="JavadocWizardDialog">
-		<item value="702" key="DIALOG_WIDTH"/>
+		<item value="706" key="DIALOG_WIDTH"/>
 		<item value="39" key="DIALOG_Y_ORIGIN"/>
-		<item value="490" key="DIALOG_X_ORIGIN"/>
-		<item value="696" key="DIALOG_HEIGHT"/>
-		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="497" key="DIALOG_X_ORIGIN"/>
+		<item value="682" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.typehierarchy.QuickHierarchy">
 		<item value="400" key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_WIDTH"/>

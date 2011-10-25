@@ -1,0 +1,16 @@
+package ressource;
+
+public class Scheduler extends Scheduling 
+{
+	protected int nbFinishedAction;
+	public Scheduler()
+	{
+		
+	}
+	
+	@Override
+	protected void inToDo()
+	{
+		
+	}
+}

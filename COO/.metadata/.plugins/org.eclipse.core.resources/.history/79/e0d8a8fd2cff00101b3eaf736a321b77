@@ -1,0 +1,10 @@
+package piscine;
+
+public class Piscine 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+
+}

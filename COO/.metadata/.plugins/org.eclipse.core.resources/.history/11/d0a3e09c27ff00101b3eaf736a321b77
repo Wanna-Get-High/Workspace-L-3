@@ -1,0 +1,10 @@
+package ressource;
+
+public class RessourceManager<R> 
+{
+	protected int nbRessource;
+	protected int nbDispRessource;
+	protected List<R> dispRessource;
+	protected List<R> UnDispRessource;
+	
+}

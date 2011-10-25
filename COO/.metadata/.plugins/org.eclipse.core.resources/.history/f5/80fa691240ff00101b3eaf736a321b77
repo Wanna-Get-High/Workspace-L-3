@@ -1,0 +1,28 @@
+package action;
+
+import ressource.RessourceManager;
+import ressource.RessourceUser;
+
+public class TakeRessource<R> extends RessourceAction<R>
+{
+
+	
+	public TakeRessource(String msg, RessourceManager<R> manager,RessourceUser<R> user)
+	{
+		super(msg, manager, user);
+	}
+
+	@Override
+	public void inToDo()
+	{
+		this.user.setRessource(this.manager.giveRessource());
+	}
+
+	@Override
+	protected boolean stopCondition() 
+	{
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

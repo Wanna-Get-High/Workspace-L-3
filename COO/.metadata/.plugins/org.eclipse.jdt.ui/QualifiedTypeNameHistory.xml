@@ -13,6 +13,16 @@
 <fullyQualifiedTypeName name="oie.StartCell"/>
 <fullyQualifiedTypeName name="oie.Cell"/>
 <fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="ressource.ActionState"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ressource.Scheduling"/>
+<fullyQualifiedTypeName name="ressource.Scenario"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="ressource.RessourceAction"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="R"/>
+<fullyQualifiedTypeName name="ressource.Cabine"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="ressource.Ressource"/>
 </qualifiedTypeNameHistroy>

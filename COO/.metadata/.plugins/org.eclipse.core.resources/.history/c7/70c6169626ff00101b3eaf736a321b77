@@ -1,0 +1,11 @@
+package ressource;
+
+public class LiberateRessource<R> extends RessourceAction<R> {
+
+	@Override
+	public void toDo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
