@@ -1,0 +1,6 @@
+package facteur;
+
+public interface Content 
+{
+	public String getDescription();
+}

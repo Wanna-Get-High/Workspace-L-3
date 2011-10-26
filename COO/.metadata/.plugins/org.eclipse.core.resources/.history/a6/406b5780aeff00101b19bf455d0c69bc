@@ -1,0 +1,9 @@
+package facteur;
+
+public abstract class Mail <C extends Content> implements Content
+{
+	public Mail()
+	{
+		
+	}
+}

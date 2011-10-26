@@ -1,0 +1,27 @@
+package mail;
+
+public abstract class Mail <C extends Content> implements Content
+{
+	protected c content;
+	private int cpt;
+	protected Inhabitant sender;
+	protected Inhabitant receiver;
+	protected String nom;
+	
+	public Mail(Inhabitant sen, Inhabitant rec,Content con)
+	{
+		this.sender = sen;
+		this.receiver = rec;
+		this.c = con;
+	}
+	
+	public abstract void action();
+	public abstract float getCost();
+	
+	public c getContent()
+	{
+		return this.content;
+	}
+	
+	
+}

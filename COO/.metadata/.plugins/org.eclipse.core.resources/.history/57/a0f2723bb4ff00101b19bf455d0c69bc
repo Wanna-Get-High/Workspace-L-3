@@ -1,0 +1,24 @@
+package mail;
+
+public class MailDecoration extends Mail<Mail<?>> {
+
+	public MailDecoration(Inhabitant sen, Inhabitant rec, Mail<?> con) 
+	{
+		super(sen, rec, con);
+	}
+
+	@Override
+	public void action() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public float getCost() 
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

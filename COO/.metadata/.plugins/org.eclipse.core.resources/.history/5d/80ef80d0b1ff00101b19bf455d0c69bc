@@ -1,0 +1,18 @@
+package mail;
+
+public class Text implements Content
+{
+	private String Text;
+	
+	public text(String text)
+	{
+		this.Text = text;
+	}
+	
+	@Override
+	public String getDescription() 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,37 @@
+package mail;
+
+public class DecorationMail extends Mail<Mail<?>> 
+{
+	public DecorationMail(Inhabitant sen, Inhabitant rec, Mail<?> con) 
+	{
+		super(sen, rec, con);
+	}
+
+	@Override
+	public void action() 
+	{
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public float getCost() 
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public Inhabitant getReceiver()
+	{
+		return this.content.getReceiver();
+	}
+	
+	public Inhabitant getSender()
+	{
+		return this.content.getSender();
+	}
+	
+	public String toString()
+	{
+		return this.content.toString();
+	}
+}

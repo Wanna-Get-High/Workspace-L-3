@@ -1,0 +1,6 @@
+package mail;
+
+public class BillOfExchange extends Mail<Money> 
+{
+
+}

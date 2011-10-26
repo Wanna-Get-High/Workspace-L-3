@@ -25,4 +25,7 @@
 <fullyQualifiedTypeName name="ressource.Cabine"/>
 <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
 <fullyQualifiedTypeName name="ressource.Ressource"/>
+<fullyQualifiedTypeName name="mail.Inhabitant"/>
+<fullyQualifiedTypeName name="mail.Content"/>
+<fullyQualifiedTypeName name="mail.SimpleMail"/>
 </qualifiedTypeNameHistroy>

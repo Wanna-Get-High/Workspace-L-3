@@ -1,0 +1,18 @@
+package facteur;
+
+public abstract class Mail <C extends Content> implements Content
+{
+	protected Content content;
+	private int cpt;
+	protected Inhabitant content;
+	protected Inhabitant receiver;
+	portected String nom;
+	
+	public Mail(Inhabitant sen, Inhabitant rec,Content con)
+	{
+		this.content = sen;
+		this.receiver = rec;
+		this.content = con;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package mail;
+
+public class urgentMail extends DecorationMail {
+
+	public urgentMail(Inhabitant sen, Inhabitant rec, Mail<?> con) {
+		super(sen, rec, con);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,12 @@
+package mail;
+
+public class RecommendedMail extends DecorationMail 
+{
+
+	public RecommendedMail(Mail<?> con) 
+	{
+		super(con);
+	}
+	
+	
+}

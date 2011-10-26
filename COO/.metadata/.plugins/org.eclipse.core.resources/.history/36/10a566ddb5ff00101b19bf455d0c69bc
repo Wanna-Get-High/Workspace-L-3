@@ -1,0 +1,13 @@
+package mail;
+
+public class RecommendedMail extends DecorationMail 
+{
+	private float percentage;
+	
+	public RecommendedMail(Mail<?> con) 
+	{
+		super(con);
+	}
+	
+	
+}

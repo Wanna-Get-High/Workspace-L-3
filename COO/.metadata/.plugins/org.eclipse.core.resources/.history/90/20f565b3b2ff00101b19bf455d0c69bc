@@ -1,0 +1,24 @@
+package mail;
+
+public class SimpleMail extends Mail<Mail> 
+{
+
+	public SimpleMail(Inhabitant sen, Inhabitant rec, Mail con) {
+		super(sen, rec, con);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void action() 
+	{
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public float getCost() 
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

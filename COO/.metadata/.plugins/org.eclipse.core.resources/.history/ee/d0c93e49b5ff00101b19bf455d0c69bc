@@ -1,0 +1,12 @@
+package mail;
+
+public class urgentMail extends DecorationMail 
+{
+	private float urgentFactor;
+	
+	public urgentMail(Mail<?> con) 
+	{
+		super(con.getSender(), con.getReceiver(), con);
+	}
+
+}
