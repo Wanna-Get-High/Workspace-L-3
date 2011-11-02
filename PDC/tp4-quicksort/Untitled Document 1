@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+# define MAX_ELEMENTS 10
+
+void swapelem(int *x,int *y)
+{
+   int temp;
+   temp = *x;
+   *x = *y;
+   *y = temp;
+}
+
+void printlist(int list[],int n)
+{
+   int i;
+   for(i=0;i<n;i++)
+      printf("%d ",list[i]);
+      
+   printf("\n");
+}
+
+void quicksort_int(int list[],int m,int n)
+{
+	int key,i,j;
+	if( m < n) 
+	{
+		key = list[m];
+		i = m+1;
+		j = n;
+		
+		while(i <= j)
+		{
+			while((i <= n) && (list[i] <= key)) i++;
+			while((j >= m) && (list[j] > key)) j--;
+			if( i < j)
+				swapelem(&list[i],&list[j]);
+		}
+
+		swapelem(&list[m],&list[j]);
+
+		quicksort_int(list,m,j-1);
+		quicksort_int(list,j+1,n);
+	}
+}
+
+
+
+int main()
+{
+   int list[MAX_ELEMENTS];
+   int i;
+   
+   for(i = 0; i < MAX_ELEMENTS; i++ )
+	   list[i] = rand() % 10;
+   
+   printf("The list before sorting :\n");
+   printlist(list,MAX_ELEMENTS);
+   
+   quicksort_int(list,0,MAX_ELEMENTS-1);
+
+   /* print the result*/
+   printf("The list after sorting using quicksort algorithm:\n");
+   printlist(list,MAX_ELEMENTS);
+   return 1;
+}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=tp6-piscine/src&lt;ressource{RessourceManager.java[RessourceManager" modifiers="1025" timestamp="1319617276000"/>
-<typeInfo handle="=tp6-piscine/src&lt;ressource{Ressource.java[Ressource" modifiers="513" timestamp="1319617276000"/>
-<typeInfo handle="=tp6-piscine/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;com.sun.corba.se.spi.orbutil.fsm(ActionBase.class[ActionBase" modifiers="1025" timestamp="1311301390000"/>
-<typeInfo handle="=tp7-facteur/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;javax.swing.text(AbstractDocument$Content.class[Content" modifiers="1545" timestamp="1311301390000"/>
-<typeInfo handle="=tp7-facteur/src&lt;mail{Content.java[Content" modifiers="513" timestamp="1319618868000"/>
-<typeInfo handle="=tp7-facteur/src&lt;mail{Mail.java[Mail" modifiers="1025" timestamp="1319620830000"/>
-<typeInfo handle="=tp7-facteur/src&lt;mail{DecorationMail.java[DecorationMail" modifiers="1" timestamp="1319621584000"/>
+<typeInfo handle="=tp6-piscine/src&lt;ressource{RessourceManager.java[RessourceManager" modifiers="1025" timestamp="1319572511000"/>
+<typeInfo handle="=tp6-piscine/src&lt;ressource{Ressource.java[Ressource" modifiers="513" timestamp="1319561557000"/>
+<typeInfo handle="=tp7-facteur/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;javax.swing.text(AbstractDocument$Content.class[Content" modifiers="1545" timestamp="1307772196000"/>
+<typeInfo handle="=tp7-facteur/src&lt;mail{Content.java[Content" modifiers="513" timestamp="1320158986000"/>
+<typeInfo handle="=tp7-facteur/src&lt;mail{Mail.java[Mail" modifiers="1025" timestamp="1320158986000"/>
+<typeInfo handle="=tp7-facteur/src&lt;mail{DecorationMail.java[DecorationMail" modifiers="1" timestamp="1320158986000"/>
+<typeInfo handle="=tp6-piscine/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;com.sun.corba.se.spi.orbutil.fsm(ActionBase.class[ActionBase" modifiers="1057" timestamp="1307772196000"/>
 </typeInfoHistroy>
