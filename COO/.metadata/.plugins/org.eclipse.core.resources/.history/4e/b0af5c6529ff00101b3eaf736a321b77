@@ -1,5 +1,0 @@
-package ressource;
-
-public class CabineManager<R> extends RessourceManager<R> {
-
-}

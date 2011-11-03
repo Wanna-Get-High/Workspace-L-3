@@ -1,0 +1,19 @@
+package ressource;
+
+public class Panier implements Ressource 
+{
+	protected int cpt;
+	protected int index;
+	
+	public Panier(int cpt, int ind)
+	{
+		this.cpt = cpt;
+		this.index = ind;
+	}
+	
+	@Override
+	public String description() 
+	{
+		return "Panier";
+	}
+}

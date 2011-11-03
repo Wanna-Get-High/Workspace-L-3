@@ -1,5 +1,0 @@
-package mail;
-
-public class SimpleMail extends Mail<C> {
-
-}

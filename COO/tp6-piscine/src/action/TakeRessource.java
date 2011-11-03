@@ -1,9 +1,10 @@
 package action;
 
-import ressource.RessourceManager;
-import ressource.RessourceUser;
+import java.util.NoSuchElementException;
 
-public class TakeRessource<R> extends RessourceAction<R>
+import ressource.*;
+
+public class TakeRessource<R extends Ressource> extends RessourceAction<R>
 {
 	public TakeRessource(String msg, RessourceManager<R> manager,RessourceUser<R> user)
 	{
@@ -13,14 +14,17 @@ public class TakeRessource<R> extends RessourceAction<R>
 	@Override
 	public void inToDo()
 	{
-		R res  = this.manager.giveRessource();
-		if (res != null)
-		{
+		R res;
+		try{
+			res = this.manager.giveRessource();
 			this.user.setRessource(res);
 			this.canStop = true;
+			System.out.println(this.msg);
+		} 
+		catch(NoSuchElementException e)
+		{
+			System.out.print(" - no ressource available \n");
 		}
-		else
-			System.out.println("inToDo -> takeRess -> no ressource available");
 	}
 
 	@Override

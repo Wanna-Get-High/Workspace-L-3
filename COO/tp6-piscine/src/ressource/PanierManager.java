@@ -12,5 +12,4 @@ public class PanierManager extends RessourceManager<Panier>
 	{
 		return new Panier();
 	}
-
 }

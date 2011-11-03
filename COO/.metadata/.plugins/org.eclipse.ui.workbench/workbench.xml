@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
-<window height="984" maximized="true" width="1582" x="66" y="24">
+<window height="1085" width="1321" x="0" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -27,8 +27,8 @@
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1319191624123" focus="true" label="Workspace - Java">
 <editors>
-<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@e5d994">
-<info part="org.eclipse.ui.internal.EditorStack@e5d994">
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
@@ -36,36 +36,99 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Nageur.java" partName="Nageur.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/tp6-piscine/src/piscine/Nageur.java" title="Nageur.java" tooltip="tp6-piscine/src/piscine/Nageur.java" workbook="org.eclipse.ui.internal.EditorStack@e5d994">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RessourceManager.java" partName="RessourceManager.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/RessourceManager.java" title="RessourceManager.java" tooltip="tp6-piscine/src/ressource/RessourceManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/RessourceManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="618" selectionTopPixel="303"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Action.java" partName="Action.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/Action.java" title="Action.java" tooltip="tp6-piscine/src/action/Action.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/Action.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="709" selectionTopPixel="354"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Nageur.java" partName="Nageur.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/piscine/Nageur.java" title="Nageur.java" tooltip="tp6-piscine/src/piscine/Nageur.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/piscine/Nageur.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="129" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="395" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Piscine.java" partName="Piscine.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/piscine/Piscine.java" title="Piscine.java" tooltip="tp6-piscine/src/piscine/Piscine.java" workbook="org.eclipse.ui.internal.EditorStack@e5d994">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Piscine.java" partName="Piscine.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/piscine/Piscine.java" title="Piscine.java" tooltip="tp6-piscine/src/piscine/Piscine.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/piscine/Piscine.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="862" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="426" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scheduler.java" partName="Scheduler.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/tp6-piscine/src/action/Scheduler.java" title="Scheduler.java" tooltip="tp6-piscine/src/action/Scheduler.java" workbook="org.eclipse.ui.internal.EditorStack@e5d994">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiberateRessource.java" partName="LiberateRessource.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/LiberateRessource.java" title="LiberateRessource.java" tooltip="tp6-piscine/src/action/LiberateRessource.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/LiberateRessource.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="418" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RessourceAction.java" partName="RessourceAction.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/RessourceAction.java" title="RessourceAction.java" tooltip="tp6-piscine/src/action/RessourceAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/RessourceAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scenario.java" partName="Scenario.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/Scenario.java" title="Scenario.java" tooltip="tp6-piscine/src/action/Scenario.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/Scenario.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="240" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scheduler.java" partName="Scheduler.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/Scheduler.java" title="Scheduler.java" tooltip="tp6-piscine/src/action/Scheduler.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/Scheduler.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="180" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="324" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scheduling.java" partName="Scheduling.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/tp6-piscine/src/action/Scheduling.java" title="Scheduling.java" tooltip="tp6-piscine/src/action/Scheduling.java" workbook="org.eclipse.ui.internal.EditorStack@e5d994">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scheduling.java" partName="Scheduling.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/Scheduling.java" title="Scheduling.java" tooltip="tp6-piscine/src/action/Scheduling.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/Scheduling.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="212" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="422"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AcknoReceipt.java" partName="AcknoReceipt.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/AcknoReceipt.java" title="AcknoReceipt.java" tooltip="tp7-facteur/src/mail/AcknoReceipt.java" workbook="org.eclipse.ui.internal.EditorStack@e5d994">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/AcknoReceipt.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="191" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TakeRessource.java" partName="TakeRessource.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/TakeRessource.java" title="TakeRessource.java" tooltip="tp6-piscine/src/action/TakeRessource.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/TakeRessource.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="557" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Wait.java" partName="Wait.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/action/Wait.java" title="Wait.java" tooltip="tp6-piscine/src/action/Wait.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/action/Wait.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="536" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cabine.java" partName="Cabine.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/Cabine.java" title="Cabine.java" tooltip="tp6-piscine/src/ressource/Cabine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/Cabine.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CabineManager.java" partName="CabineManager.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/CabineManager.java" title="CabineManager.java" tooltip="tp6-piscine/src/ressource/CabineManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/CabineManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InvalidRessourceExecption.java" partName="InvalidRessourceExecption.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/InvalidRessourceExecption.java" title="InvalidRessourceExecption.java" tooltip="tp6-piscine/src/ressource/InvalidRessourceExecption.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/InvalidRessourceExecption.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Panier.java" partName="Panier.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/Panier.java" title="Panier.java" tooltip="tp6-piscine/src/ressource/Panier.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/Panier.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ressource.java" partName="Ressource.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/Ressource.java" title="Ressource.java" tooltip="tp6-piscine/src/ressource/Ressource.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/Ressource.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RessourceUser.java" partName="RessourceUser.java" path="/home/franziz/Workspace-L-3/COO/tp6-piscine/src/ressource/RessourceUser.java" title="RessourceUser.java" tooltip="tp6-piscine/src/ressource/RessourceUser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp6-piscine/src/ressource/RessourceUser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="265" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<expanded>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="914" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -108,7 +171,9 @@
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
 <viewState/>
 </view>
@@ -164,15 +229,11 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="131072" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
-<fastViews>
-<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
-<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
-<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
@@ -203,19 +264,24 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.1335778" ratioLeft="255" ratioRight="1654" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.6484785" ratioLeft="618" ratioRight="335" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.7493438" ratioLeft="571" ratioRight="191" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
+<folder appearance="2" expanded="0">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
@@ -229,170 +295,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Mail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/DecorationMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/urgentMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/RecommendedMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Acknoeceipt.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/AcknoReceipt.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Thanks.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Inhabitant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Adress.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/ressource/PanierManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/ressource/RessourceUser.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/piscine/Nageur.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/piscine/Piscine.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/action/Scheduler.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/action/Scheduling.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/AcknoReceipt.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/action/TakeRessource.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/action/Wait.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp6-piscine/src/action/Scenario.java"/>
 </editors>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="157" y="0"/>
+<item historyLabel="Wait.java" index="6">
+<position info="not_deleted" x="309" y="0"/>
 </item>
-<item historyLabel="urgentMail.java" index="2">
-<position info="not_deleted" x="241" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="135" y="0"/>
 </item>
-<item historyLabel="Mail.java" index="0">
-<position info="not_deleted" x="440" y="263"/>
+<item historyLabel="TakeRessource.java" index="5">
+<position info="not_deleted" x="572" y="0"/>
 </item>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="160" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="438" y="0"/>
 </item>
-<item historyLabel="urgentMail.java" index="2">
-<position info="not_deleted" x="241" y="0"/>
+<item historyLabel="TakeRessource.java" index="5">
+<position info="not_deleted" x="329" y="0"/>
 </item>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="160" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="438" y="0"/>
 </item>
-<item historyLabel="urgentMail.java" index="2">
-<position info="not_deleted" x="241" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="160" y="0"/>
+<item historyLabel="PanierManager.java" index="0">
+<position info="not_deleted" x="230" y="0"/>
 </item>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="419" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="urgentMail.java" index="2">
-<position info="not_deleted" x="161" y="25"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="441" y="0"/>
 </item>
-<item historyLabel="RecommendedMail.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="PanierManager.java" index="0">
+<position info="not_deleted" x="229" y="0"/>
 </item>
-<item historyLabel="RecommendedMail.java" index="3">
-<position info="not_deleted" x="328" y="0"/>
+<item historyLabel="TakeRessource.java" index="5">
+<position info="not_deleted" x="634" y="0"/>
 </item>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="13" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="441" y="0"/>
 </item>
-<item historyLabel="RecommendedMail.java" index="3">
-<position info="not_deleted" x="158" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="Acknoeceipt.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="PanierManager.java" index="0">
+<position info="not_deleted" x="229" y="0"/>
 </item>
-<item historyLabel="Acknoeceipt.java" index="4">
-<position/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="28" y="12"/>
+<item historyLabel="RessourceUser.java" index="1">
+<position info="not_deleted" x="265" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="60" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="28" y="12"/>
+<item historyLabel="Wait.java" index="6">
+<position info="not_deleted" x="309" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="136" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="0" y="192"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Thanks.java" index="6">
-<position info="not_deleted" x="166" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="441" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="0" y="192"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Thanks.java" index="6">
-<position info="not_deleted" x="165" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="256" y="0"/>
 </item>
-<item historyLabel="AcknoReceipt.java" index="5">
-<position info="not_deleted" x="0" y="192"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Thanks.java" index="6">
-<position info="not_deleted" x="165" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="RecommendedMail.java" index="3">
-<position info="not_deleted" x="158" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="206" y="47"/>
 </item>
-<item historyLabel="Mail.java" index="0">
-<position info="not_deleted" x="440" y="263"/>
+<item historyLabel="TakeRessource.java" index="5">
+<position info="not_deleted" x="557" y="0"/>
 </item>
-<item historyLabel="DecorationMail.java" index="1">
-<position info="not_deleted" x="13" y="0"/>
+<item historyLabel="Wait.java" index="6">
+<position info="not_deleted" x="536" y="0"/>
 </item>
-<item historyLabel="Mail.java" index="0">
-<position info="not_deleted" x="440" y="263"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="1125" y="0"/>
 </item>
-<item historyLabel="Inhabitant.java" index="7">
-<position info="not_deleted" x="71" y="0"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Adress.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="334" y="0"/>
 </item>
-<item historyLabel="Inhabitant.java" index="7">
-<position info="not_deleted" x="109" y="0"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Nageur.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="334" y="0"/>
 </item>
-<item historyLabel="Nageur.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Piscine.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="Piscine.java" index="10">
-<position info="not_deleted" x="338" y="6"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="861" y="0"/>
 </item>
-<item historyLabel="Nageur.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Scenario.java" index="7">
+<position info="not_deleted" x="234" y="0"/>
 </item>
-<item historyLabel="Piscine.java" index="10">
-<position info="not_deleted" x="338" y="6"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="Scheduler.java" index="11">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Scenario.java" index="7">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item historyLabel="Scheduler.java" index="11">
-<position info="not_deleted" x="180" y="0"/>
+<item historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="324" y="0"/>
 </item>
-<item historyLabel="Scheduling.java" index="12">
-<position info="not_deleted" x="212" y="0"/>
+<item historyLabel="Scenario.java" index="7">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item historyLabel="Nageur.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="316" y="0"/>
 </item>
-<item historyLabel="Piscine.java" index="10">
-<position info="not_deleted" x="285" y="9"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="395" y="12"/>
 </item>
-<item historyLabel="Scheduler.java" index="11">
-<position info="not_deleted" x="180" y="0"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="327" y="528"/>
 </item>
-<item historyLabel="Scheduling.java" index="12">
-<position info="not_deleted" x="212" y="0"/>
+<item historyLabel="Scenario.java" index="7">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item historyLabel="Nageur.java" index="9">
-<position info="not_deleted" x="129" y="0"/>
+<item historyLabel="Nageur.java" index="2">
+<position info="not_deleted" x="395" y="12"/>
 </item>
-<item historyLabel="Piscine.java" index="10">
-<position info="not_deleted" x="285" y="9"/>
+<item historyLabel="Piscine.java" index="3">
+<position info="not_deleted" x="426" y="0"/>
 </item>
-<item historyLabel="Piscine.java" index="10">
-<position info="not_deleted" x="862" y="0"/>
+<item historyLabel="Scenario.java" index="7">
+<position info="not_deleted" x="240" y="0"/>
 </item>
-<item active="true" historyLabel="AcknoReceipt.java" index="13">
-<position info="not_deleted" x="0" y="0"/>
+<item active="true" historyLabel="Scheduler.java" index="4">
+<position info="not_deleted" x="324" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -400,6 +460,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="bottom"/>
 <trimItem IMemento.internal.id="right"/>
@@ -415,8 +478,29 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AcknoReceipt.java" tooltip="tp7-facteur/src/mail/AcknoReceipt.java">
-<persistable path="/tp7-facteur/src/mail/AcknoReceipt.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RessourceUser.java" tooltip="tp6-piscine/src/ressource/RessourceUser.java">
+<persistable path="/tp6-piscine/src/ressource/RessourceUser.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ressource.java" tooltip="tp6-piscine/src/ressource/Ressource.java">
+<persistable path="/tp6-piscine/src/ressource/Ressource.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Panier.java" tooltip="tp6-piscine/src/ressource/Panier.java">
+<persistable path="/tp6-piscine/src/ressource/Panier.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InvalidRessourceExecption.java" tooltip="tp6-piscine/src/ressource/InvalidRessourceExecption.java">
+<persistable path="/tp6-piscine/src/ressource/InvalidRessourceExecption.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CabineManager.java" tooltip="tp6-piscine/src/ressource/CabineManager.java">
+<persistable path="/tp6-piscine/src/ressource/CabineManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cabine.java" tooltip="tp6-piscine/src/ressource/Cabine.java">
+<persistable path="/tp6-piscine/src/ressource/Cabine.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Wait.java" tooltip="tp6-piscine/src/action/Wait.java">
+<persistable path="/tp6-piscine/src/action/Wait.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TakeRessource.java" tooltip="tp6-piscine/src/action/TakeRessource.java">
+<persistable path="/tp6-piscine/src/action/TakeRessource.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scheduling.java" tooltip="tp6-piscine/src/action/Scheduling.java">
 <persistable path="/tp6-piscine/src/action/Scheduling.java"/>
@@ -424,41 +508,20 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scheduler.java" tooltip="tp6-piscine/src/action/Scheduler.java">
 <persistable path="/tp6-piscine/src/action/Scheduler.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Scenario.java" tooltip="tp6-piscine/src/action/Scenario.java">
+<persistable path="/tp6-piscine/src/action/Scenario.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RessourceAction.java" tooltip="tp6-piscine/src/action/RessourceAction.java">
+<persistable path="/tp6-piscine/src/action/RessourceAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiberateRessource.java" tooltip="tp6-piscine/src/action/LiberateRessource.java">
+<persistable path="/tp6-piscine/src/action/LiberateRessource.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Piscine.java" tooltip="tp6-piscine/src/piscine/Piscine.java">
 <persistable path="/tp6-piscine/src/piscine/Piscine.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Nageur.java" tooltip="tp6-piscine/src/piscine/Nageur.java">
 <persistable path="/tp6-piscine/src/piscine/Nageur.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Adress.java" tooltip="tp7-facteur/src/mail/Adress.java">
-<persistable path="/tp7-facteur/src/mail/Adress.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Inhabitant.java" tooltip="tp7-facteur/src/mail/Inhabitant.java">
-<persistable path="/tp7-facteur/src/mail/Inhabitant.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Thanks.java" tooltip="tp7-facteur/src/mail/Thanks.java">
-<persistable path="/tp7-facteur/src/mail/Thanks.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Acknoeceipt.java" tooltip="tp7-facteur/src/mail/Acknoeceipt.java">
-<persistable path="/tp7-facteur/src/mail/Acknoeceipt.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RecommendedMail.java" tooltip="tp7-facteur/src/mail/RecommendedMail.java">
-<persistable path="/tp7-facteur/src/mail/RecommendedMail.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="urgentMail.java" tooltip="tp7-facteur/src/mail/urgentMail.java">
-<persistable path="/tp7-facteur/src/mail/urgentMail.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mail.java" tooltip="tp7-facteur/src/mail/Mail.java">
-<persistable path="/tp7-facteur/src/mail/Mail.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MailDecoration.java" tooltip="tp7-facteur/src/mail/MailDecoration.java">
-<persistable path="/tp7-facteur/src/mail/MailDecoration.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Money.java" tooltip="tp7-facteur/src/mail/Money.java">
-<persistable path="/tp7-facteur/src/mail/Money.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BillOfExchange.java" tooltip="tp7-facteur/src/mail/BillOfExchange.java">
-<persistable path="/tp7-facteur/src/mail/BillOfExchange.java"/>
 </file>
 </mruList>
 </workbench>

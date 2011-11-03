@@ -40,11 +40,15 @@ public abstract class Action
 				this.state = ActionState.finished;
 			}
 		}
-		System.out.println("erreur ne doit pas faire puisque l'action "+this.msg+" est termine");
 	}
 	
 	public ActionState getState()
 	{
 		return this.state;
+	}
+	
+	public void setMsg(String msg)
+	{
+		this.msg = msg;
 	}
 }

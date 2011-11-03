@@ -17,6 +17,7 @@ public class LiberateRessource<R extends Ressource> extends RessourceAction<R>
 			this.manager.libRessource(user.getRessource());
 			this.canStop = true;
 		}
+		System.out.print(this.msg);
 	}
 
 	@Override

@@ -1,6 +1,0 @@
-package ressource;
-
-public class Scenario extends Scheduling
-{
-
-}

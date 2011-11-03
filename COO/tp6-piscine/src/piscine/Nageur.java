@@ -1,25 +1,25 @@
 package piscine;
 
-import ressource.CabineManager;
-import ressource.PanierManager;
+import ressource.*;
+import action.*;
 
-public class Nageur 
+public class Nageur extends Scenario
 {
-	protected String name;
-	protected PanierManager panierManager;
-	protected CabineManager cabineManager;
-	protected int timeToGetdressed;
-	protected int timeToSwim;
-	protected int timeToUndress;
+	private RessourceUser<Panier> userPanier = new RessourceUser<Panier>();
+	private RessourceUser<Cabine> userCabine = new RessourceUser<Cabine>();
 	
 	public Nageur(String name,PanierManager panierManager,CabineManager cabineManager,
-			int timeToGetdressed,int timeToSwim,int timeToUndress)
+			int timeToUndress,int timeToSwim,int timeToGetdressed)
 	{
-		this.name = name;
-		this.panierManager = panierManager;
-		this.cabineManager = cabineManager;
-		this.timeToGetdressed = timeToGetdressed;
-		this.timeToSwim = timeToSwim;
-		this.timeToUndress = timeToUndress;
+		this.setMsg(name);
+		this.add(new TakeRessource<Panier>(" - take a Panier\n", panierManager, userPanier));
+		this.add(new TakeRessource<Cabine>(" - take a Cabine\n", cabineManager, userCabine));
+		this.add(new Wait(" - undress ", timeToUndress));
+		this.add(new LiberateRessource<Cabine>(" - give back a Cabine\n", cabineManager, userCabine));
+		this.add(new Wait(" - swim ", timeToSwim));
+		this.add(new TakeRessource<Cabine>(" - take a Cabine\n", cabineManager, userCabine));
+		this.add(new Wait(" - get dressed", timeToGetdressed));
+		this.add(new LiberateRessource<Cabine>(" - give back a Cabine\n", cabineManager, userCabine));
+		this.add(new LiberateRessource<Panier>(" - give back a Panier\n", panierManager, userPanier));
 	}
 }

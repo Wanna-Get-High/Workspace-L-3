@@ -1,0 +1,32 @@
+package action;
+
+public class Wait extends Action 
+{
+	protected int timeToWait;
+	protected int timeAlreadyWaited;
+	
+	public Wait(String msg, int ttw)
+	{
+		super(msg);
+		this.timeToWait = ttw;
+		this.timeAlreadyWaited = 0;
+	}
+
+	public Wait(int ttw) 
+	{
+		this("", ttw);
+	}
+
+	@Override
+	public void inToDo() 
+	{		
+		this.timeAlreadyWaited++;
+		System.out.println(this.msg + " " + this.timeToWait);
+	}
+
+	@Override
+	protected boolean stopCondition() 
+	{
+		return this.timeToWait == 0;
+	}
+}

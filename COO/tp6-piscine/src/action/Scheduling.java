@@ -20,11 +20,35 @@ public abstract class Scheduling extends Action
 		this.theAction.add(a);
 	}
 	
-	@Override
-	public void toDo() 
+	public int previous()
 	{
-		for (Action a :theAction)
-			a.toDo();
+		if (this.currentActionIndex == 0)
+			return this.theAction.size() - 1;
+		
+		return this.currentActionIndex - 1;
+	}
+	
+	public int next()
+	{
+		if (this.currentActionIndex == this.theAction.size() - 1)
+			return 0;
+		
+		return this.currentActionIndex +1;
+	}
+	
+	public void setCurrentActionIndex(int newIndex)
+	{
+		this.currentActionIndex = newIndex;
+	}
+	
+	public void incrementIndex()
+	{
+		this.setCurrentActionIndex(this.next());
+	}
+	
+	public void decrementIndex()
+	{
+		this.setCurrentActionIndex(this.previous());
 	}
 	
 	@Override
@@ -32,5 +56,4 @@ public abstract class Scheduling extends Action
 	{
 		return this.theAction.isEmpty();
 	}
-
 }

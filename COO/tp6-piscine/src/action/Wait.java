@@ -2,13 +2,14 @@ package action;
 
 public class Wait extends Action 
 {
-	
 	protected int timeToWait;
+	protected int timeAlreadyWaited;
 	
 	public Wait(String msg, int ttw)
 	{
 		super(msg);
 		this.timeToWait = ttw;
+		this.timeAlreadyWaited = 0;
 	}
 
 	public Wait(int ttw) 
@@ -18,13 +19,14 @@ public class Wait extends Action
 
 	@Override
 	public void inToDo() 
-	{		
-		this.timeToWait--;
+	{
+		int timeLeft = this.timeToWait - this.timeAlreadyWaited++;
+		System.out.print(this.msg + " " + timeLeft + "\n");
 	}
 
 	@Override
 	protected boolean stopCondition() 
 	{
-		return this.timeToWait == 0;
+		return this.timeToWait <= this.timeAlreadyWaited;
 	}
 }

@@ -1,9 +1,0 @@
-package ressource;
-
-public class RessourceUser<R> 
-{
-	public RessourceUser()
-	{
-		
-	}
-}

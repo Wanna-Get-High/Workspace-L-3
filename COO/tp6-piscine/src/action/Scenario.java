@@ -2,23 +2,13 @@ package action;
 
 public class Scenario extends Scheduling
 {
-	public Scenario()
-	{
-		super();
-	}
-	
 	@Override
 	protected void inToDo()
 	{
-		this.theAction.get(this.currentActionIndex).toDo();
+		this.theAction.get(0).toDo();
+		System.out.print(this.msg);
 		
-		if (this.theAction.get(this.currentActionIndex).isFinished())
-		{
-			this.theAction.remove(this.currentActionIndex);
-		}
-		else 
-		{
-			this.currentActionIndex++;
-		}
+		if (this.theAction.get(0).isFinished())
+			this.theAction.remove(0);
 	}
 }

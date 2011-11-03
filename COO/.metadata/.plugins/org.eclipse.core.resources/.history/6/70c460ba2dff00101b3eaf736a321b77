@@ -1,5 +1,0 @@
-package ressource;
-
-public enum ActionState {
-	notStarted,started,finished
-}

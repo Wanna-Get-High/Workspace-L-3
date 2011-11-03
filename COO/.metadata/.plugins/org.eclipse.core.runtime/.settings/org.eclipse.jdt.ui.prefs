@@ -1,4 +1,4 @@
-#Tue Nov 01 15:50:09 CET 2011
+#Fri Nov 04 00:06:41 CET 2011
 content_assist_proposals_foreground=60,60,60
 spelling_locale_initialized=true
 command=/usr/lib/jvm/java-6-openjdk/bin/javadoc
@@ -19,6 +19,6 @@ org.eclipse.jdt.ui.formatterprofiles.version=12
 content_assist_number_of_computers=13
 useQuickDiffPrefPage=true
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="afficheurLumineux.Horloge"><rhs name\="afficheurLumineux.Horloge"/></lhs><lhs name\="afficheurLumineux.Afficheur"><rhs name\="afficheurLumineux.Afficheur"/></lhs><lhs name\="oie.Cell"><rhs name\="oie.GooseCell"/><rhs name\="oie.TrapCell"/><rhs name\="oie.WaitCell"/><rhs name\="oie.TeleportCell"/><rhs name\="oie.NormalCell"/><rhs name\="oie.StartCell"/></lhs><lhs name\="oie.Player"><rhs name\="oie.Player"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Enum"><rhs name\="ressource.ActionState"/></lhs><lhs name\="ressource.ActionState"><rhs name\="ressource.ActionState"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="afficheurLumineux.Horloge"><rhs name\="afficheurLumineux.Horloge"/></lhs><lhs name\="afficheurLumineux.Afficheur"><rhs name\="afficheurLumineux.Afficheur"/></lhs><lhs name\="oie.Cell"><rhs name\="oie.GooseCell"/><rhs name\="oie.TrapCell"/><rhs name\="oie.WaitCell"/><rhs name\="oie.TeleportCell"/><rhs name\="oie.NormalCell"/><rhs name\="oie.StartCell"/></lhs><lhs name\="oie.Player"><rhs name\="oie.Player"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Enum"><rhs name\="ressource.ActionState"/></lhs><lhs name\="ressource.ActionState"><rhs name\="ressource.ActionState"/></lhs><lhs name\="java.lang.RuntimeException"><rhs name\="java.util.NoSuchElementException"/></lhs><lhs name\="java.lang.Exception"><rhs name\="java.util.NoSuchElementException"/></lhs><lhs name\="java.lang.Throwable"><rhs name\="java.util.NoSuchElementException"/></lhs><lhs name\="java.util.NoSuchElementException"><rhs name\="java.util.NoSuchElementException"/></lhs><lhs name\="action.Action"><rhs name\="action.TakeRessource"/></lhs></history>
 =\=\=\=\=\=\=
 org.eclipse.jdt.ui.text.code_templates_migrated=true

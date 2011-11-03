@@ -1,5 +1,0 @@
-package ressource;
-
-public class LiberateRessource extends RessourceAction<R> {
-
-}

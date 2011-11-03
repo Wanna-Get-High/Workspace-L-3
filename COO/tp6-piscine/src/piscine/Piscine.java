@@ -8,8 +8,8 @@ public class Piscine
 {
 	public static void main(String[] args) 
 	{
-		PanierManager paniers = new PanierManager(6) ;
-		CabineManager cabines = new CabineManager(3) ;
+		PanierManager paniers = new PanierManager(3) ;
+		CabineManager cabines = new CabineManager(2) ;
 	    
 	    Scheduler s = new Scheduler() ;
 	    
@@ -22,5 +22,4 @@ public class Piscine
 	    s.add(new Nageur("Desire" ,  paniers , cabines , 6  , 5  , 7)) ;
 	    while (! s.isFinished()) s.toDo() ;
 	}
-
 }
