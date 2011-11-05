@@ -1,14 +1,18 @@
 package action;
 
+/**
+ * The Class Scenario.
+ */
 public class Scenario extends Scheduling
 {
+
 	@Override
 	protected void inToDo()
 	{
-		this.theAction.get(0).toDo();
 		System.out.print(this.msg);
+		this.theActions.get(0).toDo();
 		
-		if (this.theAction.get(0).isFinished())
-			this.theAction.remove(0);
+		if (this.theActions.get(0).isFinished())
+			this.theActions.remove(0);
 	}
 }

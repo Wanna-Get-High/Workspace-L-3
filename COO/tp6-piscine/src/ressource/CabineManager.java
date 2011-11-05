@@ -1,14 +1,24 @@
 package ressource;
 
-public class CabineManager extends RessourceManager<Cabine>
+
+/**
+ * The Class CabineManager.
+ */
+public class CabineManager extends ResourceManager<Cabine>
 {
-	public CabineManager(int nbRessource)
+	
+	/**
+	 * Instantiates a new cabine manager.
+	 *
+	 * @param nbRessource the number of resource
+	 */
+	public CabineManager(int nbResource)
 	{
-		super(nbRessource);
+		super(nbResource);
 	}
 
 	@Override
-	protected Cabine createRessource() 
+	protected Cabine createResource() 
 	{
 		return new Cabine();
 	}

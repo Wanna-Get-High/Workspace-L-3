@@ -1,0 +1,12 @@
+package ressource;
+
+public class Panier implements Resource 
+{
+	public Panier(){}
+	
+	@Override
+	public String description() 
+	{
+		return "Panier";
+	}
+}

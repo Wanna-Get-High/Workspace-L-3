@@ -1,0 +1,140 @@
+----------------------- Q1
+
+   e_id    
+-----------
+ 112348546
+ 115987938
+ 301221823
+ 322654189
+ 348121549
+ 552455318
+ 567354612
+ 574489456
+(8 rows)
+----------------------- Q2
+                 titre                 
+---------------------------------------
+ Systemes de Bases de Donnees
+ Conception de Systemes d Exploitation
+ Droit des brevets
+(3 rows)
+
+
+----------------------- Q3
+                 cours                 
+---------------------------------------
+ Conception de Systemes d Exploitation
+ Reseaux de communication
+ Structures de Donnees
+ Systemes de Bases de Donnees
+(4 rows)
+
+----------------------- Q4
+  niveau   |         avg         | count 
+-----------+---------------------+-------
+ Licence 1 | 17.6666666666666667 |     6
+ Licence 2 | 18.4000000000000000 |     5
+ Licence 3 | 19.5000000000000000 |     6
+ Master 1  | 20.7142857142857143 |     7
+(4 rows)
+
+----------------------- Q5
+       e_nom        
+--------------------
+ Christophe Cordier
+ Paul Cheminot
+(2 rows)
+
+----------------------- Q6
+ max 
+-----
+  20
+(1 row)
+
+
+----------------------- Q7
+     e_nom     
+---------------
+ Louis Fernand
+(1 row)
+
+
+----------------------- Q8
+       e_nom       
+-------------------
+ Angela Martinet
+ Charles Harry
+ Damien Leroi
+ Daniel Lemaire
+ Dorothee Lechemin
+ Eduouard Blanchet
+ Georges Watteau
+ Marc Jeune
+ Margarethe Cousin
+ Marie Blanche
+ Nancy Alain
+ Stephane Vert
+ Thomas Robet
+(13 rows)
+
+----------------------- Q9
+ prof_id 
+---------
+(0 rows)
+
+----------------------- Q10
+ niveau   |         avg         
+-----------+---------------------
+ Licence 3 | 19.5000000000000000
+ Master 1  | 20.7142857142857143
+ Licence 2 | 18.4000000000000000
+(3 rows)
+----------------------- Q11
+                 titre                 
+---------------------------------------
+ Structures de Donnees
+ Systemes de Bases de Donnees
+ Conception de Systemes d Exploitation
+ Archeologie des Incas
+ Droit des brevets
+ Elevage bovin
+ Introduction a l Algebre Lineaire
+(7 rows)
+
+----------------------- Q12
+
+  prof_id  |   prof_nom   | nbcours 
+-----------+--------------+---------
+ 356187925 | Victor Goron |       1
+(1 row)
+
+----------------------- Q13
+     e_nom     
+---------------
+ Anna Lopet
+ Jean Robinet
+ Lisa Marcheur
+ Louis Fernand
+(4 rows)
+
+----------------------- Q14
+     e_nom      
+----------------
+ Susanne Martin
+ Louis Fernand
+ Morgan Monl
+(3 rows)
+
+
+----------------------- Q15
+        avg         
+--------------------
+ 1.8333333333333333
+(1 row)
+
+----------------------- Q16
+         avg           
+------------------------
+ 0.95652173913043478261
+(1 row)
+

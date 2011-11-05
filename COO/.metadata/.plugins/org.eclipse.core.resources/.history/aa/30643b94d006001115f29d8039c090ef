@@ -1,0 +1,20 @@
+package action;
+
+import ressource.ResourceManager;
+import ressource.ResourceUser;
+
+public abstract class RessourceAction<R> extends Action 
+{
+
+	protected ResourceManager<R> manager;
+	protected ResourceUser<R> user;
+	protected boolean canStop;
+	
+	public RessourceAction(String msg,ResourceManager<R> manager, ResourceUser<R> user)
+	{
+		super(msg);
+		this.manager = manager;
+		this.user = user;
+		this.canStop = false;
+	}
+}

@@ -1,14 +1,23 @@
 package ressource;
 
-public class PanierManager extends RessourceManager<Panier> 
+/**
+ * The Class PanierManager.
+ */
+public class PanierManager extends ResourceManager<Panier> 
 {
-	public PanierManager(int nbRessource)
+	
+	/**
+	 * Instantiates a new panier manager.
+	 *
+	 * @param nbResource the number resource
+	 */
+	public PanierManager(int nbResource)
 	{
-		super(nbRessource);
+		super(nbResource);
 	}
 
 	@Override
-	protected Panier createRessource() 
+	protected Panier createResource() 
 	{
 		return new Panier();
 	}

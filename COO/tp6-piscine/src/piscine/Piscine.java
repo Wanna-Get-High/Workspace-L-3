@@ -4,8 +4,17 @@ import action.Scheduler;
 import ressource.CabineManager;
 import ressource.PanierManager;
 
+/**
+ * The Class Piscine.
+ */
 public class Piscine 
 {
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) 
 	{
 		PanierManager paniers = new PanierManager(3) ;

@@ -1,0 +1,168 @@
+--  Q1  articles non fournissables 
+
+ aid 
+-----
+(0 rows)
+
+
+--Q2 vendeur sans articles
+
+ fid 
+-----
+(0 rows)
+
+-- Q3 couleurs, pour lesquelles il existe un article non fournissable
+-- jointure entre catalogue et article autorisee dans la sous-requete
+
+ acoul 
+-------
+(0 rows)
+
+-- Q4 lignes du catalogue erronees: vendeur non existant
+ fid 
+-----
+(0 rows)
+
+
+-- Q5 lignes du catalogue erronees: article non existant
+
+ aid 
+-----
+(0 rows)
+
+---Q6 articles coutant au moins 100 euros , chez tous les vendeurs
+-- (comparaison au niveau des aids)
+-- faute dans version precedente!
+
+ aid 
+-----
+   6
+(1 row)
+
+--Q7 articles uniquement vendus par kiventout
+
+             anom              
+--------------------------------
+ Smoke Shifter End
+ Acme Widget Washer
+ Anti-Gravity Turbine Generator
+(3 rows)
+
+
+-- Q8 articles offerts par  au moins 2 fournisseurs
+aid 
+-----
+   1
+   4
+   5
+   7
+   8
+   9
+(6 rows)
+
+
+-- Q9 articles existants en rouge et en vert
+--- remarque: pour verifier si votre resultat est correct, 
+--- vous pourriez rajouter a ARTICLES les lignes concernant les aids 10 et 12.
+--- avec ceci, vous obtenez un resultat non vide si tout va bien (Microsd Card USB Reader)
+-- il faudra ensuite re-supprimer ces deux lignes.
+
+ anom 
+------
+(0 rows)
+
+-- Q10 article en rouge, qui n'existe pas en vert
+ aid 
+-----
+   1
+   3
+   8
+(3 rows)
+
+-- Q11 articles en rouge, exclusivement, 
+
+          anom            
+---------------------------
+ Left Handed Toaster Cover
+ Fire Hydrant Cap
+(2 rows)
+
+-- Q12 articles disponbles aux etats-unis, uniquement
+
+-- v1: resultat obtenu avec requete erronnÃ©e:
+ aid 
+-----
+   1
+   4
+   5
+   7
+   8
+   9
+(6 rows)
+-- la mauvaise requete produisant ce resultat suit. la faute se situe dans la
+-- deuxieme sous-requete. l'idee etait d'y dire, qu'il n'existe pas
+-- d'autre  vendeur pour CET article, qui ne soit pas aux USA
+
+-- corrigez la requete dans ce sens!
+
+select distinct c.aid 
+from catalogue c 
+where 
+exists 
+     (select * from fournisseurs f
+      where f.fid=c.fid and  fad like '%USA')
+and not exists
+   (select * from fournisseurs f
+    where f.fid=c.fid and  fad not like '%USA');
+
+---- pour tester:
+
+--ajouter pour Q12 a la base les lignes suivantes (un article dispo
+--uniquement aux USA chez le vendeur no 2.
+INSERT INTO Articles VALUES (13,'Microsd Card USB Reader','rose');
+INSERT INTO Catalogue VALUES (2,13,1.23);
+
+
+-- vous devriez retrouver le resultat suivant:
+ aid 
+-----
+  13
+(1 row)
+
+--- (c) remettre la base a l'etat precedent.
+delete from catalogue where aid=13;
+delete from articles where aid=13;
+
+-----------------------------------
+-- Q13  vendeurs offrant aussi bien des articles rouges que des verts
+-- jointure autorisee dans la sous-requete
+
+ fid 
+-----
+   1
+   3
+(2 rows)
+
+---Q14  vendeur offrant tous les articles
+-- il faut enlever les articles 10, 11 et 12 pour obtenir un resultat
+
+ fid 
+-----
+   1
+(1 row)
+
+-- Q15 fournisseur offrant tous les articles rouges
+-- il faut enlever les articles 10, 11 et 12 du catalogue pour obtenir un resultat
+
+ fid 
+-----
+   1
+(1 row)
+
+-- Q16 - monopolistes avec leurs articles
+fid | aid 
+-----+-----
+   1 |   2
+   1 |   3
+   1 |   6
+(3 rows)

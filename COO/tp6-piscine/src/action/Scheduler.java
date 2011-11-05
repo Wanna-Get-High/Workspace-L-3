@@ -1,9 +1,17 @@
 package action;
 
+/**
+ * The Class Scheduler.
+ */
 public class Scheduler extends Scheduling 
 {
+	
+	/** The number of finished action. */
 	protected int nbFinishedAction;
 	
+	/**
+	 * Instantiates a new scheduler.
+	 */
 	public Scheduler()
 	{
 		super();
@@ -13,11 +21,11 @@ public class Scheduler extends Scheduling
 	protected void inToDo()
 	{
 		this.incrementIndex();
-		this.theAction.get(this.currentActionIndex).toDo();
+		this.theActions.get(this.currentActionIndex).toDo();
 		
-		if (this.theAction.get(this.currentActionIndex).isFinished())
+		if (this.theActions.get(this.currentActionIndex).isFinished())
 		{
-			this.theAction.remove(this.currentActionIndex);
+			this.theActions.remove(this.currentActionIndex);
 			this.decrementIndex();
 		}
 		System.out.print(this.msg);

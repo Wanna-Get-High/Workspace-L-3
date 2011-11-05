@@ -31,4 +31,6 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
 <fullyQualifiedTypeName name="action.TakeRessource"/>
+<fullyQualifiedTypeName name="ressource.Resource"/>
+<fullyQualifiedTypeName name="ressource.InvalidResourceException"/>
 </qualifiedTypeNameHistroy>

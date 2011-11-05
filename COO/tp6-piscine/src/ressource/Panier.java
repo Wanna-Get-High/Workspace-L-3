@@ -1,7 +1,14 @@
 package ressource;
 
-public class Panier implements Ressource 
+/**
+ * The Class Panier.
+ */
+public class Panier implements Resource 
 {
+	
+	/**
+	 * Instantiates a new panier.
+	 */
 	public Panier(){}
 	
 	@Override

@@ -1,0 +1,88 @@
+package ressource;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RessourceManager.
+ *
+ * @param <R> the generic type
+ */
+public abstract class RessourceManager<R> 
+{
+	
+	/** The number of resource. */
+	protected int nbResource;
+	
+	/** The number of available resource. */
+	protected int nbAvailResource;
+	
+	/** The available resource. */
+	protected List<R> AvailResource;
+	
+	/** The Unavailable resource. */
+	protected List<R> UnAvailResource;
+	
+	/**
+	 * Instantiates a new resource manager.
+	 *
+	 * @param ndr the number of available resource
+	 */
+	public RessourceManager(int ndr)
+	{
+		this.nbResource = this.nbDispResource = ndr;
+		this.dispResource = new LinkedList<R>();
+		this.UnDispResource = new LinkedList<R>();
+		
+		for (int i =0; i < this.nbResource; i++)
+		{
+			this.dispResource.add(this.createRessource());
+		}
+	}
+	
+	/**
+	 * Creates the resource.
+	 *
+	 * @return the r
+	 */
+	protected abstract R createRessource();
+	
+	/**
+	 * Give resource.
+	 *
+	 * @return the r
+	 * @throws NoSuchElementException the no such element exception
+	 */
+	public R giveRessource() throws NoSuchElementException
+	{
+		if (!this.dispResource.isEmpty())
+		{
+			R res;
+			res = this.dispResource.get(0);
+			this.dispResource.remove(0);
+			this.UnDispResource.add(res);
+			
+			this.nbDispResource--;
+			return res;
+		}
+		throw new NoSuchElementException();
+	}
+	
+	/**
+	 * Lib ressource.
+	 *
+	 * @param res the res
+	 */
+	public void libRessource(R res)
+	{
+		if (this.nbDispResource < this.nbResource)
+		{
+			this.dispResource.add(res);
+			this.UnDispResource.remove(res);
+			
+			this.nbDispResource++;
+		}
+	}
+}

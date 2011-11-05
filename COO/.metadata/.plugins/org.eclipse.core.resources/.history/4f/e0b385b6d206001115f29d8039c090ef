@@ -1,0 +1,18 @@
+package ressource;
+
+/**
+ * The Class InvalidResourceExecption.
+ */
+public class InvalidResourceExecption 
+{
+	
+	/**
+	 * Instantiates a new invalid resource execption.
+	 *
+	 * @param msg the message
+	 */
+	public InvalidResourceExecption(String msg)
+	{
+		System.err.println(msg);
+	}
+}
