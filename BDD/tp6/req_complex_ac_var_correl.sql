@@ -1,4 +1,5 @@
-/*
+-- il n'y a que la 13 que je n'ai pas trouve sinon tout me semble correct
+
 -- Q1 --
 select aid 
 from articles
@@ -93,20 +94,30 @@ select c.fid
 from catalogue as c
 where c.aid in (select a.aid
 				from articles as a
-				where acoul = 'rouge'
-				inner join articles as a1
-				on );*/
--- Q14 --                                                            ???????????????????????
-
--- Q15 --                                                            ???????????
-select c.fid , c.aid
+				where acoul = 'rouge');
+-- Q14 --                                                            
+select distinct c.fid 
 from catalogue as c
-where exists (	select a.aid
-				from articles as a 
-				where c.aid = a.aid and a.acoul = 'rouge');
+where not exists (	select  f.fid
+					from fournisseurs as f, (select aid from articles) as artrouge
+					where f.fid  = c.fid 
+					and not exists (select fid, aid
+									from Catalogue as c2
+									where f.fid = c2.fid
+									and artrouge.aid = c2.aid));
+-- Q15 --                                                           
+select distinct c.fid 
+from catalogue as c
+where not exists (	select  f.fid
+					from fournisseurs as f, (select aid from articles where acoul = 'rouge') as artrouge
+					where f.fid  = c.fid 
+					and not exists (select fid, aid
+									from Catalogue as c2
+									where f.fid = c2.fid
+									and artrouge.aid = c2.aid));
 -- Q16 -- 
-/*select c1.fid, c1.aid
+select c1.fid, c1.aid
 from catalogue as c1
 where not exists (	select c2.fid
 					from catalogue as c2
-					where c1.fid <> c2.fid and c1.aid = c2.aid);*/
+					where c1.fid <> c2.fid and c1.aid = c2.aid);
