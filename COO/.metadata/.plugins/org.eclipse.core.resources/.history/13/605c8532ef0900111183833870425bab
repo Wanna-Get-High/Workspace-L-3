@@ -1,0 +1,29 @@
+package mail;
+
+public class ContentGoGo implements Content
+{
+	private Inhabitant[] beneficiary;
+	private float value;
+
+	public Inhabitant[] getInhabitant()
+	{
+		return this.beneficiary;
+	}
+	
+	public float getValue() 
+	{
+		return this.value;
+	}
+	
+	public void setBeneficiary(Inhabitant[] benef)
+	{
+		this.beneficiary = new Inhabitant[benef.length];
+		this.beneficiary = benef;
+	}
+	
+	@Override
+	public String getDescription() 
+	{
+		return " this content is money for some people ";
+	}
+}

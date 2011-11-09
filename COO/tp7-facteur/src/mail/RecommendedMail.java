@@ -2,7 +2,7 @@ package mail;
 
 public class RecommendedMail extends DecorationMail 
 {
-	private float percentage;
+	private final float percentage = 15;
 	
 	public RecommendedMail(Mail<?> con) 
 	{
@@ -12,14 +12,13 @@ public class RecommendedMail extends DecorationMail
 	@Override
 	public float getCost() 
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return this.content.getCost() + ( this.content.getCost() * this.percentage ); 
 	}
 	
 	@Override
 	public void action() 
 	{
-		// TODO Auto-generated method stub
+		this.content.action();
+		this.receiver.sendMail(new AcknoReceipt(this.receiver,this.sender,"acknowledgement of receipt of mail number : "+this.getSerial(),this.getSerial()));
 	}
-	
 }

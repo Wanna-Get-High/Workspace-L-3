@@ -1,0 +1,22 @@
+package mail;
+
+public class Simulation 
+{
+	public Adress createAdress(Town t)
+	{
+		return new Adress((int)Math.random(), "troud bal", t);
+	}
+	public Inhabitant[] createInhabitant()
+	{
+		Inhabitant[] in = new Inhabitant[10];
+		for (int i = 0;i< in.length;i++)
+			in = new Inhabitant((float)Math.random(),)
+		return in;
+	}
+	
+	public static void main(String[] args)
+	{
+		Town town = new Town();
+		
+	}
+}

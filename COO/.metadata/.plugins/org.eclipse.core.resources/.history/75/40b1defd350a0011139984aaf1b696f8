@@ -1,0 +1,43 @@
+package mail;
+
+public class Inhabitant 
+{
+	private float accountBalance;
+	protected Adress adress;
+	
+	public Inhabitant(float ab, Adress ad)
+	{
+		this.accountBalance = ab;
+		this.adress = ad;
+	}
+	
+	public void receiveMail(Mail<?> m)
+	{
+		Object cont = m.getContent();
+		
+		if (cont == ContentGoGo.class)
+		{
+			this.creditAccount( ((ContentGoGo) cont).getValue());
+		}
+		else if (cont == Money.class)
+		{
+			this.creditAccount( ((Money) cont).getValue());
+		}
+	}
+	
+	public void sendMail(Mail<?> m)
+	{
+		this.adress.getTown().postMail(m);
+	}
+	
+	public void debitAccount(float amount)
+	{
+		this.accountBalance -= amount;
+	}
+
+	public void creditAccount(float amount)
+	{
+		this.accountBalance += amount;
+	}
+	
+}

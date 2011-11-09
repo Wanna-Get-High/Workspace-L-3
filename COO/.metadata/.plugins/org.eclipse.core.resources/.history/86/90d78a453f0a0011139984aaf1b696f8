@@ -1,0 +1,16 @@
+package mail;
+
+public class Simulation 
+{
+	Town town
+	public void createInhabitant()
+	{
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		Town town = new Town();
+		
+	}
+}

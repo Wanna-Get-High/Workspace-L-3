@@ -1,0 +1,29 @@
+package mail;
+
+public class Inhabitant 
+{
+	private float accountBalance;
+	protected Adress adress;
+	
+	public void recieveMail(Mail m)
+	{
+		
+	}
+	public void sendMail(Mail m)
+	{
+		
+	}
+	public void debitAccount(float amount)
+	{
+		if (this.accountBalance-amount >= 0)
+			this.accountBalance -= amount;
+		else 
+			System.out.println("cant debit because the inhabitant don't have enough money");
+	}
+
+	public void creditAccount(float amount)
+	{
+		this.accountBalance+=amount;
+	}
+	
+}
