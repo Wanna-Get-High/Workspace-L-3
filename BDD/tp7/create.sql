@@ -15,17 +15,17 @@ create table etudiants(
 	e_id int primary key,
 	e_nom varchar(30),
 	programme varchar(25),
-	niveau varchar(10),--
+	niveau varchar(10),
 	age int
 	);
 create table profs(
-prof_id int primary key,
+	prof_id int primary key,
 	prof_nom varchar(30),
 	lab_id int
 	);
 create table cours(
-       c_id int primary key,
-       	titre varchar(40) unique, 
+   	c_id int primary key,
+   	titre varchar(40) unique, 
 	horaire varchar(20),
 	salle varchar(10),
 	prof_id int,
