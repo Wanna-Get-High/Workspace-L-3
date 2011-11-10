@@ -1,0 +1,132 @@
+/*****************************************************
+ * Description pour Cup d'une grammaire pour Init
+ * attribuée : avec classe ControleurType ayant la 
+ * responsabilité du contrôle de type
+ *
+ * 16/12/04 - revu 09/09 
+ * M. Nebut
+ *
+ *****************************************************/
+
+package init.analyseurs;
+
+import java_cup.runtime.*;
+import init.controleType.*;
+import java.util.ArrayList;
+
+action code {:
+private ControleurType controleur;
+:}
+
+parser code {: 
+
+private boolean erreurSyntaxique;
+private String messageErreur;
+
+/** Redéfinition de la méthode parse() pour levée de 
+  * ParserException() en cas d'erreur syntaxique.
+  * @throws ParserException en cas d'erreur syntaxique.
+  */ 
+public Symbol parse() throws Exception, ParserException {
+   Symbol s = null;
+   try {    
+     s = super.parse();
+   } catch (Exception e) {
+   	   if (this.erreurSyntaxique)
+     	      throw new ParserException(this.messageErreur); 
+           else throw e;
+   }
+   return s;
+} 
+
+/** Redéfinition de syntax_error() pour qu'elle affiche
+  * le symbole courant.
+  */
+public void syntax_error(Symbol symboleCourant) {
+    this.erreurSyntaxique = true;
+    this.messageErreur = "erreur syntaxique sur le symbole " 
+    + ((Symbole)symboleCourant).getRepresentationTextuelle() 
+    + " ligne " + (symboleCourant.left + 1) 
+    + " colonne " + (symboleCourant.right + 1);
+}
+
+:} // parser code
+
+
+/* terminaux (symboles retournés par l'analyseur lexical) */
+
+terminal String IDENT;
+terminal PROG,DECLINT,READ,ENTIER,AFF,FININSTR;
+terminal SEPVAR, DEBUT_LISTE, FIN_LISTE, DECLLIST;
+
+/* non-terminaux de la grammaire */
+
+non terminal ArrayList<String> listeIdent;
+non terminal programme,entete,listeDecl,decl, listeInstr;
+non terminal instr,affect,lect, liste, contenuListe;
+
+start with programme; /* axiome */
+
+/* la grammaire */
+
+programme ::= entete listeDecl listeInstr {:
+   this.controleur.imprimerTable();
+:}
+
+;
+
+entete ::= PROG IDENT:nom FININSTR {:
+   this.controleur = new ControleurType();
+   this.controleur.typerIdentificateurCommeProgramme(nom);
+:}
+;
+
+listeDecl ::= 
+            | decl listeDecl 
+;
+
+decl ::= DECLINT listeIdent:liste FININSTR {:
+     this.controleur.typerIdentificateursCommeEntier(liste);
+:}
+      | DECLLIST listeIdent:liste FININSTR {:
+     this.controleur.typerIdentificateursCommeListe(liste);
+:}
+;
+
+listeIdent ::= IDENT:nom {:
+   RESULT = new ArrayList<String>();
+   RESULT.add(nom);
+:}
+             | IDENT:nom SEPVAR listeIdent:liste {:
+   RESULT = liste;
+   RESULT.add(nom);
+:}
+
+;
+
+listeInstr ::= 
+             | instr listeInstr
+; 
+
+instr ::= affect
+        | lect
+;
+
+affect ::= IDENT:nom AFF ENTIER FININSTR {:
+       this.controleur.verifierIdentificateurEstUnEntier(nom);	
+:}
+         | IDENT:nom AFF liste FININSTR {:
+       this.controleur.verifierIdentificateurEstUneListe(nom);
+:}
+;
+
+liste ::= DEBUT_LISTE contenuListe FIN_LISTE
+;
+
+contenuListe ::= | ENTIER contenuListe | liste contenuListe
+;
+
+lect ::= READ IDENT:nom FININSTR {:
+     this.controleur.verifierIdentificateurEstUnEntier(nom);
+:}
+;

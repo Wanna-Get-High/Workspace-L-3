@@ -1,0 +1,102 @@
+/*****************************************************
+ * Description pour Cup d'une grammaire pour Init
+ * version étendue 
+ *
+ * 16/12/04 - revu 09/09 
+ * M. Nebut
+ *
+ *****************************************************/
+
+package init.analyseurs;
+
+import java_cup.runtime.*;
+
+parser code {: 
+
+private boolean erreurSyntaxique;
+private String messageErreur;
+
+/** Redéfinition de la méthode parse() pour levée de 
+  * ParserException() en cas d'erreur syntaxique.
+  * @throws ParserException en cas d'erreur syntaxique.
+  */ 
+public Symbol parse() throws Exception, ParserException {
+   Symbol s = null;
+   try {    
+     s = super.parse();
+   } catch (Exception e) {
+   	   if (this.erreurSyntaxique)
+     	      throw new ParserException(this.messageErreur); 
+           else throw e;
+   }
+   return s;
+} 
+
+/** Redéfinition de syntax_error() pour qu'elle affiche
+  * le symbole courant.
+  */
+public void syntax_error(Symbol symboleCourant) {
+    this.erreurSyntaxique = true;
+    this.messageErreur = "erreur syntaxique sur le symbole " 
+    + ((Symbole)symboleCourant).getRepresentationTextuelle() 
+    + " ligne " + (symboleCourant.left + 1) 
+    + " colonne " + (symboleCourant.right + 1);
+}
+
+:} // parser code
+
+
+/* terminaux (symboles retournés par l'analyseur lexical) */
+
+terminal  IDENT;
+terminal PROG,DECLINT,READ,ENTIER,AFF,FININSTR;
+terminal SEPVAR, DEBUT_LISTE, FIN_LISTE, DECLLIST;
+
+/* non-terminaux de la grammaire */
+
+non terminal listeIdent;
+non terminal programme,entete,listeDecl,decl, listeInstr;
+non terminal instr,affect,lect, liste, contenuListe;
+
+start with programme; /* axiome */
+
+/* la grammaire */
+
+programme ::= entete listeDecl listeInstr 
+;
+
+entete ::= PROG IDENT FININSTR 
+;
+
+listeDecl ::= 
+            | decl listeDecl 
+;
+
+decl ::= DECLINT listeIdent FININSTR 
+      | DECLLIST listeIdent FININSTR 
+;
+
+listeIdent ::= IDENT 
+             | IDENT SEPVAR listeIdent 
+;
+
+listeInstr ::= 
+             | instr listeInstr
+; 
+
+instr ::= affect
+        | lect
+;
+
+affect ::= IDENT AFF ENTIER FININSTR 
+         | IDENT AFF liste FININSTR 
+;
+
+liste ::= DEBUT_LISTE contenuListe FIN_LISTE
+;
+
+contenuListe ::= | ENTIER contenuListe | liste contenuListe
+;
+
+lect ::= READ IDENT FININSTR 
+;

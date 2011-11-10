@@ -1,0 +1,4 @@
+program chose;
+int x;
+x := 1254
+;

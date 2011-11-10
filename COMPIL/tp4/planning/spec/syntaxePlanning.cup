@@ -1,0 +1,117 @@
+/*****************************************************
+ * Description pour Cup d'une grammaire vide
+ * Sert uniquement à définir les symboles de Planning
+ *
+ * M. Lepan & M. Van Ryseghem 
+ * 2011/10/05
+ *
+ *****************************************************/
+
+package planningMaster.analyseurs;
+import java_cup.runtime.*;
+import java.io.*;
+
+
+action code {:
+	private EcritureTexteFlot file;
+:}
+
+parser code {: 
+
+	private boolean erreurSyntaxique;
+	private String messageErreur;
+	
+	/** Redéfinition de la méthode parse() pour levée de 
+	  * ParserException() en cas d'erreur syntaxique.
+	  * @throws ParserException en cas d'erreur syntaxique.
+	  */
+	
+	public Symbol parse() throws Exception, ParserException 
+	{
+		Symbol s = null;
+		try {    
+			s = super.parse();
+		} 
+		catch (Exception e) 
+		{
+			if (this.erreurSyntaxique)
+				throw new ParserException(this.messageErreur); 
+			else 
+				throw e;
+		}
+		return s;
+	} 
+
+	/** Redéfinition de syntax_error() pour qu'elle affiche
+	  * le symbole courant.
+	  */
+	public void syntax_error(Symbol symboleCourant) 
+	{
+		this.erreurSyntaxique = true;
+		this.messageErreur = "erreur syntaxique sur le symbole " 
+				+ ((Symbole)symboleCourant).getRepresentationTextuelle() 
+				+ " ligne " + (symboleCourant.left + 1) 
+				+ " colonne " + (symboleCourant.right + 1);
+	}
+	
+:} // parser code
+	
+/* terminaux (symboles retournés par l'analyseur lexical) */
+
+terminal DATECST,MASTERCST,ROOMCST,PETITEPAUSE,GRANDEPAUSE;
+terminal SLOT,DATE, NAME,ENTREPRISE;
+terminal ROOM,MASTER,OPTIONS,SEPARATOR;
+
+/* non-terminaux de la grammaire */
+
+non terminal salle, date, entry, master, petitePause, grandePause, file;
+non terminal String data;
+
+/* axiome */
+start with file;
+
+/* la grammaire */
+
+file ::= 
+		| master:m date:d salle:s data:d file
+		{:
+			/** .tex file*/
+			file = new EcritureTexteFlot(new java.io.FileOutputStream(m+"_"+d+"_"+s+".tex"));
+			file.ecrire(d);
+			file.terminer();
+		:}
+;
+
+data ::= 
+		| entry data
+		| petitePause data
+		| grandePause data
+;
+
+salle ::= ROOMCST:name ROOM
+{:
+	
+:}
+;
+
+master ::= MASTERCST MASTER
+;
+
+date ::= DATECST DATE
+;
+
+entry ::= SLOT SEPARATOR NAME SEPARATOR ENTREPRISE SEPARATOR OPTIONS
+;
+
+petitePause ::= PETITEPAUSE
+;
+
+grandePause ::= GRANDEPAUSE
+;
+
+
+
+
+
+
+
