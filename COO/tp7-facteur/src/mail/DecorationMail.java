@@ -1,10 +1,10 @@
 package mail;
 
-public class DecorationMail extends Mail<Mail<?>> 
+public abstract class DecorationMail extends Mail<Mail<?>> 
 {
 	public DecorationMail(Mail<?> con) 
 	{
-		super(con.getSender(), con.getReceiver(), con);
+		super(con.getSender(), con.getReceiver(), con,con.getSerial());
 	}
 	
 	public Inhabitant getReceiver()
@@ -20,18 +20,5 @@ public class DecorationMail extends Mail<Mail<?>>
 	public String toString()
 	{
 		return this.content.toString();
-	}
-
-	@Override
-	public float getCost() 
-	{
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	@Override
-	public void action() 
-	{
-		// TODO Auto-generated method stub
 	}
 }

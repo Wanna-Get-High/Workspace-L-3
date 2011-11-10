@@ -2,7 +2,7 @@ package mail;
 
 public class urgentMail extends DecorationMail 
 {
-	private float urgentFactor;
+	private final float urgentFactor = 2;
 	
 	public urgentMail(Mail<?> con) 
 	{
@@ -12,7 +12,12 @@ public class urgentMail extends DecorationMail
 	@Override
 	public float getCost() 
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return this.content.getCost()*this.urgentFactor;
+	}
+
+	@Override
+	public void action() 
+	{
+		this.content.action();
 	}
 }

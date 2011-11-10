@@ -1,0 +1,22 @@
+package mail;
+
+public class BillOfExchange extends Mail<Money> 
+{
+	public BillOfExchange(Inhabitant sen, Inhabitant rec, Money content) 
+	{
+		super(sen, rec, content);
+	}
+
+	@Override
+	public void action() 
+	{
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public float getCost() 
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

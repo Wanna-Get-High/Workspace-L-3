@@ -1,0 +1,25 @@
+package mail;
+
+public class RecommendedMail extends DecorationMail 
+{
+	private float percentage;
+	
+	public RecommendedMail(Mail<?> con) 
+	{
+		super(con);
+	}
+	
+	@Override
+	public float getCost() 
+	{
+		return this.content.getCost() + ( this.content.getCost() * this.percentage ); 
+	}
+	
+	@Override
+	public void action() 
+	{
+		this.content.action();
+		this.content.getReceiver().sendMail(new AcknoReceipt(this.content.getReceiver(),this.content.getSender()))
+	}
+	
+}

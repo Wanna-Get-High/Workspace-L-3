@@ -1,0 +1,15 @@
+package mail;
+
+public class Adress 
+{
+	protected int streetNumber;
+	protected String streetName;
+	protected Town town;
+	
+	public Adress(int sNum, String sName, Town t)
+	{
+		this.streetName = sNum;
+		this.streetNumber = sName;
+		this.town = t;
+	}
+}

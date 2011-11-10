@@ -105,7 +105,7 @@ Insert into cours values(21,'Electronique optique','MaJeu 12:30-1:45','R15',2540
 insert into cours values(22,'Intelligence artificielle',null,'UP328',null);
 insert into cours values(23,'Introduction a l Algebre Lineaire','MaJeu 8-9:30','R128',489221823);
 -------------
-insert into participer values(112348546,2);
+insert into participer values(112348546,2); 112348546
 insert into participer values(115987938,2);
 insert into participer values(348121549,2);
 insert into participer values(322654189,2);
@@ -113,7 +113,7 @@ insert into participer values(552455318,2);
 insert into participer values(455798411,3);
 insert into participer values(552455318,3);
 insert into participer values(567354612,3);
-insert into participer values(112348546,3);
+insert into participer values(112348546,3); 112348546
 insert into participer values(115987938,3);
 insert into participer values(322654189,3);
 insert into participer values(567354612,1);

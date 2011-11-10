@@ -8,6 +8,7 @@ public class Money implements Content
 	{
 		this.value = val;
 	}
+	
 	public float getValue()
 	{
 		return this.value;

@@ -1,0 +1,26 @@
+package mail;
+
+public class Inhabitant 
+{
+	private float accountBalance;
+	protected Adress adress;
+	
+	public void recieveMail(Mail m)
+	{
+		
+	}
+	public void sendMail(Mail m)
+	{
+		
+	}
+	public void debitAccount(float amount)
+	{
+		
+	}
+
+	public void creditSolde(float amount)
+	{
+		
+	}
+	
+}

@@ -2,21 +2,19 @@ package mail;
 
 public class SimpleMail extends Mail<Text> 
 {
-	public SimpleMail(Inhabitant sen, Inhabitant rec, Text con)
+	public SimpleMail(Inhabitant sen, Inhabitant rec, Text con, int s)
 	{
-		super(sen, rec, con);
+		super(sen, rec, con, s);
 	}
 
 	@Override
 	public void action() 
 	{
-		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public float getCost() 
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 }

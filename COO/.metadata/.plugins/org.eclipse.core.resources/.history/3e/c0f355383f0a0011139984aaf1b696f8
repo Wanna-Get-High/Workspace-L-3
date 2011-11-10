@@ -1,0 +1,13 @@
+package mail;
+
+public class Simulation 
+{
+	
+	public void 
+	
+	public static void main(String[] args)
+	{
+		Town town = new Town();
+		
+	}
+}

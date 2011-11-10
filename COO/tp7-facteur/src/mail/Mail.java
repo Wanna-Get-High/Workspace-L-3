@@ -5,13 +5,14 @@ public abstract class Mail <C extends Content> implements Content
 	protected C content;
 	protected Inhabitant sender;
 	protected Inhabitant receiver;
-	protected String name;
+	protected int serial;
 	
-	public Mail(Inhabitant sen, Inhabitant rec,C con)
+	public Mail(Inhabitant sen, Inhabitant rec,C con,int s)
 	{
 		this.sender = sen;
 		this.receiver = rec;
 		this.content = con;
+		this.serial = s;
 	}
 	
 	public abstract void action();
@@ -22,6 +23,10 @@ public abstract class Mail <C extends Content> implements Content
 		return this.content;
 	}
 	
+	public int getSerial()
+	{
+		return this.serial;
+	}
 	public Inhabitant getReceiver()
 	{
 		return this.receiver;
@@ -30,11 +35,6 @@ public abstract class Mail <C extends Content> implements Content
 	public Inhabitant getSender()
 	{
 		return this.sender;
-	}
-	
-	public String toString()
-	{
-		return this.name;
 	}
 	
 	@Override
