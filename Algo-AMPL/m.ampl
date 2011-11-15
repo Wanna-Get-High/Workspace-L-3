@@ -12,7 +12,7 @@ var qte_produite {p in PROD} >= vente_min [p], <= vente_max [p];
 		
 	subject to production_limitee :
 		sum {p in PROD} (qte_produite [p] / vitesse_production [p]) <= heures_ouvrees;
-		let {p in PROD} vitesse_production [p] < 26 ;
+		let {p in PROD} vitesse_production [p] = 26 ;
 
 
 

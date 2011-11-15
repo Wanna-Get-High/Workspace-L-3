@@ -1,0 +1,4 @@
+reset;
+option solver cplex;
+model DM.model
+solve;
