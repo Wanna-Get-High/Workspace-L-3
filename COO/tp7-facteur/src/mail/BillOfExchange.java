@@ -10,6 +10,8 @@ public class BillOfExchange extends Mail<Money>
 	@Override
 	public void action() 
 	{
+		System.out.println("mail"+this.serial+ " (cost : " + this.getCost() + ") [value = " + this.getContent().getValue() + " euro(s)] send by hab" 
+				+ this.getSender().getSerial() + ", recieved by hab" + this.getReceiver().getSerial());
 		this.sender.debitAccount(this.content.getValue());
 		this.receiver.creditAccount(this.content.getValue());
 		this.receiver.sendMail(new Thanks(this.receiver, this.sender, " thanks for the bill of exchange number : "+this.getSerial(),this.getSerial()));
@@ -19,5 +21,10 @@ public class BillOfExchange extends Mail<Money>
 	public float getCost() 
 	{
 		return 1 + ((this.content.getValue()*1) / 100);
+	}
+	
+	public String toString()
+	{
+		return "bill of exchange";
 	}
 }

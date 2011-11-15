@@ -20,4 +20,9 @@ public class urgentMail extends DecorationMail
 	{
 		this.content.action();
 	}
+	
+	public String toString()
+	{
+		return "<"+this.getContent().toString() + "> urgent";
+	}
 }

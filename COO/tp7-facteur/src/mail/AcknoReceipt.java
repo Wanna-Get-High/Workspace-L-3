@@ -6,4 +6,9 @@ public class AcknoReceipt extends SimpleMail
 	{
 		super(sen, rec, new Text(recomendedName), s);
 	}
+	
+	public String toString()
+	{
+		return "acknoledgment";
+	}
 }

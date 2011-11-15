@@ -17,4 +17,9 @@ public class GoGoMail extends Mail<ContentGoGo>
 	{
 		return 1;
 	}
+	
+	public String toString()
+	{
+		return "gogo mail";
+	}
 }

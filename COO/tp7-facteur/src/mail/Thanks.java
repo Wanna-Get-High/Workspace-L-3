@@ -6,4 +6,9 @@ public class Thanks extends SimpleMail
 	{
 		super(sen, rec, new Text(boeName), s);
 	}
+	
+	public String toString()
+	{
+		return "thanks";
+	}
 }

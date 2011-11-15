@@ -1,0 +1,45 @@
+package mail;
+
+import java.util.*;
+
+public class Town 
+{
+	protected List <Mail<?>> boxLetter;
+	
+	public Town()
+	{
+		this.boxLetter = new ArrayList<Mail<?>>();
+	}
+	
+	public void postMail(Mail<?> m)
+	{
+		this.boxLetter.add(m);
+	}
+	
+	public void deliverMail()
+	{
+		synchronized(this.boxLetter){
+			for (Mail<?> m : this.boxLetter)
+			{
+				m.getReceiver().receiveMail(m);
+			}
+			this.clear();
+		}
+	}
+	
+	public void clear()
+	{
+		synchronized(this.boxLetter)
+		{
+			for(Iterator<Mail<?>> iter = this.boxLetter.iterator(); iter.hasNext();) 
+			{
+				iter.remove();
+			}
+		}
+	}
+	
+	public boolean mailToDeliver()
+	{
+		return !this.boxLetter.isEmpty();
+	}
+}

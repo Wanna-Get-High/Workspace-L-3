@@ -1,0 +1,68 @@
+package mail;
+
+public class Simulation 
+{
+	public static Adress createAdress(Town t)
+	{
+		return new Adress((int)Math.random()*100, "troud bal", t);
+	}
+	
+	public static Inhabitant[] createInhabitant(int length, Town t)
+	{
+		Inhabitant[] in = new Inhabitant[length];
+		for (int i = 0;i< length;i++)
+			in[i] = new Inhabitant(1000,createAdress(t),i);
+		
+		return in;
+	}
+	
+	public static void main(String[] args)
+	{
+		Town town = new Town();
+		Inhabitant[] inhabitant = createInhabitant(10,town);
+		int jour = 4;
+		int letterType = 0;
+		int receiver = 0;
+		int letterSerial = 0;
+		int amountOfMoney = 0;
+		int recomUrgentMail = 0;
+		Mail<?> theMailToSend;
+
+		for (int i = 0;i < jour;i++)
+		{
+			System.out.println(" -------------- Day "+(i+1)+" -------------------");
+			// deliver the mail in the mailbox to the inhabitant
+			if (town.mailToDeliver())
+				town.deliverMail();
+			
+			// choosing the type of letter they will send and to whom
+			for (int j = 0; j<inhabitant.length;j++)
+			{
+				
+				letterType = (int)(Math.random()*2) +1;		// choosing the type of letter it will be
+				recomUrgentMail = (int)(Math.random()*2) + 1;	// choosing if its a recommended mail or urgent mail or mail
+				receiver = (int)(Math.random()*9) +1;			// the inhabitant that will receive the mail
+				amountOfMoney = (int)(Math.random()*19) +1; 	// the amount of money the current inhabitant could send
+				letterSerial++;									// the serial of all the letter that will be send
+				
+				if (letterType == 1)// a simple mail
+					theMailToSend = new SimpleMail(inhabitant[j], inhabitant[receiver], new Text("bla bla"), letterSerial);
+				else 				// a bill of exchange
+					theMailToSend = new BillOfExchange(inhabitant[j], inhabitant[receiver], new Money(amountOfMoney), letterSerial);
+				
+				if (recomUrgentMail == 1)		// a recommended mail
+					theMailToSend = new RecommendedMail(theMailToSend);
+				else if (recomUrgentMail == 2)	// an urgent mail
+					theMailToSend = new urgentMail(theMailToSend);
+				
+				inhabitant[j].sendMail(theMailToSend);
+			}
+		}
+		if (town.mailToDeliver())
+		{
+			System.out.println(" -------------- Day "+(jour+ind)+" -------------------");
+			while (town.mailToDeliver())
+				town.deliverMail();
+		}
+	}
+}

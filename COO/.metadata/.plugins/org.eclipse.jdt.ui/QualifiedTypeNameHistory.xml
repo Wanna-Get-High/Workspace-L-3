@@ -14,7 +14,6 @@
 <fullyQualifiedTypeName name="oie.Cell"/>
 <fullyQualifiedTypeName name="java.lang.Class"/>
 <fullyQualifiedTypeName name="ressource.ActionState"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="ressource.Scheduling"/>
 <fullyQualifiedTypeName name="ressource.Scenario"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -33,16 +32,19 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="mail.ContentGoGo"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="mail.Money"/>
-<fullyQualifiedTypeName name="mail.RecommendedMail"/>
-<fullyQualifiedTypeName name="mail.SimpleMail"/>
-<fullyQualifiedTypeName name="mail.BillOfExchange"/>
-<fullyQualifiedTypeName name="mail.GoGoMail"/>
 <fullyQualifiedTypeName name="mail.AcknoReceipt"/>
 <fullyQualifiedTypeName name="mail.Thanks"/>
 <fullyQualifiedTypeName name="java.lang.Float"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="mail.Town"/>
-<fullyQualifiedTypeName name="mail.Inhabitant"/>
 <fullyQualifiedTypeName name="mail.Adress"/>
+<fullyQualifiedTypeName name="mail.SimpleMail"/>
+<fullyQualifiedTypeName name="mail.BillOfExchange"/>
+<fullyQualifiedTypeName name="mail.Money"/>
+<fullyQualifiedTypeName name="mail.GoGoMail"/>
+<fullyQualifiedTypeName name="mail.urgentMail"/>
+<fullyQualifiedTypeName name="mail.RecommendedMail"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="mail.Inhabitant"/>
+<fullyQualifiedTypeName name="mail.Town"/>
 </qualifiedTypeNameHistroy>

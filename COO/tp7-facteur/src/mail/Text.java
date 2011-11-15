@@ -17,6 +17,6 @@ public class Text implements Content
 	@Override
 	public String getDescription() 
 	{
-		return "This content is some text";
+		return "Some text";
 	}
 }

@@ -155,6 +155,44 @@ where e.e_id in (	select p.e_id
 					and exists (select * 
 								from cours as c
 								where p.c_id = c.c_id
-								and horaire like '%Lu%'));*/
--- Q15 --
+								and horaire like '%Lu%'));
+								
+-- Q15 --                                              ???????   rep logic mais comprend pas rep <>   ????????
+
+create view nb_etu_par_cour as
+select c.c_id as cid, count(e) as nb_etu
+from cours as c, etudiants as e
+where c.c_id in (	select p.c_id
+					from participer as p
+					where p.e_id = e.e_id)
+group by c.c_id;
+
+select sum(nb_etu) as avg_student
+from nb_etu_par_cour;
+
+--drop view nb_etu_par_cour;*/
+
 -- Q16 --
+--create view nb_etu_par_cour as
+select c.c_id as cid, count(e) as nb_etu
+from cours as c, etudiants as e
+group by c.c_id
+order by c.c_id;
+
+select sum(nb_etu) as avg_student
+from nb_etu_par_cour;
+
+
+/*select avg(nb_etu) as avg_student
+from nb_etu_par_cour;*/
+
+--drop view nb_etu_par_cour;
+
+
+
+
+
+
+
+
+

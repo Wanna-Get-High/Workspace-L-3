@@ -35,6 +35,6 @@ public class ContentGoGo implements Content
 	@Override
 	public String getDescription() 
 	{
-		return " this content is money for some people ";
+		return "Money";
 	}
 }

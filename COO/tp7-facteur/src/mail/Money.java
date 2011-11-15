@@ -17,7 +17,6 @@ public class Money implements Content
 	@Override
 	public String getDescription() 
 	{
-		return "This content is money";
+		return "Money";
 	}
-
 }
