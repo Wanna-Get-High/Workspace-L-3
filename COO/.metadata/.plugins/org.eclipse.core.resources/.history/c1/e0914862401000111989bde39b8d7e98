@@ -1,0 +1,24 @@
+package questionnaires;
+
+public class Symbolique extends Answer<String>{
+	
+	public Symbolique(String s)
+	{
+		super(s);
+	}
+	
+	public static Answer<?> build(String answerText) throws IllegalArgumentException
+	{
+		return new Symbolique(s);
+	}
+
+
+    public String getType() {        
+        return "symbolique";
+    }
+
+
+    public boolean acceptablePattern(String text) {
+        return true;
+    }
+}

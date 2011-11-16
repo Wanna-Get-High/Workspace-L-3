@@ -1,7 +1,19 @@
 package mail;
 
+/**
+ * The Class SimpleMail.
+ */
 public class SimpleMail extends Mail<Text> 
 {
+	
+	/**
+	 * Instantiates a new simple mail.
+	 *
+	 * @param sen the sender
+	 * @param rec the receiver
+	 * @param con the content
+	 * @param s the serial
+	 */
 	public SimpleMail(Inhabitant sen, Inhabitant rec, Text con, int s)
 	{
 		super(sen, rec, con, s);
@@ -19,6 +31,10 @@ public class SimpleMail extends Mail<Text>
 	{
 		return 1;
 	}
+	
+	/**
+	 * return the type of the message in a String
+	 */
 	public String toString()
 	{
 		return "simple";

@@ -1,0 +1,70 @@
+package questionnaires;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class AnswerFactory 
+{	    
+    public static final AnswerFactory INSTANCE = new AnswerFactory();
+    
+	 private AnswerFactory() { }
+	
+	 // version Q3
+//		public Answer<?> buildAnswer(String answerText){
+//		    // si answerText est oui/non alors
+//		    //  return OuiNon.build(answerText);
+//		    // sinon si answerText est un nombre alors
+//		    //  return Numerique.build(answerText);
+//		    
+//		    // pb OCP => ici Q5 et Q6
+//		    
+//		    
+//		    // sinon
+//		    // return Symbolique.build(answerText);
+//		    return null; // à modifier
+//		}
+
+	// version  Q4
+	public Answer<?> buildAnswer(String answerClassName, String answerText) 
+		throws NoSuchMethodException,IllegalArgumentException,IllegalAccessException,InvocationTargetException, ClassNotFoundException
+	{
+		Method method;
+		Answer<?> answer;
+		Class<?> c;
+		
+	    // we retrieve the Object Class for the named class answerClassName
+	    c = Object.class.forName(answerClassName);
+	    
+	    
+	    try {
+	    	// we retrieve for this class the method with signature build(String)
+	    	method = c.getMethod("build",String.class);
+	    }
+	    catch (NoSuchMethodException nsme)
+	    {
+	    	throw new NoSuchMethodException();
+	    }
+	    
+		// we invoke this method , 1st parameter = null because static
+	    try {
+			answer = (Answer<?>) method.invoke(null,answerText);
+		} 
+	    catch (IllegalArgumentException e) 
+		{
+			e.printStackTrace();
+			throw new IllegalArgumentException();
+		} 
+	    catch (IllegalAccessException e)
+		{
+			e.printStackTrace();
+			throw new IllegalAccessException();
+		} 
+		catch (InvocationTargetException e) 
+		{
+			e.printStackTrace();
+			throw new InvocationTargetException(e);
+		}
+	    return answer;
+	}
+}
+

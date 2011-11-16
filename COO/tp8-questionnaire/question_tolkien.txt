@@ -1,0 +1,20 @@
+Quel est le nom de l'auteur du Seigneur des Anneaux ? 
+Tolkien
+1
+Symbolic
+Frodo est un Hobbit ?
+oui
+1
+OuiNon
+Combien de membres composent la Compagnie de l'Anneau ?
+9
+2
+Numeric
+Gandalf est un humain ?
+non
+3
+OuiNon
+En quelle annee est paru le Seigneur des Anneaux ?
+1954
+3
+Numeric

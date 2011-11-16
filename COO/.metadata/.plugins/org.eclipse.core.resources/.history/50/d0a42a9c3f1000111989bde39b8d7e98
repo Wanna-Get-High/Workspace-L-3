@@ -1,0 +1,36 @@
+package questionnaires;
+
+public class Question 
+{
+	private String uneQuestion;
+	
+	private Answer<?> laSolution;
+	
+	private int points;
+	
+	public Question(String uneQuestion, Answer<?> laSolution, int points)
+	{
+		this.uneQuestion = uneQuestion;
+		this.laSolution = laSolution;
+		this.points = points;
+	}
+	
+	public Answer<?> getAnswer() {
+	    return this.laSolution;
+	}
+	
+	public void askQuestion( ){
+		System.out.println(this.uneQuestion);
+		//lire la reponse (surement un truc du style readline()) et la mettre dans une variable
+		//Afficher la variable
+		//Si la variable est egal a this.laSolution
+		//on affiche correct et on accorde les points
+		//sinon incorrect et bah pas de points et on affiche la reponse correcte
+	}
+	
+	public int getPoints(){
+		return this.points;
+	}
+	
+
+}

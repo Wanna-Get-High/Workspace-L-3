@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="12" version="2.0">
 <workbenchAdvisor/>
 <window height="1085" maximized="true" width="1321" x="7" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -12,10 +12,10 @@
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.soyatec.uml.UMLElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="34"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -30,41 +30,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Inhabitant.java" partName="Inhabitant.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/Inhabitant.java" title="Inhabitant.java" tooltip="tp7-facteur/src/mail/Inhabitant.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/Inhabitant.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="401" selectionTopPixel="133"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" partName="Simulation.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/Simulation.java" title="Simulation.java" tooltip="tp7-facteur/src/mail/Simulation.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/Simulation.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2247" selectionTopPixel="568"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BillOfExchange.java" partName="BillOfExchange.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/BillOfExchange.java" title="BillOfExchange.java" tooltip="tp7-facteur/src/mail/BillOfExchange.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/BillOfExchange.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="835" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleMail.java" partName="SimpleMail.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/SimpleMail.java" title="SimpleMail.java" tooltip="tp7-facteur/src/mail/SimpleMail.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/SimpleMail.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="515" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RecommendedMail.java" partName="RecommendedMail.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/RecommendedMail.java" title="RecommendedMail.java" tooltip="tp7-facteur/src/mail/RecommendedMail.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/RecommendedMail.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="311" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="urgentMail.java" partName="urgentMail.java" path="/home/franziz/Workspace-L-3/COO/tp7-facteur/src/mail/urgentMail.java" title="urgentMail.java" tooltip="tp7-facteur/src/mail/urgentMail.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp7-facteur/src/mail/urgentMail.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="397" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
@@ -124,7 +93,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -208,7 +177,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.1335778" ratioLeft="255" ratioRight="1654" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.136" ratioLeft="255" ratioRight="1620" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.6484785" ratioLeft="618" ratioRight="335" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -239,173 +208,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Inhabitant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/RecommendedMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/urgentMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Town.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Simulation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/SimpleMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/BillOfExchange.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Mail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/Simulation.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/BillOfExchange.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/SimpleMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/RecommendedMail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp7-facteur/src/mail/urgentMail.java"/>
-</editors>
-<item historyLabel="SimpleMail.java" index="5">
-<position info="not_deleted" x="457" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="6">
-<position info="not_deleted" x="808" y="0"/>
-</item>
-<item historyLabel="Town.java" index="3">
-<position info="not_deleted" x="505" y="0"/>
-</item>
-<item historyLabel="urgentMail.java" index="2">
-<position info="not_deleted" x="399" y="0"/>
-</item>
-<item historyLabel="RecommendedMail.java" index="1">
-<position info="not_deleted" x="607" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="4">
-<position info="not_deleted" x="2029" y="0"/>
-</item>
-<item historyLabel="SimpleMail.java" index="5">
-<position info="not_deleted" x="198" y="0"/>
-</item>
-<item historyLabel="Mail.java" index="7">
-<position info="not_deleted" x="134" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="656" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="2068" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="614" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="2068" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="2068" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="614" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="2068" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="248" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="1980" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="862" y="0"/>
-</item>
-<item historyLabel="SimpleMail.java" index="10">
-<position info="not_deleted" x="515" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="862" y="0"/>
-</item>
-<item historyLabel="RecommendedMail.java" index="11">
-<position info="not_deleted" x="543" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="611" y="0"/>
-</item>
-<item historyLabel="RecommendedMail.java" index="11">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="307" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="180" y="0"/>
-</item>
-<item historyLabel="SimpleMail.java" index="10">
-<position info="not_deleted" x="515" y="0"/>
-</item>
-<item historyLabel="RecommendedMail.java" index="11">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="302" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="2131" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="RecommendedMail.java" index="11">
-<position info="not_deleted" x="311" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="302" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position/>
-</item>
-<item historyLabel="urgentMail.java" index="12">
-<position info="not_deleted" x="397" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="SimpleMail.java" index="10">
-<position info="not_deleted" x="515" y="0"/>
-</item>
-<item historyLabel="RecommendedMail.java" index="11">
-<position info="not_deleted" x="311" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="695" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="1255" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="203" y="0"/>
-</item>
-<item historyLabel="BillOfExchange.java" index="9">
-<position info="not_deleted" x="835" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="1255" y="0"/>
-</item>
-<item historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="1038" y="0"/>
-</item>
-<item historyLabel="Inhabitant.java" index="0">
-<position info="not_deleted" x="401" y="0"/>
-</item>
-<item active="true" historyLabel="Simulation.java" index="8">
-<position info="not_deleted" x="1038" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -429,50 +232,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="urgentMail.java" tooltip="tp7-facteur/src/mail/urgentMail.java">
-<persistable path="/tp7-facteur/src/mail/urgentMail.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Positif.java" tooltip="tp8-questionnaire/src/questionnaires/Positif.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Positif.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RecommendedMail.java" tooltip="tp7-facteur/src/mail/RecommendedMail.java">
-<persistable path="/tp7-facteur/src/mail/RecommendedMail.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbolic.java" tooltip="tp8-questionnaire/src/questionnaires/Symbolic.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Symbolic.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleMail.java" tooltip="tp7-facteur/src/mail/SimpleMail.java">
-<persistable path="/tp7-facteur/src/mail/SimpleMail.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="YesNo.java" tooltip="tp8-questionnaire/src/questionnaires/YesNo.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/YesNo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Numeric.java" tooltip="tp8-questionnaire/src/questionnaires/Numeric.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Numeric.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Answer.java" tooltip="tp8-questionnaire/src/questionnaires/Answer.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Answer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AnswerFactory.java" tooltip="tp8-questionnaire/src/questionnaires/AnswerFactory.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/AnswerFactory.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Question.java" tooltip="tp8-questionnaire/src/questionnaires/Question.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Question.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbolique.java" tooltip="tp8-questionnaire/src/questionnaires/Symbolique.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Symbolique.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Questionnaire.java" tooltip="tp8-questionnaire/src/questionnaires/Questionnaire.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Questionnaire.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OuiNon.java" tooltip="tp8-questionnaire/src/questionnaires/OuiNon.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/OuiNon.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Numerique.java" tooltip="tp8-questionnaire/src/questionnaires/Numerique.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Numerique.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Answer.java" tooltip="tp8-questionnaire/src/Answer.java">
+<persistable path="/tp8-questionnaire/src/Answer.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BillOfExchange.java" tooltip="tp7-facteur/src/mail/BillOfExchange.java">
 <persistable path="/tp7-facteur/src/mail/BillOfExchange.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" tooltip="tp7-facteur/src/mail/Simulation.java">
-<persistable path="/tp7-facteur/src/mail/Simulation.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mail.java" tooltip="tp7-facteur/src/mail/Mail.java">
-<persistable path="/tp7-facteur/src/mail/Mail.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Thanks.java" tooltip="tp7-facteur/src/mail/Thanks.java">
 <persistable path="/tp7-facteur/src/mail/Thanks.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AcknoReceipt.java" tooltip="tp7-facteur/src/mail/AcknoReceipt.java">
-<persistable path="/tp7-facteur/src/mail/AcknoReceipt.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Town.java" tooltip="tp7-facteur/src/mail/Town.java">
-<persistable path="/tp7-facteur/src/mail/Town.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Money.java" tooltip="tp7-facteur/src/mail/Money.java">
-<persistable path="/tp7-facteur/src/mail/Money.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContentGoGo.java" tooltip="tp7-facteur/src/mail/ContentGoGo.java">
-<persistable path="/tp7-facteur/src/mail/ContentGoGo.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Content.java" tooltip="tp7-facteur/src/mail/Content.java">
-<persistable path="/tp7-facteur/src/mail/Content.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Adress.java" tooltip="tp7-facteur/src/mail/Adress.java">
-<persistable path="/tp7-facteur/src/mail/Adress.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoGoMail.java" tooltip="tp7-facteur/src/mail/GoGoMail.java">
-<persistable path="/tp7-facteur/src/mail/GoGoMail.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Text.java" tooltip="tp7-facteur/src/mail/Text.java">
-<persistable path="/tp7-facteur/src/mail/Text.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" tooltip="tp7-facteur/src/mail/Simulation.java">
+<persistable path="/tp7-facteur/src/mail/Simulation.java"/>
 </file>
 </mruList>
 </workbench>

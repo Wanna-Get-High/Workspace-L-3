@@ -1,0 +1,12 @@
+in .bashrc
+
+############## added for Licence 3 ################
+
+# pour avoir JFlex (sudo apt-get install jFlex)
+# et Cup (here java-cup-11.jar download at (http://www2.cs.tum.edu/projects/cup/) change name for version)
+export CLASSPATH=.:classes/:../classes/:/usr/share/java/JFlex.jar:/usr/share/java/java-cup-11a.jar:$CLASSPATH
+# pour être sûr d'avoir ant + voir les scripts
+export PATH=/usr/local/bin:scripts:$PATH
+
+############## added for Licence 3 #################
+

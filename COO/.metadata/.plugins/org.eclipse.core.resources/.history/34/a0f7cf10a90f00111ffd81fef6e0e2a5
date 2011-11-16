@@ -1,0 +1,44 @@
+package mail;
+
+import java.util.*;
+
+public class Town 
+{
+	protected List <Mail<?>> boxLetter;
+	protected List <Mail<?>> aknoThanksLetter;
+	protected boolean isOver;
+	
+	public Town()
+	{
+		this.boxLetter = new ArrayList<Mail<?>>();
+		this.isOver = true;
+	}
+	
+	public void postMail(Mail<?> m)
+	{
+		this.boxLetter.add(m);
+	}
+	
+	public void deliverMail()
+	{
+		for(Mail<?> m : this.boxLetter)
+			m.getReceiver().receiveMail(m);
+
+		this.boxLetter.clear();
+	}
+	
+	public boolean isDeliverOver()
+	{
+		return this.isOver;
+	}
+	
+	public boolean mailToDeliver()
+	{
+		return !this.boxLetter.isEmpty();
+	}
+	
+	public List <Mail<?>> getBoxLetter()
+	{
+		return this.boxLetter;
+	}
+}

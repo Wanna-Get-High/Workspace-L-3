@@ -1,0 +1,50 @@
+package questionnaires;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Numerique.
+ */
+public class Numerique extends Answer<Integer> 
+{
+
+    /**
+     * Instantiates a new numerique.
+     *
+     * @param a the a
+     */
+    public Numerique(Integer a) 
+    {
+        super(a);
+    }
+
+    /**
+     * Builds the numerique answer.
+     *
+     * @param answerText the answer text
+     * @return the answer
+     */
+    public static Answer<?> build(String answerText)
+    {
+    	return new Numerique(Integer.valueOf(answerText));
+    }
+
+    @Override
+    public boolean acceptablePattern(String text) 
+    {
+        try {
+            Integer.parseInt(text);
+        } 
+        catch (NumberFormatException e) 
+        {
+            return false;
+        }
+        return true;
+    }
+    /* (non-Javadoc)
+     * @see questionnaires.Answer#getType()
+     */
+    public String getType() 
+    {
+        return "numerique";
+    }
+}

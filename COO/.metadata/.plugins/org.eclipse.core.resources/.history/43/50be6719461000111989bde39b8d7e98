@@ -1,0 +1,54 @@
+package questionnaires;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class OuiNon.
+ */
+public class OuiNon extends Answer<Positif> 
+{
+	
+	/**
+	 * Instantiates a new yes / no.
+	 *
+	 * @param p the 
+	 */
+	public OuiNon(Positif p)
+	{
+		super(p);
+	}
+	
+	/**
+	 * Builds the.
+	 *
+	 * @param answerText the answer text
+	 * @return the answer
+	 * @throws IllegalArgumentException the illegal argument exception
+	 */
+	public static Answer<?> build(String answerText) throws IllegalArgumentException
+	{
+		return null; // à modifier	
+	}
+
+    /* (non-Javadoc)
+     * @see questionnaires.Answer#getType()
+     */
+    public String getType()
+    {
+        return "oui/non";
+    }
+
+    /* (non-Javadoc)
+     * @see questionnaires.Answer#acceptablePattern(java.lang.String)
+     */
+    public boolean acceptablePattern(String text) 
+    {
+        try {
+            Positif.valueOf(text);
+        } 
+        catch (IllegalArgumentException e) 
+        {
+            return false;
+        }
+        return true;
+    }
+}

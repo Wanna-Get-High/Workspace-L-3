@@ -1,0 +1,49 @@
+package questionnaires;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Question 
+{
+	private String uneQuestion;
+	private Answer<?> laSolution;
+	private int points;
+	
+	public Question(String uneQuestion, Answer<?> laSolution, int points)
+	{
+		this.uneQuestion = uneQuestion;
+		this.laSolution = laSolution;
+		this.points = points;
+	}
+	
+	public Answer<?> getAnswer() 
+	{
+	    return this.laSolution;
+	}
+	
+	public void askQuestion()
+	{
+		System.out.println(this.uneQuestion);
+		//lire la reponse (surement un truc du style readline()) et la mettre dans une variable
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		String givenAnswer = "";
+		
+		try {
+			givenAnswer = input.readLine();
+		}
+		catch (IOException e) 
+        {
+            e.printStackTrace();
+        }
+		//Afficher la variable
+		//Si la variable est egal a this.laSolution
+		//on affiche correct et on accorde les points
+		//sinon incorrect et bah pas de points et on affiche la reponse correcte
+	}
+	
+	public int getPoints()
+	{
+		return this.points;
+	}
+}

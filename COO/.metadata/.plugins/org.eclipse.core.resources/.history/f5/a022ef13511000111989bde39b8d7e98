@@ -1,0 +1,129 @@
+package questionnaires;
+
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.util.*;
+
+import questionnaires.Question;
+
+/**
+ * The class Questionnaire
+ */
+public class Questionnaire 
+{
+    /** the questions for the players */
+    private List<Question> questions;
+    
+    /** the points of this questionnaire */
+    protected int points;
+    
+    /**
+     * Instantiate a new Questionnaire
+     */
+    public Questionnaire()
+    {
+        this.questions = new ArrayList<Question>();
+    }
+
+    /**
+     * the method ask.
+     * it will ask the question to the player and check his answer.
+     */
+    public void ask() 
+    {
+        int score = 0;
+        Iterator<Question> it = this.questions.iterator();
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        Question q;
+        String givenAnswer = "";
+        
+        while (it.hasNext()) 
+        {
+            q = it.next();
+            
+            // print the question
+            System.out.println(q);
+
+            // the payer write an answer unless it has the right type (int, yes/no, symolique(string))
+            do {
+                System.out.print("(" + q.getAnswer().getType() + ") ");
+               
+                // read the answer of the player
+                try {
+                	givenAnswer = input.readLine();
+                } 
+                catch (IOException e) 
+                {
+                    System.out.println("wrong type of data!, should be : "+q.getAnswer().getType());
+                    e.printStackTrace();
+                }
+            } while (!q.getAnswer().acceptablePattern(givenAnswer));
+
+            // check and print the answer
+            if (q.getAnswer().checkAnswer(givenAnswer)) 
+            {
+                System.out.println("correct (" + q.getPoints() + ")");
+                // increment the score
+                score += q.getPoints();
+            } 
+            else 
+            {
+                System.out.println("incorrect, la bonne réponse est : " + q.getAnswer().toString());
+            }
+        } 
+        // end of the questionnaire
+        System.out.println("\nVous avez " + score + " points.");
+    }
+
+    public Question createQuestion(String questionTest, String answerText, String points,String answerClassName) 
+    	throws IllegalArgumentException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, ClassNotFoundException 
+    {
+        Answer<?> sol = AnswerFactory.INSTANCE.buildAnswer(answerClassName, answerText);
+        return (new Question(questionTest, sol, Integer.parseInt(points)));
+    }
+
+    public void initQuestionnaire(String FileName) throws FileNotFoundException,IOException
+    {
+    	BufferedReader br;
+    	String line;
+    	int lineNumb = 0;
+    	
+    	try {
+    		br = new BufferedReader(new InputStreamReader(new FileInputStream(FileName)));
+    	}
+    	catch (FileNotFoundException fnfe)
+    	{
+    		throw new FileNotFoundException();
+    	}
+    	catch (IOException ioe)
+    	{
+    		throw new IOException();
+    	}
+		
+		while ((line=br.readLine())!=null)
+		{
+			if (lineNumb == 0)
+			{
+				
+			}
+			else if (lineNumb == 1)
+			{
+				
+			}
+			else if (lineNumb == 2)
+			{
+				
+			}
+			else if ()
+			lineNumb++;
+		}
+		br.close(); 
+
+        // lire ces donnees, et les créer avec la methode precedente creer de
+        // nouvelles questions
+        // les ajouter � la liste des questions(this.lesQuestions)
+
+        // Q4 => lire 4 lignes en ajoutant le nom de la classe de answer à créer
+        // en 4ème ligne
+    }
+}

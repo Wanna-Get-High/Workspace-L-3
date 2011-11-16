@@ -1,0 +1,15 @@
+package mail;
+
+/**
+ * The Interface Content.
+ */
+public interface Content 
+{
+	
+	/**
+	 * Gets the description.
+	 *
+	 * @return the description
+	 */
+	public String getDescription();
+}

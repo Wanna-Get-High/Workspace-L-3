@@ -1,0 +1,103 @@
+package mail;
+
+/**
+ * The Class Inhabitant.
+ */
+public class Inhabitant 
+{
+	
+	/** The serial. */
+	private int serial;	
+	
+	/** The account balance. */
+	private float accountBalance;
+	
+	/** The address. */
+	protected Address address;
+	
+	/**
+	 * Instantiates a new inhabitant.
+	 *
+	 * @param ab the account balance of the inhabitant
+	 * @param ad the address
+	 * @param serial the serial
+	 */
+	public Inhabitant(float ab, Address ad,int serial)
+	{
+		this.accountBalance = ab;
+		this.address = ad;
+		this.serial  = serial;
+	}
+	
+	/**
+	 * Gets the serial.
+	 *
+	 * @return the serial
+	 */
+	public int getSerial()
+	{
+		return this.serial;
+	}
+	
+	/**
+	 * Gets the address.
+	 *
+	 * @return the address
+	 */
+	public Address getAddress()
+	{
+		return this.address;
+	}
+	
+	/**
+	 * Receive mail.
+	 *
+	 * @param m the m
+	 */
+	public void receiveMail(Mail<?> m)
+	{
+		m.action();
+	}
+	
+	/**
+	 * Send mail.
+	 *
+	 * @param m the m
+	 */
+	public void sendMail(Mail<?> m)
+	{
+		System.out.println(">> hab" + this.serial + " send mail" + m.getSerial() + " <" + m.toString() + "> mail (cost : " + m.getCost() + ") to hab" + m.getReceiver().getSerial());
+		this.address.getTown().postMail(m);
+	}
+	
+	/**
+	 * Send reply.
+	 *
+	 * @param m the m
+	 */
+	public void sendReply(Mail<?> m)
+	{
+		System.out.println(">> hab" + this.serial + " send mail" + m.getSerial() + " <" + m.toString() + "> mail (cost : " + m.getCost() + ") to hab" + m.getReceiver().getSerial());
+		this.address.getTown().postReply(m);
+	}
+	
+	/**
+	 * Debit account.
+	 *
+	 * @param amount the amount
+	 */
+	public void debitAccount(float amount)
+	{
+		this.accountBalance -= amount;
+	}
+
+	/**
+	 * Credit account.
+	 *
+	 * @param amount the amount
+	 */
+	public void creditAccount(float amount)
+	{
+		this.accountBalance += amount;
+	}
+}

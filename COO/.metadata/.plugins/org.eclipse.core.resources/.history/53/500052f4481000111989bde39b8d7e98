@@ -1,0 +1,60 @@
+package questionnaires;
+
+/**
+ * The Class YesNo.
+ */
+public class YesNo extends Answer<Positif> 
+{
+	
+	/**
+	 * Instantiates a new yes / no.
+	 *
+	 * @param p the enumeration type Positive (yes/no)
+	 */
+	public YesNo(Positif p)
+	{
+		super(p);
+	}
+	
+	/**
+	 * Builds the YesNo answer.
+	 *
+	 * @param answerText the answer text
+	 * @return the answer
+	 * @throws IllegalArgumentException the illegal argument exception
+	 */
+	public static Answer<?> build(String answerText) throws IllegalArgumentException
+	{
+		if (answerText == "oui")
+		{
+			return new YesNo(Positif.yes);
+		}
+		else if (answerText == "non")
+		{
+			return new YesNo(Positif.no);
+		}
+		
+		throw new IllegalArgumentException();
+	}
+
+    @Override
+    public boolean acceptablePattern(String text) 
+    {
+        try {
+            Positif.valueOf(text);
+        } 
+        catch (IllegalArgumentException e) 
+        {
+            return false;
+        }
+        return true;
+    }
+    
+    /**
+     * return the type of answer in a String
+     */
+    public String getType()
+    {
+        return "oui/non";
+    }
+}
