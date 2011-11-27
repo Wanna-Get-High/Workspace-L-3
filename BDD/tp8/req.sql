@@ -1,5 +1,8 @@
--- Q1 --
 /*
+	Francois Lepan
+	J'ai tout sauf la question 9
+*/
+-- Q1 --
 select a.name 
 from artist as a
 where a.name in (	select i.actor
@@ -99,19 +102,53 @@ where m.m_id in (	select i.m_id
 					from interpretation as i
 					where i.actor not in (select a.name 
 										from artist as a
-										where a.place_birth in ('Lille','Nice','Monpelier','Paris')))*/
+										where a.place_birth in ('Lille','Nice','Monpelier','Paris')))
 -- Q7 --
 --voir create_db_movie.sql
 
 -- Q8 --
-select a.name 
-from artist as a
-where exists (	select *
-				from interpretation as i
-				where a.name = i.actor
-				and in all(	select m.m_id
-							from movie));
+select i.actor 
+from interpretation as i
+group by i.actor
+having (	select count(i.m_id)
+			from artist as a
+			where a.name = i.actor
+			group by a.name ) = (select count(*) from movie);
+	
+select i.actor 
+from interpretation as i
+group by i.actor
+having (	select count(i.m_id)
+			from artist as a
+			where a.name = i.actor
+			group by a.name ) = all (select count(*) from movie);		
+			
 -- Q9 --
+
+
 -- Q10 --
+
+UPDATE movie
+SET type = 'Film a pas rater !'
+WHERE m_id in ( select m_id 
+				from interpretation
+				group by m_id
+				having count(protagonist = '1') >= 10);
 -- Q11 --
+UPDATE movie
+SET type = 'Francais'
+WHERE m_id in ( select m.m_id
+				from movie as m	
+				where m.m_id in (	select i.m_id
+									from interpretation as i
+									where i.protagonist = '1'
+									and i.actor in (	select a.name 
+														from artist as a
+														where a.place_birth in ('Lille','Nice','Monpelier','Paris')))
+				or m.director in (	select a.name 
+									from artist as a
+									where a.place_birth in ('Lille','Nice','Monpelier','Paris')));
 -- Q12 --
+select m.title
+from movie as m	
+where type = 'Francais';

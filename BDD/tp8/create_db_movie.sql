@@ -1,3 +1,6 @@
+/*
+	Francois Lepan
+*/
 drop table interpretation;
 drop table movie;
 drop table artist;
@@ -68,14 +71,16 @@ insert into interpretation values (3,'Elijah Wood','Frodo','1');
 insert into interpretation values (3,'Viggo Mortensen','Aragorn','1');
 insert into interpretation values (3,'Franscesco de la Vega','a guy','0');
 
-insert into interpretation values (4,'Harrison Ford','Boby','1');
-insert into interpretation values (4,'Dany Boon','the strangers','0');
-insert into interpretation values (4,'Melissa Theuriau','Bobys stool pigeon','0');
+insert into interpretation values (4,'Dany Boon','the strangers','1');
+insert into interpretation values (4,'Melissa Theuriau','Bobys stool pigeon','1');
 insert into interpretation values (4,'Jean Reno','Bobys opponent','1');
-insert into interpretation values (4,'Bourville','Bourville','0');
-insert into interpretation values (4,'Mia Frye','Bourville girlfriend','0');
-insert into interpretation values (4,'Bruce Willis','the military','0');
-insert into interpretation values (4,'Franscesco de la Vega','a guy','0');
+insert into interpretation values (4,'Bourville','Bourville','1');
+insert into interpretation values (4,'Harrison Ford','Boby','1');
+insert into interpretation values (4,'Mia Frye','Bourville girlfriend','1');
+insert into interpretation values (4,'Bruce Willis','the military','1');
+insert into interpretation values (4,'Franscesco de la Vega','a guy','1');
+insert into interpretation values (4,'Elijah Wood','a guy','1');
+insert into interpretation values (4,'Viggo Mortensen','a guy','1');
 
 insert into interpretation values (5,'Franscesco de la Vega','a guy','0');
 
