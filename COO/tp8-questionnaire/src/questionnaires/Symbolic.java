@@ -1,4 +1,5 @@
 package questionnaires;
+import questionnairesUI.*;
 
 /**
  * The Class Symbolic.
@@ -45,10 +46,16 @@ public class Symbolic extends Answer<String>
     {
         return true;
     }
-    
-    @Override
-    public String toString()
-    {
-    	return this.answer;
-    }
+
+	@Override
+	public AnswerUI getUI(Question q) 
+	{
+		return new SymbolicUI(this,q);
+	}
+
+	@Override
+	public String getPossibleAnswers() 
+	{
+		return this.answer;
+	}
 }

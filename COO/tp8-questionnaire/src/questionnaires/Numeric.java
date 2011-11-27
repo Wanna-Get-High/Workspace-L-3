@@ -1,4 +1,5 @@
 package questionnaires;
+import questionnairesUI.*;
 
 /**
  * The Class Numeric.
@@ -10,7 +11,7 @@ public class Numeric extends Answer<Integer>
      *
      * @param a the integer.
      */
-    public Numeric(Integer a) 
+    public Numeric(Integer a)
     {
         super(a);
     }
@@ -56,9 +57,15 @@ public class Numeric extends Answer<Integer>
     {
         return "numerique";
     }
-    
+
     @Override
-	public String toString()
+	public AnswerUI getUI(Question q)
+	{
+		return new NumericUI(this,q);
+	}
+
+	@Override
+	public String getPossibleAnswers() 
 	{
 		return String.valueOf(this.answer);
 	}

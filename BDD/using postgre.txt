@@ -1,0 +1,6 @@
+
+// logging in the data base
+sudo -u <username> psql <name of the database>
+
+// creating a data base
+sudo -u <username> createdb <name of the database>

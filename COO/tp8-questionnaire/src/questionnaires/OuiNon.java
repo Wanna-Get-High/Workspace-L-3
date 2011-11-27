@@ -1,15 +1,17 @@
 package questionnaires;
 
+import questionnairesUI.*;
+
 /**
- * The Class YesNo.
+ * The Class OuiNon.
  */
 public class OuiNon extends Answer<Positif> 
 {
 	
 	/**
-	 * Instantiates a new yes / no.
+	 * Instantiates a new Oui / Non
 	 *
-	 * @param p the enumeration type Positive (yes/no)
+	 * @param p the enumeration type Positive (Oui / Non)
 	 */
 	public OuiNon(Positif p)
 	{
@@ -36,11 +38,17 @@ public class OuiNon extends Answer<Positif>
 		
 		throw new IllegalArgumentException();
 	}
+	
+	@Override
+	public String getPossibleAnswers()
+	{
+		return "oui | non";
+	}
 
 	@Override
 	public boolean checkAnswer(String userAnswer) 
-	{
-	    return this.answer.equals(Positif.valueOf(userAnswer));
+	{		
+	    return userAnswer.contains(this.answer.toString());
 	}
 	
     @Override
@@ -59,7 +67,7 @@ public class OuiNon extends Answer<Positif>
    @Override
     public String getType()
     {
-        return "oui/non";
+        return "oui|non";
     }
    
    @Override
@@ -67,4 +75,10 @@ public class OuiNon extends Answer<Positif>
    {
 	   return this.answer.toString();
    }
+
+	@Override
+	public AnswerUI getUI(Question q)
+	{
+		return new MultipleAnswerUI(this,q);
+	}
 }

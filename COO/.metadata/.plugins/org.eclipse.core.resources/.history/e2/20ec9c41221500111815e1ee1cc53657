@@ -1,0 +1,30 @@
+package questionnairesUI;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.ButtonGroup;
+import questionnaires.Answer;
+import questionnaires.Question;
+
+public abstract class MultipleAnswerUI extends AnswerUI<String>
+{
+	ButtonGroup group;
+	List <String> values;
+	
+	public MultipleAnswerUI(Answer<String> ans, Question q) 
+	{
+		super(ans, q);
+		this.values = new ArrayList <String>();
+		this.group = new ButtonGroup();
+		this.initValues();
+	}
+
+	public abstract void initValues();
+
+	@Override
+	public String getValue() 
+	{
+		return this.group.getSelection().getActionCommand();
+	}
+}

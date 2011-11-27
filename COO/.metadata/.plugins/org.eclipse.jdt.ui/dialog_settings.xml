@@ -37,45 +37,25 @@
 		<item value="protected" key="access"/>
 		<item value="true" key="version"/>
 		<item value="false" key="nodeprecated"/>
-		<item value="/home/franziz/Workspace-L-3/COO/tp7-facteur/doc" key="destdir"/>
+		<item value="/home/franziz/Workspace-L-3/COO/tp8-questionnaire/doc" key="destdir"/>
 		<item value="true" key="author"/>
 		<item value="" key="docletname"/>
 		<item value="1.6" key="source"/>
 		<item value="false" key="openinbrowser"/>
 		<item value="false" key="noindex"/>
 		<item value="" key="docletpath"/>
-		<item value="/home/franziz/Workspace-L-3/COO/tp7-facteur/javadoc.xml" key="antpath"/>
+		<item value="/home/franziz/Workspace-L-3/COO/tp8-questionnaire/javadoc.xml" key="antpath"/>
 		<item value="true" key="fromStandard"/>
 		<section name="projects">
-			<section name="tp4-afflumin">
-				<item value="/home/franziz/Workspace-L-3/COO/tp4-afflumin/doc" key="destdir"/>
+			<section name="tp8-questionnaire">
+				<item value="/home/franziz/Workspace-L-3/COO/tp8-questionnaire/doc" key="destdir"/>
+				<item value="/home/franziz/Workspace-L-3/COO/tp8-questionnaire/javadoc.xml" key="antpath"/>
 				<item value="" key="href"/>
-				<item value="/home/franziz/Workspace-L-3/COO/tp4-afflumin/javadoc.xml" key="antpath"/>
-			</section>
-			<section name="tp2-generics">
-				<item value="/home/franziz/Workspace-L-3/COO/tp2-generics/doc" key="destdir"/>
-				<item value="" key="href"/>
-				<item value="/home/franziz/Workspace-L-3/COO/tp2-generics/javadoc.xml" key="antpath"/>
-			</section>
-			<section name="tp6-piscine">
-				<item value="/home/franziz/Workspace-L-3/COO/tp6-piscine/doc" key="destdir"/>
-				<item value="" key="href"/>
-				<item value="/home/franziz/Workspace-L-3/COO/tp6-piscine/javadoc.xml" key="antpath"/>
-			</section>
-			<section name="tp5-jeuDeLoie">
-				<item value="/home/franziz/Workspace-L-3/COO/tp5-jeuDeLoie/doc" key="destdir"/>
-				<item value="" key="href"/>
-				<item value="/home/franziz/Workspace-L-3/COO/tp5-jeuDeLoie/javadoc.xml" key="antpath"/>
 			</section>
 			<section name="tp3-introihm">
 				<item value="/home/franziz/Workspace-L-3/COO/tp3-introihm/doc" key="destdir"/>
-				<item value="" key="href"/>
 				<item value="/home/franziz/Workspace-L-3/COO/tp3-introihm/javadoc.xml" key="antpath"/>
-			</section>
-			<section name="tp7-facteur">
-				<item value="/home/franziz/Workspace-L-3/COO/tp7-facteur/doc" key="destdir"/>
 				<item value="" key="href"/>
-				<item value="/home/franziz/Workspace-L-3/COO/tp7-facteur/javadoc.xml" key="antpath"/>
 			</section>
 		</section>
 	</section>
@@ -123,7 +103,7 @@
 		<item value="708" key="DIALOG_WIDTH"/>
 		<item value="39" key="DIALOG_Y_ORIGIN"/>
 		<item value="712" key="DIALOG_HEIGHT"/>
-		<item value="511" key="DIALOG_X_ORIGIN"/>
+		<item value="518" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>

@@ -1,0 +1,48 @@
+package questionnairesUI;
+
+import java.util.List;
+
+import javax.swing.Box;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+
+import questionnaires.Answer;
+import questionnaires.OuiNon;
+import questionnaires.Question;
+
+public class OuiNonUI extends AnswerUI<OuiNon>
+{
+	ButtonGroup group;
+	JRadioButton oui;
+	JRadioButton non;
+	
+	public OuiNonUI(Answer<OuiNon> ans, Question q)
+	{
+		super(ans, q);
+		this.oui = new JRadioButton("oui");
+		this.non = new JRadioButton("non");
+		
+		this.oui.setActionCommand("oui");
+		this.non.setActionCommand("non");
+		
+		this.group = new ButtonGroup();
+		this.group.add(oui);
+		this.group.add(non);
+	}
+
+	@Override
+	public JPanel getPanel() 
+	{
+		this.panel.add(oui);
+		return this.group;
+	}
+
+	@Override
+	public String getValue() 
+	{
+		return this.group.getSelection().getActionCommand();
+	}
+
+}

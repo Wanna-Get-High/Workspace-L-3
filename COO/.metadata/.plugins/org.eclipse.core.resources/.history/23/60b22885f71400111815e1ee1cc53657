@@ -1,0 +1,15 @@
+package questionnairesUI;
+import questionnaires.Answer;
+import javax.swing.*;
+
+public abstract class AnswerUI <T>
+{
+	Answer<T> answer;
+	
+	public AnswerUI(Answer<T> ans)
+	{
+		this.answer = ans;
+	}
+	
+	public abstract JPanel getPanel();
+}

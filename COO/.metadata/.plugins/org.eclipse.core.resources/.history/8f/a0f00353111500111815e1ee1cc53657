@@ -1,0 +1,32 @@
+package questionnairesUI;
+
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import questionnaires.Answer;
+
+public class SymbolicUI extends AnswerUI<String>
+{
+
+	JTextField fieldOfAnswer;
+	
+	public SymbolicUI(Answer<String> ans) 
+	{
+		super(ans);
+		this.fieldOfAnswer = new JTextField(20);
+	}
+	
+	
+	public String getValue()
+	{
+		return this.fieldOfAnswer.getText();
+	}
+
+	@Override
+	public JPanel getPanel() 
+	{
+		this.panel.add(this.fieldOfAnswer);
+		return this.panel;
+	}
+	
+}

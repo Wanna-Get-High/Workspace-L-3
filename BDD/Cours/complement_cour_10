@@ -1,0 +1,34 @@
+--- slide 8
+{ t | exists t1 in student,
+       exists t2 in exam,
+       exists t3 in class:
+       (
+          t[Name]=t1[Name] and
+	  t1[Sid]=t2[Sid] and 
+	  t2[Cid]=t3[Cid] and
+	  t2[Grade]= A and
+	  t3[Title]='mathematics'
+
+)
+}
+
+
+--- slide 9
+
+{ t |exists t1 in exam, 
+     exists t2 in class 
+(
+	t[Sid]=t1[Sid] and
+	t1[Cid]=t2[Cid] and 
+	t2[Title]='mathematics') 
+	and
+		not 
+		(
+		exists t3 in exam, 
+		exists t4 in class 
+		       (
+				t[Sid]=t3[Sid] and
+				t3[Cid]=t4[Cid] and 
+				t4[Title]='databases')
+)
+}

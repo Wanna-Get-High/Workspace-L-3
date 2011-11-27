@@ -3,12 +3,27 @@ package questionnaires;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * A factory for creating Answer objects.
+ */
 public class AnswerFactory 
 {	    
-    public static final AnswerFactory INSTANCE = new AnswerFactory();
     
-	 private AnswerFactory() {}
+    /** The Constant INSTANCE. */
+    public static final AnswerFactory INSTANCE = new AnswerFactory();
 	
+	/**
+	 * Builds the answer.
+	 *
+	 * @param answerClassName the name of the answer class 
+	 * @param answerText the answer text
+	 * @return the answer
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws InvocationTargetException the invocation target exception
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	public Answer<?> buildAnswer(String answerClassName, String answerText) 
 		throws NoSuchMethodException,IllegalArgumentException,IllegalAccessException,InvocationTargetException, ClassNotFoundException
 	{

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="12" version="2.0">
+<workbench progressCount="13" version="2.0">
 <workbenchAdvisor/>
 <window height="1085" maximized="true" width="1321" x="7" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -21,6 +21,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.soyatec.uml.ClassDiagramEditor" itemType="typePlaceholder" x="419" y="34"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -177,7 +179,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.136" ratioLeft="255" ratioRight="1620" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.1552" ratioLeft="291" ratioRight="1584" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.6484785" ratioLeft="618" ratioRight="335" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -214,9 +216,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="right"/>
 </trimArea>
@@ -227,55 +226,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Positif.java" tooltip="tp8-questionnaire/src/questionnaires/Positif.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Positif.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="question_tolkien_2.txt" tooltip="tp8-questionnaire/question_tolkien_2.txt">
+<persistable path="/tp8-questionnaire/question_tolkien_2.txt"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbolic.java" tooltip="tp8-questionnaire/src/questionnaires/Symbolic.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Symbolic.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="YesNo.java" tooltip="tp8-questionnaire/src/questionnaires/YesNo.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/YesNo.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Numeric.java" tooltip="tp8-questionnaire/src/questionnaires/Numeric.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Numeric.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Answer.java" tooltip="tp8-questionnaire/src/questionnaires/Answer.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Answer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AnswerFactory.java" tooltip="tp8-questionnaire/src/questionnaires/AnswerFactory.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/AnswerFactory.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Question.java" tooltip="tp8-questionnaire/src/questionnaires/Question.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Question.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbolique.java" tooltip="tp8-questionnaire/src/questionnaires/Symbolique.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Symbolique.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Questionnaire.java" tooltip="tp8-questionnaire/src/questionnaires/Questionnaire.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Questionnaire.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="question_tolkien.txt" tooltip="tp8-questionnaire/question_tolkien.txt">
+<persistable path="/tp8-questionnaire/question_tolkien.txt"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OuiNon.java" tooltip="tp8-questionnaire/src/questionnaires/OuiNon.java">
 <persistable path="/tp8-questionnaire/src/questionnaires/OuiNon.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Numerique.java" tooltip="tp8-questionnaire/src/questionnaires/Numerique.java">
-<persistable path="/tp8-questionnaire/src/questionnaires/Numerique.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Questionnaire.java" tooltip="tp8-questionnaire/src/questionnaires/Questionnaire.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Questionnaire.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Answer.java" tooltip="tp8-questionnaire/src/Answer.java">
-<persistable path="/tp8-questionnaire/src/Answer.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Answer.java" tooltip="tp8-questionnaire/src/questionnaires/Answer.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Answer.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BillOfExchange.java" tooltip="tp7-facteur/src/mail/BillOfExchange.java">
-<persistable path="/tp7-facteur/src/mail/BillOfExchange.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultipleAnswerUI.java" tooltip="tp8-questionnaire/src/questionnairesUI/MultipleAnswerUI.java">
+<persistable path="/tp8-questionnaire/src/questionnairesUI/MultipleAnswerUI.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Thanks.java" tooltip="tp7-facteur/src/mail/Thanks.java">
-<persistable path="/tp7-facteur/src/mail/Thanks.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AnswerUI.java" tooltip="tp8-questionnaire/src/questionnairesUI/AnswerUI.java">
+<persistable path="/tp8-questionnaire/src/questionnairesUI/AnswerUI.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" tooltip="tp7-facteur/src/mail/Simulation.java">
-<persistable path="/tp7-facteur/src/mail/Simulation.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SymbolicUI.java" tooltip="tp8-questionnaire/src/questionnairesUI/SymbolicUI.java">
+<persistable path="/tp8-questionnaire/src/questionnairesUI/SymbolicUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QuestionnaireUI.java" tooltip="tp8-questionnaire/src/questionnairesUI/QuestionnaireUI.java">
+<persistable path="/tp8-questionnaire/src/questionnairesUI/QuestionnaireUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NumericUI.java" tooltip="tp8-questionnaire/src/questionnairesUI/NumericUI.java">
+<persistable path="/tp8-questionnaire/src/questionnairesUI/NumericUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Question.java" tooltip="tp8-questionnaire/src/questionnaires/Question.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Question.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbolic.java" tooltip="tp8-questionnaire/src/questionnaires/Symbolic.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Symbolic.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Positif.java" tooltip="tp8-questionnaire/src/questionnaires/Positif.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Positif.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Numeric.java" tooltip="tp8-questionnaire/src/questionnaires/Numeric.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/Numeric.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultipleOpenedAnswer.java" tooltip="tp8-questionnaire/src/questionnaires/MultipleOpenedAnswer.java">
+<persistable path="/tp8-questionnaire/src/questionnaires/MultipleOpenedAnswer.java"/>
 </file>
 </mruList>
 </workbench>

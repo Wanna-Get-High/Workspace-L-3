@@ -1,5 +1,7 @@
 package questionnaires;
 
+import questionnairesUI.AnswerUI;
+
 /**
  * The Class Answer.
  *
@@ -26,7 +28,7 @@ public abstract class Answer<T>
 	 *
 	 * @return the answer
 	 */
-	public T getCorrectAnswer() 
+	public T getCorrectAnswer()
 	{
 	    return this.answer;
 	}
@@ -47,10 +49,24 @@ public abstract class Answer<T>
 	public abstract String getType();
 	
 	/**
+	 * returns all of the possible answers in a String
+	 * (the answers has to be separated by a " | ")
+	 * 
+	 * @return a String that contains all of the possible answers
+	 */
+	public abstract String getPossibleAnswers();
+	
+	/**
 	 * check if the text passed in parameter is in the good format.
 	 * 
 	 * @param text the text to check
 	 * @return true if the text is in the good format
 	 */
 	public abstract boolean acceptablePattern(String text);
+	
+	/**
+	 * returns an AnswerUI for the graphical Interface
+	 * @return an AnswerUI that matches the type of answer
+	 */
+	public abstract AnswerUI getUI(Question q);
 }
