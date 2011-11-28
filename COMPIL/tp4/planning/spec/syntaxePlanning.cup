@@ -73,40 +73,80 @@ start with file;
 /* la grammaire */
 
 file ::= 
-		| master:m date:d salle:s data:d file
+		| master:mast date:date salle:sal data:data file
 		{:
-			/** .tex file*/
-			file = new EcritureTexteFlot(new java.io.FileOutputStream(m+"_"+d+"_"+s+".tex"));
-			file.ecrire(d);
+			/** .tex file */
+			EcritureTexteFlot file = new EcritureTexteFlot(new java.io.FileOutputStream(mast+"_"+date+"_"+sal+".tex"));
+			file.ecrire(ConstantesLatex.DEBUT_DOCUMENT);
+			file.ecrire(ConstantesLatex.DEBUT_COMMANDE_MASTER + mast + ConstantesLatex.FIN_COMMANDE);
+			file.ecrire(ConstantesLatex.DEBUT_COMMANDE_DATE + date + ConstantesLatex.FIN_COMMANDE);
+			file.ecrire(ConstantesLatex.DEBUT_COMMANDE_SALLE + sal + ConstantesLatex.FIN_COMMANDE);
+			file.ecrire(ConstantesLatex.DEFINITION_TITRE);
+			file.ecrire(ConstantesLatex.DEBUT_TABLEAU);
+			file.ecrire(data);
+			file.ecrire(ConstantesLatex.FIN_TABLEAU);
+			file.ecrire(ConstantesLatex.FIN_DOCUMENT);
 			file.terminer();
 		:}
 ;
 
 data ::= 
-		| entry data
-		| petitePause data
-		| grandePause data
+		| entry:ent data:data
+		{:
+			RESULT = (String)ent;
+			if (data != null)
+				RESULT+= (String)data;
+		:}
+		| petitePause:pp data:data
+		{:
+			RESULT = (String)pp;
+			if (data != null)
+				RESULT+= (String)data;
+		:}
+		| grandePause:gp data:data
+		{:
+			RESULT = (String)gp;
+			if (data != null)
+				RESULT+= (String)data;
+		:}
 ;
 
-salle ::= ROOMCST:name ROOM
-{:
-	
-:}
+salle ::= ROOMCST ROOM:room
+		{:
+			RESULT = room;
+		:}
 ;
 
-master ::= MASTERCST MASTER
+master ::= MASTERCST MASTER:master
+		{:
+			RESULT = master;
+		:}
 ;
 
-date ::= DATECST DATE
+date ::= DATECST DATE:date
+		{:
+			RESULT = date;
+		:}
 ;
 
-entry ::= SLOT SEPARATOR NAME SEPARATOR ENTREPRISE SEPARATOR OPTIONS
+entry ::= SLOT:slot SEPARATOR NAME:name SEPARATOR ENTREPRISE:ent SEPARATOR OPTIONS:opt
+		{:
+			RESULT = slot + ConstantesLatex.SEPARATEUR_CASE + name + ConstantesLatex.SEPARATEUR_CASE
+					+ ent + ConstantesLatex.SEPARATEUR_CASE + opt + ConstantesLatex.FIN_LIGNE_TABLEAU;
+		:}
+
 ;
 
-petitePause ::= PETITEPAUSE
+petitePause ::= PETITEPAUSE:pp
+			{:
+				RESULT = ConstantesLatex.PETITE_PAUSE;
+			:}
 ;
 
-grandePause ::= GRANDEPAUSE
+grandePause ::= GRANDEPAUSE:gp
+			{:
+				RESULT = ConstantesLatex.GRANDE_PAUSE;
+			:}
 ;
 
 

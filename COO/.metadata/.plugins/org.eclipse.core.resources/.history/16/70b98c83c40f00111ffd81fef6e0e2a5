@@ -1,0 +1,49 @@
+package mail;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class SimpleMail.
+ */
+public class SimpleMail extends Mail<Text> 
+{
+	
+	/**
+	 * Instantiates a new simple mail.
+	 *
+	 * @param sen the sen
+	 * @param rec the rec
+	 * @param con the con
+	 * @param s the s
+	 */
+	public SimpleMail(Inhabitant sen, Inhabitant rec, Text con, int s)
+	{
+		super(sen, rec, con, s);
+	}
+
+	/* (non-Javadoc)
+	 * @see mail.Mail#action()
+	 */
+	@Override
+	public void action()
+	{
+		System.out.println("mail"+this.serial+ " (cost : " + this.getCost() + ") [" + this.getContent().getText() 
+				+ "] send by hab" + this.getSender().getSerial() + ", recieved by hab" + this.getReceiver().getSerial());
+	}
+
+	/* (non-Javadoc)
+	 * @see mail.Mail#getCost()
+	 */
+	@Override
+	public float getCost() 
+	{
+		return 1;
+	}
+	
+	/**
+	 * return the type of the message in a String
+	 */
+	public String toString()
+	{
+		return "simple";
+	}
+}

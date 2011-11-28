@@ -1,34 +1,42 @@
 package mail;
 
+/**
+ * The Class ContentGoGo.
+ */
 public class ContentGoGo implements Content
 {
-	private Inhabitant[] beneficiary;
-	private float value;
 	
-	public ContentGoGo(Inhabitant[] benef, float val)
+	/** The beneficiary. */
+	private Inhabitant[] beneficiary;
+	
+	/**
+	 * Instantiates a new contentGoGo.
+	 *
+	 * @param benef the beneficiary
+	 * @param val the amount of money that will be split
+	 */
+	public ContentGoGo(Inhabitant[] benef)
 	{
 		this.beneficiary = benef;
-		this.value = val;
 	}
 	
-	public void setValue(float val)
-	{
-		this.value=val;
-	}
-	
+	/**
+	 * Gets the inhabitant.
+	 *
+	 * @return the inhabitant
+	 */
 	public Inhabitant[] getInhabitant()
 	{
 		return this.beneficiary;
 	}
 	
-	public float getValue() 
-	{
-		return this.value / this.beneficiary.length;
-	}
-	
+	/**
+	 * Sets the beneficiary.
+	 *
+	 * @param benef the new beneficiary
+	 */
 	public void setBeneficiary(Inhabitant[] benef)
 	{
-		this.beneficiary = new Inhabitant[benef.length];
 		this.beneficiary = benef;
 	}
 	

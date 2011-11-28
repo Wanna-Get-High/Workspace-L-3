@@ -1,0 +1,50 @@
+package questionnaires;
+
+import java.lang.reflect.Method;
+
+public class AnswerFactory 
+{	    
+    public static final AnswerFactory INSTANCE = new AnswerFactory();
+    
+	 private AnswerFactory() { }
+	
+	 // version Q3
+//		public Answer<?> buildAnswer(String answerText){
+//		    // si answerText est oui/non alors
+//		    //  return OuiNon.build(answerText);
+//		    // sinon si answerText est un nombre alors
+//		    //  return Numerique.build(answerText);
+//		    
+//		    // pb OCP => ici Q5 et Q6
+//		    
+//		    
+//		    // sinon
+//		    // return Symbolique.build(answerText);
+//		    return null; // à modifier
+//		}
+
+	// version  Q4
+		public Answer<?> buildAnswer(String answerClassName, String answerText) throws NoSuchMethodException 
+		{
+			Method method;
+	        // on récupère l'objet Class pour la classe de nom answerClassName
+	        Class c = Object.class.forName(answerClassName);
+	        
+	        
+	        try {
+	        	// on récupère pour cette classe la méthode de signature build(String)
+	        	 Method method = c.getMethod("build",String.class);
+	        }
+	        catch (NoSuchMethodException nsme)
+	        {
+	        	throw new NoSuchMethodException();
+	        }
+
+	        // on invoque cette méthode, 1er param = null car static
+
+	         Answer<?> answer = (Answer<?>) method.invoke(null,answerText);
+
+	        return answer;
+		}
+}
+

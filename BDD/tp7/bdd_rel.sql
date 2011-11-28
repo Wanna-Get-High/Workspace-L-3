@@ -1,4 +1,9 @@
 /*
+J'ai répondu a quasiment toutes les questions sauf la 9 et la 16
+A la question 12 il me manque le count
+A la question 15 je n'obtient pas le même résultat que vous
+*/
+
 -- Q1 --
 select e.e_id
 from etudiants as e
@@ -91,12 +96,12 @@ from etudiants
 where e_id not in ( select e_id
 					from participer)
 order by e_nom;
--- Q9 --											?????????????????
-select prof_nom
+-- Q9 --
+/*select prof_nom
 from profs as p
 where not exists (	select c_id
 					from cours as c
-					where p.prof_id = c.prof_id );
+					where p.prof_id = c.prof_id );*/
 -- Q10 --
 select niveau, avg(age) as "age moyen"
 from etudiants
@@ -111,7 +116,7 @@ or (select count(*)
 	from participer as p 
 	where c.c_id = p.c_id) = 5;
 
--- Q12 --                                       ???? manque le count ?????
+-- Q12 --
 select p.prof_id, p.prof_nom
 from profs as p
 where exists (	select *
@@ -122,7 +127,7 @@ and not exists (select *
 				from cours as c2
 				where c2.prof_id = p.prof_id 
 				and c2.salle <> 'R128');
-				
+
 -- Q13 --
 create view nb_cour_par_etu as 
 select e.e_nom, count(p) as nb_cour
@@ -157,8 +162,7 @@ where e.e_id in (	select p.e_id
 								where p.c_id = c.c_id
 								and horaire like '%Lu%'));
 								
--- Q15 --                                              ???????   rep logic mais comprend pas rep <>   ????????
-
+-- Q15 --
 create view nb_etu_par_cour as
 select c.c_id as cid, count(e) as nb_etu
 from cours as c, etudiants as e
@@ -167,23 +171,24 @@ where c.c_id in (	select p.c_id
 					where p.e_id = e.e_id)
 group by c.c_id;
 
-select sum(nb_etu) as avg_student
+select avg(nb_etu) as avg_student
 from nb_etu_par_cour;
 
---drop view nb_etu_par_cour;*/
+drop view nb_etu_par_cour;
 
 -- Q16 --
---create view nb_etu_par_cour as
-select c.c_id as cid, count(e) as nb_etu
-from cours as c, etudiants as e
-group by c.c_id
+/*create view nb_etu_par_cour as
+select c.c_id as cid, nb_etu
+from cours as c, ( 	select count(p.e_id) as nb_etu 
+					from participer  as p
+					group by p.c_id) as nb_etu_par_cour
 order by c.c_id;
 
 select sum(nb_etu) as avg_student
 from nb_etu_par_cour;
 
 
-/*select avg(nb_etu) as avg_student
+select avg(nb_etu) as avg_student
 from nb_etu_par_cour;*/
 
 --drop view nb_etu_par_cour;

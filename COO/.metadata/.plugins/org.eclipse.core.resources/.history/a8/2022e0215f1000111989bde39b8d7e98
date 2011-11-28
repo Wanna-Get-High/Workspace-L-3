@@ -1,0 +1,6 @@
+package questionnaires;
+
+public enum Positif 
+{	
+	yes,no
+}

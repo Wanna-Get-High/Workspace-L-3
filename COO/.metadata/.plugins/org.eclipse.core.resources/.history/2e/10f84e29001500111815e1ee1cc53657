@@ -1,0 +1,26 @@
+package questionnairesUI;
+
+import java.awt.Component;
+
+import questionnaires.Answer;
+import javax.swing.JPanel;
+
+public abstract class AnswerUI <T>
+{
+	Answer<T> answer;
+	JPanel panel;
+	
+	public AnswerUI(Answer<T> ans)
+	{
+		this.answer = ans;
+		this.panel = new JPanel();
+	}
+	
+	public Answer<T> getAnswer()
+	{
+		return this.answer;
+	}
+	public abstract Component getComponent();
+	
+	public abstract JPanel getPanel();
+}

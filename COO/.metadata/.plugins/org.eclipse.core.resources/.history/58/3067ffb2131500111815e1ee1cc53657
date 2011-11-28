@@ -1,0 +1,29 @@
+package questionnairesUI;
+
+import javax.swing.JPanel;
+
+import questionnaires.Answer;
+import questionnaires.OuiNon;
+import questionnaires.Question;
+
+public class OuiNonUI extends AnswerUI<OuiNon>
+{
+
+	public OuiNonUI(Answer<OuiNon> ans, Question q)
+	{
+		super(ans, q);
+	}
+
+	@Override
+	public JPanel getPanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,20 @@
+Quel est le nom de l'auteur du Seigneur des Anneaux ? 
+Tolkien
+1
+Symbolic
+Combien de membres composent la Compagnie de l'Anneau ?
+9
+2
+Numeric
+En quelle annee est paru le Seigneur des Anneaux ?
+1954
+3
+Numeric
+Donnez le nom de l'un des hobbits de la Compagnie de l'Anneau ? 
+Frodo ; Pippin ; Merry ; Sam
+1
+MultipleOpenedAnswer
+Comment s'appelle le poney qui accompagne la compagnie jusqu'� la Moria ?
+Bill | Bourricot | Robert | Jolly Jumper
+3
+MultipleClosedAnswer

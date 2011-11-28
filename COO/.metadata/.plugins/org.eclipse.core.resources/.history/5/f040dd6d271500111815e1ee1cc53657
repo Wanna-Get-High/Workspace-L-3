@@ -1,0 +1,40 @@
+package questionnairesUI;
+
+import java.util.StringTokenizer;
+
+import javax.swing.JRadioButton;
+
+import questionnaires.Answer;
+import questionnaires.Question;
+
+public class MultChoiceAnswer extends MultipleAnswerUI
+{
+
+	public MultChoiceAnswer(Answer<String> ans, Question q)
+	{
+		super(ans, q);
+	}
+
+	@Override
+	public void initValues() 
+	{
+		 StringTokenizer st = new StringTokenizer(this.answer.getCorrectAnswer().toString());
+         boolean first = true;
+         
+         while (st.hasMoreElements())
+         {
+	         String label = st.nextToken();
+	         JRadioButton button;
+	         
+	         if(first)
+	         {
+	                 first = !first;
+	                 button = new JRadioButton(label,true);
+	         }
+	         else  button = new JRadioButton(label);
+	         button.setActionCommand(label);
+	         this.group.add(button);
+	         this.panel.add(button);
+         }
+	}
+}

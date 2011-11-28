@@ -1,0 +1,12 @@
+package questionnairesUI;
+import questionnaires.Answer;
+
+public class AnswerUI <T>
+{
+	Answer<T> Answer;
+	
+	public AnswerUI(Answer<T> answer)
+	{
+		
+	}
+}

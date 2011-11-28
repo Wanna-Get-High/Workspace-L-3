@@ -1,0 +1,29 @@
+package questionnairesUI;
+
+import javax.swing.*;
+
+import questionnaires.*;
+
+public class NumericUI extends AnswerUI<Integer>
+{
+	JSpinner spinner;
+	
+	public NumericUI(Answer<Integer> ans)
+	{
+		super(ans);
+		this.spinner = new JSpinner(new SpinnerNumberModel(0,-3000,3000,1));
+	}
+	
+	public String getValue()
+	{
+		this.notify();
+		return this.spinner.getValue().toString();
+	}
+	
+	@Override
+	public JPanel getPanel()
+	{
+		this.panel.add(this.spinner);
+		return this.panel;
+	}
+}

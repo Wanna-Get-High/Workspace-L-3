@@ -1,0 +1,73 @@
+package questionnaires;
+
+import java.util.*;
+
+/**
+ * The Class MultipleOpenedAnswer.
+ */
+public class MultipleOpenedAnswer extends Answer<String> 
+{	
+    /**
+     * Instantiates a new MultipleOpenedAnswer.
+     *
+     * @param a the integer.
+     */
+    public MultipleOpenedAnswer(String a) 
+    {
+    	super(a);
+    }
+
+    /**
+     * Builds the Multiple opened answer.
+     *
+     * @param answerText the answer text
+     * @return the answer
+     */
+    public static Answer<?> build(String answerText)
+    {
+    	StringTokenizer st = new StringTokenizer(answerText," ; ");
+    	String build = "";
+    	
+    	if (st.hasMoreTokens())
+    		build = st.nextToken();
+    	
+    	while (st.hasMoreTokens())
+    	{
+    		build += " " + st.nextToken();
+        }
+    	
+    	return new MultipleOpenedAnswer(answerText);
+    }
+    
+    @Override
+    public boolean checkAnswer(String userAnswer) 
+	{
+    	StringTokenizer st = new StringTokenizer(this.answer," ; ");
+    	
+    	while (st.hasMoreTokens())
+		{
+    		if (userAnswer.equals(st.nextToken()))
+    			return true;
+		}
+    	return false;
+	}
+    
+    @Override
+    public boolean acceptablePattern(String text) 
+    {
+    	return true;
+    }
+    
+    @Override
+    public String getType() 
+    {
+    	StringTokenizer st = new StringTokenizer(this.answer," ");
+        return "there are " + st.countTokens() + " possible answers";
+    }
+    
+    @Override
+	public String toString()
+	{
+    	return this.answer;
+	}
+}
