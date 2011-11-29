@@ -1,0 +1,20 @@
+set OBJETS;
+
+param poids{OBJETS}	 >= 0;
+param valeur{OBJETS} >= 0;
+param volume{OBJETS} >= 0;
+
+var x1 >=0, <= 20;
+var x2 >=0, <= 15;
+var x3 >=0, <= 50;
+
+maximize profit :
+	20*x1 + 35*x2 + 50*x3;
+
+subject to condition1 :
+	0.2*x1 + x2 + 0.3*x3 <= 30;
+	
+subject to condition2 :
+	125*x1 + 15000*x2 + 50*x3 <= 200000;
+	
+	

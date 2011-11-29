@@ -1,0 +1,6 @@
+Ce dossier a été réalisé dans le cadre de notre troisième année de Licence Informatique à Lille 1.
+Nous avons choisi le smartphone, car c'est un outil que l'on retrouve de plus en plus chez un utilisateur lambda et qui devient pour la plupart un outil indispensable dans leur vie quotidienne.
+Nous sommes donc partis sur l'idée que ces personnes seraient devenus dépendant de leur smartphone.
+Après quoi nous avons fait une carte mentale qui nous a permis de mettre en place un questionnaire adapté du type ????.
+Nous avons ensuite interrogé des personnes sur leur dépendance au smartphone.
+Et au vu des éléments récupérer suite aux différentes interviews, nous avons fait une analyse de ceux-ci en prenant en compte l'intervieweur et l'interviewer.
