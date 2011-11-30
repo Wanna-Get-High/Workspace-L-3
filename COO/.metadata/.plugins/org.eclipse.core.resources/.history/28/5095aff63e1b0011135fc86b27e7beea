@@ -1,0 +1,25 @@
+package testfilenamefilter;
+
+import java.io.File;
+import java.io.FilenameFilter;
+
+public class TestFilenameFilter implements FilenameFilter
+{
+	protected String extention;
+	
+	public TestFilenameFilter(String ext)
+	{
+		this.extention = ext;
+	}
+	
+	@Override
+	public boolean accept(File arg0, String arg1) 
+	{
+		return false;
+	}
+	
+	public static void main (String[] args)
+	{
+		
+	}
+}

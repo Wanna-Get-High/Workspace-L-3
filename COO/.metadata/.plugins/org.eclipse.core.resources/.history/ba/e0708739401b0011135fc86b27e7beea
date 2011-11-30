@@ -1,0 +1,18 @@
+package testfilenamefilter;
+
+import java.io.*;
+class ListClassFileName 
+{
+	public static void main(String args[]) 
+	{
+		String dirname = "/bin/testtimer";
+		//System.out.println("before create file");
+		File f1 = new File(dirname);
+		//System.out.println("after create file");
+		FilenameFilter only = new OnlyClassFile();
+		//System.out.println("before create list");
+		String s[] = f1.list(only);
+		System.out.println("after create list");
+		System.out.println(s.toString());
+	}
+}

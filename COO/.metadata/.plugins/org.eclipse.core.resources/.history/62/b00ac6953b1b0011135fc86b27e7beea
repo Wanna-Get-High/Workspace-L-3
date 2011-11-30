@@ -1,0 +1,15 @@
+package timerTest;
+
+public class TimerTest 
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		Timer scheduler = new Timer();
+
+	}
+
+}
