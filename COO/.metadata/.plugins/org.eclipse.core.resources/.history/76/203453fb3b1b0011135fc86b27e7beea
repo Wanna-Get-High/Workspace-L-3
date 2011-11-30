@@ -1,0 +1,24 @@
+package timerTest;
+
+import javax.swing.Timer;
+
+public class TimerTest 
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		
+		Timer scheduler = new Timer(500,
+
+	}
+	
+	
+	class action extends ActionListenner
+	{
+		
+	}
+
+}
