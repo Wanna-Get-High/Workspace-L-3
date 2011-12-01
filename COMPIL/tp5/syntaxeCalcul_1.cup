@@ -1,0 +1,118 @@
+/*****************************************************
+ * Description pour Cup d'une grammaire vide
+ * Sert uniquement à définir les symboles de Planning
+ *
+ * M. Lepan & M. Van Ryseghem 
+ * 2011/10/05
+ *
+ *****************************************************/
+
+package calcul.analyseurs;
+
+import java_cup.runtime.*;
+import java.util.*;
+
+action code {:
+	HashMap<String, String> affectation = new HashMap<String, String>();
+:}
+
+parser code {: 
+
+	private boolean erreurSyntaxique;
+	private String messageErreur;
+	
+	/** Redéfinition de la méthode parse() pour levée de 
+	  * ParserException() en cas d'erreur syntaxique.
+	  * @throws ParserException en cas d'erreur syntaxique.
+	  */
+	
+	public Symbol parse() throws Exception, ParserException 
+	{
+		Symbol s = null;
+		try {    
+			s = super.parse();
+		} 
+		catch (Exception e) 
+		{
+			if (this.erreurSyntaxique)
+				throw new ParserException(this.messageErreur); 
+			else 
+				throw e;
+		}
+		return s;
+	} 
+
+	/** Redéfinition de syntax_error() pour qu'elle affiche
+	  * le symbole courant.
+	  */
+	public void syntax_error(Symbol symboleCourant) 
+	{
+		this.erreurSyntaxique = true;
+		this.messageErreur = "erreur syntaxique sur le symbole " 
+				+ ((Symbole)symboleCourant).getRepresentationTextuelle() 
+				+ " ligne " + (symboleCourant.left + 1) 
+				+ " colonne " + (symboleCourant.right + 1);
+	}
+	
+:} // parser code
+
+/* terminaux (symboles retournés par l'analyseur lexical) */
+
+terminal END, VARIABLE, AFFECTATIONCST, PARENTHESISL, PARENTHESISR, PLUS, MINUS, TIMES, DIVIDE, NUMBER, UNAIRE;
+
+non terminal expr, affect, exprUnaire, listAffect, file;
+
+precedence left PLUS;
+precedence left TIMES;
+precedence left UNAIRE;
+precedence left PARENTHESISL;
+
+start with file;
+
+file ::= listAffect
+			{:
+				String cle;
+				String valeur;
+				for(java.util.Map.Entry<String, String> entry : affectation.entrySet()) 
+				{
+					cle = entry.getKey();
+					valeur = entry.getValue();
+					System.out.println(cle + " = " + valeur);
+				}
+			:}
+;
+
+listAffect ::= affect 
+			| affect listAffect	
+;
+
+affect ::= VARIABLE:var AFFECTATIONCST expr:val END {: affectation.put(var.toString(),val.toString()); :}
+;
+
+expr ::= NUMBER:num 											{: RESULT = num; :}
+		| expr:val1 MINUS expr:val2 							{: RESULT = Integer.parseInt(val1.toString()) - Integer.parseInt(val2.toString()); :} %prec PLUS
+		| expr:val1 PLUS expr:val2 								{: RESULT = Integer.parseInt(val1.toString()) + Integer.parseInt(val2.toString()); :} %prec PLUS
+		| expr:val1 TIMES expr:val2 							{: RESULT = Integer.parseInt(val1.toString()) * Integer.parseInt(val2.toString()); :} %prec TIMES
+		| expr:val1 DIVIDE expr:val2							{: RESULT = Integer.parseInt(val1.toString()) / Integer.parseInt(val2.toString()); :} %prec TIMES
+		| exprUnaire:val 										{: RESULT = val; :}
+		| VARIABLE:var 
+			{: 
+				if (!affectation.keySet().contains(var)) throw new ParserException();
+				RESULT = affectation.get(var); 
+			:}
+			
+		| PARENTHESISL expr:val1 MINUS expr:val2 PARENTHESISR 	{: RESULT = Integer.parseInt(val1.toString()) - Integer.parseInt(val2.toString()); :} %prec PARENTHESISL
+		| PARENTHESISL expr:val1 PLUS expr:val2 PARENTHESISR  	{: RESULT = Integer.parseInt(val1.toString()) + Integer.parseInt(val2.toString()); :} %prec PARENTHESISL
+		| PARENTHESISL expr:val1 TIMES expr:val2 PARENTHESISR 	{: RESULT = Integer.parseInt(val1.toString()) * Integer.parseInt(val2.toString()); :} %prec PARENTHESISL
+		| PARENTHESISL expr:val1 DIVIDE expr:val2 PARENTHESISR	{: RESULT = Integer.parseInt(val1.toString()) / Integer.parseInt(val2.toString()); :} %prec PARENTHESISL
+		| PARENTHESISL exprUnaire:val PARENTHESISR 				{: RESULT = val; :} %prec PARENTHESISL
+		| PARENTHESISL NUMBER:num PARENTHESISR 					{: RESULT = num; :} %prec PARENTHESISL
+		| PARENTHESISL VARIABLE:var PARENTHESISR 				
+			{: 
+				if (!affectation.keySet().contains(var)) throw new ParserException();
+				RESULT = affectation.get(var); 
+			:} %prec PARENTHESISL
+;
+
+exprUnaire ::= MINUS expr:val {: RESULT = - Integer.parseInt(val.toString()); :} %prec UNAIRE
+;
