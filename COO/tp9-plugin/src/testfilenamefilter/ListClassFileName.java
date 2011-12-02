@@ -5,6 +5,8 @@ class ListClassFileName
 {
 	public static void main(String args[]) 
 	{
+		Object a = "salut";
+		System.out.println(a.toString());
 		String dirname = "bin/testfilenamefilter";
 
 		File f1 = new File(dirname);

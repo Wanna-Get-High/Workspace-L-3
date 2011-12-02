@@ -25,7 +25,7 @@ package calcul.analyseurs;
 // ATTENTION : le % doit toujours être en 1ère colonne
 
 // la classe générée implantant l'analyseur s'appelle ScannerCalcul.java
-%class 
+%class ScannerCalcul
 // et est publique
 %public
 // la cl. générée implante l'itf java_cup.runtime.Scanner fournie par Cup
@@ -44,7 +44,7 @@ package calcul.analyseurs;
 // ... et lève une exception ScannerException en cas d'erreur lexicale
 %yylexthrow{
 	ScannerException
-%yylexthrow}
+%yylexthrow}	
 // action effectuée qd la fin du fichier à analyser est rencontrée
 // le type EOF est généré automatiquement par Cup
 %eofval{
@@ -81,14 +81,10 @@ blancs = {endOfLine} | [ \t\f]
 
 
 
-variable = [A-Za-z]+
-digit = [:digit:]+
-
-minus = '-'
-plus = '+'
-times = '*'
-divide = '\/'
-
+endOfExpression = ";"
+variable = [A-Za-z]+[A-Za-z0-9]*
+affectationCst = ":="
+nombre = [0-9]+
 %%
 
 /***********************************************************************/
@@ -101,36 +97,49 @@ divide = '\/'
 // S'il n'y a pas de return, on passe au symbole suivant.
 
 {blancs} { /* on ne fait rien */ }
-
-{minus} { // on a reconnu le mot-clé minus
-  return creerSymbole("-",TypeSymboles.MINUS);
+ 
+{endOfExpression} {
+	return creerSymbole("END",TypeSymboles.END);
 }
 
-{plus} { // on a reconnu le mot-clé plus
-  return creerSymbole("+",TypeSymboles.PLUS);
+{nombre} {
+	return creerSymbole("NUMBER",TypeSymboles.NUMBER, yytext());
 }
 
-{times} {// on a reconnu le mot-clé times
-  return creerSymbole("*",TypeSymboles.TIMES);
+{variable} {
+	return creerSymbole("VARIABLE",TypeSymboles.VARIABLE, yytext());
 }
 
-{divide} {// on a reconnu le mot-clé  divide
-  return creerSymbole("/",TypeSymboles.DIVIDE);
+{affectationCst} {
+	return creerSymbole("AFFECTIONCST",TypeSymboles.AFFECTATIONCST);
 }
 
-{variable} {// on a reconnu le mot-clé variable
-  return creerSymbole("var",TypeSymboles.VAR);
+"(" {
+	return creerSymbole("PARENTHESISL",TypeSymboles.PARENTHESISL);
 }
 
-// on a défini tous les mot-clés qui pourraient préfixer un indentificateur :
-// on définit donc maintenant seulement les identificateurs
+")" {
+	return creerSymbole("PARENTHESISR",TypeSymboles.PARENTHESISR);
+}
 
-{digit} {
-	return creerSymbole("digit",TypeSymboles.DIGIT,yytext());
+"*" {
+	return creerSymbole("TIMES",TypeSymboles.TIMES);
+}
+
+"+" {
+	return creerSymbole("PLUS",TypeSymboles.PLUS);
+}
+
+"-" {
+	return creerSymbole("MINUS",TypeSymboles.MINUS);
+}
+
+"/" {
+	return creerSymbole("DIVIDE",TypeSymboles.DIVIDE);
 }
 
 .|\n {// erreur : .|\n désigne n'importe quel caractère non reconnu
-      // par une des règles précédentes
-  throw new ScannerException("symbole inconnu, caractère " + yytext() +
-" ligne " + yyline + " colonne " + yycolumn);
-} 
+      // par une des règles précédentes 
+  throw new ScannerException("symbole inconnu, caractère " + yytext() + 
+				 " ligne " + yyline + " colonne " + yycolumn);
+}
