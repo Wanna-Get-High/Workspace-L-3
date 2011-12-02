@@ -7,6 +7,6 @@ sommets = A B C D E;
 # la liste des arcs
 arcs = 
      A  B 10
-     B  C 20 
+     B  C 20
      A  E 15
 ;

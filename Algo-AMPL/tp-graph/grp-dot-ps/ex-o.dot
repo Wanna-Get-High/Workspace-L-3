@@ -1,0 +1,5 @@
+digraph {
+	bleu -> jaune;
+	jaune -> rouge;
+	jaune -> vert;
+}

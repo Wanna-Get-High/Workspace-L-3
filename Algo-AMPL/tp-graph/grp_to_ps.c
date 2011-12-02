@@ -1,38 +1,104 @@
-#include "sys/wait.h"
-/* N ́cessaire pour la macro WEXITSTATUS */
-e
-void graphe2visu(tGraphe graphe, char *outfile) {
-FILE *fic;
-char commande[80];
-char dotfile[80]; /* le fichier dot pour cr ́er le ps */
-e
-/* on va cr ́er un fichier pour graphviz, dans le fichier "outfile".dot */
-e
-strcpy(dotfile, outfile);
-strcat(dotfile, ".dot");
-fic = fopen(dotfile, "w");
-if (fic==NULL)
-halt ("Ouverture du fichier %s en ecriture impossible\n", dotfile);
- ́
-/*
-on parcourt le graphe pour en tirer les informations
-n ́cessaires pour graphviz.
-e
-Pour  ́crire dans le fichier, on utilise fprintf (qui s’utilise
-e
-comme printf mais on mettant en plus fic comme premier param`tre).
-e
-Ex :
-fprint(fic, "graph {\n");
-ou
-fprint(fic, " %s -> %s\n", origine, destination);
-*/
-fclose(fic);
-sprintf(commande, "dot -Tps %s -o %s", dotfile, outfile);
-ret = system(commande);
-if (WEXITSTATUS(ret))
-halt("La commande suivante a echou ́\n%s\n", commande);
- ́
-e
+#include <sys/wait.h>
+#include "graphe.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* Necessaire pour la macro WEXITSTATUS */
+
+void graphe2visu (tGraphe graphe, char* outfile) 
+{
+	FILE *fic; /* le fichier .dot dan lequel on va ecrire*/
+	char commande[80]; /* la commande appeller par sprintf plus bas */
+	char dotfile[80]; /* le fichier dot pour creer le ps */
+	
+	int nb_sommet, i, j, nb_successeur, ret;
+	tNomSommet origine;
+	tNomSommet destination;
+	
+	/* on va creer un fichier pour graphviz, dans le fichier "outfile".dot */
+	strcpy(dotfile, outfile);
+	strcat(dotfile, ".dot");
+	
+	/* on ouvre le fichier .dot en ecriture */
+	fic = fopen(dotfile, "w");
+
+	if (fic==NULL) 
+		halt("Ouverture du fichier %s en ecriture impossible\n", dotfile);
+
+	/* on recupere le nombre de sommet du graphe*/
+	nb_sommet = grapheNbSommets(graphe); 
+	
+	
+	if (grapheEstOriente(graphe))
+	{
+		fprintf(fic, "digraph {\n"); /* digraph pour oriente */
+		for (i=0; i<nb_sommet;i++)
+		{
+			/* on recupere le nb de successeur du sommet*/
+			nb_successeur = grapheNbSuccesseursSommet(graphe,i);
+			for (j=0;j<nb_successeur;j++)
+			{
+				/* on recupere le nom du sommet i et on le stock dans la variable origine */
+				grapheRecupNomSommet(graphe,i,origine);
+				/* on recupere le nom du successeur j du sommet i et on le stock dans la variable destination*/
+				grapheRecupNomSommet(graphe,grapheSuccesseurSommetNumero(graphe,i,j),destination);
+				/* -> pour oriente*/
+				fprintf(fic, "\t%s -> %s;\n", origine, destination);
+			}
+		}
+		fprintf(fic, "}");
+	}
+	else
+	{
+		fprintf(fic, "graph {\n"); /* graph pour non oriente */
+		for (i=0; i<nb_sommet;i++)
+		{
+			/* on recupere le nb de voisin du sommet*/
+			nb_successeur = grapheNbVoisinsSommet(graphe,i);
+			for (j=0;j<nb_successeur;j++)
+			{
+				/* on recupere le nom du sommet i et on le stock dans la variable origine */
+				grapheRecupNomSommet(graphe,i,origine);
+				/* on recupere le nom du voisin j du sommet i et on le stock dans la variable destination*/
+				grapheRecupNomSommet(graphe,grapheVoisinSommetNumero(graphe,i,j),destination);
+				/* -- pour non oriente*/
+				fprintf(fic, "\t%s -- %s;\n", origine, destination);
+			}
+		}
+		fprintf(fic, "}");
+	}
+	
+	fclose(fic);
+	
+	/* on stock dans commande la commande qui permet a partir d'un .dot de creer un .ps*/
+	sprintf(commande, "dot -Tps %s -o %s.ps", dotfile, outfile);
+	/* on appelle la fonction stocker dans commande */
+	ret = system(commande);
+	
+	if (WEXITSTATUS(ret)) 
+		halt("La commande suivante a echoue \n%s\n", commande);
 }
 
+int main(int argc, char** argv)
+{
+	if (argc<2)
+    	halt("Usage : %s FichierGraphe\n", argv[0]);
+
+	/* creation du graph et allocation memoire */
+	tGraphe graphe = grapheAlloue();
+	/* creation du fichier grp (argv[1] ne doi pas contenir l'extention) */
+	char grpfile[80] = "";
+	strcat(grpfile,argv[1]);
+	strcat(grpfile,".grp");
+	
+	/* on charge dans le graphe le fichier passer en param */
+	grapheChargeFichier(graphe,grpfile);
+	
+	/* on appelle la methode ki creer le .ps apartir du .grp en passant par un .dot */
+	graphe2visu(graphe,argv[1]);
+	
+	/* on free le graphe */
+	grapheLibere(graphe);
+	return 1;
+}
