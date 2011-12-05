@@ -16,7 +16,6 @@ INSERT INTO avions VALUES(5,'Embraer ERJ-145',1530);
 INSERT INTO avions VALUES(6,'SAAB 340',2128);
 INSERT INTO avions VALUES(7,'Piper Archer III',520);
 INSERT INTO avions VALUES(8,'Tupolev 154',4103);
-INSERT INTO avions VALUES(16,'Schwitzer 2-33',30);
 INSERT INTO avions VALUES(9,'Lockheed L1011',6900);
 INSERT INTO avions VALUES(10,'Boeing 757-300',4010);
 INSERT INTO avions VALUES(11,'Boeing 777-300',6441);
@@ -25,6 +24,7 @@ INSERT INTO avions VALUES(13,'Airbus A320',2605);
 INSERT INTO avions VALUES(14,'Airbus A319',1805);
 INSERT INTO avions VALUES(15,'Boeing 727',1504);
 INSERT INTO avions VALUES(16,'Airbus A380-800ER',18001);
+INSERT INTO avions VALUES(17,'Schwitzer 2-33',30);
 
 
 ------------------------------------------------------------------
@@ -37,8 +37,8 @@ salaire int
 INSERT INTO employes VALUES(242518965,'Ivonne Boulala',120433);
 INSERT INTO employes VALUES(141582651,'Anael Klein',178345);
 INSERT INTO employes VALUES(011564812,'Joris Robillard',153972);
-INSERT INTO employes VALUES(567354612,'Laura Giacco',256481);
-INSERT INTO employes VALUES(552455318,'Patricia Jones',101745);
+INSERT INTO employes VALUES(567354612,'Laura Giacco',256481); --
+INSERT INTO employes VALUES(552455318,'Patricia Jones',101745); --
 INSERT INTO employes VALUES(550156548,'Victor Goron',205187);
 INSERT INTO employes VALUES(390487451,'Linda Mariencourt',212156);
 INSERT INTO employes VALUES(274878974,'Valentin Owczarek',99890);
@@ -79,7 +79,7 @@ INSERT INTO certifications VALUES(567354612,10);
 INSERT INTO certifications VALUES(567354612,11);
 INSERT INTO certifications VALUES(567354612,12);
 INSERT INTO certifications VALUES(567354612,15);
-INSERT INTO certifications VALUES(567354612,7);
+INSERT INTO certifications VALUES(567354612,7); --7
 INSERT INTO certifications VALUES(567354612,9);
 INSERT INTO certifications VALUES(567354612,3);
 INSERT INTO certifications VALUES(567354612,4);
@@ -97,7 +97,7 @@ INSERT INTO certifications VALUES(355548984,8);
 INSERT INTO certifications VALUES(355548984,9);
 INSERT INTO certifications VALUES(310454876,8);
 INSERT INTO certifications VALUES(310454876,9);
-INSERT INTO certifications VALUES(548977562,7);
+INSERT INTO certifications VALUES(548977562,7);--6
 INSERT INTO certifications VALUES(142519864,1);
 INSERT INTO certifications VALUES(142519864,11);
 INSERT INTO certifications VALUES(142519864,12);
@@ -105,14 +105,14 @@ INSERT INTO certifications VALUES(142519864,10);
 INSERT INTO certifications VALUES(142519864,3);
 INSERT INTO certifications VALUES(142519864,2);
 INSERT INTO certifications VALUES(142519864,13);
-INSERT INTO certifications VALUES(142519864,7);
+INSERT INTO certifications VALUES(142519864,7);--5
 INSERT INTO certifications VALUES(269734834,1);
 INSERT INTO certifications VALUES(269734834,2);
 INSERT INTO certifications VALUES(269734834,3);
 INSERT INTO certifications VALUES(269734834,4);
 INSERT INTO certifications VALUES(269734834,5);
 INSERT INTO certifications VALUES(269734834,6);
-INSERT INTO certifications VALUES(269734834,7);
+INSERT INTO certifications VALUES(269734834,7);--4
 INSERT INTO certifications VALUES(269734834,8);
 INSERT INTO certifications VALUES(269734834,9);
 INSERT INTO certifications VALUES(269734834,10);
@@ -121,7 +121,7 @@ INSERT INTO certifications VALUES(269734834,12);
 INSERT INTO certifications VALUES(269734834,13);
 INSERT INTO certifications VALUES(269734834,14);
 INSERT INTO certifications VALUES(269734834,15);
-INSERT INTO certifications VALUES(552455318,7);
+INSERT INTO certifications VALUES(552455318,7);--3
 INSERT INTO certifications VALUES(556784565,5);
 INSERT INTO certifications VALUES(556784565,2);
 INSERT INTO certifications VALUES(556784565,3);
@@ -130,7 +130,7 @@ INSERT INTO certifications VALUES(573284895,4);
 INSERT INTO certifications VALUES(573284895,5);
 INSERT INTO certifications VALUES(574489456,8);
 INSERT INTO certifications VALUES(574489456,6);
-INSERT INTO certifications VALUES(574489457,7);
+INSERT INTO certifications VALUES(574489457,7);--2
 INSERT INTO certifications VALUES(242518965,2);
 INSERT INTO certifications VALUES(242518965,10);
 INSERT INTO certifications VALUES(141582651,2);
@@ -140,11 +140,10 @@ INSERT INTO certifications VALUES(011564812,2);
 INSERT INTO certifications VALUES(011564812,10);
 INSERT INTO certifications VALUES(356187925,6);
 INSERT INTO certifications VALUES(159542516,5);
-INSERT INTO certifications VALUES(159542516,7);
+INSERT INTO certifications VALUES(159542516,7);--1
 INSERT INTO certifications VALUES(090873519,6);
 
 ------------------------------------------------------------------
-drop table vols;
 
 create table vols(
 vid int,
