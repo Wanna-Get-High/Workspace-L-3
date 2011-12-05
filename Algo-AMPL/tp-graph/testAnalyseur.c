@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
   graphe = grapheAlloue();
   
   grapheChargeFichier(graphe,  argv[1]);
+  
   grapheAffiche(graphe);
 
   grapheLibere(graphe);
