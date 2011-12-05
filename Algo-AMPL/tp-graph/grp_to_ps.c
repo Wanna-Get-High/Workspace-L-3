@@ -62,8 +62,10 @@ void graphe2visu (tGraphe graphe, char* outfile)
 				grapheRecupNomSommet(graphe,i,origine);
 				/* on recupere le nom du voisin j du sommet i et on le stock dans la variable destination*/
 				grapheRecupNomSommet(graphe,grapheVoisinSommetNumero(graphe,i,j),destination);
+				
 				/* -- pour non oriente*/
-				fprintf(fic, "\t%s -- %s;\n", origine, destination);
+				if (strcmp(origine, destination) < 0)
+					fprintf(fic, "\t%s -- %s;\n", origine, destination);
 			}
 		}
 		fprintf(fic, "}");
