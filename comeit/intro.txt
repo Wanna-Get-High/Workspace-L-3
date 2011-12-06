@@ -4,3 +4,15 @@ Nous sommes donc partis sur l'idée que ces personnes seraient devenus dépendan
 Après quoi nous avons fait une carte mentale qui nous a permis de mettre en place un questionnaire adapté du type ????.
 Nous avons ensuite interrogé des personnes sur leur dépendance au smartphone.
 Et au vu des éléments récupérer suite aux différentes interviews, nous avons fait une analyse de ceux-ci en prenant en compte l'intervieweur et l'interviewer.
+
+//
+
+Ce dossier a été réalisé dans le cadre de notre troisième année de licence informatique à Lille 1.
+Nous avons choisi comme sujet "la dépendance aux smartphones", car il allie à la fois un aspect informatique, et un aspect à la mode. De plus en plus de gens l'utilisent tous les jours et devient une pierre central de leur vie.
+La première partie présente les différentes phases de la construction d'une maquette d'entretien et de son amélioration :
+- Nous avons tout d'abord établie une carte mentale regroupant le plus d'idées autour des smartphones.
+- Cette carte mentale nous a permis d'établir un guide d'entretien.
+- Nous avons donc créé une maquette vierge de ce guide comme support de nos interviews.
+- Nous sommes passés aux interviews (2 par personne).
+- Ces entretiens fini nous nous sommes donc penchés sur l'analyse de notre méthodologie que nous vous livrons au sein de ce dossier.
+La deuxième partie est un bilan du travail sur les currivulum vitae. Elle contient la synthèse sous forme de tableau des commentaires échangés, le C.V. envoyé à tout le monde, ainsi que sa correction.
