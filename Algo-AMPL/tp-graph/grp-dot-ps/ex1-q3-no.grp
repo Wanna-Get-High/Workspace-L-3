@@ -6,10 +6,13 @@ sommets = A B C D E F G;
 
 # la liste des arcs
 arcs = 
-     A B 1
-     A C 1
-     B D 1
+     A B 3
+     A C 4
+     A E 4
+     B D 2
+     B E 1
+     E F 2
      C F 1
-     C G 1
-     D E 1
+     C G 8
+     D E 4
 ;

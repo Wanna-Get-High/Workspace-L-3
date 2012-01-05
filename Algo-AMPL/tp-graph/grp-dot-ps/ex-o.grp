@@ -2,11 +2,14 @@
 type = oriente;
 
 # la liste des sommets
-sommets = bleu vert jaune rouge;
+sommets = bleu vert jaune rouge mauve orange gris;
 
 # la liste des arcs
 arcs = 
      bleu  jaune 1.5
-     jaune rouge 2.2 
+     jaune rouge 2.2
      jaune vert 5.5
+     vert mauve 5.5
+     rouge orange 1.3
+     orange gris 0
 ;

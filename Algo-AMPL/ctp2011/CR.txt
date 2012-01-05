@@ -1,0 +1,63 @@
+NOM : 
+Prénom :
+Nom de la machine : (s'obtient en tapant la commande $ hostname)
+
+==============================================
+= 1 : AMPL
+==============================================
+
+Q1.1) Fait : OUI
+model ctp.ampl
+solve;
+MINOS 5.51: optimal solution found.
+2 iterations, objective 638
+
+Q1.2) Fait : OUI
+display profit;
+profit = 638
+
+Q1.3) Fait : OUI
+display limitation_fruit;
+limitation_fruit [*] :=
+ABRICOT  0
+FRAISE  0.0275
+FRAMBOISE  0
+;
+
+Q1.4) Fait : OUI/NON
+chiffre a ,
+
+Q1.5) Fait : OUI/NON
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+Q1.6) Fait : OUI/NON
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+Q1.7) Fait : OUI/NON
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+==============================================
+= Graphes
+==============================================
+
+Q2.1) Fait : OUI/NON
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+Q2.2) Fait : OUI/NON
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+Q2.3) Fait : OUI/NON
+
+Indiquer la sortie écran :
+
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+
+Q2.4) Fait : OUI/NON
+
+Indiquer la sortie écran :
+
+Expliquez les difficultés rencontrées si vous n'y arrivez pas
+
+Q2.5) Fait : OUI/NON
+Expliquez les difficultés rencontrées si vous n'y arrivez pas

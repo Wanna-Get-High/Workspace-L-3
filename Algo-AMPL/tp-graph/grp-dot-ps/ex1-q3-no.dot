@@ -1,8 +1,11 @@
 graph {
 	A -- B;
 	A -- C;
+	A -- E;
 	B -- D;
+	B -- E;
 	C -- F;
 	C -- G;
 	D -- E;
+	E -- F;
 }
