@@ -66,7 +66,7 @@ int main (int argc, char** argv)
 	
 	error = access(file,flags>>1);
 
-	else if ((flags & 1 << 1))
+	if ((flags & 1 << 1))
 	{
 		
 	} 
