@@ -1,9 +1,0 @@
-package testfilenamefilter;
-
-public class TestFilenameFilter 
-{
-	public static void main (String[] args)
-	{
-		
-	}
-}

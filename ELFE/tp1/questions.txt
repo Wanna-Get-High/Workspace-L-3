@@ -1,0 +1,45 @@
+PARTIE 1:
+
+	Q4 :
+		femme(mia).
+		femme(yolande).
+		femme(lapin).
+	
+	Q5 :
+		femme(X).      ou 		listing(femme).
+	
+	Q6 :
+		aime(vincent,X), femme(X).	
+	
+	Q7 :
+		Négation dificile donc on a rajouter un prédicat : 
+		homme(X). qui repond a la question "qui est un homme ?".
+	
+		aime(vincent,X), homme(X).
+
+	Q8 :
+		jaloux(vincent,X).
+	
+	Q9 :
+		jaloux(vincent,_).
+	
+PARTIE 2 :
+
+	Q11 :
+		employe(X,_,_,_,bull,_).
+		
+	Q12 :
+		employe(jacques,_,_,_,bull,4), salaire(bull,4,Z).
+		
+	Q14 :
+		1- employe(NOM,AGE,SEXE,ENTREE,ibm,ECHELON).
+		2- employe(NOM,AGE,femme,_,_,_).
+		3- salaire(ibm,ECHELON,VAL).
+		4- employe(NOM,AGE,homme,_,_,_) , AGE =< 25.
+		5- employe(NOM,AGE,homme,_,_,_) , \+AGE > 25.
+		
+	Q15 :
+		1- oui : jeune_employe(marc,xerox).
+		2- non : jeune_employe(jacques,_).
+		3- jean et julie :  jeune_employe(X,ibm).
+		
