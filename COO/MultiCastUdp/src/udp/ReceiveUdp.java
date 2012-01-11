@@ -28,14 +28,14 @@ public class ReceiveUdp
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-	
-			System.out.println("Paquet recu : message = " + new String(buffer) + 
-								" - envoyeur = " + dp.getAddress().getHostName() +
-								" - port = " + dp.getPort());
+			
+			String m = new String(dp.getData());
+			System.out.println("envoyeur [" + dp.getAddress().getHostName() +
+								"] - port [" + dp.getPort()+"] = "+ m);
 		}
 	}
 	
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		new ReceiveUdp(Integer.parseInt(args[0]));
 	}

@@ -7,12 +7,12 @@ public class SendUdp
 	DatagramSocket ds;
 	DatagramPacket dp;
 	
-	public SendUdp(String msg,int port,String taztavu)
+	public SendUdp(String msg,int port,String ad)
 	{
 		System.out.println("envoyé : "+msg);
 		InetAddress address=null;
 		try {
-			address = InetAddress.getByName(taztavu);
+			address = InetAddress.getByName(ad);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
@@ -34,9 +34,9 @@ public class SendUdp
 	
 	public static void main(String[] args) 
 	{
-		if (args.length < 2)
+		if (args.length < 3)
 		{
-			System.out.println("plop :) faux ta vu");
+			System.out.println("usage : ./sendUdp <msg> <port> <adress>");
 		}
 		else
 		{

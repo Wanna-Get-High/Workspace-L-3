@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="oie.StartCell"/>
-<fullyQualifiedTypeName name="oie.Cell"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
 <fullyQualifiedTypeName name="ressource.ActionState"/>
 <fullyQualifiedTypeName name="ressource.Scheduling"/>
 <fullyQualifiedTypeName name="ressource.Scenario"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="java.net.SocketAddress"/>
 <fullyQualifiedTypeName name="udp.sendUdp"/>
 <fullyQualifiedTypeName name="java.net.MulticastSocket"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+<fullyQualifiedTypeName name="udp.MultiCastReceive"/>
+<fullyQualifiedTypeName name="udp.SendReceiveMC"/>
 </qualifiedTypeNameHistroy>

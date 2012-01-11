@@ -1,0 +1,49 @@
+package udp;
+import java.io.IOException;
+import java.net.*;
+
+public class MultiCastSend 
+{
+	MulticastSocket ms;
+	DatagramPacket dp;
+	
+	public MultiCastSend(String msg)
+	{	
+		InetAddress address=null;
+		try {
+			address = InetAddress.getByName("224.0.0.1");
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		
+		dp = new DatagramPacket(msg.getBytes(),msg.length(),address,7654);
+		
+		
+		
+		try {
+			ms = new MulticastSocket();
+			ms.setTimeToLive(1);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			ms.send(dp);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("envoyé : "+msg);
+	}
+	
+	public static void main(String[] args) 
+	{
+		if (args.length < 3)
+		{
+			System.out.println("usage : ./sendUdp <msg> <port> <adress>");
+		}
+		else
+		{
+			new SendUdp(args[0],Integer.parseInt(args[1]),args[2]);
+		}
+	}
+}
