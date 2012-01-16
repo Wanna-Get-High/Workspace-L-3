@@ -1,0 +1,75 @@
+package editor;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JTextArea;
+
+import application.extensions.PluginChecker;
+import application.extensions.PluginEvent;
+import application.extensions.PluginListener;
+
+
+
+
+public class Editor
+{
+	JFrame frame;
+	JTextArea text;
+	JMenuBar menuBar;
+	JMenu plugins;
+	
+	PluginChecker checker;
+	
+	public Editor(String repExt)
+	{
+		this.checker = new PluginChecker(500, repExt);
+		this.checker.addPluginListener(new OutilsListener());
+		
+		this.frame = new JFrame("Plugin");
+		this.menuBar = new JMenuBar();
+		this.plugins = new JMenu("Plugin");
+		this.menuBar.add(this.plugins);
+		
+		this.text  = new JTextArea(20,40);
+		
+		this.frame.add(this.menuBar);
+		this.frame.add(this.text);
+		this.frame.pack();
+		this.frame.setVisible(true);
+		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+
+	
+	public static void main(String[] args) 
+	{
+		Editor e = new Editor(args[0]);
+		e.checker.createChecker();
+	}
+	
+	/**
+	 * subClasse 
+	 * @author franziz
+	 *
+	 */
+	class OutilsListener implements PluginListener
+	{
+
+		@Override
+		public void pluginAdded(PluginEvent e) 
+		{
+			System.out.println("--> plugin added : "+e.getExtention());
+			
+			//on recupere le nom via e.getExtentions();
+			// et on ajoute un JMeniuItem ac le nom corespondant
+		}
+
+		@Override
+		public void pluginRemoved(PluginEvent e) {
+			System.out.println("<-- plugin removed : "+e.getExtention());
+			//on chope le nom via e.getExtentions();
+			// et on retire un JMeniuItem ac le nom corespondant		
+		}
+	}
+}

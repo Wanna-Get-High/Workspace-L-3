@@ -1,0 +1,53 @@
+package editor;
+
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JTextArea;
+
+import extensions.*;
+
+
+public class Editor 
+{
+	JFrame frame;
+	JTextArea text;
+	PluginChecker checker;
+	JMenu outils;
+	
+	public Editor(String repExt)
+	{
+		this.checker.addPluginListener(new OutilsListener());
+	}
+
+
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	/**
+	 * subClasse 
+	 * @author franziz
+	 *
+	 */
+	class OutilsListener implements PluginListener
+	{
+
+		@Override
+		public void pluginAdded(PluginEvent e) 
+		{
+			//on chope le nom via e.getExtentions();
+			// et on ajoute un JMeniuItem ac le nom corespondant
+			// et un PluginListenner au PluginChecker ???
+		}
+
+		@Override
+		public void pluginRemoved(PluginEvent e) {
+			//on chope le nom via e.getExtentions();
+			// et on retire un JMeniuItem ac le nom corespondant
+			// et un PluginListenner au PluginChecker
+			
+		}
+	}
+}

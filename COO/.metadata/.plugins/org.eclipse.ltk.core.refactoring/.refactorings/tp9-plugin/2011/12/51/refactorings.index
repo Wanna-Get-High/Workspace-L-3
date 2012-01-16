@@ -1,0 +1,12 @@
+1323800574585	Move compilation unit
+1323806850434	Move compilation unit
+1323807712770	Delete element
+1323807720249	Delete element
+1323807726074	Delete element
+1323807728977	Delete element
+1323807850937	Delete element
+1323808292622	Rename package 'extensions'
+1323809706681	Rename field 'outils'
+1323814235669	Rename local variable 'repExt'
+1323814241181	Rename local variable 'dirREp'
+1323815034991	Rename method 'getExtention'

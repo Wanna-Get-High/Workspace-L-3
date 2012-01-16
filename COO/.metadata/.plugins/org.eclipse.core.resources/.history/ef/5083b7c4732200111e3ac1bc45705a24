@@ -1,0 +1,11 @@
+package testfilenamefilter;
+
+import java.util.EventListener;
+
+import extensions.PluginEvent;
+
+public interface PluginListener extends EventListener 
+{
+	void pluginAdded(PluginEvent e);
+	void pluginRemoved(PluginEvent e);
+}

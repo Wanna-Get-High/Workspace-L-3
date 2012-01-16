@@ -7,7 +7,6 @@
 -- Q1 --  
 --votre reponse c'est pour un pilote certifie sur au moin 2 avions 
 --pour plus de 3 avion il faudrait mettre > 3 au lieu de >1
-
 select c1.eid, max(a.portee)
 from certifications as c1, avions as a
 where c1.aid = a.aid
@@ -61,9 +60,33 @@ order by e.enom;
 -- Q5 --
 --question super bien pose
 --"pour au moins deux tels avions" --> et qui en pilotes au moins 2
+select e.enom 
+from employes as e
+where exists (	select c.eid
+				from certifications as c
+				where e.eid = c.eid
+				and exists (select a.aid
+							from avions as a
+							where a.aid = c.aid
+							and a.portee > 1500)
+				group by c.eid
+				having count(c.aid) > 1
+			except
+				select c.eid
+				from certifications as c
+				where e.eid = c.eid
+				and exists (select a.aid
+							from avions as a
+							where a.aid = c.aid
+							and a.portee < 1500)
+			
+				
+)
+order by e.enom;
 
 -- Q6 --
 -- le resultat que vous proposez est pour Boeing mais vous demandez pour Airbus...
+
 select e.enom 
 from employes as e
 where exists (	select c.eid

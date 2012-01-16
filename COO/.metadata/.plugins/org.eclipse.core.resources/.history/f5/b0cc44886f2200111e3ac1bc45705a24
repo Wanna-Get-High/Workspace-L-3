@@ -1,0 +1,11 @@
+package testfilenamefilter;
+
+public class PluginEvent implements ActionListener
+{
+	protected String className;
+	
+	public PluginEvent(String className)
+	{
+		this.className = className;
+	}
+}

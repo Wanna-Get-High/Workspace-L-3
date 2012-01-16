@@ -1,0 +1,8 @@
+package testfilenamefilter;
+
+public interface PluginListener 
+{
+	void pluginAdded();
+	void pluginRemoved();
+	
+}

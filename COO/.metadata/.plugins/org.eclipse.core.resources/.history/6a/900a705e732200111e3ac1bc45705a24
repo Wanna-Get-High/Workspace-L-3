@@ -1,0 +1,20 @@
+package testfilenamefilter;
+
+import java.util.EventObject;
+
+public class PluginEvent extends EventObject
+{
+	private static final long serialVersionUID = 1L;
+	protected String extension;
+	
+	public PluginEvent(Object source, String ext)
+	{
+		super(source);
+		this.extension = ext;
+	}
+
+	public String getExtention()
+	{
+		return this.extension;
+	}
+}

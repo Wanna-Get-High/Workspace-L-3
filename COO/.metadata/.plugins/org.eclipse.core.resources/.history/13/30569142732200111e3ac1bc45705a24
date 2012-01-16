@@ -1,0 +1,15 @@
+package testfilenamefilter;
+
+import java.util.EventObject;
+
+public class PluginEvent extends EventObject
+{
+	protected String extension;
+	
+	public PluginEvent(Object source, String ext)
+	{
+		super(source);
+		this.extension = ext;
+	}
+
+}

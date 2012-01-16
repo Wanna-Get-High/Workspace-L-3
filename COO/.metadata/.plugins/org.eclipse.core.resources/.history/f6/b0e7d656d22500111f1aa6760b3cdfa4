@@ -1,0 +1,129 @@
+package application.extensions;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.Timer;
+
+
+
+public class PluginChecker 
+{
+	protected File directory;
+	protected List<PluginListener> pluginListeners;
+	protected int delay;
+	protected PluginEvent pluginEvent;
+	protected Timer checker;
+	
+	public PluginChecker(int delay, String dir)
+	{
+		this.directory = new File(dir);
+		this.delay = delay;
+		this.pluginListeners = new ArrayList<PluginListener>();
+	}
+	
+	public void addPlugin(String extName)
+	{
+		this.pluginEvent = new PluginEvent(this, extName);
+		this.firePluginAdded();
+	}
+	
+	protected void firePluginAdded()
+	{
+		for (PluginListener pl : this.pluginListeners)
+		{
+			pl.pluginAdded(pluginEvent);
+		}
+	}
+	
+	public void removePlugin(String extName)
+	{
+		this.pluginEvent = new PluginEvent(this,Class.forName(extName));
+		this.firePluginRemoved();
+	}
+	
+	public void firePluginRemoved()
+	{
+		for (PluginListener pl : this.pluginListeners)
+		{
+			pl.pluginRemoved(pluginEvent);
+		}	
+	}
+	
+	public void addPluginListener(PluginListener listener)
+	{
+		if (pluginListeners.contains(listener))
+			return;
+		
+		this.pluginListeners.add(listener);
+	}
+	
+	public void removePluginListener(PluginListener listener)
+	{
+		this.pluginListeners.remove(listener);
+	}
+	
+	public void createChecker()
+	{
+		this.checker = new Timer(this.delay,new ActionListener()
+											{
+												protected String[] newFileName;
+												protected String[] fileName;
+												protected int length = 0;
+												protected int newLength;
+												protected boolean isContained = false;
+												protected FilenameFilter onlyClassFile = new OnlyClassFile();
+												
+												@Override
+												public void actionPerformed(ActionEvent arg0)
+												{
+													this.newFileName = PluginChecker.this.directory.list(this.onlyClassFile);
+													this.newLength = this.newFileName.length;
+														
+													//System.out.println("-----------------------------------------------");
+													if (this.newLength > this.length)
+													{
+														for (int i = 0; i< this.newLength; i++)
+														{
+															this.isContained=false;
+															
+															for (int j = 0; j< this.length; j++)
+															{
+																if (this.newFileName[i].equals(this.fileName[j]))
+																	this.isContained=true;
+															}
+															
+															if (!isContained) 
+																PluginChecker.this.addPlugin(newFileName[i]);
+														}
+													} 
+													else if (this.newLength < this.length)
+													{
+														for (int i = 0; i< this.length; i++)
+														{
+															this.isContained=false;
+															
+															for (int j = 0; j< this.newLength; j++)
+															{
+																if (this.fileName[i].equals(this.newFileName[j]))
+																	this.isContained=true;
+															}
+															
+															if (!isContained) 
+																PluginChecker.this.removePlugin(fileName[i]);
+														}
+													}
+													
+													this.fileName = this.newFileName;
+													this.length = this.newLength;
+												}
+											}
+								);
+		
+		this.checker.start();
+	}
+}

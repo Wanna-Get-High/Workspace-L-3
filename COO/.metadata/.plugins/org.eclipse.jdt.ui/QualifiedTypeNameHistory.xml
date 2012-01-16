@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="oie.WaitCell"/>
-<fullyQualifiedTypeName name="oie.TeleportCell"/>
-<fullyQualifiedTypeName name="oie.NormalCell"/>
-<fullyQualifiedTypeName name="oie.Player"/>
-<fullyQualifiedTypeName name="oie.GooseCell"/>
-<fullyQualifiedTypeName name="oie.StartCell"/>
-<fullyQualifiedTypeName name="oie.Cell"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
-<fullyQualifiedTypeName name="ressource.ActionState"/>
-<fullyQualifiedTypeName name="ressource.Scheduling"/>
-<fullyQualifiedTypeName name="ressource.Scenario"/>
 <fullyQualifiedTypeName name="ressource.RessourceAction"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="R"/>
@@ -35,7 +24,6 @@
 <fullyQualifiedTypeName name="mail.Town"/>
 <fullyQualifiedTypeName name="mail.BillOfExchange"/>
 <fullyQualifiedTypeName name="mail.Money"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="mail.Inhabitant"/>
 <fullyQualifiedTypeName name="mail.GoGoMail"/>
 <fullyQualifiedTypeName name="mail.ContentGoGo"/>
@@ -45,10 +33,8 @@
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="questionnaires.Answer"/>
 <fullyQualifiedTypeName name="questionnaires.MultipleOpenedAnswer"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="java.awt.LayoutManager"/>
 <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
@@ -58,6 +44,20 @@
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="questionnaires.QuestionaireUI"/>
 <fullyQualifiedTypeName name="questionnaires.Questionnaire"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="editor.Editor"/>
+<fullyQualifiedTypeName name="extensions.PluginChecker"/>
+<fullyQualifiedTypeName name="extensions.PluginListener"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JMenu"/>
+<fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+<fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
+<fullyQualifiedTypeName name="java.awt.Menu"/>
+<fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+<fullyQualifiedTypeName name="application.extensions.Extension"/>
 </qualifiedTypeNameHistroy>
