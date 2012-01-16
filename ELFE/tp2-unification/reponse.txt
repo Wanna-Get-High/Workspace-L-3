@@ -1,0 +1,55 @@
+Q1 :
+	1 : U = f(Y)
+		W = U = f(Y)
+		V = g(Z)
+		
+	2 : faux car V = f(Y) et V = G(Y)
+	
+	3 : Z = a
+		X = h(Z,W) = h(a,g(Y))
+		W = g(Y)
+		
+	4 : W = a
+		Z = g(X,Y) = g(f(**),Y)
+		X = f(g(**,Y))
+		
+Q2 :
+	unifie(A,A).
+	
+Q3 :
+	il repondra qu'il y aura un arbre infini.	
+	
+Q4 :
+	?- set_prolog_flag(occurs_check,true).
+	true.
+	?- f(X) = X.
+	false.
+
+	?- set_prolog_flag(occurs_check,error).
+	true.
+	?- f(X) = X.
+	ERROR: =/2: Cannot unify _G319 with f(_G319): would create an infinite tree
+
+
+Q5 :
+	jaloux(X,Y) :- aime(X,Z) , aime(Y,Z) , X\==Y.
+	
+Q6 :
+	il  appelle la fonction k(X).
+	de la il cherche une valeur a tester.
+	il prend alors la premiere valeur (ici a) de la premiere fonction presente a droite de k(X) ici f(X).
+	et puis il test les autres fonctions avec cette valeur.
+	il se retrouve avec h(a) qui est faux donc il recomence avec la deuxieme valeur de f(X) (ici b).
+	puis il ne retourne poas d'erreur donc b est la solution.
+	
+Q7 :
+	(voir unif.pl)
+									
+									
+Q8 :
+	il y a 6 solution.			
+	
+Q9 :
+								  
+												  
+	

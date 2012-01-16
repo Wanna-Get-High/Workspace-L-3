@@ -1,0 +1,39 @@
+package udp;
+import java.io.IOException;
+import java.net.*;
+
+public class SendUdp 
+{
+	DatagramSocket ds;
+	DatagramPacket dp;
+	
+	public SendUdp(String msg,int port,String tavu)
+	{
+
+		InetAddress address=null;
+		try {
+			address = InetAddress.getByAddress("172.19.160.187",new byte[]{(byte)172, (byte)19, (byte) 160, (byte)187} );
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		
+		dp = new DatagramPacket(msg.getBytes(),msg.length(),address,port);
+
+		try {
+			ds = new DatagramSocket(port,address);
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			ds.send(dp);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		new SendUdp("plop",2012,"1");
+	}
+}

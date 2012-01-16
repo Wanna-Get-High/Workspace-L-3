@@ -1,0 +1,14 @@
+package udp;
+
+public class SendReceiveMC extends Thread
+{
+	public void run()
+	{
+		new MultiCastReceive();
+	}
+	
+	public static void main(String[] args) 
+	{
+		
+	}
+}

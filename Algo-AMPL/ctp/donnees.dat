@@ -1,0 +1,23 @@
+set JOUETS;
+
+param prix{JOUETS} >=0;
+
+var nb_jouet {j in JOUETS} >=0;
+
+maximize budget_utiliser:
+	sum {j in JOUETS} nb_jouet[j]*prix[j];
+
+subject to limite_budget :
+ sum{j in JOUETS} nb_jouet[j]*prix[j] <= 75;
+
+data;
+
+param : JOUETS : prix :=
+billes                     3.00
+trains_en_bois            17.95
+circuit_train             49.85
+jeu_de_construction       79.90
+modele_reduit_tracteur    12.99 
+livre_contes_pour_enfants 15.90
+dvd_anime                 65.98  
+modele_reduit_betonneuse  19.99 ;

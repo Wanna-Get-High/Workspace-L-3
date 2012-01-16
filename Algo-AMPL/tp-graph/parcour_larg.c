@@ -4,13 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Necessaire pour la macro WEXITSTATUS */
 tNumeroSommet* numerosParcourus;
 tNumeroSommet* numerosEnfiles;
 int parcourusSize = 0;
 int enfilesSize = 0;
 int enfilesIndex = 0;
-
 
 int fileEstVide(){
 	return enfilesSize == enfilesIndex;
@@ -44,8 +42,8 @@ void parcourLarg(tGraphe graphe, tNomSommet som)
 	
 	while(!fileEstVide()){
 		int i, nb_successeurs;
-		current = numerosEnfiles[enfilesIndex++];
 		tNomSommet sommet;
+		current = numerosEnfiles[enfilesIndex++];
 		grapheRecupNomSommet (graphe, current, sommet);
 		printf(" %s ",sommet);
 		if (grapheEstOriente(graphe))
@@ -63,6 +61,9 @@ void parcourLarg(tGraphe graphe, tNomSommet som)
 			}
 		}
 	}
+	printf("\n");
+	free(numerosParcourus);
+	free(numerosEnfiles);
 }
 
 int main(int argc, char** argv)

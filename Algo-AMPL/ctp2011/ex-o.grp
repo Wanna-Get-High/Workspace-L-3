@@ -1,0 +1,22 @@
+# type
+type = oriente;
+
+# la liste des sommets
+sommets = A B C D E F G H;
+
+# la liste des arcs
+arcs =
+     A B 7
+     A C 3
+     B E 5
+     C B 1
+     C D 2
+     C E 2
+     D B 1
+     D E 3
+     D F 5
+     E F 3
+     G E 2
+     G F 4
+     H G 3
+;

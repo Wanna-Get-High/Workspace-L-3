@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;MultiCast&apos; to &apos;MultiCastUdp&apos;&#x0A;- Original element: &apos;MultiCast&apos;&#x0A;- Renamed element: &apos;MultiCast&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;MultiCast&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=MultiCast" name="MultiCastUdp" references="true" stamp="1326118757304" version="1.0"/>
+</session>

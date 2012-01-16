@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <workbench progressCount="17" version="2.0">
+=======
+<workbench progressCount="31" version="2.0">
+>>>>>>> 3f11936b0d0a00b4301f424a8d437189da069588
 <workbenchAdvisor/>
 <window height="1085" maximized="true" width="1321" x="7" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
-<coolbarLayout locked="0">
+<coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="104" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="156" y="34"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.soyatec.uml.UMLElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="34"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="116" y="34"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="100" y="34"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="124" y="34"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="140" y="34"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="172" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -42,6 +46,7 @@
 </folder>
 </info>
 </editorArea>
+<<<<<<< HEAD
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OnlyClassFile.java" partName="OnlyClassFile.java" path="/home/franziz/Workspace-L-3/COO/tp9-plugin/src/application/extensions/OnlyClassFile.java" title="OnlyClassFile.java" tooltip="tp9-plugin/src/application/extensions/OnlyClassFile.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp9-plugin/src/application/extensions/OnlyClassFile.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="230" selectionTopPixel="0"/>
@@ -61,17 +66,34 @@
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PluginChecker.java" partName="PluginChecker.java" path="/home/franziz/Workspace-L-3/COO/tp9-plugin/src/application/extensions/PluginChecker.java" title="PluginChecker.java" tooltip="tp9-plugin/src/application/extensions/PluginChecker.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tp9-plugin/src/application/extensions/PluginChecker.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="592" selectionTopPixel="0"/>
+=======
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReceiveUdp.java" partName="ReceiveUdp.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/MultiCastUdp/src/udp/ReceiveUdp.java" title="ReceiveUdp.java" tooltip="MultiCastUdp/src/udp/ReceiveUdp.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MultiCastUdp/src/udp/ReceiveUdp.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="581" selectionTopPixel="216"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendUdp.java" partName="SendUdp.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/MultiCastUdp/src/udp/SendUdp.java" title="SendUdp.java" tooltip="MultiCastUdp/src/udp/SendUdp.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MultiCastUdp/src/udp/SendUdp.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="243" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiCastReceive.java" partName="MultiCastReceive.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/MultiCastUdp/src/udp/MultiCastReceive.java" title="MultiCastReceive.java" tooltip="MultiCastUdp/src/udp/MultiCastReceive.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MultiCastUdp/src/udp/MultiCastReceive.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="714" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiCastSend.java" partName="MultiCastSend.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/MultiCastUdp/src/udp/MultiCastSend.java" title="MultiCastSend.java" tooltip="MultiCastUdp/src/udp/MultiCastSend.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MultiCastUdp/src/udp/MultiCastSend.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="971" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendReceiveMC.java" partName="SendReceiveMC.java" path="/home/l3/lepan/Workspace-L-3/Workspace-L-3/COO/MultiCastUdp/src/udp/SendReceiveMC.java" title="SendReceiveMC.java" tooltip="MultiCastUdp/src/udp/SendReceiveMC.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MultiCastUdp/src/udp/SendReceiveMC.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="322" selectionTopPixel="0"/>
+>>>>>>> 3f11936b0d0a00b4301f424a8d437189da069588
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -107,6 +129,8 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
@@ -121,7 +145,11 @@
 <viewState/>
 </view>
 </views>
+<<<<<<< HEAD
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+=======
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+>>>>>>> 3f11936b0d0a00b4301f424a8d437189da069588
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -139,6 +167,13 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="register"/>
+<alwaysOnActionSet id="com.soyatec.uml.UMLElementCreationActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -238,6 +273,7 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<<<<<<< HEAD
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp9-plugin/src/editor/Editor.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp9-plugin/src/application/extensions/OnlyClassFile.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tp9-plugin/src/application/extensions/PluginChecker.java"/>
@@ -393,6 +429,166 @@
 </item>
 <item active="true" historyLabel="PluginChecker.java" index="2">
 <position info="not_deleted" x="592" y="0"/>
+=======
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/SendUdp.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/ReceiveUdp.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/MultiCastReceive.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/MultiCastSend.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/SendReceiveMC.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/MultiCastReceive.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/MultiCastSend.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MultiCastUdp/src/udp/SendUdp.java"/>
+</editors>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="335" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1020" y="163"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="383" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="217" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="379" y="0"/>
+</item>
+<item historyLabel="ReceiveUdp.java" index="1">
+<position info="not_deleted" x="208" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1118" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="825" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="322" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="825" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1118" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="244" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1118" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="825" y="0"/>
+</item>
+<item historyLabel="SendUdp.java" index="0">
+<position info="not_deleted" x="0" y="842"/>
+</item>
+<item historyLabel="ReceiveUdp.java" index="1">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="SendUdp.java" index="0">
+<position info="not_deleted" x="619" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="629" y="0"/>
+</item>
+<item historyLabel="ReceiveUdp.java" index="1">
+<position info="not_deleted" x="541" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="593" y="153"/>
+</item>
+<item historyLabel="ReceiveUdp.java" index="1">
+<position/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="449" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="244" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1118" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="449" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1118" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="244" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="750" y="0"/>
+</item>
+<item historyLabel="ReceiveUdp.java" index="1">
+<position/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="750" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="244" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="1118" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="593" y="153"/>
+</item>
+<item historyLabel="ReceiveUdp.java" index="1">
+<position info="not_deleted" x="581" y="0"/>
+</item>
+<item historyLabel="SendUdp.java" index="0">
+<position info="not_deleted" x="621" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="2">
+<position info="not_deleted" x="584" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="3">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="244" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="5">
+<position info="not_deleted" x="709" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="6">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="5">
+<position info="not_deleted" x="714" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="6">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="MultiCastReceive.java" index="5">
+<position info="not_deleted" x="714" y="0"/>
+</item>
+<item historyLabel="MultiCastSend.java" index="6">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="SendUdp.java" index="7">
+<position info="not_deleted" x="243" y="0"/>
+</item>
+<item active="true" historyLabel="SendReceiveMC.java" index="4">
+<position info="not_deleted" x="217" y="0"/>
+>>>>>>> 3f11936b0d0a00b4301f424a8d437189da069588
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -404,6 +600,7 @@
 <trimItem IMemento.internal.id="right"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
@@ -414,8 +611,31 @@
 </trimLayout>
 </window>
 <mruList>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PluginChecker.java" tooltip="tp9-plugin/src/application/extensions/PluginChecker.java">
 <persistable path="/tp9-plugin/src/application/extensions/PluginChecker.java"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendReceiveMultiCast.java" tooltip="MultiCastUdp/src/udp/SendReceiveMultiCast.java">
+<persistable path="/MultiCastUdp/src/udp/SendReceiveMultiCast.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="MulticastSocket.class" tooltip="java.net.MulticastSocket">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=MultiCastUdp/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.net(MulticastSocket.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiCastSend.java" tooltip="MultiCastUdp/src/udp/MultiCastSend.java">
+<persistable path="/MultiCastUdp/src/udp/MultiCastSend.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiCastReceive.java" tooltip="MultiCastUdp/src/udp/MultiCastReceive.java">
+<persistable path="/MultiCastUdp/src/udp/MultiCastReceive.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="sendUdp.java" tooltip="MultiCastUdp/src/udp/sendUdp.java">
+<persistable path="/MultiCastUdp/src/udp/sendUdp.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="receiveUdp.java" tooltip="MultiCastUdp/src/receiveUdp.java">
+<persistable path="/MultiCastUdp/src/receiveUdp.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ListClassFileName.java" tooltip="tp9-plugin/src/testfilenamefilter/ListClassFileName.java">
+<persistable path="/tp9-plugin/src/testfilenamefilter/ListClassFileName.java"/>
+>>>>>>> 3f11936b0d0a00b4301f424a8d437189da069588
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PluginEvent.java" tooltip="tp9-plugin/src/application/extensions/PluginEvent.java">
 <persistable path="/tp9-plugin/src/application/extensions/PluginEvent.java"/>
@@ -441,6 +661,7 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Editor.java" tooltip="tp9-plugin/src/editor/Editor.java">
 <persistable path="/tp9-plugin/src/editor/Editor.java"/>
 </file>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PluginChecker.java" tooltip="tp9-plugin/src/extensions/PluginChecker.java">
 <persistable path="/tp9-plugin/src/extensions/PluginChecker.java"/>
 </file>
@@ -459,5 +680,7 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="question_tolkien.txt" tooltip="tp8-questionnaire/question_tolkien.txt">
 <persistable path="/tp8-questionnaire/question_tolkien.txt"/>
 </file>
+=======
+>>>>>>> 3f11936b0d0a00b4301f424a8d437189da069588
 </mruList>
 </workbench>

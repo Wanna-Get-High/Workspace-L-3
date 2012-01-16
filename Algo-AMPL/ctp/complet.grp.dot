@@ -1,0 +1,65 @@
+graph {
+	A [color=blue]
+	A -- B;
+	A [color=blue]
+	A -- C;
+	A [color=blue]
+	A -- D;
+	A [color=blue]
+	A -- E;
+	A [color=blue]
+	A -- F;
+	A [color=blue]
+	A -- G;
+	B [color=blue]
+	B [color=blue]
+	B -- C;
+	B [color=blue]
+	B -- D;
+	B [color=blue]
+	B -- E;
+	B [color=blue]
+	B -- F;
+	B [color=blue]
+	B -- G;
+	C [color=blue]
+	C [color=blue]
+	C [color=blue]
+	C -- D;
+	C [color=blue]
+	C -- E;
+	C [color=blue]
+	C -- F;
+	C [color=blue]
+	C -- G;
+	D [color=blue]
+	D [color=blue]
+	D [color=blue]
+	D [color=blue]
+	D -- E;
+	D [color=blue]
+	D -- F;
+	D [color=blue]
+	D -- G;
+	E [color=blue]
+	E [color=blue]
+	E [color=blue]
+	E [color=blue]
+	E [color=blue]
+	E -- F;
+	E [color=blue]
+	E -- G;
+	F [color=blue]
+	F [color=blue]
+	F [color=blue]
+	F [color=blue]
+	F [color=blue]
+	F [color=blue]
+	F -- G;
+	G [color=blue]
+	G [color=blue]
+	G [color=blue]
+	G [color=blue]
+	G [color=blue]
+	G [color=blue]
+}

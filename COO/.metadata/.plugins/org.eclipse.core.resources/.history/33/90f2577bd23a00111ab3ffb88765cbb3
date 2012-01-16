@@ -1,0 +1,50 @@
+package udp;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+public class ReceiveUdp 
+{
+	DatagramSocket ds;
+	DatagramPacket dp;
+	
+	public ReceiveUdp(int port,String taztavu)
+	{
+		byte[] buffer = new byte[1024];
+		InetAddress address=null;
+		
+		try {
+			address = InetAddress.getByName(taztavu);
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			ds = new DatagramSocket(port,address);
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+		
+		dp = new DatagramPacket(buffer, buffer.length);
+
+		while(true) {
+			ds.receive(dp);
+			ch = new String(buffer, 0, 0, p.getLength());
+	
+			System.out.println("Paquet recu : message = " + ch +
+			" - envoyeur = " +
+			p.getAddress.getHostName() +
+			" - port = " + p.getPort());
+		}
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		new ReceiveUdp(2012,"localhost");
+	}
+}
