@@ -14,6 +14,7 @@ motscroises(VERT1,VERT2,VERT3,HORZ1,HORZ2,HORZ3) :- mot(VERT1,_,A,_,D,_,G,_) , m
 
 
 
+
 lex(suis,verbe).
 
 lex(chat,nom).
