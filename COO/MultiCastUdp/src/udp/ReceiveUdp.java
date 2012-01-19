@@ -37,6 +37,9 @@ public class ReceiveUdp
 	
 	public static void main(String[] args)
 	{
-		new ReceiveUdp(Integer.parseInt(args[0]));
+		if (args.length < 1)
+			System.out.println("usage : ./ReceiveUdp <port>");
+		else
+			new ReceiveUdp(Integer.parseInt(args[0]));
 	}
 }

@@ -1,9 +1,0 @@
-package application.extensions;
-
-import java.util.EventListener;
-
-public interface PluginListener extends EventListener 
-{
-	void pluginAdded(PluginEvent e);
-	void pluginRemoved(PluginEvent e);
-}

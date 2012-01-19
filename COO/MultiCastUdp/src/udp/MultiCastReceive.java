@@ -20,7 +20,7 @@ public class MultiCastReceive
 			e.printStackTrace();
 		}
 		
-		// receive every message on the address 224.0.0.1
+		// receive every message on the address 224.0.0.1 and print it with the id of the sending machine
 		while(true) {
 			byte[] buffer = new byte[1024];
 			try {
@@ -34,6 +34,7 @@ public class MultiCastReceive
 								"] - port [" + dp.getPort()+"] = "+ m);
 		}
 	}
+	
 	
 	public static void main(String[] args) 
 	{

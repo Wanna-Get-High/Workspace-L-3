@@ -9,16 +9,19 @@ public class SendUdp
 	
 	public SendUdp(String msg,int port,String ad)
 	{
-		System.out.println("envoyé : "+msg);
 		InetAddress address=null;
+		// retrieve the InetAdresss from the address passed in argument
 		try {
 			address = InetAddress.getByName(ad);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
 		
+		// create a new datagramPacket with the passed message
 		dp = new DatagramPacket(msg.getBytes(),msg.length(),address,port);
 
+		
+		// create a new datagramSocket and send the datagramPacket.
 		try {
 			ds = new DatagramSocket(port+1);
 		} catch (SocketException e) {
@@ -30,13 +33,14 @@ public class SendUdp
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("envoyé : "+msg);
 	}
 	
 	public static void main(String[] args) 
 	{
 		if (args.length < 3)
 		{
-			System.out.println("usage : ./sendUdp <msg> <port> <adress>");
+			System.out.println("usage : ./SendUdp <msg> <port> <adress>");
 		}
 		else
 		{
