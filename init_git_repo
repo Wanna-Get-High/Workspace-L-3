@@ -1,0 +1,10 @@
+mkdir <repo_name>
+cd <repo_name>
+git init
+git config --global github.user Wanna-Get-High
+git config --global user.name "Franziz"
+git config --global user.email "franziz.sephiroth@gmail.com"
+git remote add origin https://Wanna-Get-High@github.com/Wanna-Get-High/Workspace-L-3.git
+git config branch.master.remote origin
+git config branch.master.merge refs/heads/master
+git pull
