@@ -1,4 +1,3 @@
-sudo apt-get install git-core git-gui git-doc
 mkdir <repo_name>
 cd <repo_name>
 git init
