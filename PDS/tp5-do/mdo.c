@@ -1,69 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include "makeargv.h"
 
-int mdo(char** argv)
+int mdo(char* argv)
 {
-   	int i;
+	/*int status;*/
 	pid_t pid;
+	pid = fork();
 	
-	for (i = 0; i < argc; i++)
-	{
-		pid = fork();
-		if (pid == -1) 
-		{   /* erreur */
-            perror("erreur fork");
-            exit(EXIT_FAILURE);
-        } 
-        else if (!pid)
-        {  /* fils */
-	        int compt = 0; 
-        	while (compt < 5000000) compt++;
-        	compt = 0;
-			printf("je suis %d et je vous emmerde !\n",i);
-			while (compt < 5000000) compt++;
-        	exit(EXIT_SUCCESS);
-        }
-	}
+	if (pid == -1) 
+	{   /* erreur */
+        perror("erreur fork\n");
+        exit(EXIT_FAILURE);
+    } 
+    else if (!pid)
+    {  	/* fils */
+    	char **cmdargv;
+		makeargv(argv, " \t", &cmdargv);
+    	if (!execvp(cmdargv[0], cmdargv))
+    	{
+    		freeargv(cmdargv);
+    		printf("fail to execute : %s\n",cmdargv[0]);
+    		return 0;
+    	}
+    }
 	
-	for (i=0;i<10;i++)
-	{
-	    int status;
-    	printf("%d vient de crever comme une merde\n",waitpid(0, &status, 0));
-	}
+	/* pere */
+    return 1;
 }
-
-void usage()
+/*
+wifexit
+wexitstatus
+*/
+void usage(char* arg)
 {
-	printf("usage : %s [-and|-or] command [command|...]");
+	printf("\n");
+	printf("\tusage : %s [-and|-or] command [command|...]\n",arg);
+	printf("\n");
 }
 
 
 int main(int argc,char** argv)
 {	
-	if (argc < 2)
-	{
-		usage();
-		exit(EXIT_FAILURE);
-	}
-	
 	char** arg = (char**) malloc(sizeof(char*)*argc);
 	int i;
 	int index = 0;
-	int result = 0;
+	int result = 1;
 	int and_or = 0;
+	if (argc < 2)
+	{
+		usage(argv[0]);
+		exit(EXIT_FAILURE);
+	}
 	
 	for (i=1;i<argc;i++)
 	{
-		if (argv[1][0] == '-')
+		if (argv[i][0] == '-')
 		{
-			if (strcmp(argv[1],"-or") == 0)
+			if (strcmp(argv[i],"-or") == 0)
 			{
 				and_or = 1;
 			}
-			else if (strcmp(argv[1],"-and") != 0)
+			else if (strcmp(argv[i],"-and") == 0)
 			{
-				usage();
+				usage(argv[0]);
 				exit(EXIT_FAILURE);
 			}
 		}
@@ -72,14 +76,18 @@ int main(int argc,char** argv)
 			arg[index++] = argv[i];
 		}
 	}
-	
-	for (i=0;i<index-1;i++)
+
+	for (i=0;i<index;i++)
 	{
-		if (and_or)
-			result |= mdo(argv[i]);
-		else 
-			result &= mdo(argv[i]);
+		/*printf("arg : %s\n",arg[i]);*/
+		if (and_or) result |= mdo(arg[i]);
+		else 		result &= mdo(arg[i]);
 	}
+	
+	/*printf("%d\n",result);*/
+	
+	if (result)	printf("class la bite\n");
+	else 		printf("pas class la bite\n");
 	
 	free(arg);
 	return result;
