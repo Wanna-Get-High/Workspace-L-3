@@ -1,10 +1,10 @@
 CC	= gcc -ansi -pedantic
 CFLAGS = -Wall -Werror -g
-FILE = mdo
+FILE = ff
 
 
 $(FILE): $(FILE).o 
-	$(CC) $(CFLAGS) $(FILE).c makeargv.c makeargv.h -o $(FILE)
+	$(CC) $(CFLAGS) $(FILE).c -o $(FILE)
 
 all: $(FILE)
 

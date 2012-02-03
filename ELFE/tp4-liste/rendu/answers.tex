@@ -1,0 +1,334 @@
+\documentclass[a4paper,10pt]{article}
+\include{amsymb}
+\include{marvosym}
+
+\usepackage[francais]{babel}
+\usepackage[cyr]{aeguill}
+\usepackage[applemac]{inputenc}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage[a4paper]{geometry}
+\usepackage{latexsym,amsmath,amssymb,textcomp}
+
+\usepackage{pdfpages}
+
+\usepackage{hyperref}
+
+
+\newlength{\indentationnota}
+\newlength{\largeurlignenota}
+\newlength{\paddingnota}
+\newlength{\largeurnota}
+\setlength{\paddingnota}{5pt}
+\setlength{\largeurnota}{0.9cm}
+
+
+\makeatletter
+
+\newenvironment{pictonote}[1]{% on passe le nom du ﬁchier en argument
+\begin{list}{}{%
+\setlength{\labelsep}{0pt}%
+\setlength{\rightmargin}{15pt}%
+\setlength{\paddingnota}{5pt}}
+\item%
+\setlength{\indentationnota}{%
+\@totalleftmargin+\largeurnota+\paddingnota}%
+\setlength{\largeurlignenota}{%
+\linewidth-\largeurnota-\paddingnota}%
+\parshape=3%
+\indentationnota\largeurlignenota%
+\indentationnota\largeurlignenota%
+\@totalleftmargin\linewidth%
+\raisebox{-\largeurnota+2.2ex}[0pt][0pt]{%
+\makebox[0pt][r]{%
+\includegraphics[width=\largeurnota]{#1}%
+\hspace{\paddingnota}}}%
+\ignorespaces}{%
+\end{list}}
+
+\makeatother
+
+\newenvironment{attention}%
+{\begin{pictonote}{/Users/benjamin/Documents/Education/danger}}%
+{\end{pictonote}}
+
+\newcommand\danger{\raisebox{-0.4ex}{\LARGE $\triangle$ \normalsize} \hspace{-4.1ex}! \hspace{1ex}}
+\newcommand\PL{Programmation Logique\xspace}
+\newcommand\pl{\bsc{Prolog}\xspace}
+
+\title{ELFE TP3: Résolution - Récursivité}
+\author{François \bsc{Lepan}\\Benjamin \bsc{Van Ryseghem}}
+
+\begin{document}
+\maketitle
+
+\part{Généalogie}
+\subsection*{Question 1.2}
+22 étapes sont franchies pour obtenir un résultat lors de l'exécution du but \verb?descendant_de(anne,emily).?
+
+\subsection*{Question 1.3}
+Nous obtenons 10 solutions:
+\begin{enumerate}
+	\item\vspace{1ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = bridget  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = caroline  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = caroline
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = donna
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = caroline  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = caroline
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+\end{enumerate}
+
+\subsection*{Question 2.2}
+Il y a une boucle infinie.
+
+\subsection*{Question 2.3}
+Nous obtenons 10 solutions:
+\begin{enumerate}
+	\item\vspace{1ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = emily 
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = donna
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = caroline
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = emily
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = caroline
+Y = emily
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = bridget
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = caroline
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = caroline
+Y = donna
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = donna
+Y = emily
+						\end{verbatim}}
+		\end{minipage}
+\end{enumerate}
+
+\subsection*{Question 3.2}
+\verb?Fatal Error: local stack overflow?.
+
+\subsection*{Question 3.3}
+\verb?Fatal Error: local stack overflow?.
+
+\subsection*{Question 4.2}
+6 étapes puis:
+\begin{verbatim}
+true ? ;
+Fatal Error: local stack overflow
+\end{verbatim}
+
+\subsection*{Question 4.3}
+Nous obtenons 10 solutions:
+\begin{enumerate}
+	\item\vspace{1ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = bridget  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = caroline  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = caroline
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = donna
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = caroline  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = caroline
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = donna  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = bridget
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+	\item \vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = anne
+Y = emily  
+						\end{verbatim}}
+		\end{minipage}
+\end{enumerate}
+puis: \verb?Fatal Error: local stack overflow?.
+
+\newpage
+\part{Entiers de \bsc{Peano}}
+\subsection*{Question 6.1}
+\begin{verbatim}
+entier(zero).
+entier(succ(X)) :- entier(X).
+\end{verbatim}
+
+\subsection*{Question 6.2}
+Il y a une infinité de successeurs de \verb?zero?.
+
+subsection*{Question 7.1}
+\begin{verbatim}
+inf_ou_egal(zero, X) :- entier(X).
+inf_ou_egal(succ(X),succ(Y)) :-  inf_ou_egal(X,Y).
+\end{verbatim}
+
+subsection*{Question 7.2}
+\begin{enumerate}
+\item true
+\item false
+\item \begin{itemize}
+	\item \verb?X = zero ;?
+	\item \verb?X = succ(zero) ;?
+	\item \verb?X = succ(succ(zero)) ;?
+	\end{itemize}
+\item \begin{itemize}
+	\item \verb?X = succ(zero) ;?
+	\item \verb?X = succ(succ(zero)) ;?
+	\item \verb?X = succ(succ(succ(zero))) ;?
+	\item \verb?X = succ(succ(succ(succ(zero)))) ;?
+	\item \dots
+	\end{itemize}
+	Toutes les prédicats à partir de \verb?succ(zero)? satisfont le but \verb?inf_ou_egal(succ(zero),Z)?.
+\end{enumerate}
+
+\subsection*{Question 8.1}
+\begin{verbatim}
+add(zero, X, X) :- entier(X).
+add(X, zero, X) :- entier(X).
+add(succ(X),succ(Y),succ(succ(Z))) :- add(X,Y,Z).
+\end{verbatim}
+
+\subsection*{Question 8.2}
+\begin{enumerate}
+\item \verb?false?
+\item \verb?true?
+\item \verb?R= succ(succ(succ(zero)))?
+\item \verb?Z= succ(succ(zero))?
+\item \begin{itemize}
+		\item\vspace{1ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = zero
+Y = succ(zero)  
+						\end{verbatim}}
+		\end{minipage}
+		\item\vspace{2ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = succ(zero)
+Y = succ(succ(zero))  
+						\end{verbatim}}
+		\end{minipage}
+		\item\vspace{1ex} \begin{minipage}{10cm}{	\begin{verbatim}
+X = succ(succ(zero))
+Y = succ(succ(succ(zero)))  
+						\end{verbatim}}
+		\vspace{1ex}
+		\end{minipage}
+		\item \dots
+	\end{itemize}
+\end{enumerate}
+
+\subsection* {Question 8.3}
+\begin{verbatim}
+sub(X, zero, X) :- entier(X).
+sub(succ(X),succ(Y),Z) :- sub(X,Y,Z).
+\end{verbatim}
+
+\subsection*{Question 9}
+\begin{verbatim}
+mult(zero,X,zero) :- entier(X).
+mult(X,zero,zero) :- entier(X).
+mult(succ(X),Y,T) :- mult(X,Y,Z), add(Y,Z,T).
+mult(X,succ(Y),T) :- mult(X,Y,Z), add(X,Z,T).
+\end{verbatim}
+\end{document}
