@@ -8,34 +8,33 @@
 
 int mdo(char* argv)
 {
-	/*int status;*/
+	int status;
 	pid_t pid;
 	pid = fork();
 	
 	if (pid == -1) 
 	{   /* erreur */
         perror("erreur fork\n");
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); /* 1 */
     } 
     else if (!pid)
     {  	/* fils */
     	char **cmdargv;
 		makeargv(argv, " \t", &cmdargv);
-    	if (!execvp(cmdargv[0], cmdargv))
-    	{
-    		freeargv(cmdargv);
-    		printf("fail to execute : %s\n",cmdargv[0]);
-    		return 0;
-    	}
+    	execvp(cmdargv[0], cmdargv);
+    	freeargv(cmdargv);
+		printf("error the command \"%s\" doesn't exist \n",argv);
+		exit(EXIT_FAILURE); /* 1 */
     }
+
+	waitpid(pid,&status,0); /* on attend le code de retour du fils pour continuer*/
 	
-	/* pere */
-    return 1;
+	if (WIFEXITED(status)) /* si le processus du fils s'est fini correctement */			
+		return WEXITSTATUS(status)==0?0:1; /* si le code de retour du processus du fils indique qu'il s'est fini correctement */
+	
+	return 1; /* failure */
 }
-/*
-wifexit
-wexitstatus
-*/
+
 void usage(char* arg)
 {
 	printf("\n");
@@ -49,7 +48,7 @@ int main(int argc,char** argv)
 	char** arg = (char**) malloc(sizeof(char*)*argc);
 	int i;
 	int index = 0;
-	int result = 1;
+	int result;
 	int and_or = 0;
 	if (argc < 2)
 	{
@@ -65,7 +64,7 @@ int main(int argc,char** argv)
 			{
 				and_or = 1;
 			}
-			else if (strcmp(argv[i],"-and") == 0)
+			else if (strcmp(argv[i],"-and") != 0)
 			{
 				usage(argv[0]);
 				exit(EXIT_FAILURE);
@@ -77,17 +76,23 @@ int main(int argc,char** argv)
 		}
 	}
 
-	for (i=0;i<index;i++)
+	if (index == 0) /* si il m'y a pas de commande a lancer*/
 	{
-		/*printf("arg : %s\n",arg[i]);*/
-		if (and_or) result |= mdo(arg[i]);
-		else 		result &= mdo(arg[i]);
+		usage(argv[0]);
+		exit(EXIT_FAILURE);
 	}
-	
-	/*printf("%d\n",result);*/
-	
-	if (result)	printf("class la bite\n");
-	else 		printf("pas class la bite\n");
+		
+	result = mdo(arg[0]);
+
+	for (i=1;i<index;i++)
+	{
+		/* il faut inverser & et | pour que cela coresponde au retour : 0 = success et non 1 = success */
+		if (and_or)	result &= mdo(arg[i]);
+		else 		result |= mdo(arg[i]);
+	}
+
+	if (result == 0)	printf("class la bite\n");
+	else 				printf("pas class la bite\n");
 	
 	free(arg);
 	return result;
