@@ -1,0 +1,7 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.m2e.usagedata,1.0.100.20110804-1717,"org.eclipse.m2e.usagedata",1329303744559
+stopped,bundle,com.soyatec.eemf,3.7.1.20110624,"com.soyatec.eemf",1329303744560
+stopped,bundle,com.soyatec.additional,3.7.1.20110624,"com.soyatec.additional",1329303744586
+stopped,bundle,com.soyatec.core,3.7.1.20110624,"com.soyatec.core",1329303744604
+stopped,bundle,org.eclipse.pde.ua.ui,1.0.100.v20110516,"org.eclipse.pde.ua.ui",1329303744618
+stopped,bundle,org.eclipse.pde.api.tools.ui,1.0.301.v20110803_r371,"org.eclipse.pde.api.tools.ui",1329303744618

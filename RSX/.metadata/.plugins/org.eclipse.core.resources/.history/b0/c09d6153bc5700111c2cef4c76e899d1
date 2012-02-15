@@ -1,0 +1,76 @@
+import java.io.IOException;
+import java.net.*;
+
+
+public class QueryDNS {
+       
+   static final byte dns_query[] = {       (byte)0x08, (byte)0xbb, (byte)0x01, (byte)0x00,
+	                                       (byte)0x00, (byte)0x01, (byte)0x00, (byte)0x00,
+	                                       (byte)0x00, (byte)0x00, (byte)0x00, (byte)0x00,
+	                                       (byte)0x03, (byte)0x77, (byte)0x77, (byte)0x77,
+	                                       (byte)0x04, (byte)0x6c, (byte)0x69, (byte)0x66,
+	                                       (byte)0x6c, (byte)0x02, (byte)0x66, (byte)0x72,
+	                                       (byte)0x00,
+	                                       (byte)0x00, (byte)0x01,
+	                                       (byte)0x00, (byte)0x01 };
+       
+       DatagramSocket ds;
+       DatagramPacket dp;
+       DatagramPacket dpr;
+       int port;
+       InetAddress address;
+       int buffer_size = 1024;
+       InetAddress receiverAddress;
+       
+       public QueryDNS(){
+               this.port = 53;
+
+               try {
+                       ds = new DatagramSocket();
+               } catch (SocketException e) {
+                       e.printStackTrace();
+               }
+               
+               try {
+                       receiverAddress = InetAddress.getByName("172.18.12.9");
+               } catch (UnknownHostException e) {
+                       // TODO Auto-generated catch block
+                       e.printStackTrace();
+               }
+       }
+       
+       protected void queryDNS(){
+               if(ds != null ){
+                       byte[] buffer = dns_query;
+                       dp = new DatagramPacket(buffer, buffer.length, receiverAddress, port);
+                       try {
+                               ds.send(dp);
+                       } catch (IOException e) {
+                               e.printStackTrace();
+                       }
+               }
+       }
+       
+       protected void receive(){
+               byte[] buffer = new byte[1024];
+               dpr = new DatagramPacket(buffer, buffer.length);
+               try {
+                       ds.receive(dpr);
+               } catch (IOException e) {
+                       // TODO Auto-generated catch block
+                       e.printStackTrace();
+               }
+               for (int i = 0 ; i < dpr.getLength() ; i++)
+                       System.out.print(Integer.toHexString(dpr.getData()[i]&0xff) + ",");
+       }
+       
+       public static void main(String[] args) {
+               QueryDNS test = new QueryDNS();
+               
+               test.queryDNS();
+               while(true){
+                       test.receive();
+                       
+               }
+       }
+}
