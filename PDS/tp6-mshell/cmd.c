@@ -113,17 +113,9 @@ waitfg(pid_t pid)
 void
 do_fg(char **argv)
 {
-	int pid;
-	pid = fork();
-	if (pid < 0)
-	{
-		printf(" fork error on cmd : %s",argv[0]);
-		return;
-	} 
-	
-	if (!pid) /* fils */
-		execvp(argv[0],argv);
-		
+	struct job_t* job = treat_argv(argv);
+	job->jb_state = FG;
+
 	waitfg(pid);
     
     return;

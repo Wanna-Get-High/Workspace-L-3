@@ -13,9 +13,7 @@
 void do_pipe(char *cmds[MAXCMDS][MAXARGS], int nbcmd, int bg) {
 
 
-  printf("Not implemented yet\n");
-
+  printf("Do pipe : Not implemented yet\n");
   
-
   return;
 }

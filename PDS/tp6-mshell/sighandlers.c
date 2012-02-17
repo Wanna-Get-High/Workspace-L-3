@@ -21,13 +21,15 @@
 /*
  * Signal - wrapper for the sigaction function
  */
-int
-signal_wrapper(int signum, handler_t *handler)
+int signal_wrapper(int signum, handler_t *handler)
 {
-    printf("signal_wrapper : To be implemented\n");
-    
-    
-    return 1;
+    struct sigaction sa;
+ 	sa.sa_handler = handler;
+ 	sigemptyset(&sa.sa_mask);
+ 	sa.sa_flags = SA_RESTART;
+ 	if(sigaction(signum,&sa,NULL)<0) unix_error("signal_wrapper");
+ 
+ 	return 1;
 }
 
 
@@ -37,16 +39,42 @@ signal_wrapper(int signum, handler_t *handler)
  *     received a SIGSTOP or SIGTSTP signal. The handler reaps all
  *     available zombie children
  */
-void
-sigchld_handler(int sig) 
+void sigchld_handler(int sig)
 {
-    if (verbose)
-	printf("sigchld_handler: entering\n");
+	struct job_t* job;
+	int status, pid;
+
+    if (verbose) printf("sigchld_handler: entering\n");
+
+	if ((pid = waitpid(-1,&status,WNOHANG | WUNTRACED)) == -1)
+		pid = jobs_fgpid();
+		
+    if (pid > 0)
+    {	
+    	job = jobs_getjobpid(pid);
+		if (WIFSTOPPED(status))
+		{
+			job->jb_state = ST;
+			printf("[%d] (%d) : Stopped\n",job->jb_jid,job->jb_pid);
+		}
+		else if (WIFEXITED(status) && WEXITSTATUS(status))
+		{
+			printf("[%d] (%d) : Exited\n",job->jb_jid,job->jb_pid);
+			jobs_deletejob(pid);
+		}
+		else if (WIFSIGNALED(status))
+		{
+			printf("[%d] (%d) : Exited by User\n",job->jb_jid,job->jb_pid);
+			jobs_deletejob(pid);
+		}
+		else
+		{
+			printf("Error on : [%d] (%d)  - %s \n",job->jb_jid,job->jb_pid,job->jb_cmdline);
+		}
+    }
     
-    printf("sigchld_handler : To be implemented\n");
     
-    if (verbose)
-	printf("sigchld_handler: exiting\n");
+    if (verbose) printf("sigchld_handler: exiting\n");
     
     return;
 }
@@ -56,22 +84,16 @@ sigchld_handler(int sig)
  *    user types ctrl-c at the keyboard.  Catch it and send it along
  *    to the foreground job.
  */
-void
-sigint_handler(int sig) 
+void sigint_handler(int sig) 
 {
 	int pid;
-    if (verbose)
-	printf("sigint_handler: entering\n");
+	
+    if (verbose) printf("sigint_handler: entering\n");
+
+    if ((pid = jobs_fgpid()))
+	    kill(pid,sig);	/* sig or SIGINT */
     
-    printf("sigint_handler \n");
-    
-    pid = jobs_fgpid();
-    if (!pid)
-	    kill(pid,SIGTERM);
-    
-    
-    if (verbose)
-	printf("sigint_handler: exiting\n");
+    if (verbose) printf("sigint_handler: exiting\n");
     
     return;
 }
@@ -81,16 +103,16 @@ sigint_handler(int sig)
  *     the user types ctrl-z at the keyboard. Catch it and suspend the
  *     foreground job by sending it a SIGTSTP.  
  */
-void
-sigtstp_handler(int sig) 
+void sigtstp_handler(int sig)
 {
-    if (verbose)
-	printf("sigtstp_handler: entering\n");
+	int pid;
+	
+    if (verbose) printf("sigtstp_handler: entering\n");
+
+    if ((pid = jobs_fgpid()))
+    	kill(pid,sig); /* sig or SIGTSTP */
     
-    printf("sigtstp_handler : To be implemented\n");
-    
-    if (verbose)
-	printf("sigtstp_handler: exiting\n");
+    if (verbose) printf("sigtstp_handler: exiting\n");
     
     return;
 }

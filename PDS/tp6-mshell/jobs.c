@@ -36,7 +36,7 @@ jobs_initjobs()
     int i;
     
     for (i = 0; i < MAXJOBS; i++)
-	jobs_clearjob(&jobs[i]);
+		jobs_clearjob(&jobs[i]);
 }
 
 /* maxjid - Returns largest allocated job ID */
@@ -53,7 +53,7 @@ jobs_maxjid()
 
 /* addjob - Add a job to the job list */
 int
-jobs_addjob(pid_t pid, int state, char *cmdline) 
+jobs_addjob(pid_t pid, int state, char *cmdline)
 {
     int i;
     
@@ -161,7 +161,8 @@ jobs_getstoppedjob() {
 
     for (i = 0; i < MAXJOBS; i++)
       if (jobs[i].jb_state == ST)
-	return &jobs[i];
+		return &jobs[i];
+		
     return NULL;
 }
 
