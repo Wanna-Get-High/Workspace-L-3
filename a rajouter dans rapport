@@ -1,0 +1,33 @@
+visuqlisation table arp :
+
+	lepan@a14p19:~$ arp -a
+	gw712.univ-lille1.fr (172.18.12.1) à 00:00:0c:07:ac:d4 [ether] sur eth0
+	a14p20.fil.univ-lille1.fr (172.18.12.180) à 00:23:ae:93:be:5a [ether] sur eth0
+	cacti.fil.univ-lille1.fr (172.18.12.22) à 00:16:3e:92:6b:d9 [ether] sur eth0
+	kasteel.fil.univ-lille1.fr (172.18.12.9) à 00:24:e8:49:93:3d [ether] sur eth0
+
+	lepan@a14p19:~$ ping a14p10
+	PING a14p10.fil.univ-lille1.fr (172.18.12.170) 56(84) bytes of data.
+	64 bytes from a14p10.fil.univ-lille1.fr (172.18.12.170): icmp_seq=1 ttl=64 time=1.19 ms
+
+	lepan@a14p19:~$ arp -a
+	gw712.univ-lille1.fr (172.18.12.1) à 00:00:0c:07:ac:d4 [ether] sur eth0
+	a14p10.fil.univ-lille1.fr (172.18.12.170) à 00:23:ae:93:c9:4b [ether] sur eth0
+	a14p20.fil.univ-lille1.fr (172.18.12.180) à 00:23:ae:93:be:5a [ether] sur eth0
+	cacti.fil.univ-lille1.fr (172.18.12.22) à 00:16:3e:92:6b:d9 [ether] sur eth0
+	kasteel.fil.univ-lille1.fr (172.18.12.9) à 00:24:e8:49:93:3d [ether] sur eth0
+
+modifier ou qjouter une association IP <-> MAC dans la table arp :
+	
+	arp -s @IP @MAC
+
+
+Si on met un mauvaise association on peut tromper quelqun, ou envoyer des paquets a quelquun d'autre
+
+Sur ma machine :
+	arp -s @IPVoisin1 @MACVoisin2
+	ping @IPVoisin1
+	
+seul le voisin2 recevrai u paquet ICMP en mode promiscious (seul le niveau physique recevra le paquet, la liaison 
+filtrera celui-ci car adresse IP Fausse)
+
