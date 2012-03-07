@@ -1,20 +1,21 @@
 import java.io.IOException;
 import java.net.*;
-import java.util.Formatter;
 
 
 public class QueryDNS {
        
-   static final byte dns_query[] = {       (byte)0x08, (byte)0xbb, (byte)0x01, (byte)0x00,
-	                                       (byte)0x00, (byte)0x01, (byte)0x00, (byte)0x00,
-	                                       (byte)0x00, (byte)0x00, (byte)0x00, (byte)0x00,
-	                                       (byte)0x03, (byte)0x77, (byte)0x77, (byte)0x77,
-	                                       (byte)0x04, (byte)0x6c, (byte)0x69, (byte)0x66,
-	                                       (byte)0x6c, (byte)0x02, (byte)0x66, (byte)0x72,
-	                                       (byte)0x00,
-	                                       (byte)0x00, (byte)0x01,
-	                                       (byte)0x00, (byte)0x01 };
-       
+   static byte dns_query[] = {       (byte)0x08, (byte)0xbb, (byte)0x01, (byte)0x00,
+                                       (byte)0x00, (byte)0x01, (byte)0x00, (byte)0x00,
+                                       (byte)0x00, (byte)0x00, (byte)0x00, (byte)0x00,
+                                       (byte)0x03, (byte)0x77, (byte)0x77, (byte)0x77,
+                                       (byte)0x04, (byte)0x6c, (byte)0x69, (byte)0x66,
+                                       (byte)0x6c, (byte)0x02, (byte)0x66, (byte)0x72,
+                                       (byte)0x00,
+                                       (byte)0x00, (byte)0x01,
+                                       (byte)0x00, (byte)0x01 };
+   
+   int secureNumberOfLoop = 0;
+   
    DatagramSocket ds;
    DatagramPacket dp;
    DatagramPacket dpr;
@@ -23,7 +24,7 @@ public class QueryDNS {
    int buffer_size = 1024;
    InetAddress receiverAddress;
    
-   public QueryDNS(){
+   public QueryDNS(String s){
        this.port = 53;
 
        try {
@@ -37,14 +38,46 @@ public class QueryDNS {
        } catch (UnknownHostException e) {
                e.printStackTrace();
        }
+       dns_query = buildDnsQuestion(s);
+   }
+   
+   public byte[] buildDnsQuestion(String s)
+   {
+	   int i;
+	   byte[] dnsQuerry = new byte[100];
+	   
+	   dnsQuerry[0] =(byte)0x08; // id
+	   dnsQuerry[1] =(byte)0xbb;
+	   dnsQuerry[2] =(byte)0x01; // param
+	   dnsQuerry[3] =(byte)0x00;
+	   dnsQuerry[4] =(byte)0x00; // ques
+	   dnsQuerry[5] =(byte)0x01;
+	   dnsQuerry[6] =(byte)0x00; // rep
+	   dnsQuerry[7] =(byte)0x00;
+	   dnsQuerry[8] =(byte)0x00; // autorite
+	   dnsQuerry[9] =(byte)0x00;
+	   dnsQuerry[10] =(byte)0x00; // info complem
+	   dnsQuerry[11] =(byte)0x00;
+	   
+	   System.out.println(s);
+	   for (i = 0; i< s.length();i++)
+	   {
+		   char c = s.charAt(i);
+		   if (c == '.')
+		   System.out.print("0x"+Integer.toHexString((int)c)+", ");
+	   }
+	   
+	   dnsQuerry[20] =(byte)0x00;
+	   dnsQuerry[21] =(byte)0x00; //type
+	   dnsQuerry[22] =(byte)0x01;
+	   dnsQuerry[23] =(byte)0x00; //class
+	   dnsQuerry[24] =(byte)0x01;
+	   return dnsQuerry;
    }
 
    public static int byteToInt(byte[] b, int i)	{ return ((int)b[i])&0xff; }
    
-   public static int shortToInt(byte[] b, int i)
-   {
-	   return byteToInt(b,i)*256+byteToInt(b,i+1);
-   }
+   public static int shortToInt(byte[] b, int i) { return byteToInt(b,i)*256+byteToInt(b,i+1); }
    
    public InetAddress byteToIpAddress(byte[] b, int i)
    {
@@ -63,6 +96,12 @@ public class QueryDNS {
    
    public int byteToString(byte[] b, int i)
    {
+	   if (++secureNumberOfLoop > 4000)
+	   {
+		   System.err.println("Numbre of Loop to high (>4000) might be a security problem");
+		   System.exit(0);
+	   }
+	   
 	   int code;
 	   while ((code = byteToInt(b, i)) > 0)
 	   {
@@ -257,7 +296,7 @@ public class QueryDNS {
    
    public static void main(String[] args) 
    {
-	   QueryDNS test = new QueryDNS();
+	   QueryDNS test = new QueryDNS("www.lifl.fr");
 	   
 	   test.sendQueryDNS();
 	   while(true)
