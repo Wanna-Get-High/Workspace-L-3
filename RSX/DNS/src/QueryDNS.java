@@ -4,18 +4,8 @@ import java.net.*;
 
 public class QueryDNS {
        
-   static byte dns_query[] = {       (byte)0x08, (byte)0xbb, (byte)0x01, (byte)0x00,
-                                       (byte)0x00, (byte)0x01, (byte)0x00, (byte)0x00,
-                                       (byte)0x00, (byte)0x00, (byte)0x00, (byte)0x00,
-                                       (byte)0x03, (byte)0x77, (byte)0x77, (byte)0x77,
-                                       (byte)0x04, (byte)0x6c, (byte)0x69, (byte)0x66,
-                                       (byte)0x6c, (byte)0x02, (byte)0x66, (byte)0x72,
-                                       (byte)0x00,
-                                       (byte)0x00, (byte)0x01,
-                                       (byte)0x00, (byte)0x01 };
-   
+   static byte dns_query[];
    int secureNumberOfLoop = 0;
-   
    DatagramSocket ds;
    DatagramPacket dp;
    DatagramPacket dpr;
@@ -43,8 +33,7 @@ public class QueryDNS {
    
    public byte[] buildDnsQuestion(String s)
    {
-	   int i;
-	   byte[] dnsQuerry = new byte[100];
+	   byte[] dnsQuerry = new byte[18+s.length()];
 	   
 	   dnsQuerry[0] =(byte)0x08; // id
 	   dnsQuerry[1] =(byte)0xbb;
@@ -58,20 +47,39 @@ public class QueryDNS {
 	   dnsQuerry[9] =(byte)0x00;
 	   dnsQuerry[10] =(byte)0x00; // info complem
 	   dnsQuerry[11] =(byte)0x00;
+	
+	   int indexQuerry=12; // the index of the next value
+	   int indexWord=0;    // the index of the adress
+	   int i = 0;			// the length between each point.
 	   
-	   System.out.println(s);
-	   for (i = 0; i< s.length();i++)
+	   while(indexWord < s.length())
 	   {
-		   char c = s.charAt(i);
-		   if (c == '.')
-		   System.out.print("0x"+Integer.toHexString((int)c)+", ");
+		   char c = s.charAt(indexWord);
+		   if (c != '.')
+		   {
+			   dnsQuerry[indexQuerry+1] = (byte)c; //+1 for the value of the next word
+
+			   // System.out.print("dnsQ : "+(indexQuerry+1)+" -> "+(byte)c+" -:- ");
+			   i++;
+		   }
+		   else
+		   {
+			   dnsQuerry[indexQuerry-i] = (byte)i; // -i to go to the value of the next word
+			   
+			  // System.out.println((byte)i+"  at : "+(indexQuerry-i));
+			   i=0;
+		   }
+		   indexWord++;
+		   indexQuerry++;
 	   }
+	   dnsQuerry[indexQuerry-i] = (byte)i; // -i one last time to put the value of the last word
+	 
+	   dnsQuerry[indexQuerry+1] =(byte)0x00;
+	   dnsQuerry[indexQuerry+2] =(byte)0x00; //type
+	   dnsQuerry[indexQuerry+3] =(byte)0x01;
+	   dnsQuerry[indexQuerry+4] =(byte)0x00; //class
+	   dnsQuerry[indexQuerry+5] =(byte)0x01;
 	   
-	   dnsQuerry[20] =(byte)0x00;
-	   dnsQuerry[21] =(byte)0x00; //type
-	   dnsQuerry[22] =(byte)0x01;
-	   dnsQuerry[23] =(byte)0x00; //class
-	   dnsQuerry[24] =(byte)0x01;
 	   return dnsQuerry;
    }
 
@@ -296,7 +304,7 @@ public class QueryDNS {
    
    public static void main(String[] args) 
    {
-	   QueryDNS test = new QueryDNS("www.lifl.fr");
+	   QueryDNS test = new QueryDNS("www.lifl.fr"); 
 	   
 	   test.sendQueryDNS();
 	   while(true)
