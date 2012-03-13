@@ -78,7 +78,7 @@ config.h
 
 1- prise en charge de multiples clients. 
     - prendre en charge l'appel de la fonction repeater() par un
-      thread. 
+      thread.
     - garantir que les variables globales accédées par ce thread sont
       bien protégées contre des accès concurrents par plusieurs
       threads. 

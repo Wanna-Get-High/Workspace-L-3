@@ -21,17 +21,18 @@
 /* Gestion des sockets */
 static int sockets[MAX_CONNECTION]; /* tableau initialisé a zero */
 
-static void
-add_socket(int fd)
+static void add_socket(int fd)
 {
     int i;
     
     pgrs_in();
-    for (i=0; i<MAX_CONNECTION; i++) {
-	if (sockets[i] == 0) {
-	    sockets[i] = fd;
-	    break;
-	}
+    for (i=0; i<MAX_CONNECTION; i++) 
+    {
+		if (sockets[i] == 0) 
+		{
+			sockets[i] = fd;
+			break;
+		}
     }
     assert(i!=MAX_CONNECTION);
     pgrs_out();
@@ -43,11 +44,12 @@ del_socket(int fd)
     int i;
     
     pgrs_in();
-    for (i=0; i<MAX_CONNECTION; i++) {
-	if (sockets[i] == fd) {
-	    sockets[i] = 0;
-	    break;
-	}
+    for (i=0; i<MAX_CONNECTION; i++) 
+    {
+		if (sockets[i] == fd) {
+			sockets[i] = 0;
+			break;
+		}
     }
     assert(i!=MAX_CONNECTION);
     pgrs_out();
