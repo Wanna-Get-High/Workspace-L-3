@@ -1,0 +1,94 @@
+\documentclass[a4paper,10pt]{article}
+\input{/Users/benjamin/Documents/Education/LaTeX/macro.tex}
+
+\title{Sance }
+\author{Franois \bsc{Lepan} \\ Benjamin \bsc{Van Ryseghem}}
+
+\begin{document}
+\maketitle
+
+\subsection* {Question 1}
+\begin{verbatimtab}[4]
+let quotient x y =
+	if y = 0
+		then
+			Non_defini
+		else
+			Int (x / y);;
+\end{verbatimtab}
+
+\subsection* {Question 2}
+\begin{verbatimtab}[4]
+Cons (1,Cons (2, Cons ( 3, Cons (1,Vide))));;
+\end{verbatimtab}
+
+\subsection* {Question 3}
+\begin{verbatimtab}[4]
+let negation = function
+	| Vrai -> Faux
+	| _ -> Vrai ;;
+\end{verbatimtab}
+
+\subsection* {Question 4}
+\begin{verbatimtab}[4]
+let quotient = function
+	| _, Int 0 -> Non_defini
+	| Int n, Int m -> Int (n/m)
+	|_ -> Non_defini;;
+\end{verbatimtab}
+
+\subsection* {Question 5}
+\begin{verbatimtab}[4]
+let rec longueur = function
+	| Vide -> 0
+	| Cons(_,l) -> 1 + longueur l;;
+\end{verbatimtab}
+
+\subsection* {Question 6}
+\begin{verbatimtab}[4]
+let somme n m = 
+	match n,m with
+	| Int n, Int p -> Int (n+p)
+	|_ -> Non_defini;;
+	
+let rec rang n l =
+	match n,l with
+	| _,Vide -> Non_defini
+	| n, Cons ( p, l) when n=p -> Int 0
+	| n, Cons(_,l) -> somme (Int 1) (rang n l);;
+\end{verbatimtab}
+
+\subsection* {Question 15}
+Oui cela est conforme a l'interface
+\begin{verbatimtab}[4]
+type environnement = (string * valeur) list 
+environnement -> Syntaxe.phrase -> environnement * valeur
+
+# eval;;
+- : (string * valeur) list ->
+    Syntaxe.phrase -> (string * valeur) list * valeur
+= <fun>
+\end{verbatimtab}
+
+
+\subsection* {Question 16}
+\begin{verbatimtab}[4]
+# eval [] (Syntaxe.analyse("12"));;                      
+- : (string * valeur) list * valeur = ([], Valeur (Expr_int 0))
+
+# eval [] (Syntaxe.analyse("let x = 1"));;
+- : (string * valeur) list * valeur =
+	([("x", Valeur (Expr_int 1))], Liaison ("x", Valeur (Expr_int 1)))
+
+\end{verbatimtab}
+
+\subsection* {Question 17}
+oui cela est normal.
+\begin{verbatimtab}[4]
+# eval_expr;;                                            
+- : 'a -> Syntaxe.expression -> valeur = <fun>
+\end{verbatimtab}
+
+\signature[Franois \bsc{Lepan} \\ Benjamin \bsc{Van Ryseghem}]
+
+\end{document}
