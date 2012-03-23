@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <assert.h>
+#include <pthread.h>
 
 #include "config.h"
 #include "tools.h"
@@ -56,9 +57,9 @@ del_socket(int fd)
 }
 
 /* Un client  */
-static void
-repeater(int sckt)
+static void* repeater(void* sck)
 {
+	int sckt = (int) sck;
     char buf[MAX_BUFFER];
     int nbc, i;
     const char WELCOME[] = "mtcs : bienvenu\n";
@@ -78,7 +79,7 @@ repeater(int sckt)
 	    del_socket(sckt);
 	    close(sckt);
             pgrs_out();
-	    return;
+	    return NULL;
 	}
 	pgrs("boucle ecriture");
 	for(i=0; i<MAX_CONNECTION; i++)
@@ -86,6 +87,7 @@ repeater(int sckt)
 		write(sockets[i], buf, nbc);
 	pgrs("fin boucle ecriture");
     }
+    return NULL;
 }
 
 /* Création d'un client */
@@ -95,11 +97,15 @@ repeater(int sckt)
 */
 int
 manage_cnct(int fd)
-{    
+{   
+	pthread_t thread;
+	int result;
     pgrs_in();
-
-    repeater(fd);
+	result = pthread_create(&thread,NULL,repeater,(void*)fd);
+	add_socket(fd);
+	
+	/*repeater(fd);	*/
 
     pgrs_out();
-    return 0;
+    return result;
 }

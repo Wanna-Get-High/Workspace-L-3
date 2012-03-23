@@ -11,6 +11,7 @@
 #ifndef _CNCT_H_
 #define _CNCT_H_
 
+
 /*  Crée un thread qui va
     - enregistrer le desripteur fd comme celui d'un nouveau client
     - puis lire en boucle sur la socket identifiee par fd et répéter

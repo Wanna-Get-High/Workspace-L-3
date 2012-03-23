@@ -15,8 +15,8 @@ all : $(BINARIES) $(OBJECTS)
 ###------------------------------
 ### Entries
 ###------------------------------------------------------------
-mtcs : $(OBJECTS)
-	$(CC) -o $@ $^
+mtcs : $(OBJECTS) 
+	$(CC) -lpthread -o $@ $^
 
 ###------------------------------
 ### Dependencies
@@ -24,7 +24,7 @@ mtcs : $(OBJECTS)
 # thanks to 'make depend'
 cnct.o: cnct.c config.h tools.h cnct.h
 mtcs.o: mtcs.c tools.h config.h cnct.h
-tools.o: tools.c tools.h
+tools.o: tools.c tools.h	
 
 ###------------------------------
 ### Misc.
