@@ -20,8 +20,8 @@
 #define NORM "\033[00;00m"
 
 void
-do_help() {
-
+do_help() 
+{
     printf("available commands are:\n");
     printf(" exit - cause the shell to exit\n");
     printf(BOLD"\t exit\n"NORM);
@@ -81,20 +81,20 @@ treat_argv(char **argv) {
 void
 do_bg(char **argv) 
 {
-	
-	int pid;
-	printf("do_bg\n");
-	pid = fork();
-	
-	if (pid < 0)
+    struct job_t* job = treat_argv(argv);
+
+    if (job == NULL)
 	{
-		printf(" fork error on cmd : %s",argv[0]);
+	    printf("PID NULL\n");
+	    return;
+    }
+
+    if (kill(job->jb_pid,SIGCONT) <0)
+	{
+		printf("do_bg error");
 		return;
-	} 
-	
-	if (!pid) /* fils */
-		execvp(argv[0],argv);
-    
+    }
+    job->jb_state = BG;
     return;
 }
 
@@ -114,28 +114,46 @@ void
 do_fg(char **argv)
 {
 	struct job_t* job = treat_argv(argv);
+
+	if (job == NULL){
+        printf("PID NULL\n");
+        return ;
+    }
+
+	if (job->jb_state == ST)
+		kill(job->jb_pid,SIGCONT);
+
 	job->jb_state = FG;
 
-	waitfg(pid);
-    
+	waitfg(job->jb_pid);
+
     return;
 }
 
 /* do_stop - Execute the builtin stop command */
 void
-do_stop(char **argv) 
+do_stop(char **argv)
 {
 	struct job_t* job = treat_argv(argv);
+	if (job == NULL){
+        printf("PID NULL\n");
+        return ;
+    }
+
  	kill(job->jb_pid,SIGSTOP);
  	return;
 }
 
 /* do_kill - Execute the builtin kill command */
 void
-do_kill(char **argv) 
+do_kill(char **argv)
 {
- 	struct job_t* job = treat_argv(argv);
- 	kill(job->jb_pid,SIGTERM);
+	struct job_t* job = treat_argv(argv);
+	if (job == NULL){
+		printf("PID NULL\n");
+		return ;
+	}
+	kill(job->jb_pid,SIGTERM);
     return;
 }
 
@@ -150,8 +168,8 @@ do_exit()
 void
 do_jobs()
 {
-    printf("do_jobs : To be implemented\n");
-    
+    jobs_listjobs();
+	printf("\n");
     return;
 }
 

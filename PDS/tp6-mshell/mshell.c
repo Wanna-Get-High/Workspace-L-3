@@ -145,9 +145,10 @@ void eval(char *cmdline)
   /* Parse command line */
   bg = parseline(cmdline, token, &nbcmd);
 
-  if (nbcmd > 1)  /* a command pipeline has been typed in */
+if (nbcmd > 1)  /* a command pipeline has been typed in */
     do_pipe(token,nbcmd,bg);
-  else { /* no pipeline, only one command */
+	else 
+	{ /* no pipeline, only one command */
     argv = token[0];
     if (!builtin_cmd(argv)) { 
 
@@ -177,22 +178,24 @@ void eval(char *cmdline)
        * Child  process 
        */
       
-      if (pid == 0) {
-	/* Child unblocks signals */
-	sigprocmask(SIG_UNBLOCK, &mask, NULL);
+	if (pid == 0) 
+	{
+		/* Child unblocks signals */
+		sigprocmask(SIG_UNBLOCK, &mask, NULL);
 	
-	/* Each new job must get a new process group ID 
-	   so that the kernel doesn't send ctrl-c and ctrl-z
-	   signals to all of the shell's jobs */
-	if (setpgid(0, 0) < 0) 
-	  unix_error("setpgid error"); 
+		/* Each new job must get a new process group ID 
+		   so that the kernel doesn't send ctrl-c and ctrl-z
+		   signals to all of the shell's jobs */
+		if (setpgid(0, 0) < 0) 
+		  unix_error("setpgid error"); 
 	
-	/* Now load and run the program in the new job */
-	if (execvp(argv[0], argv) < 0) {
-	  printf("%s: Command not found\n", argv[0]);
-	  exit(EXIT_FAILURE);
+		/* Now load and run the program in the new job */
+		if (execvp(argv[0], argv) < 0) 
+		{
+		  printf("%s: Command not found\n", argv[0]);
+		  exit(EXIT_FAILURE);
+		}
 	}
-      }
       
       /* 
        * Parent process
@@ -256,13 +259,14 @@ int main(int argc, char **argv)
   
   /* Execute the shell's read/eval loop */
   while (1) {
-
+	char* plop;
     /* Read command line */
     printf("%s", prompt);
-
+	
+	plop = fgets(cmdline, MAXLINE, stdin);
       
-    if ((fgets(cmdline, MAXLINE, stdin) == NULL) && ferror(stdin)) {
-      fprintf(stdout, "fgets error\n");
+    if (( plop== NULL) && ferror(stdin)) {
+      fprintf(stdout, "fgets error (%d) (%d)\n",plop==NULL?1:0,ferror(stdin)?1:0);
       exit(EXIT_FAILURE);
     }
     if (feof(stdin)) { /* End of file (ctrl-d) */

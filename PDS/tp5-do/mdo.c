@@ -6,13 +6,13 @@
 #include <unistd.h>
 #include "makeargv.h"
 
-int mdo(char* argv)
+int mdo(char* argv)	
 {
 	int status;
 	pid_t pid;
 	pid = fork();
 	
-	if (pid == -1) 
+	if (pid == -1)
 	{   /* erreur */
         perror("erreur fork\n");
         exit(EXIT_FAILURE); /* 1 */

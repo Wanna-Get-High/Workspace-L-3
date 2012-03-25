@@ -12,6 +12,8 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <errno.h>
+#include <unistd.h>
+
 
 
 #include "jobs.h"
@@ -26,7 +28,7 @@ int signal_wrapper(int signum, handler_t *handler)
     struct sigaction sa;
  	sa.sa_handler = handler;
  	sigemptyset(&sa.sa_mask);
- 	sa.sa_flags = SA_RESTART;
+ 	sa.sa_flags = SA_RESTART; /*SA_SIGINFO*/
  	if(sigaction(signum,&sa,NULL)<0) unix_error("signal_wrapper");
  
  	return 1;
@@ -50,14 +52,14 @@ void sigchld_handler(int sig)
 		pid = jobs_fgpid();
 		
     if (pid > 0)
-    {	
+    {
     	job = jobs_getjobpid(pid);
 		if (WIFSTOPPED(status))
 		{
 			job->jb_state = ST;
 			printf("[%d] (%d) : Stopped\n",job->jb_jid,job->jb_pid);
 		}
-		else if (WIFEXITED(status) && WEXITSTATUS(status))
+		else if (WIFEXITED(status))
 		{
 			printf("[%d] (%d) : Exited\n",job->jb_jid,job->jb_pid);
 			jobs_deletejob(pid);
@@ -72,7 +74,6 @@ void sigchld_handler(int sig)
 			printf("Error on : [%d] (%d)  - %s \n",job->jb_jid,job->jb_pid,job->jb_cmdline);
 		}
     }
-    
     
     if (verbose) printf("sigchld_handler: exiting\n");
     
@@ -92,7 +93,7 @@ void sigint_handler(int sig)
 
     if ((pid = jobs_fgpid()))
 	    kill(pid,sig);	/* sig or SIGINT */
-    
+
     if (verbose) printf("sigint_handler: exiting\n");
     
     return;
@@ -100,18 +101,20 @@ void sigint_handler(int sig)
 
 /*
  * sigtstp_handler - The kernel sends a SIGTSTP to the shell whenever
- *     the user types ctrl-z at the keyboard. Catch it and suspend the
+ *     the user types ctrl-z at the keyboard. Catch it and supid : 6031, getpid 6030
+spend the
  *     foreground job by sending it a SIGTSTP.  
  */
 void sigtstp_handler(int sig)
 {
 	int pid;
-	
-    if (verbose) printf("sigtstp_handler: entering\n");
 
+    if (verbose) printf("sigtstp_handler: entering\n");
+	;
+	
     if ((pid = jobs_fgpid()))
-    	kill(pid,sig); /* sig or SIGTSTP */
-    
+    	kill(pid,SIGSTOP); /* sig or SIGTSTP */
+
     if (verbose) printf("sigtstp_handler: exiting\n");
     
     return;
